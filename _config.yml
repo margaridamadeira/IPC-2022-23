@@ -42,7 +42,7 @@ html:
 
 # #######################################################################################
 # Interact link settings
-notebook_interface            : "notebook"
+notebook_interface            : "classic"
 
 
 # #######################################################################################
@@ -51,3 +51,9 @@ sphinx:
   config:
     language: pt
     bibtex_reference_style: label
+
+# ######################
+# launch buttons
+launch_buttons:
+  binderhub_url: "https://mybinder.org"  # The URL for your BinderHub (e.g., https://mybinder.org)
+  colab_url: "https://colab.research.google.com"
