@@ -1,0 +1,42 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: docs/intro
+parts:
+- caption: "Preâmbulo"
+  chapters:
+  - file: docs/Apresentação
+- caption: "Resumos dos temas"
+  chapters:
+  - file: docs/Introdução
+  - file: docs/IniciarProgramar
+  - file: docs/ProgPython
+#  - file: docs/ProgPython2
+#  - file: docs/ProgPython3
+#  - file: docs/ProgPython4
+#  - file: docs/Ficheiros
+#  - file: docs/MódulosTestes
+#  - file: docs/Matplotlib
+#  - file: docs/Numpy
+#  - file: docs/Biopython_introd
+#  - file: docs/Apresent_sympy
+- caption: "Guiões práticos"
+  chapters:
+  - file: docs/Primeiros_passos 
+  - file: docs/SubmissãoMooshak
+  - file: docs/Lab0
+  - file: docs/Lab1
+  - file: docs/Lab2
+#  - file: docs/Lab3
+#  - file: docs/Lab4
+#  - file: docs/Lab5
+#  - file: docs/Lab6
+#  - file: docs/F1-2021
+#  - file: docs/Lab7
+#  - file: docs/F2-2021
+#  - file: docs/Lab8
+#  - file: docs/Lab9
+#  - file: docs/F3-2122
+
+

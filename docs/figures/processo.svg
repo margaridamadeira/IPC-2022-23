@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2.8 -->
+<!-- CreationDate: 2022-01-19 13:18:26 -->
+<!-- Magnification: 1.05 -->
+<svg	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="232pt" height="164pt"
+	viewBox="888 2643 3676 2589">
+<g fill="none">
+<!-- Line -->
+<defs>
+<clipPath id="cp0">
+	<path clip-rule="evenodd" d="M 888,2643 H 4564 V 5232 H 888 z
+		M 1050,2792 1080,2672 1110,2792 1087,2648 1073,2648z"/>
+</clipPath>
+</defs>
+<polyline points=" 1080,5220 1080,2655" clip-path="url(#cp0)"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Forward arrow to point 1080,2655 -->
+<polyline points=" 1050,2792 1080,2672 1110,2792"
+	stroke="#000000" stroke-width="8px" stroke-miterlimit="8"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp1">
+	<path clip-rule="evenodd" d="M 888,2643 H 4564 V 5232 H 888 z
+		M 4183,5010 4303,5040 4183,5070 4327,5047 4327,5033z"/>
+</clipPath>
+</defs>
+<polyline points=" 900,5040 4320,5040" clip-path="url(#cp1)"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Forward arrow to point 4320,5040 -->
+<polyline points=" 4183,5010 4303,5040 4183,5070"
+	stroke="#000000" stroke-width="8px" stroke-miterlimit="8"/>
+<!-- Line -->
+<polyline points=" 1080,4140 3645,4140"
+	stroke="#0000ff" stroke-width="30px"/>
+<!-- Line -->
+<polyline points=" 3555,3150 3690,3150"
+	stroke="#0000ff" stroke-width="30px"/>
+<!-- Line -->
+<polyline points=" 3690,3375 3555,3375"
+	stroke="#ff0000" stroke-width="30px"/>
+<!-- Line -->
+<polyline points=" 1440,3690 1440,4140"
+	stroke="#ff0000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 2070,4455 2070,4140"
+	stroke="#ff0000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 2700,3780 2700,4140"
+	stroke="#ff0000" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 3105,4455 3105,4140"
+	stroke="#ff0000" stroke-width="8px"/>
+<!-- Text -->
+<text xml:space="preserve" x="3735" y="4185" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="144" text-anchor="start">Ref</text>
+<!-- Text -->
+<text xml:space="preserve" x="3780" y="3195" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="144" text-anchor="start">Ref</text>
+<!-- Text -->
+<text xml:space="preserve" x="1395" y="3780" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="144" text-anchor="start">*</text>
+<!-- Text -->
+<text xml:space="preserve" x="2025" y="4545" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="144" text-anchor="start">*</text>
+<!-- Text -->
+<text xml:space="preserve" x="2655" y="3870" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="144" text-anchor="start">*</text>
+<!-- Text -->
+<text xml:space="preserve" x="3060" y="4545" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="144" text-anchor="start">*</text>
+<!-- Text -->
+<text xml:space="preserve" x="3780" y="3420" fill="#ff0000" font-family="Times" font-style="normal" font-weight="normal" font-size="144" text-anchor="start">Desvio</text>
+<!-- Text -->
+<text xml:space="preserve" x="3780" y="2970" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="144" text-anchor="start">Amostras</text>
+<!-- Text -->
+<text xml:space="preserve" x="3555" y="3015" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="144" text-anchor="start">*</text>
+</g>
+</svg>

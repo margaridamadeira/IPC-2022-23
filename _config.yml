@@ -1,0 +1,53 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: Introdução à programação científica
+author: Margarida Madeira e Moura
+logo: logo.png
+
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: force
+
+#######################################################################################
+# Parse and render settings
+parse:
+  myst_enable_extensions:
+    - dollarmath
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_engine: pdflatex
+  latex_documents:
+    targetname: book.tex
+
+# Add a bibtex file so that we can create citations
+bibtex_bibfiles:
+  - references.bib
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/margaridamadeira/IPC-2022-23  # Online location of your book
+  path_to_book: docs/:x
+  # Optional path to your book, relative to the repository root
+  branch: master  # Which branch of the repository should be used when creating links (optional)
+
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  use_issues_button: false
+  use_repository_button: false
+  baseurl: https://margaridamadeira.github.io/IPC-2022-23/
+
+# #######################################################################################
+# Interact link settings
+notebook_interface            : "notebook"
+
+
+# #######################################################################################
+# sphinx 
+sphinx:
+  config:
+    language: pt
+    bibtex_reference_style: label
