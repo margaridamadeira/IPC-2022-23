@@ -1,0 +1,1809 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A biblioteca NumPy &#8212; Introdução à programação científica</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2022-23/docs/Numpy.html" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à programação científica</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquise este livro ..." aria-label="Pesquise este livro ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introdução à programação científica
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preâmbulo
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Apresenta%C3%A7%C3%A3o.html">
+   A unidade curricular
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Resumos dos temas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Introdu%C3%A7%C3%A3o.html">
+   Introdução
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="IniciarProgramar.html">
+   Tipos de dados, variáveis e funções
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ProgPython.html">
+   Operações lógicas e controlo de execução
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Guiões práticos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Primeiros_passos.html">
+   Primeiros passos na programação em Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Submiss%C3%A3oMooshak.html">
+   Submissão ao Mooshak
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab0.html">
+   Lab0
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab1.html">
+   Lab1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab2.html">
+   Lab2
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/Numpy.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/margaridamadeira/IPC-2022-23/main?urlpath=tree/docs/docs/Numpy.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lançamento Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Conteúdo
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introducao">
+   Introdução
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objetivos-de-aprendizagem">
+   Objetivos de aprendizagem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#generalidades">
+   Generalidades
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#criacao-de-vetores-e-matrizes">
+   Criação de vetores e matrizes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dimensao">
+     Dimensão
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#indexacao">
+   Indexação
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#slicing">
+   <em>
+    Slicing
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#copia-de-matrizes">
+   Cópia de matrizes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#redimensionamento">
+   Redimensionamento
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#iteracao-dos-elementos">
+   Iteração dos elementos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#casos-particulares">
+   Casos Particulares
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-matriz-all-ones">
+     A matriz
+     <em>
+      all-ones
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-matriz-nula">
+     A matriz nula
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-matriz-identidade">
+     A matriz identidade
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-matriz-diagonal">
+     A matriz diagonal
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operacoes-elementares">
+   Operações elementares
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#soma-e-diferenca">
+     Soma e diferença
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multiplicacao">
+     Multiplicação
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#divisao">
+     Divisão
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#divisao-inteira">
+     Divisão inteira
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#resto-da-divisao-inteira">
+     Resto da divisão inteira
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#transposta">
+     Transposta
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exponenciacao">
+     Exponenciação
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#determinante">
+     Determinante
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#documentacao-e-ajuda">
+     Documentação e ajuda
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#funcoes-universais-ufunc">
+   Funções universais (
+   <em>
+    ufunc
+   </em>
+   )
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operacoes-aritmeticas">
+     Operações Aritméticas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#funcoes-trigonometricas">
+     Funções trigonométricas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#logaritmos">
+     Logaritmos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diferencas-diff">
+     Diferenças:
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       diff
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#somas-sum-e-cumsum">
+     Somas:
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       sum
+      </span>
+     </code>
+     e
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       cumsum
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#geracao-de-numeros-aleatorios">
+   Geração de números aleatórios
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#distribuicao-uniforme">
+     Distribuição Uniforme
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#distribuicao-normal-gaussiana">
+     Distribuição Normal (Gaussiana)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#distribuicao-de-poisson">
+     Distribuição de Poisson
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resumo">
+   Resumo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercicios-propostos">
+   Exercícios propostos
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="a-biblioteca-numpy">
+<h1>A biblioteca <em>NumPy</em><a class="headerlink" href="#a-biblioteca-numpy" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="introducao">
+<h2>Introdução<a class="headerlink" href="#introducao" title="Link permanente para este título">¶</a></h2>
+<p>Neste capítulo abordamos alguma  funcionalidades da biblioteca <em>NumPy</em>, nomeadamente:</p>
+<ul class="simple">
+<li><p>a criação de vetores e de matrizes,</p></li>
+<li><p>a manipulação de matrizes,</p></li>
+<li><p>as operações elementares com matrizes,</p></li>
+<li><p>a geração de números aleatórios.</p></li>
+</ul>
+</div>
+<div class="section" id="objetivos-de-aprendizagem">
+<h2>Objetivos de aprendizagem<a class="headerlink" href="#objetivos-de-aprendizagem" title="Link permanente para este título">¶</a></h2>
+<p>No final deste capítulo deveremos ser capazes de usar as seguintes funcionalidades da biblioteca <em>NumPy</em>:</p>
+<ul class="simple">
+<li><p>criar vetores e matrizes,</p></li>
+<li><p>manipular matrizes usando a indexação, <em>slicing</em>, etc.,</p></li>
+<li><p>aplicar as operações elementares em matrizes,</p></li>
+<li><p>aplicar as <em>ufuncs</em> nativas e</p></li>
+<li><p>gerar números aleatórios de acordo com as distribuições de probabilidade Uniforme, Gaussiana e de Poisson.</p></li>
+</ul>
+</div>
+<div class="section" id="generalidades">
+<h2>Generalidades<a class="headerlink" href="#generalidades" title="Link permanente para este título">¶</a></h2>
+<p>Para usarmos esta biblioteca é necessário a sua importação para o espaço de trabalho,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Além de importarmos a biblioteca <code class="docutils literal notranslate"><span class="pre">numpy</span></code> também lhe atribuímos o nome <code class="docutils literal notranslate"><span class="pre">np</span></code> através do qual podemos invocar os métodos, ou seja, para um determinado <em>método</em> existente, a instrução <code class="docutils literal notranslate"><span class="pre">np.método()</span></code> é equivalente a <code class="docutils literal notranslate"><span class="pre">numpy.método()</span></code>.</p>
+</div>
+<div class="section" id="criacao-de-vetores-e-matrizes">
+<h2>Criação de vetores e matrizes<a class="headerlink" href="#criacao-de-vetores-e-matrizes" title="Link permanente para este título">¶</a></h2>
+<p>Para criarmos vetores e matrizes usamos o método <code class="docutils literal notranslate"><span class="pre">array</span></code> juntamente com listas ou tuplos. Por exemplo, para criamos o vetor (ou matriz) <span class="math notranslate nohighlight">\([0\, 1\,  2\, 3]\)</span> podemos executar,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação de uma matriz com np.array() e uma lista</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0 1 2 3]
+</pre></div>
+</div>
+</div>
+</div>
+<p>ou, em alternativa,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criação de uma matriz com np.array() e um tuplo</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0 1 2 3]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Os objetos que representam as matrizes criadas através do método <code class="docutils literal notranslate"><span class="pre">array</span></code> são do tipo <code class="docutils literal notranslate"><span class="pre">ndarray</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>numpy.ndarray
+</pre></div>
+</div>
+</div>
+</div>
+<p>Outra maneira de gerar esta matriz é através do método <code class="docutils literal notranslate"><span class="pre">arange(inicio,</span> <span class="pre">fim+1,</span> <span class="pre">intervalo)</span></code>,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0 1 2 3]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Podemos criar matrizes com várias dimensões. Por exemplo, para criarmos a seguinte matriz com duas linhas e três colunas,</p>
+<p><span class="math notranslate nohighlight">\(\left[\begin{array}{ccc}
+   0 &amp; 1 &amp; 2\\
+   3 &amp; 4 &amp; 5
+\end{array}\right]\)</span></p>
+<p>podemos usar o método <code class="docutils literal notranslate"><span class="pre">array</span></code> especificando as duas linhas da matriz,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0 1 2]
+ [3 4 5]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para criarmos uma matriz com três dimensões, especificamos as fatias (<em>slices</em>) as quais por, suas vez, devem especificar as linhas da matriz. No exemplo seguinte a matriz <code class="docutils literal notranslate"><span class="pre">c</span></code> tem 4 fatias, duas linhas (por fatia) e 3 colunas (por linha),</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">]],</span> <span class="p">[[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]],</span>
+              <span class="p">[[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">]],</span> <span class="p">[[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[[1 2 3]
+  [1 3 2]]
+
+ [[2 2 1]
+  [2 1 2]]
+
+ [[3 1 3]
+  [3 4 2]]
+
+ [[4 5 6]
+  [4 7 6]]]
+</pre></div>
+</div>
+</div>
+</div>
+<img src="./figures/matrizes_nd.png" alt="Exemplos de matrizes" style="height: 350px;"/><div class="section" id="dimensao">
+<h3>Dimensão<a class="headerlink" href="#dimensao" title="Link permanente para este título">¶</a></h3>
+<p>Em Python, podemos interpretar a dimensão de uma matriz como o número correspondente de índices. Para determinarmos esta dimensão usamos o método <code class="docutils literal notranslate"><span class="pre">ndim</span></code> que devolve um inteiro com esta informação,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Dimensão da matriz </span><span class="se">\&#39;</span><span class="s1">a</span><span class="se">\&#39;</span><span class="s1">: &#39;</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">ndim</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Dimensão da matriz </span><span class="se">\&#39;</span><span class="s1">b</span><span class="se">\&#39;</span><span class="s1">: &#39;</span><span class="p">,</span> <span class="n">b</span><span class="o">.</span><span class="n">ndim</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Dimensão da matriz </span><span class="se">\&#39;</span><span class="s1">c</span><span class="se">\&#39;</span><span class="s1">: &#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">ndim</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dimensão da matriz &#39;a&#39;:  1
+Dimensão da matriz &#39;b&#39;:  2
+Dimensão da matriz &#39;c&#39;:  3
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para determinarmos o número de elementos de uma matriz em cada uma das suas dimensões usamos o método <code class="docutils literal notranslate"><span class="pre">shape</span></code> que devolve um tuplo com esta informação. Por exemplo,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">n_colunas_de_a</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A matriz </span><span class="se">\&#39;</span><span class="si">{}</span><span class="se">\&#39;</span><span class="s1"> tem </span><span class="si">{}</span><span class="s1"> colunas.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="n">n_colunas_de_a</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(4,)
+A matriz &#39;a&#39; tem 4 colunas.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">n_linhas_de_b</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">n_colunas_de_b</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A matriz </span><span class="se">\&#39;</span><span class="si">{}</span><span class="se">\&#39;</span><span class="s1"> tem </span><span class="si">{}</span><span class="s1"> linhas e </span><span class="si">{}</span><span class="s1"> colunas.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+    <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">n_linhas_de_b</span><span class="p">,</span> <span class="n">n_colunas_de_b</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2, 3)
+A matriz &#39;b&#39; tem 2 linhas e 3 colunas.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">n_fatias_de_c</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">n_linhas_de_c</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">n_colunas_de_c</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A matriz </span><span class="se">\&#39;</span><span class="si">{}</span><span class="se">\&#39;</span><span class="s1"> tem </span><span class="si">{}</span><span class="s1"> fatias, </span><span class="si">{}</span><span class="s1"> linhas </span><span class="se">\</span>
+<span class="s1">e </span><span class="si">{}</span><span class="s1"> colunas.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="n">n_fatias_de_c</span><span class="p">,</span> <span class="n">n_linhas_de_c</span><span class="p">,</span> <span class="n">n_colunas_de_c</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(4, 2, 3)
+A matriz &#39;c&#39; tem 4 fatias, 2 linhas e 3 colunas.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="indexacao">
+<h2>Indexação<a class="headerlink" href="#indexacao" title="Link permanente para este título">¶</a></h2>
+<p>A indexação permite-nos aceder aos elementos individuais de uma matriz e segue a ordenação devolvida pelo método <code class="docutils literal notranslate"><span class="pre">shape</span></code>. Assim, para uma matriz de dimensão unitária o acesso aos seu elementos individuais é feito indexando cada uma das suas colunas. Por exemplo, para a matriz “a” a indexação é  efetuada da seguinte forma,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;; &#39;</span><span class="p">)</span>  <span class="c1"># elemento da primeiracoluna,</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;; &#39;</span><span class="p">)</span>  <span class="c1"># elemento da segunda coluna,</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;; &#39;</span><span class="p">)</span>  <span class="c1"># elemento da terceira coluna,</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>  <span class="c1"># elemento da quarta coluna.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0; 1; 2; 3 
+</pre></div>
+</div>
+</div>
+</div>
+<p>Tal como para a indexação de <em>strings</em>, listas ou tuplos, a primeiro índice é o 0 e o último é <span class="math notranslate nohighlight">\(n-1\)</span>, em que <span class="math notranslate nohighlight">\(n\)</span> representa número de elemento na dimensão considerada.</p>
+<p>Para a matriz <code class="docutils literal notranslate"><span class="pre">b</span></code> com duas dimensões esta indexação é efetuada genericamente <code class="docutils literal notranslate"><span class="pre">b[linha,coluna]</span></code>,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;; &#39;</span><span class="p">)</span>  <span class="c1"># elemento da primeira linha, primeira coluna</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;; &#39;</span><span class="p">)</span>  <span class="c1"># elemento da primeira linha, segunda coluna</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;; &#39;</span><span class="p">)</span>  <span class="c1"># elemento da primeira linha, terceira coluna</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;; &#39;</span><span class="p">)</span>  <span class="c1"># elemento da segunda linha, primeira coluna</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;; &#39;</span><span class="p">)</span>  <span class="c1"># elemento da segunda linha, segunda coluna</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;  &#39;</span><span class="p">)</span>  <span class="c1"># elemento da segunda linha, terceira coluna</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0; 1; 2; 3; 4; 5  
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para a matriz <code class="docutils literal notranslate"><span class="pre">c</span></code> com três dimensões esta indexação é efetuada genericamente <code class="docutils literal notranslate"><span class="pre">c[fatia,linha,coluna]</span></code>. Por exemplo,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fatia</span><span class="p">,</span> <span class="n">linha</span><span class="p">,</span> <span class="n">coluna</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Matriz C: elemento da fatia </span><span class="si">{}</span><span class="s1">, linha </span><span class="si">{}</span><span class="s1">, </span><span class="se">\</span>
+<span class="s1">coluna </span><span class="si">{}</span><span class="s1">: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span> <span class="nb">format</span><span class="p">(</span><span class="n">fatia</span><span class="p">,</span> <span class="n">linha</span><span class="p">,</span> <span class="n">coluna</span><span class="p">,</span> <span class="n">c</span><span class="p">[</span><span class="n">fatia</span><span class="p">,</span> <span class="n">linha</span><span class="p">,</span> <span class="n">coluna</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriz C: elemento da fatia 1, linha 0, coluna 2: 1
+</pre></div>
+</div>
+</div>
+</div>
+<p>Além de consultarmos os elementos da matriz, também é possível a sua modificação. Por exemplo,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">9</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[4 1 2]
+ [9 4 5]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Dependendo da dimensão da matriz, é possível também indexar linhas e colunas de forma individual. Por exemplo, para acedermos à primeira linha da matriz <code class="docutils literal notranslate"><span class="pre">b</span></code> executamos,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([4, 1, 2])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para indexar a segunda coluna da matriz <code class="docutils literal notranslate"><span class="pre">b</span></code> executamos,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 4])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para acedermos à primeira fatia da matriz <code class="docutils literal notranslate"><span class="pre">c</span></code> executamos,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1, 2, 3],
+       [1, 3, 2]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para acedermos à primeira linha da primeira fatia da matriz <code class="docutils literal notranslate"><span class="pre">c</span></code> executamos,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 2, 3])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para acedermos à segunda coluna da quarta fatia da matriz <code class="docutils literal notranslate"><span class="pre">c</span></code> executamos,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="p">:,</span> <span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5, 7])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="slicing">
+<h2><em>Slicing</em><a class="headerlink" href="#slicing" title="Link permanente para este título">¶</a></h2>
+<p>Esta operação permite-nos aceder aos elementos de uma matriz especificando uma sequência para os seu índices com o formato <code class="docutils literal notranslate"><span class="pre">[inicio:fim+1]</span></code> ou <code class="docutils literal notranslate"><span class="pre">[inicio:fim+1:intervalo]</span></code>. Por exemplo,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;matriz a =&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">11</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;matriz b =&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>matriz a = [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14]
+matriz b = [2 5 8]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;matriz c =&#39;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;matriz d =&#39;</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>matriz c = [[ 1  2  3  4  5]
+ [ 6  7  8  9 10]]
+matriz d = [[2 3 4]
+ [7 8 9]]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="copia-de-matrizes">
+<h2>Cópia de matrizes<a class="headerlink" href="#copia-de-matrizes" title="Link permanente para este título">¶</a></h2>
+<p>A cópia de matrizes obedece às mesmas considerações que devemos ter em conta quando copiamos listas. Se quisermos duas entidades diferentes devemos usar o método <code class="docutils literal notranslate"><span class="pre">copy</span></code>,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">c</span>
+<span class="n">e</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="n">d</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;matriz c =&#39;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;matriz d =&#39;</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;matriz e =&#39;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>matriz c = [20  2  3  4  5]
+matriz d = [20  2  3  4  5]
+matriz e = [1 2 3 4 5]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="redimensionamento">
+<h2>Redimensionamento<a class="headerlink" href="#redimensionamento" title="Link permanente para este título">¶</a></h2>
+<p>Para redimensionarmos uma matriz podemos usar o método <code class="docutils literal notranslate"><span class="pre">reshape</span></code>. Por exemplo,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;matriz a =&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;matriz b =&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>matriz a = [ 1  3  5  7  9 11]
+matriz b = [[ 1  3  5]
+ [ 7  9 11]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Podemos transformar uma matriz de dimensão superior numa matriz de dimensão unitária,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;matriz a =&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;matriz b =&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>matriz a = [[1 2 3]
+ [4 5 6]]
+matriz b = [1 2 3 4 5 6]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="iteracao-dos-elementos">
+<h2>Iteração dos elementos<a class="headerlink" href="#iteracao-dos-elementos" title="Link permanente para este título">¶</a></h2>
+<p>Os seguintes exemplos ilustram como podemos aceder aos elementos de uma matriz através da iteração com ciclos <code class="docutils literal notranslate"><span class="pre">for</span></code>,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">elemento</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">elemento</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 2 3 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+<span class="k">for</span> <span class="n">linhas</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">linhas</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1 2 3]
+[4 5 6]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">linhas</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">elemento</span> <span class="ow">in</span> <span class="n">linhas</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">elemento</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 2 3 4 5 6 
+</pre></div>
+</div>
+</div>
+</div>
+<p>O método <code class="docutils literal notranslate"><span class="pre">nditer</span></code> permite iterações mais avançadas. Por exemplo,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">elemento</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">nditer</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">elemento</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 2 3 4 5 6 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="casos-particulares">
+<h2>Casos Particulares<a class="headerlink" href="#casos-particulares" title="Link permanente para este título">¶</a></h2>
+<p>Consideramos agora os métodos nativos para a criação de casos particulares de matrizes: a matriz <em>all-ones</em>, a matriz nula, a matriz identidade e a matriz diagonal.</p>
+<div class="section" id="a-matriz-all-ones">
+<h3>A matriz <em>all-ones</em><a class="headerlink" href="#a-matriz-all-ones" title="Link permanente para este título">¶</a></h3>
+<p>Neste tipo de matriz todos os seu elementos são iguais a 1. Para gerarmos uma matriz deste género podemos usar o método <code class="docutils literal notranslate"><span class="pre">ones</span></code>. Por exemplo, para gerar uma destas matrizes com <span class="math notranslate nohighlight">\(m\)</span> linhas e <span class="math notranslate nohighlight">\(n\)</span> colunas,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
+<span class="n">a</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1., 1., 1., 1.],
+       [1., 1., 1., 1.],
+       [1., 1., 1., 1.]])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="a-matriz-nula">
+<h3>A matriz nula<a class="headerlink" href="#a-matriz-nula" title="Link permanente para este título">¶</a></h3>
+<p>Para gerarmos uma matriz nula podemos usar o método <code class="docutils literal notranslate"><span class="pre">zeros</span></code>. Por exemplo, para gerar uma matriz nula com <span class="math notranslate nohighlight">\(m\)</span> linhas e <span class="math notranslate nohighlight">\(n\)</span> colunas,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
+<span class="n">b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0., 0., 0., 0.],
+       [0., 0., 0., 0.],
+       [0., 0., 0., 0.]])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="a-matriz-identidade">
+<h3>A matriz identidade<a class="headerlink" href="#a-matriz-identidade" title="Link permanente para este título">¶</a></h3>
+<p>Para gerarmos uma matriz identidade podemos recorrer ao método <code class="docutils literal notranslate"><span class="pre">eye</span></code>. A sua criação pode ser com números inteiros ou reais (<code class="docutils literal notranslate"><span class="pre">float</span></code>) através da opção <code class="docutils literal notranslate"><span class="pre">dtype</span></code>. Por exemplo, para criarmos uma destas matrizes com <span class="math notranslate nohighlight">\(n\)</span> linhas e <span class="math notranslate nohighlight">\(n\)</span> colunas,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">c</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1, 0, 0],
+       [0, 1, 0],
+       [0, 0, 1]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">c</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1., 0., 0.],
+       [0., 1., 0.],
+       [0., 0., 1.]])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="a-matriz-diagonal">
+<h3>A matriz diagonal<a class="headerlink" href="#a-matriz-diagonal" title="Link permanente para este título">¶</a></h3>
+<p>Para gerarmos uma matriz diagonal podemos usar o método <code class="docutils literal notranslate"><span class="pre">diag</span></code> juntamente com uma lista ou um tuplo que contém os elemento da diagonal. O comprimento desta lista ou tuplo determina a dimensão da matriz.</p>
+<p>Por exemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]))</span>
+<span class="n">d</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1, 0, 0, 0],
+       [0, 2, 0, 0],
+       [0, 0, 3, 0],
+       [0, 0, 0, 4]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)))</span>
+<span class="n">d</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1, 0, 0, 0],
+       [0, 2, 0, 0],
+       [0, 0, 3, 0],
+       [0, 0, 0, 4]])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="operacoes-elementares">
+<h2>Operações elementares<a class="headerlink" href="#operacoes-elementares" title="Link permanente para este título">¶</a></h2>
+<div class="section" id="soma-e-diferenca">
+<h3>Soma e diferença<a class="headerlink" href="#soma-e-diferenca" title="Link permanente para este título">¶</a></h3>
+<p>Em relação a estas operações podemos considerar duas situações:</p>
+<ul class="simple">
+<li><p>a soma ou diferença de um escalar com uma matriz,</p></li>
+<li><p>a soma ou diferença de matrizes.</p></li>
+</ul>
+<p>Consideremos as matrizes <code class="docutils literal notranslate"><span class="pre">a</span></code> e <code class="docutils literal notranslate"><span class="pre">b</span></code>,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="mi">10</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 0 10 20 30]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0 1 2 3]
+</pre></div>
+</div>
+</div>
+</div>
+<p>A adição e a subtração de um escalar a uma matriz é efetuada usando os operadores <span class="math notranslate nohighlight">\(+\)</span> e <span class="math notranslate nohighlight">\(-\)</span>, respetivamente. Por exemplo,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a1</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 5 15 25 35]
+</pre></div>
+</div>
+</div>
+</div>
+<p>A soma e diferença de matrizes é efetuada usando os operadores <span class="math notranslate nohighlight">\(+\)</span> e <span class="math notranslate nohighlight">\(-\)</span>, respetivamente. Por exemplo,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">-</span><span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 0  9 18 27]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 0 11 22 33]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="multiplicacao">
+<h3>Multiplicação<a class="headerlink" href="#multiplicacao" title="Link permanente para este título">¶</a></h3>
+<p>Em relação ao produto há que considerar três situações:</p>
+<ul class="simple">
+<li><p>o produto de um escalar com uma matriz</p></li>
+<li><p>o produto elemento a elemento: <span class="math notranslate nohighlight">\(a(m,n)\times b(m,n)\)</span></p></li>
+<li><p>o produto matricial</p></li>
+</ul>
+<p>Consideremos as matrizes <code class="docutils literal notranslate"><span class="pre">a</span></code> e <code class="docutils literal notranslate"><span class="pre">b</span></code>,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para o produto de um escalar com uma matriz usamos o operador <span class="math notranslate nohighlight">\(*\)</span>,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[100 100]
+ [  0 100]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para o produto elemento-a-elemento também usamos o operador <span class="math notranslate nohighlight">\(*\)</span>,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[2 1]
+ [0 4]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para o produto matricial usamos o operador <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> ou o <span class="target" id="index-0"></span>método <code class="docutils literal notranslate"><span class="pre">dot</span></code>,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">a</span> <span class="o">@</span> <span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[5 5]
+ [3 4]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[5 5]
+ [3 4]]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="divisao">
+<h3>Divisão<a class="headerlink" href="#divisao" title="Link permanente para este título">¶</a></h3>
+<p>A divisão de matrizes elemento-a elemento, pode ser efetuada com o operador <span class="math notranslate nohighlight">\(/\)</span>,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">/</span><span class="n">b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.5 , 1.  ],
+       [0.  , 0.25]])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="divisao-inteira">
+<h3>Divisão inteira<a class="headerlink" href="#divisao-inteira" title="Link permanente para este título">¶</a></h3>
+<p>A divisão inteira de matrizes elemento-a elemento, pode ser efetuada com o operador <span class="math notranslate nohighlight">\(//\)</span>,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">//</span><span class="n">b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0, 1],
+       [0, 0]])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="resto-da-divisao-inteira">
+<h3>Resto da divisão inteira<a class="headerlink" href="#resto-da-divisao-inteira" title="Link permanente para este título">¶</a></h3>
+<p>O resto da divisão inteira de matrizes elemento-a elemento, pode ser efetuada com o operador <span class="math notranslate nohighlight">\(\%\)</span>,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">%</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1, 0],
+       [0, 1]])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="transposta">
+<h3>Transposta<a class="headerlink" href="#transposta" title="Link permanente para este título">¶</a></h3>
+<p>Para calcularmos a transposta de uma matriz usamos o método <code class="docutils literal notranslate"><span class="pre">transpose</span></code>,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c_t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c_t</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[2 0]
+ [1 4]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>ou, em alternativa,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c_t</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">T</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c_t</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[2 0]
+ [1 4]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Este método também é útil para criamos um vetor no formato coluna,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v_l</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]])</span>
+<span class="n">v_c</span> <span class="o">=</span> <span class="n">v_l</span><span class="o">.</span><span class="n">T</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;vector linha=&#39;</span><span class="p">,</span> <span class="n">v_l</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;vector coluna=</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">v_c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>vector linha= [[1 2 3 4 5]]
+vector coluna=
+ [[1]
+ [2]
+ [3]
+ [4]
+ [5]]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exponenciacao">
+<h3>Exponenciação<a class="headerlink" href="#exponenciacao" title="Link permanente para este título">¶</a></h3>
+<p>O operador <span class="math notranslate nohighlight">\(**\)</span> é usado para a exponenciação dos elementos individuais da matriz. O expoente pode ser um escalar ou uma matriz</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="n">d</span><span class="o">**</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;matriz e:&#39;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="n">d</span> <span class="o">**</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;matriz f:&#39;</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>matriz e: [[25 25]
+ [ 9 16]]
+matriz f: [[25 25]
+ [ 9 16]]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="determinante">
+<h3>Determinante<a class="headerlink" href="#determinante" title="Link permanente para este título">¶</a></h3>
+<p>Para calcularmos determinantes de matrizes podemos usar o método <code class="docutils literal notranslate"><span class="pre">linalg.det</span></code>,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">det_d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Determinante de </span><span class="se">\&#39;</span><span class="si">{0}</span><span class="se">\&#39;</span><span class="s1">: </span><span class="si">{1:1.1f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="n">det_d</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Determinante de &#39;d&#39;: 5.0
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="documentacao-e-ajuda">
+<h3>Documentação e ajuda<a class="headerlink" href="#documentacao-e-ajuda" title="Link permanente para este título">¶</a></h3>
+<p>A documentação sobre matrizes pode ser acedida usado a função <code class="docutils literal notranslate"><span class="pre">help</span></code>,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remova os comentários para aceder à documentação</span>
+<span class="c1"># help (np.array)</span>
+<span class="c1"># np.lookfor(&#39;create array&#39;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="funcoes-universais-ufunc">
+<h2>Funções universais (<em>ufunc</em>)<a class="headerlink" href="#funcoes-universais-ufunc" title="Link permanente para este título">¶</a></h2>
+<p>As funções universais  - <em>universal functions (ufunc)</em> - operam sobre a forma matricial do <em>NumPy</em>, ou seja sobre os objetos do tipo <code class="docutils literal notranslate"><span class="pre">ndarray</span></code>. Estas funções implementam formas de vetorização que são mais rápidas do que a sua correspondente forma iterativa.</p>
+<p>As <em>ufuncs</em> contemplam funções aritméticas, trigonométricas, logaritmos, etc. É possível implementarmos <em>ufuncs</em> de acordo com a necessidade da solução em questão.</p>
+<div class="section" id="operacoes-aritmeticas">
+<h3>Operações Aritméticas<a class="headerlink" href="#operacoes-aritmeticas" title="Link permanente para este título">¶</a></h3>
+<p>As <em>ufuncs</em> para a aritmética simples sobre matrizes produzem resultados semelhantes aos operadores acima mencionados:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">add(a,b)</span></code> : semelhante ao operador <span class="math notranslate nohighlight">\(+\)</span>; devolve uma matriz com a soma (elemento a elemento) das matrizes <code class="docutils literal notranslate"><span class="pre">a</span></code> e <code class="docutils literal notranslate"><span class="pre">b</span></code>,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subtract(a,b)</span></code> : semelhante ao operador <span class="math notranslate nohighlight">\(-\)</span>; devolve uma matriz com a diferença (elemento a elemento) das matrizes <code class="docutils literal notranslate"><span class="pre">a</span></code> e <code class="docutils literal notranslate"><span class="pre">b</span></code>,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">multiply(a,b)</span></code> : semelhante ao operador <span class="math notranslate nohighlight">\(*\)</span>; devolve uma matriz com a multiplicação (elemento a elemento) das matrizes <code class="docutils literal notranslate"><span class="pre">a</span></code> e <code class="docutils literal notranslate"><span class="pre">b</span></code>,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">divide(a,b)</span></code> : semelhante ao operador <span class="math notranslate nohighlight">\(/\)</span>; devolve uma matriz com a divisão (elemento a elemento) das matrizes <code class="docutils literal notranslate"><span class="pre">a</span></code> e <code class="docutils literal notranslate"><span class="pre">b</span></code>,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">power(a,b)</span></code> : semelhante ao operador <span class="math notranslate nohighlight">\(**\)</span>; devolve uma matriz com a potenciação (elemento a elemento) das matrizes <code class="docutils literal notranslate"><span class="pre">a</span></code> e <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p></li>
+</ul>
+<p>Exemplos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">]])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a+b :&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a-b :&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">subtract</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a*b :&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a/b :&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a**b :&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a+b : [[ 4  6]
+ [12  9]]
+a-b : [[0 2]
+ [6 3]]
+a*b : [[ 4  8]
+ [27 18]]
+a/b : [[1. 2.]
+ [3. 2.]]
+a**b : [[  4  16]
+ [729 216]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>As <em>ufuncs</em> para a aritmética simples contemplam ainda:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">absolute(a)</span></code> : devolve uma matriz com o módulo dos elementos da matriz <code class="docutils literal notranslate"><span class="pre">a</span></code>,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">remainder(a,b)</span></code> : devolve uma matriz com o resto da divisão inteira de <code class="docutils literal notranslate"><span class="pre">a</span></code> por <code class="docutils literal notranslate"><span class="pre">b</span></code>,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">divmod(a,b)</span></code> : devolve duas matrizes matriz com o resultado da divisão inteira de <code class="docutils literal notranslate"><span class="pre">a</span></code> por <code class="docutils literal notranslate"><span class="pre">b</span></code> e o respetivo resto.</p></li>
+</ul>
+<p>Exemplos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;|a| :&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">absolute</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;resto (a/b) :&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">remainder</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a/b e resto de (a/b) :&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">divmod</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>|a| : [2 4 6 9]
+resto (a/b) : [0 0 0 1]
+a/b e resto de (a/b) : (array([-2, -2,  2,  2]), array([0, 0, 0, 1]))
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="funcoes-trigonometricas">
+<h3>Funções trigonométricas<a class="headerlink" href="#funcoes-trigonometricas" title="Link permanente para este título">¶</a></h3>
+<p>As <em>ufuncs</em> contemplam senos, co-senos, tangentes, co-tangentes e as respetivas funções inversas.</p>
+<p>O seguinte exemplo ilustra o seu uso.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ang_rad</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="o">/</span><span class="mi">4</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ângulo (rad)  :&#39;</span><span class="p">,</span> <span class="n">ang_rad</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">ang_rad</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Seno do ângulo:&#39;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ângulo (rad)  : [0.         0.78539816 1.57079633 2.35619449]
+Seno do ângulo: [0.         0.70710678 1.         0.70710678]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="logaritmos">
+<h3>Logaritmos<a class="headerlink" href="#logaritmos" title="Link permanente para este título">¶</a></h3>
+<p>Os logaritmos sobre matrizes estão implementados nas base 2, <em>e</em> (neper) e 10. Por exemplo,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">10000</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Logaritmo de f:&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Logaritmo de f: [0. 1. 2. 3. 4.]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="diferencas-diff">
+<h3>Diferenças: <code class="docutils literal notranslate"><span class="pre">diff</span></code><a class="headerlink" href="#diferencas-diff" title="Link permanente para este título">¶</a></h3>
+<p>Esta <em>ufunc</em> implementa diferenças discretas ou seja produz uma matriz cujos elementos resultam da subtração de dois elementos consecutivos. É bastante relevante na implementação numérica de derivadas de funções. Exemplo,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>       <span class="c1"># f(x)   = x**2</span>
+<span class="n">derivada_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>      <span class="c1"># f&#39;(x)  = 2 x</span>
+<span class="n">derivada_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># f&#39;&#39;(x) = 2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;f  :&#39;</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;f</span><span class="se">\&#39;</span><span class="s1"> :&#39;</span><span class="p">,</span> <span class="n">derivada_1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;f</span><span class="se">\&#39;\&#39;</span><span class="s1">:&#39;</span><span class="p">,</span> <span class="n">derivada_2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>f  : [ 1  4  9 16 25 36 49 64 81]
+f&#39; : [ 3  5  7  9 11 13 15 17]
+f&#39;&#39;: [2 2 2 2 2 2 2]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="somas-sum-e-cumsum">
+<h3>Somas: <code class="docutils literal notranslate"><span class="pre">sum</span></code> e <code class="docutils literal notranslate"><span class="pre">cumsum</span></code><a class="headerlink" href="#somas-sum-e-cumsum" title="Link permanente para este título">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">sum</span></code> implementa a soma de todos os elementos de uma matriz enquanto que <code class="docutils literal notranslate"><span class="pre">cumsum</span></code> devolve uma matriz com a soma cumulativa dos seus elementos. Estas funções podem ser relevantes na implementação numérica de integrais de funções.</p>
+<p>Exemplos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Soma total :&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Soma cumulativa:&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Soma total : 45
+Soma cumulativa: [ 1  3  6 10 15 21 28 36 45]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="geracao-de-numeros-aleatorios">
+<h2>Geração de números aleatórios<a class="headerlink" href="#geracao-de-numeros-aleatorios" title="Link permanente para este título">¶</a></h2>
+<p>A biblioteca <em>numpy</em> inclui o método <code class="docutils literal notranslate"><span class="pre">random</span></code> que disponibiliza vários métodos para gerar números aleatórios de acordo com várias distribuições de probabilidade.</p>
+<p>Consideramos as distribuições de probabilidade Uniforme, Gaussiana e de Poisson.</p>
+<div class="section" id="distribuicao-uniforme">
+<h3>Distribuição Uniforme<a class="headerlink" href="#distribuicao-uniforme" title="Link permanente para este título">¶</a></h3>
+<p>O método <code class="docutils literal notranslate"><span class="pre">randint(low,</span> <span class="pre">high,</span> <span class="pre">size)</span></code> devolve um vector (ou matriz) definida por <em>size</em> com números aleatórios inteiros compreendidos entre <em>low</em> e <em>high</em> de acordo com a distribuição de probabilidade Uniforme.</p>
+<p>Por exemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[90 71 67 79 81 75 98 98 76 70]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>numpy.ndarray
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[72 70]
+ [77 87]
+ [99 90]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>O método <code class="docutils literal notranslate"><span class="pre">uniform(low,</span> <span class="pre">high,</span> <span class="pre">size)</span></code> devolve um vector (ou matriz) definida por <code class="docutils literal notranslate"><span class="pre">size</span></code> com números aleatórios compreendidos entre <code class="docutils literal notranslate"><span class="pre">low</span></code> e <code class="docutils literal notranslate"><span class="pre">high</span></code> de acordo com a distribuição de probabilidade Uniforme.</p>
+<p>Uma das diferenças em relação ao método anterior é que este último devolve número reais (<code class="docutils literal notranslate"><span class="pre">float</span></code>). Por exemplo,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[91.78559781 66.4009302 ]
+ [64.94850177 94.18391131]
+ [63.03131099 76.22419377]]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="distribuicao-normal-gaussiana">
+<h3>Distribuição Normal (Gaussiana)<a class="headerlink" href="#distribuicao-normal-gaussiana" title="Link permanente para este título">¶</a></h3>
+<p>O método <code class="docutils literal notranslate"><span class="pre">normal(loc,</span> <span class="pre">scale</span> <span class="pre">,</span> <span class="pre">size)</span></code> devolve um vetor (ou matriz) definida por <code class="docutils literal notranslate"><span class="pre">size</span></code> com números aleatórios de acordo com a distribuição de probabilidade Gaussiana de média igual a <code class="docutils literal notranslate"><span class="pre">loc</span></code> e desvio padrão igual a <code class="docutils literal notranslate"><span class="pre">scale</span></code>.</p>
+<p>Por exemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[10.57189117 12.0002326  12.09051215]
+ [ 7.99120665 13.80818907  9.94532576]]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="distribuicao-de-poisson">
+<h3>Distribuição de Poisson<a class="headerlink" href="#distribuicao-de-poisson" title="Link permanente para este título">¶</a></h3>
+<p>O método <code class="docutils literal notranslate"><span class="pre">poisson(lam,</span> <span class="pre">size)</span></code> devolve um vetor (ou matriz) definida por <code class="docutils literal notranslate"><span class="pre">size</span></code> com números aleatórios de acordo com a distribuição de probabilidade de Poisson com um número previsto de eventos igual a <code class="docutils literal notranslate"><span class="pre">lam</span></code>.</p>
+<p>Por exemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">poisson</span><span class="p">(</span><span class="n">lam</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1 2 6]
+ [2 1 2]]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="resumo">
+<h2>Resumo<a class="headerlink" href="#resumo" title="Link permanente para este título">¶</a></h2>
+<p>Neste capítulo abordámos as funcionalidades principais da biblioteca <em>NumPy</em> no que diz respeito à criação e manipulação de matrizes, o cálculo matricial, a aplicação das funções <em>ufunc</em> e a geração de números aleatórios de acordo com as distribuições de probabilidade Uniforme, Gaussiana e de Poisson.</p>
+</div>
+<div class="section" id="exercicios-propostos">
+<h2>Exercícios propostos<a class="headerlink" href="#exercicios-propostos" title="Link permanente para este título">¶</a></h2>
+<ol class="simple">
+<li><p>Implemente uma função que determine o número total de elementos de uma matriz sem usar o método <code class="docutils literal notranslate"><span class="pre">numpy.size</span></code>.</p></li>
+<li><p>Implemente a matriz diagonal a partir do tuplo (9, 8, 7, 6, 5).</p></li>
+<li><p>Considere a seguinte matriz,</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left[\begin{array}{ccccc}
+3  &amp; 4 &amp;  5 &amp; 12 &amp; 1\\
+4  &amp; 2 &amp; -3 &amp; -2 &amp; 0\\
+7  &amp; 4 &amp;  2 &amp;  3 &amp; 5 \\
+-2 &amp; 3 &amp;  1 &amp;  3 &amp; 9
+\end{array}
+\right]
+\end{split}\]</div>
+<p>Construa uma matriz com os elementos das primeiras três linhas e as duas últimas colunas.</p>
+<ol class="simple">
+<li><p>Considere a seguinte matriz de três linhas por duas colunas.</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left[\begin{array}{cc}
+ -2 &amp; 0\\
+ 3 &amp; 5 \\
+ 3 &amp; 9
+\end{array}
+\right]
+\end{split}\]</div>
+<p>Redimensione a matriz para 2 linhas e 3 colunas.</p>
+<ol class="simple">
+<li><p>Calcule o determinante da matriz</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left[\begin{array}{cccc}
+3  &amp; 4 &amp;  5  &amp; 1\\
+4  &amp; 2 &amp; -3  &amp; 0\\
+7  &amp; 4 &amp;  2  &amp; 5 \\
+-2 &amp; 3 &amp;  1  &amp; 9
+\end{array}
+\right]
+\end{split}\]</div>
+<ol class="simple">
+<li><p>Calcule a inversa da matriz do problema anterior.</p></li>
+<li><p>Construa uma matriz com 5 linhas e 5 colunas com valores aleatórios entre -10.0 e 10.0 e que obedeça à distribuição de probabilidade uniforme.</p></li>
+<li><p>Resolva o seguinte sistema de equações</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left\{\begin{array}{ccc}
+3 z + 4 y + 5 x &amp;=&amp; 12 \\
+4 z + 2 y - 3 x &amp;=&amp; 2 \\
+7 z + 4 y + 2 x &amp;=&amp; 3 
+\end{array}
+\right.
+\end{split}\]</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          De Margarida Madeira e Moura<br/>
+        
+            &copy; direito autoral 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

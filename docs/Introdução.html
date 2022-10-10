@@ -1,0 +1,873 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introdução &#8212; Introdução à programação científica</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2022-23/docs/Introdução.html" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Tipos de dados, variáveis e funções" href="IniciarProgramar.html" />
+    <link rel="prev" title="A unidade curricular" href="Apresenta%C3%A7%C3%A3o.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à programação científica</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquise este livro ..." aria-label="Pesquise este livro ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introdução à programação científica
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preâmbulo
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Apresenta%C3%A7%C3%A3o.html">
+   A unidade curricular
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Resumos dos temas
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Introdução
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="IniciarProgramar.html">
+   Tipos de dados, variáveis e funções
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ProgPython.html">
+   Operações lógicas e controlo de execução
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Guiões práticos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Primeiros_passos.html">
+   Primeiros passos na programação em Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Submiss%C3%A3oMooshak.html">
+   Submissão ao Mooshak
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab0.html">
+   Lab0
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab1.html">
+   Lab1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab2.html">
+   Lab2
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/Introdução.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/margaridamadeira/IPC-2022-23/main?urlpath=tree/docs/docs/Introdução.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lançamento Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Conteúdo
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#porque-escolhemos-python">
+   Porque escolhemos Python?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#como-funcionam-os-computadores">
+   Como funcionam os computadores?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#que-computador-tens">
+     <em>
+      Que computador tens?
+     </em>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#o-que-e-uma-linguagem-de-programacao">
+   O que é uma linguagem de programação?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comecar-a-usar">
+     Começar a usar
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#breve-apresentacao-de-python">
+   Breve apresentação de Python
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#o-ipython-como-interpretador-de-comandos">
+     O IPython como interpretador de comandos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uso-de-bibliotecas">
+     Uso de bibliotecas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#geracao-de-graficos">
+     Geração de gráficos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#em-resumo">
+   Em resumo
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="introducao">
+<h1>Introdução<a class="headerlink" href="#introducao" title="Link permanente para este título">¶</a></h1>
+<p>Começamos com uma visão geral do enquadramento e da linguagem Python.</p>
+<p>Neste capítulo veremos:</p>
+<ol class="simple">
+<li><p>Porque escolhemos Python</p></li>
+<li><p>Como funcionam os computadores</p></li>
+<li><p>O que é uma linguagem de programação</p></li>
+<li><p>Uma breve apresentação de Python</p></li>
+</ol>
+<div class="section" id="porque-escolhemos-python">
+<h2>Porque escolhemos Python?<a class="headerlink" href="#porque-escolhemos-python" title="Link permanente para este título">¶</a></h2>
+<p>A programação é a atividade de desenvolvimento de software. Quando aplicada à área científica, essa programação incide sobre os problemas específicos da área que visa; pretende-se a aquisição de conhecimento sobre princípios e conceitos de programação e contribuir para o desenvolvimento de competências de resolução de problemas científicos, de engenharia e em particular da bioengengharia, usando computadores.</p>
+<p>A linguagem <a class="reference external" href="https://www.python.org/">Python</a>:</p>
+<ul class="simple">
+<li><p>é uma linguagem interpretada</p></li>
+<li><p>permite a utilização de diversos paradigmas de programação</p></li>
+<li><p>dispõe de múltiplos recursos (módulos e bibliotecas), livres e gratuitos.</p></li>
+</ul>
+<p>Esta escolha permite também o alinhamento com a política da União Europeia de ciência aberta (<a class="reference external" href="https://ec.europa.eu/info/research-and-innovation/strategy/strategy-2020-2024/our-digital-future/open-science_pt">Open Science</a>).
+Essa política promove também  que os dados devem poder ser encontrados, acedidos, entendidos, movidos entre sistemas e reutilizados (<a class="reference external" href="https://www.nature.com/articles/sdata201618">FAIR data</a>).</p>
+<p>É com estes princípios que vamos começar a programar em Python e fazer ciência aberta.</p>
+</div>
+<div class="section" id="como-funcionam-os-computadores">
+<h2>Como funcionam os computadores?<a class="headerlink" href="#como-funcionam-os-computadores" title="Link permanente para este título">¶</a></h2>
+<p>Um computador é um equipamento constituído por vários componentes.
+Qual é a resposta mais frequente a uma pergunta do tipo <em>Que computador tens?</em></p>
+<div class="section" id="que-computador-tens">
+<h3><em>Que computador tens?</em><a class="headerlink" href="#que-computador-tens" title="Link permanente para este título">¶</a></h3>
+<p>Tipicamente indicamos o processador, a quantidade de memória <em>RAM</em> e a
+dimensão do constituído por vários componentes.</p>
+<p>Mas há outros componentes num computador que, de tão comuns, nem nos lembramos de referir. Por exemplo, o teclado, o rato, o monitor.</p>
+<p>Na figura vemos a representação de alguns dos dispositivos que compõem um computador.</p>
+<img src="figures/sketch/computer_sk_transp.png" alt="Esquema computador" title="Diagrama simplificado de um computador" style="height: 600px;"/><p>A ideia básica é que quando o computador recebe um estímulo (pelo rato ou teclado),
+para produzir o resultado correspondente (apresentar no monitor) irá fazer processamento
+sobre esse estímulo, processamento esse que pode incluir alguns anteriores (que estão em memória ou no disco).</p>
+<p>Sugere-se a leitura da secção <a class="reference external" href="https://pt.wikipedia.org/wiki/Computador#Arquitetura_de_hardware">Arquitetura de hardware</a> na Wikipédia.</p>
+</div>
+</div>
+<div class="section" id="o-que-e-uma-linguagem-de-programacao">
+<h2>O que é uma linguagem de programação?<a class="headerlink" href="#o-que-e-uma-linguagem-de-programacao" title="Link permanente para este título">¶</a></h2>
+<p>Uma linguagem de programação é uma forma de descrever um conjunto de
+actividades que pretendemos que sejam efetuadas para atingir um
+determinado fim.</p>
+<p>O conjunto de atividades necessárias para atingir esse fim é designado <em>algoritmo</em>.</p>
+<p>Um programa ou uma aplicação é a expressão de um algoritmo usando uma linguagem de programação e consiste em instruções. Assim, para um caso, ou para um problema, temos que saber como resolver para depois podermos fazer o programa.</p>
+<p>As linguagens de programação podem ser classificadas de acordo com as funcionalidades que
+oferecem ou com a abordagem (paradigma) para a descrição da solução.</p>
+<ul class="simple">
+<li><p>No paradigma imperativo, as instruções são organizadas de forma a indicar as atividades a efetuar, essencialmente com uma estrutura que segue o ciclo de utilização do programa.</p></li>
+<li><p>No paradigma funcional, o modelo considera que temos um domínio, um contra-domínio e uma função de transformação.</p></li>
+<li><p>No paradigma orientado a objetos, a realidade com que o programa lidará é representada com objetos que têm características (atributos) e comportamentos definidos (métodos).</p></li>
+</ul>
+<p>Algumas linguagens permitem que as instruções sejam executadas assim que são fornecidas: são as linguagens interpretadas.</p>
+<p>Outras linguagens requerem que o programa completo seja preparado para execução: são as linguagens compiladas.</p>
+<div class="section" id="comecar-a-usar">
+<h3>Começar a usar<a class="headerlink" href="#comecar-a-usar" title="Link permanente para este título">¶</a></h3>
+<p>Há muitas linguagens de programação. Normalmente, para termos a certeza que tudo está a funcionar
+como desejável, faz-se um pequeno programa <em>Hello World</em>.</p>
+<blockquote>
+<div><p>Até há uma coleção desses programas <a class="reference external" href="http://helloworldcollection.de/">Hello World</a>.</p>
+</div></blockquote>
+<p>Como somos portugueses, o nosso cumprimento em Python seria</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Olá mundo&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Olá mundo
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="breve-apresentacao-de-python">
+<h2>Breve apresentação de Python<a class="headerlink" href="#breve-apresentacao-de-python" title="Link permanente para este título">¶</a></h2>
+<p>Para programar, podemos:</p>
+<ul class="simple">
+<li><p>transmitir as instruções diretamente ao Python, pela consola de comando do python</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">User</span><span class="o">&gt;</span> <span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;print(&#39;Olá mundo&#39;)&quot;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>podemos reunir as instruções num ficheiro com a extensão <span class="math notranslate nohighlight">\(.py\)</span> e indicar ao Python que deve considerar esse ficheiro</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">User</span><span class="o">&gt;</span><span class="n">echo</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ola, mundo&#39;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">ola</span><span class="o">.</span><span class="n">py</span>
+
+<span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">User</span><span class="o">&gt;</span><span class="nb">type</span> <span class="n">ola</span><span class="o">.</span><span class="n">py</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ola, mundo&#39;</span><span class="p">)</span>
+
+<span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">User</span><span class="o">&gt;</span><span class="n">python</span> <span class="n">ola</span><span class="o">.</span><span class="n">py</span>
+<span class="n">Ola</span><span class="p">,</span> <span class="n">mundo</span>
+</pre></div>
+</div>
+<ul>
+<li><p>para o desenvovimento de soluções, a utilização de um ambiente de desenvolvimento integrado (em inglês, <em>Integrated development Environment</em>, IDE) pode ser conveniente.</p>
+<p>Usaremos o Spyder. Por omissão, a janela inferior direita do Spyder é uma consola IPython, do lado esquerdo temos um editor de ficheiros e a janela superior direita permite, usando os separadores, ter acesso à ajuda em linha, ao estado das variáveis ou ao explorador de ficheiros.</p>
+</li>
+</ul>
+<ul class="simple">
+<li><p>para a apresentação e divulgação de materiais que reúnem texto formatado e blocos de código, usamos o <em>Jupyter Notebook</em> onde os ficheiros que têm a extensão <span class="math notranslate nohighlight">\(.ipynb\)</span>.</p></li>
+</ul>
+<div class="section" id="o-ipython-como-interpretador-de-comandos">
+<h3>O IPython como interpretador de comandos<a class="headerlink" href="#o-ipython-como-interpretador-de-comandos" title="Link permanente para este título">¶</a></h3>
+<p>O ambiente IPython, simples e interactivo, é extremamente conveniente para a aprendizagem da programação em Python, pois permite a elaboração de pequenos programas e sua experimentação.</p>
+<p>Na maioria dos tutoriais, a primeira proposta de utilização do Python é como <a class="reference external" href="https://docs.python.org/3/tutorial/introduction.html">calculadora</a> simples.</p>
+<p>Isto porque o Python disponibiliza à partida, para além de algumas funcionalidades básicas, várias operações numéricas que podemos utilizar:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>+ (adição)
+- (subtração)
+* (multiplicação)
+/ (divisão)
+** (exponenciação)
+// (divisão inteira)
+% (resto da divisão inteira)
+</pre></div>
+</div>
+<p>A utilização das operações de adição, subtração, multiplicação e divisão é muito simples.
+O único cuidado que temos que ter é lembrarmo-nos da prioridade das operações e usar parenteses se for caso disso.
+Vejamos alguns exemplos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span><span class="o">+</span><span class="mi">4</span><span class="o">*</span><span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">5</span><span class="o">+</span><span class="mi">4</span><span class="p">)</span><span class="o">*</span><span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>18
+</pre></div>
+</div>
+</div>
+</div>
+<p>A exponenciação é usada para calcular potências.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">**</span><span class="mi">3</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span><span class="o">**</span><span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>25
+</pre></div>
+</div>
+</div>
+</div>
+<p>A divisão inteira e resto da divisão inteira merece alguma atenção. Na divisão normal, teriamos</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span><span class="o">/</span><span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.5
+</pre></div>
+</div>
+</div>
+</div>
+<p>Na divisão inteira, o resultado é um número inteiro e poderá haver resto</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span><span class="o">//</span><span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span><span class="o">%</span><span class="k">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<p>Existem funções, disponíveis em Python, que iremos conhecendo aos poucos. Tente determinar o resultado antes de executar a célula.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="nb">abs</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="nb">min</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Para executar a célula abaixo, remova o carater “#” que indica um comentário.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># abs(-1)*max(1, 2, 3) + min(4, 5, 6)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pode consultar a documentação, embora a forma exata possa variar consoante a ferramenta que está a usar (Spyder ou Jupyter). E frequentemente, há mais de uma maneira de obter essa documentação. Por exemplo,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">?</span>abs
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>abs<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="nb">abs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on built-in function abs in module builtins:
+
+abs(x, /)
+    Return the absolute value of the argument.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="uso-de-bibliotecas">
+<h3>Uso de bibliotecas<a class="headerlink" href="#uso-de-bibliotecas" title="Link permanente para este título">¶</a></h3>
+<p>É de notar que existem numerosas e diversas bibliotecas com extensões à linguagem básica, que servem os mais diversos fins. Há bibliotecas que dão suporte a mecanismos de cálculo e visualização gráfica que poderão ser bastante úteis.</p>
+<p>Nesta unidade curricular iremos por vezes usar alguns desses mecanismos. Iniciamos com a programação em Python e avançamos depois para a utilização das bibliotecas.</p>
+<p>Um exemplo é <em>Math</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pi</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.141592653589793
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cos</span><span class="p">(</span><span class="n">pi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-1.0
+</pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<div><p><em>Sugestão</em>: Crie uma nova célula antes de importar <em>math</em> e tente obter o valor de <span class="math notranslate nohighlight">\( \pi \)</span>, ou o <span class="math notranslate nohighlight">\( cos(2\pi) \)</span>. A execução da célula vai falhar. Explique porquê.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">log</span><span class="p">(</span><span class="n">e</span><span class="o">**</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">log2</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span><span class="o">-</span><span class="n">log10</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Outro exemplo do que usaremos é <em>Matplotlib</em>.<br />
+Para ver a descrição, edite a linha abaixo e remova o comentário, isto é, apague o caracter “#”</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#matplotlib?</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>No futuro, para se trabalhar com vetores e matrizes, podemos usar <em>NumPy</em> ou outras alternativas.</p>
+<p>A instrução precedida de % é aquilo a que na terminologia do IPython se denomina <em>magic</em>, uma extensão à linguagem Python que facilita a interacção com o sistema. Introduziremos, quando necessário, outras magias do IPython. Para vermos os gráficos nesta página, fazemos</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+<p>Neste caso e para efeitos de demonstração, precisamos de algumas <em>peças</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span> <span class="n">plot</span><span class="p">,</span> <span class="n">pie</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="n">legend</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>E já temos algumas funcionalidades disponíveis, por exemplo, para gerar gráficos.</p>
+</div>
+<div class="section" id="geracao-de-graficos">
+<h3>Geração de gráficos<a class="headerlink" href="#geracao-de-graficos" title="Link permanente para este título">¶</a></h3>
+<p>A representação gráfica é uma parte importante e, felizmente, não é complicada.
+Vejamos como faríamos para representar a função <span class="math notranslate nohighlight">\(f(x) = x² \)</span> quando o conjunto de partida é <span class="math notranslate nohighlight">\( \{0, 1, 2, 3, 4, 5 \} \)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="c1"># </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># O que está afinal no eixo do x</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0 1 2 3 4 5]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Introdução_57_0.png" src="../_images/Introdução_57_0.png" />
+</div>
+</div>
+<p>E como faríamos para representar as funções seno e coseno no mesmo gráfico?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mf">0.1</span><span class="p">);</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="s1">&#39;b&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Introdução_60_0.png" src="../_images/Introdução_60_0.png" />
+</div>
+</div>
+<p>Há outros tipos de gráficos para além do <em>plot</em>, e quando chegarmos lá veremos melhor. Uma <em>espreitadela</em> rápida ao que seremos capazes de fazer.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Retire o comentário da linha abaixo para ver a documentação</span>
+<span class="c1">#pie?</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pie</span><span class="p">([</span><span class="mi">45</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="mi">45</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">frame</span><span class="o">=</span><span class="mi">0</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Introdução_63_0.png" src="../_images/Introdução_63_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span> <span class="n">plot</span> <span class="k">as</span> <span class="n">dataplot</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Retire o comentário da linha abaixo para ver a documentação</span>
+<span class="c1">#?dataplot</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataplot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Introdução_66_0.png" src="../_images/Introdução_66_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataplot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span><span class="s2">&quot;ro-&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Introdução_67_0.png" src="../_images/Introdução_67_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataplot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span><span class="s2">&quot;g*--&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Introdução_68_0.png" src="../_images/Introdução_68_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataplot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="s2">&quot;go-&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;line 1&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">dataplot</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="s2">&quot;rs&quot;</span><span class="p">,</span>  <span class="n">label</span><span class="o">=</span><span class="s2">&quot;line 2&quot;</span><span class="p">)</span>
+<span class="n">axis</span><span class="p">([</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+<span class="n">legend</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Introdução_69_0.png" src="../_images/Introdução_69_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="em-resumo">
+<h2>Em resumo<a class="headerlink" href="#em-resumo" title="Link permanente para este título">¶</a></h2>
+<ul class="simple">
+<li><p>O IPython é um ambiente de programação interactivo muito simples, apropriado à experimentação rápida de programas em Python, e portanto adequado à aprendizagem da programação</p></li>
+<li><p>Munido das extensões adequadas o ambiente IPython pode ser utilizado como poderosa ferramenta de cálculo numérico e simbólico, e de visualização gráfica, extremamente útil em aplicações científicas, matemática e engenharia</p></li>
+<li><p>A biblioteca Matplotlib fornece um ambiente de computação essencialmente equivalente ao popular sistema proprietário MATLAB, também muito usado em aplicações científicas.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Apresenta%C3%A7%C3%A3o.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">A unidade curricular</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="IniciarProgramar.html" title="próximo page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">próximo</p>
+        <p class="prev-next-title">Tipos de dados, variáveis e funções</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          De Margarida Madeira e Moura<br/>
+        
+            &copy; direito autoral 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

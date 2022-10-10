@@ -1,0 +1,1171 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introdução ao Biopython &#8212; Introdução à programação científica</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2022-23/docs/Biopython_introd.html" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à programação científica</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquise este livro ..." aria-label="Pesquise este livro ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introdução à programação científica
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preâmbulo
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Apresenta%C3%A7%C3%A3o.html">
+   A unidade curricular
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Resumos dos temas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Introdu%C3%A7%C3%A3o.html">
+   Introdução
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="IniciarProgramar.html">
+   Tipos de dados, variáveis e funções
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ProgPython.html">
+   Operações lógicas e controlo de execução
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Guiões práticos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Primeiros_passos.html">
+   Primeiros passos na programação em Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Submiss%C3%A3oMooshak.html">
+   Submissão ao Mooshak
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab0.html">
+   Lab0
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab1.html">
+   Lab1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab2.html">
+   Lab2
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/Biopython_introd.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/margaridamadeira/IPC-2022-23/main?urlpath=tree/docs/docs/Biopython_introd.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lançamento Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Conteúdo
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instalacao">
+   Instalação
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visao-panoramica">
+   Visão panorâmica
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ficheiros-fasta">
+     Ficheiros FASTA
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ficheiros-genbank">
+     Ficheiros GenBank
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#outros-recursos">
+   Outros recursos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rosalind">
+     Rosalind
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cookbook">
+     Cookbook
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="introducao-ao-biopython">
+<h1>Introdução ao Biopython<a class="headerlink" href="#introducao-ao-biopython" title="Link permanente para este título">¶</a></h1>
+<p><a class="reference external" href="https://biopython.org/">Biopython</a> facilita o trabalho em biologia computacional usando Python. Biopython disponibiliza um conjunto de ferramentas de entre as quais se destacam as funcionalidades para:</p>
+<ul class="simple">
+<li><p>manipular, em Python, de ficheiros com formatos específicos da bioinformática como BLAST, FASTA, GenBank e outros;</p></li>
+<li><p>aceder a recursos em linha como NCBI ou ExPASy;</p></li>
+<li><p>efetuar em modo gráfico algumas das operações mais frequentes;</p></li>
+</ul>
+<p>e documentação sobre o uso dos módulos, que inclui tutorial e receitas.</p>
+<div class="section" id="instalacao">
+<h2>Instalação<a class="headerlink" href="#instalacao" title="Link permanente para este título">¶</a></h2>
+<p>Usando a distribuição de Python da Anaconda, a instalação do BioPython é conseguida com o comando</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>conda install biopython
+</pre></div>
+</div>
+<p>Na imagem abaixo, podemos ver que inicialmente o Biopython não estava instalado. Tendo emitido o comando para instalar, e indicado que pretendemos prosseguir o módulo é instalado. Finalmente, quando importamos o módulo na <em>prompt</em> do python, o comando é bem sucedido.</p>
+<p>A verificação da versão instalada, consegue-se com</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">Bio</span>
+<span class="n">Bio</span><span class="o">.</span><span class="n">__version__</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;1.79&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="visao-panoramica">
+<h2>Visão panorâmica<a class="headerlink" href="#visao-panoramica" title="Link permanente para este título">¶</a></h2>
+<p>O <a class="reference external" href="http://biopython.org/DIST/docs/tutorial/Tutorial.html">tutorial</a> do Biopython ilustra as funcionalidades com alguns exemplos, que a seguir se transcrevem.</p>
+<p>Um tipo fundamental na bioinformática é a <strong>sequência</strong>. Uma sequência é uma coleção ordenada de letras, tal como surge em vários formatos de ficheiros com dados biológicos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">Bio.Seq</span> <span class="kn">import</span> <span class="n">Seq</span>
+<span class="n">my_seq</span> <span class="o">=</span> <span class="n">Seq</span><span class="p">(</span><span class="s2">&quot;AGTACACTGGT&quot;</span><span class="p">)</span>
+<span class="n">my_seq</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Seq(&#39;AGTACACTGGT&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="n">my_seq</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AGTACACTGGT
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nas sequências, de forma semelhante às strings, as operações de indexação, corte e iteração estão disponíveis.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_seq</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;T&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_second_seq</span> <span class="o">=</span> <span class="n">my_seq</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_second_seq</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AGTA
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">my_second_seq</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A G T A 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A ajuda em linha nesta bviblioteca funciona como habitualmente no IPython</span>
+<span class="c1"># my_seq?</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Experimentemos alguns exemplos</span>
+<span class="c1"># from Bio.Seq import Seq # Já tínhamos importado este módulo</span>
+<span class="n">my_seq</span> <span class="o">=</span> <span class="n">Seq</span><span class="p">(</span><span class="s2">&quot;MKQHKAMIVALIVICITAVVAALVTRKDLCEVHIRTGQTEVAVF&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_seq</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Seq(&#39;MKQHKAMIVALIVICITAVVAALVTRKDLCEVHIRTGQTEVAVF&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="n">my_seq</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MKQHKAMIVALIVICITAVVAALVTRKDLCEVHIRTGQTEVAVF
+</pre></div>
+</div>
+</div>
+</div>
+<p>A sequência inclui alguns métodos que a string não contém.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_seq_complement</span> <span class="o">=</span> <span class="n">my_seq</span><span class="o">.</span><span class="n">complement</span><span class="p">()</span>
+<span class="n">my_seq_complement</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Seq(&#39;KMQDMTKIBTLIBIGIATBBTTLBAYMHLGEBDIYACQAEBTBF&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_seq_rc</span> <span class="o">=</span> <span class="n">my_seq</span><span class="o">.</span><span class="n">reverse_complement</span><span class="p">()</span>
+<span class="n">my_seq_rc</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Seq(&#39;FBTBEAQCAYIDBEGLHMYABLTTBBTAIGIBILTBIKTMDQMK&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="ficheiros-fasta">
+<h3>Ficheiros FASTA<a class="headerlink" href="#ficheiros-fasta" title="Link permanente para este título">¶</a></h3>
+<p>Obter o ficheiro de exemplo, referido no Tutorial do Biopython.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">wget</span>
+
+<span class="k">if</span> <span class="s1">&#39;ls_orchid.fasta&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">():</span>
+    <span class="n">wget</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/biopython/biopython/master/Doc/examples/ls_orchid.fasta&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">Bio</span> <span class="kn">import</span> <span class="n">SeqIO</span>
+<span class="k">for</span> <span class="n">seq_record</span> <span class="ow">in</span> <span class="n">SeqIO</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;ls_orchid.fasta&quot;</span><span class="p">,</span> <span class="s2">&quot;fasta&quot;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">seq_record</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">seq_record</span><span class="o">.</span><span class="n">seq</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">seq_record</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gi|2765658|emb|Z78533.1|CIZ78533
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGATGAGACCGTGG...CGC&#39;)
+740
+gi|2765657|emb|Z78532.1|CCZ78532
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGACAACAG...GGC&#39;)
+753
+gi|2765656|emb|Z78531.1|CFZ78531
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGACAGCAG...TAA&#39;)
+748
+gi|2765655|emb|Z78530.1|CMZ78530
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAAACAACAT...CAT&#39;)
+744
+gi|2765654|emb|Z78529.1|CLZ78529
+Seq(&#39;ACGGCGAGCTGCCGAAGGACATTGTTGAGACAGCAGAATATACGATTGAGTGAA...AAA&#39;)
+733
+gi|2765652|emb|Z78527.1|CYZ78527
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGACAGTAG...CCC&#39;)
+718
+gi|2765651|emb|Z78526.1|CGZ78526
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGACAGTAG...TGT&#39;)
+730
+gi|2765650|emb|Z78525.1|CAZ78525
+Seq(&#39;TGTTGAGATAGCAGAATATACATCGAGTGAATCCGGAGGACCTGTGGTTATTCG...GCA&#39;)
+704
+gi|2765649|emb|Z78524.1|CFZ78524
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATAGTAG...AGC&#39;)
+740
+gi|2765648|emb|Z78523.1|CHZ78523
+Seq(&#39;CGTAACCAGGTTTCCGTAGGTGAACCTGCGGCAGGATCATTGTTGAGACAGCAG...AAG&#39;)
+709
+gi|2765647|emb|Z78522.1|CMZ78522
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGACAGCAG...GAG&#39;)
+700
+gi|2765646|emb|Z78521.1|CCZ78521
+Seq(&#39;GTAGGTGAACCTGCGGAAGGATCATTGTTGAGACAGTAGAATATATGATCGAGT...ACC&#39;)
+726
+gi|2765645|emb|Z78520.1|CSZ78520
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGACAGCAG...TTT&#39;)
+753
+gi|2765644|emb|Z78519.1|CPZ78519
+Seq(&#39;ATATGATCGAGTGAATCTGGTGGACTTGTGGTTACTCAGCTCGCCATAGGCTTT...TTA&#39;)
+699
+gi|2765643|emb|Z78518.1|CRZ78518
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGGAGGATCATTGTTGAGATAGTAG...TCC&#39;)
+658
+gi|2765642|emb|Z78517.1|CFZ78517
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGACAGTAG...AGC&#39;)
+752
+gi|2765641|emb|Z78516.1|CPZ78516
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGACAGTAT...TAA&#39;)
+726
+gi|2765640|emb|Z78515.1|MXZ78515
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGCTGAGACCGTAG...AGC&#39;)
+765
+gi|2765639|emb|Z78514.1|PSZ78514
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGGACCTTCGGGAGGATCATTTTTGAAGCCCCCA...CTA&#39;)
+755
+gi|2765638|emb|Z78513.1|PBZ78513
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGACCGCCA...GAG&#39;)
+742
+gi|2765637|emb|Z78512.1|PWZ78512
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGGACCTTCGGGAGGATCATTTTTGAAGCCCCCA...AGC&#39;)
+762
+gi|2765636|emb|Z78511.1|PEZ78511
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTTCGGAAGGATCATTGTTGAGACCCCCA...GGA&#39;)
+745
+gi|2765635|emb|Z78510.1|PCZ78510
+Seq(&#39;CTAACCAGGGTTCCGAGGTGACCTTCGGGAGGATTCCTTTTTAAGCCCCCGAAA...TTA&#39;)
+750
+gi|2765634|emb|Z78509.1|PPZ78509
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGACCGCCA...GGA&#39;)
+731
+gi|2765633|emb|Z78508.1|PLZ78508
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGACCGCCA...TGA&#39;)
+741
+gi|2765632|emb|Z78507.1|PLZ78507
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGACCCCCA...TGA&#39;)
+740
+gi|2765631|emb|Z78506.1|PLZ78506
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGACCGCAA...TGA&#39;)
+727
+gi|2765630|emb|Z78505.1|PSZ78505
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGACCGCCA...TTT&#39;)
+711
+gi|2765629|emb|Z78504.1|PKZ78504
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTTCGGAAGGATCATTGTTGAGACCGCAA...TAA&#39;)
+743
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gi|2765628|emb|Z78503.1|PCZ78503
+Seq(&#39;CGTAACCAGGTTTCCGTAGGTGAACCTCCGGAAGGATCCTTGTTGAGACCGCCA...TAA&#39;)
+727
+gi|2765627|emb|Z78502.1|PBZ78502
+Seq(&#39;CGTAACCAGGTTTCCGTAGGTGAACCTCCGGAAGGATCATTGTTGAGACCGCCA...CGC&#39;)
+757
+gi|2765626|emb|Z78501.1|PCZ78501
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGACCGCAA...AGA&#39;)
+770
+gi|2765625|emb|Z78500.1|PWZ78500
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGCTCATTGTTGAGACCGCAA...AAG&#39;)
+767
+gi|2765624|emb|Z78499.1|PMZ78499
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAGGGATCATTGTTGAGATCGCAT...ACC&#39;)
+759
+gi|2765623|emb|Z78498.1|PMZ78498
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAAGGTCATTGTTGAGATCACAT...AGC&#39;)
+750
+gi|2765622|emb|Z78497.1|PDZ78497
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...AGC&#39;)
+788
+gi|2765621|emb|Z78496.1|PAZ78496
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCGCAT...AGC&#39;)
+774
+gi|2765620|emb|Z78495.1|PEZ78495
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTCCGGAAGGATCATTGTTGAGATCACAT...GTG&#39;)
+789
+gi|2765619|emb|Z78494.1|PNZ78494
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGGTCGCAT...AAG&#39;)
+688
+gi|2765618|emb|Z78493.1|PGZ78493
+Seq(&#39;CGTAACAAGGATTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCGCAT...CCC&#39;)
+719
+gi|2765617|emb|Z78492.1|PBZ78492
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCGCAT...ATA&#39;)
+743
+gi|2765616|emb|Z78491.1|PCZ78491
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCGCAT...AGC&#39;)
+737
+gi|2765615|emb|Z78490.1|PFZ78490
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...TGA&#39;)
+728
+gi|2765614|emb|Z78489.1|PDZ78489
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...GGC&#39;)
+740
+gi|2765613|emb|Z78488.1|PTZ78488
+Seq(&#39;CTGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACGCAATAATTGATCGA...GCT&#39;)
+696
+gi|2765612|emb|Z78487.1|PHZ78487
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...TAA&#39;)
+732
+gi|2765611|emb|Z78486.1|PBZ78486
+Seq(&#39;CGTCACGAGGTTTCCGTAGGTGAATCTGCGGGAGGATCATTGTTGAGATCACAT...TGA&#39;)
+731
+gi|2765610|emb|Z78485.1|PHZ78485
+Seq(&#39;CTGAACCTGGTGTCCGAAGGTGAATCTGCGGATGGATCATTGTTGAGATATCAT...GTA&#39;)
+735
+gi|2765609|emb|Z78484.1|PCZ78484
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGGGGAAGGATCATTGTTGAGATCACAT...TTT&#39;)
+720
+gi|2765608|emb|Z78483.1|PVZ78483
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...GCA&#39;)
+740
+gi|2765607|emb|Z78482.1|PEZ78482
+Seq(&#39;TCTACTGCAGTGACCGAGATTTGCCATCGAGCCTCCTGGGAGCTTTCTTGCTGG...GCA&#39;)
+629
+gi|2765606|emb|Z78481.1|PIZ78481
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...TGA&#39;)
+572
+gi|2765605|emb|Z78480.1|PGZ78480
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...TGA&#39;)
+587
+gi|2765604|emb|Z78479.1|PPZ78479
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...AGT&#39;)
+700
+gi|2765603|emb|Z78478.1|PVZ78478
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTCCGGAAGGATCAGTGTTGAGATCACAT...GGC&#39;)
+636
+gi|2765602|emb|Z78477.1|PVZ78477
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...TGC&#39;)
+716
+gi|2765601|emb|Z78476.1|PGZ78476
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...CCC&#39;)
+592
+gi|2765600|emb|Z78475.1|PSZ78475
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...GGT&#39;)
+716
+gi|2765599|emb|Z78474.1|PKZ78474
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACGT...CTT&#39;)
+733
+gi|2765598|emb|Z78473.1|PSZ78473
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...AGG&#39;)
+626
+gi|2765597|emb|Z78472.1|PLZ78472
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...AGC&#39;)
+737
+gi|2765596|emb|Z78471.1|PDZ78471
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...AGC&#39;)
+740
+gi|2765595|emb|Z78470.1|PPZ78470
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...GTT&#39;)
+574
+gi|2765594|emb|Z78469.1|PHZ78469
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...GTT&#39;)
+594
+gi|2765593|emb|Z78468.1|PAZ78468
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCGCAT...GTT&#39;)
+610
+gi|2765592|emb|Z78467.1|PSZ78467
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...TGA&#39;)
+730
+gi|2765591|emb|Z78466.1|PPZ78466
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...CCC&#39;)
+641
+gi|2765590|emb|Z78465.1|PRZ78465
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...TGC&#39;)
+702
+gi|2765589|emb|Z78464.1|PGZ78464
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAGCGGAAGGGTCATTGTTGAGATCACATAATA...AGC&#39;)
+733
+gi|2765588|emb|Z78463.1|PGZ78463
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGTTCATTGTTGAGATCACAT...AGC&#39;)
+738
+gi|2765587|emb|Z78462.1|PSZ78462
+Seq(&#39;CGTCACGAGGTCTCCGGATGTGACCCTGCGGAAGGATCATTGTTGAGATCACAT...CAT&#39;)
+736
+gi|2765586|emb|Z78461.1|PWZ78461
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTCCGGAAGGATCATTGTTGAGATCACAT...TAA&#39;)
+732
+gi|2765585|emb|Z78460.1|PCZ78460
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTCCGGAAGGATCATTGTTGAGATCACAT...TTA&#39;)
+745
+gi|2765584|emb|Z78459.1|PDZ78459
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...TTT&#39;)
+744
+gi|2765583|emb|Z78458.1|PHZ78458
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...TTG&#39;)
+738
+gi|2765582|emb|Z78457.1|PCZ78457
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTCCGGAAGGATCATTGTTGAGATCACAT...GAG&#39;)
+739
+gi|2765581|emb|Z78456.1|PTZ78456
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...AGC&#39;)
+740
+gi|2765580|emb|Z78455.1|PJZ78455
+Seq(&#39;CGTAACCAGGTTTCCGTAGGTGGACCTTCGGGAGGATCATTTTTGAGATCACAT...GCA&#39;)
+745
+gi|2765579|emb|Z78454.1|PFZ78454
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...AAC&#39;)
+695
+gi|2765578|emb|Z78453.1|PSZ78453
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...GCA&#39;)
+745
+gi|2765577|emb|Z78452.1|PBZ78452
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...GCA&#39;)
+743
+gi|2765576|emb|Z78451.1|PHZ78451
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGTACCTCCGGAAGGATCATTGTTGAGATCACAT...AGC&#39;)
+730
+gi|2765575|emb|Z78450.1|PPZ78450
+Seq(&#39;GGAAGGATCATTGCTGATATCACATAATAATTGATCGAGTTAAGCTGGAGGATC...GAG&#39;)
+706
+gi|2765574|emb|Z78449.1|PMZ78449
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...TGC&#39;)
+744
+gi|2765573|emb|Z78448.1|PAZ78448
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...AGG&#39;)
+742
+gi|2765572|emb|Z78447.1|PVZ78447
+Seq(&#39;CGTAACAAGGATTCCGTAGGTGAACCTGCGGGAGGATCATTGTTGAGATCACAT...AGC&#39;)
+694
+gi|2765571|emb|Z78446.1|PAZ78446
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTCCGGAAGGATCATTGTTGAGATCACAT...CCC&#39;)
+712
+gi|2765570|emb|Z78445.1|PUZ78445
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...TGT&#39;)
+715
+gi|2765569|emb|Z78444.1|PAZ78444
+Seq(&#39;CGTAACAAGGTTTCCGTAGGGTGAACTGCGGAAGGATCATTGTTGAGATCACAT...ATT&#39;)
+688
+gi|2765568|emb|Z78443.1|PLZ78443
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...AGG&#39;)
+784
+gi|2765567|emb|Z78442.1|PBZ78442
+Seq(&#39;GTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACATAATAATTGATCGAGT...AGT&#39;)
+721
+gi|2765566|emb|Z78441.1|PSZ78441
+Seq(&#39;GGAAGGTCATTGCCGATATCACATAATAATTGATCGAGTTAATCTGGAGGATCT...GAG&#39;)
+703
+gi|2765565|emb|Z78440.1|PPZ78440
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGGACCTCCGGGAGGATCATTGTTGAGATCACAT...GCA&#39;)
+744
+gi|2765564|emb|Z78439.1|PBZ78439
+Seq(&#39;CATTGTTGAGATCACATAATAATTGATCGAGTTAATCTGGAGGATCTGTTTACT...GCC&#39;)
+592
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ficheiros-genbank">
+<h3>Ficheiros GenBank<a class="headerlink" href="#ficheiros-genbank" title="Link permanente para este título">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="s1">&#39;ls_orchid.gbk&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">():</span>
+    <span class="n">wget</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/biopython/biopython/master/Doc/examples/ls_orchid.gbk&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">Bio</span> <span class="kn">import</span> <span class="n">SeqIO</span>
+
+<span class="k">for</span> <span class="n">seq_record</span> <span class="ow">in</span> <span class="n">SeqIO</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;ls_orchid.gbk&quot;</span><span class="p">,</span> <span class="s2">&quot;genbank&quot;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">seq_record</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">seq_record</span><span class="o">.</span><span class="n">seq</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">seq_record</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Z78533.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGATGAGACCGTGG...CGC&#39;)
+740
+Z78532.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGACAACAG...GGC&#39;)
+753
+Z78531.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGACAGCAG...TAA&#39;)
+748
+Z78530.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAAACAACAT...CAT&#39;)
+744
+Z78529.1
+Seq(&#39;ACGGCGAGCTGCCGAAGGACATTGTTGAGACAGCAGAATATACGATTGAGTGAA...AAA&#39;)
+733
+Z78527.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGACAGTAG...CCC&#39;)
+718
+Z78526.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGACAGTAG...TGT&#39;)
+730
+Z78525.1
+Seq(&#39;TGTTGAGATAGCAGAATATACATCGAGTGAATCCGGAGGACCTGTGGTTATTCG...GCA&#39;)
+704
+Z78524.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATAGTAG...AGC&#39;)
+740
+Z78523.1
+Seq(&#39;CGTAACCAGGTTTCCGTAGGTGAACCTGCGGCAGGATCATTGTTGAGACAGCAG...AAG&#39;)
+709
+Z78522.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGACAGCAG...GAG&#39;)
+700
+Z78521.1
+Seq(&#39;GTAGGTGAACCTGCGGAAGGATCATTGTTGAGACAGTAGAATATATGATCGAGT...ACC&#39;)
+726
+Z78520.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGACAGCAG...TTT&#39;)
+753
+Z78519.1
+Seq(&#39;ATATGATCGAGTGAATCTGGTGGACTTGTGGTTACTCAGCTCGCCATAGGCTTT...TTA&#39;)
+699
+Z78518.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGGAGGATCATTGTTGAGATAGTAG...TCC&#39;)
+658
+Z78517.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGACAGTAG...AGC&#39;)
+752
+Z78516.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGACAGTAT...TAA&#39;)
+726
+Z78515.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGCTGAGACCGTAG...AGC&#39;)
+765
+Z78514.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGGACCTTCGGGAGGATCATTTTTGAAGCCCCCA...CTA&#39;)
+755
+Z78513.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGACCGCCA...GAG&#39;)
+742
+Z78512.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGGACCTTCGGGAGGATCATTTTTGAAGCCCCCA...AGC&#39;)
+762
+Z78511.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTTCGGAAGGATCATTGTTGAGACCCCCA...GGA&#39;)
+745
+Z78510.1
+Seq(&#39;CTAACCAGGGTTCCGAGGTGACCTTCGGGAGGATTCCTTTTTAAGCCCCCGAAA...TTA&#39;)
+750
+Z78509.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGACCGCCA...GGA&#39;)
+731
+Z78508.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGACCGCCA...TGA&#39;)
+741
+Z78507.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGACCCCCA...TGA&#39;)
+740
+Z78506.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGACCGCAA...TGA&#39;)
+727
+Z78505.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGACCGCCA...TTT&#39;)
+711
+Z78504.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTTCGGAAGGATCATTGTTGAGACCGCAA...TAA&#39;)
+743
+Z78503.1
+Seq(&#39;CGTAACCAGGTTTCCGTAGGTGAACCTCCGGAAGGATCCTTGTTGAGACCGCCA...TAA&#39;)
+727
+Z78502.1
+Seq(&#39;CGTAACCAGGTTTCCGTAGGTGAACCTCCGGAAGGATCATTGTTGAGACCGCCA...CGC&#39;)
+757
+Z78501.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGACCGCAA...AGA&#39;)
+770
+Z78500.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGCTCATTGTTGAGACCGCAA...AAG&#39;)
+767
+Z78499.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAGGGATCATTGTTGAGATCGCAT...ACC&#39;)
+759
+Z78498.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAAGGTCATTGTTGAGATCACAT...AGC&#39;)
+750
+Z78497.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...AGC&#39;)
+788
+Z78496.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCGCAT...AGC&#39;)
+774
+Z78495.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTCCGGAAGGATCATTGTTGAGATCACAT...GTG&#39;)
+789
+Z78494.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGGTCGCAT...AAG&#39;)
+688
+Z78493.1
+Seq(&#39;CGTAACAAGGATTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCGCAT...CCC&#39;)
+719
+Z78492.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCGCAT...ATA&#39;)
+743
+Z78491.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCGCAT...AGC&#39;)
+737
+Z78490.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...TGA&#39;)
+728
+Z78489.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...GGC&#39;)
+740
+Z78488.1
+Seq(&#39;CTGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACGCAATAATTGATCGA...GCT&#39;)
+696
+Z78487.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...TAA&#39;)
+732
+Z78486.1
+Seq(&#39;CGTCACGAGGTTTCCGTAGGTGAATCTGCGGGAGGATCATTGTTGAGATCACAT...TGA&#39;)
+731
+Z78485.1
+Seq(&#39;CTGAACCTGGTGTCCGAAGGTGAATCTGCGGATGGATCATTGTTGAGATATCAT...GTA&#39;)
+735
+Z78484.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGGGGAAGGATCATTGTTGAGATCACAT...TTT&#39;)
+720
+Z78483.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...GCA&#39;)
+740
+Z78482.1
+Seq(&#39;TCTACTGCAGTGACCGAGATTTGCCATCGAGCCTCCTGGGAGCTTTCTTGCTGG...GCA&#39;)
+629
+Z78481.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...TGA&#39;)
+572
+Z78480.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...TGA&#39;)
+587
+Z78479.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...AGT&#39;)
+700
+Z78478.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTCCGGAAGGATCAGTGTTGAGATCACAT...GGC&#39;)
+636
+Z78477.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...TGC&#39;)
+716
+Z78476.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...CCC&#39;)
+592
+Z78475.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...GGT&#39;)
+716
+Z78474.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACGT...CTT&#39;)
+733
+Z78473.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...AGG&#39;)
+626
+Z78472.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...AGC&#39;)
+737
+Z78471.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...AGC&#39;)
+740
+Z78470.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...GTT&#39;)
+574
+Z78469.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...GTT&#39;)
+594
+Z78468.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCGCAT...GTT&#39;)
+610
+Z78467.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...TGA&#39;)
+730
+Z78466.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...CCC&#39;)
+641
+Z78465.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...TGC&#39;)
+702
+Z78464.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAGCGGAAGGGTCATTGTTGAGATCACATAATA...AGC&#39;)
+733
+Z78463.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGTTCATTGTTGAGATCACAT...AGC&#39;)
+738
+Z78462.1
+Seq(&#39;CGTCACGAGGTCTCCGGATGTGACCCTGCGGAAGGATCATTGTTGAGATCACAT...CAT&#39;)
+736
+Z78461.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTCCGGAAGGATCATTGTTGAGATCACAT...TAA&#39;)
+732
+Z78460.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTCCGGAAGGATCATTGTTGAGATCACAT...TTA&#39;)
+745
+Z78459.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...TTT&#39;)
+744
+Z78458.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...TTG&#39;)
+738
+Z78457.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTCCGGAAGGATCATTGTTGAGATCACAT...GAG&#39;)
+739
+Z78456.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...AGC&#39;)
+740
+Z78455.1
+Seq(&#39;CGTAACCAGGTTTCCGTAGGTGGACCTTCGGGAGGATCATTTTTGAGATCACAT...GCA&#39;)
+745
+Z78454.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...AAC&#39;)
+695
+Z78453.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...GCA&#39;)
+745
+Z78452.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...GCA&#39;)
+743
+Z78451.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGTACCTCCGGAAGGATCATTGTTGAGATCACAT...AGC&#39;)
+730
+Z78450.1
+Seq(&#39;GGAAGGATCATTGCTGATATCACATAATAATTGATCGAGTTAAGCTGGAGGATC...GAG&#39;)
+706
+Z78449.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...TGC&#39;)
+744
+Z78448.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...AGG&#39;)
+742
+Z78447.1
+Seq(&#39;CGTAACAAGGATTCCGTAGGTGAACCTGCGGGAGGATCATTGTTGAGATCACAT...AGC&#39;)
+694
+Z78446.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTCCGGAAGGATCATTGTTGAGATCACAT...CCC&#39;)
+712
+Z78445.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...TGT&#39;)
+715
+Z78444.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGGTGAACTGCGGAAGGATCATTGTTGAGATCACAT...ATT&#39;)
+688
+Z78443.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACAT...AGG&#39;)
+784
+Z78442.1
+Seq(&#39;GTAGGTGAACCTGCGGAAGGATCATTGTTGAGATCACATAATAATTGATCGAGT...AGT&#39;)
+721
+Z78441.1
+Seq(&#39;GGAAGGTCATTGCCGATATCACATAATAATTGATCGAGTTAATCTGGAGGATCT...GAG&#39;)
+703
+Z78440.1
+Seq(&#39;CGTAACAAGGTTTCCGTAGGTGGACCTCCGGGAGGATCATTGTTGAGATCACAT...GCA&#39;)
+744
+Z78439.1
+Seq(&#39;CATTGTTGAGATCACATAATAATTGATCGAGTTAATCTGGAGGATCTGTTTACT...GCC&#39;)
+592
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="outros-recursos">
+<h2>Outros recursos<a class="headerlink" href="#outros-recursos" title="Link permanente para este título">¶</a></h2>
+<div class="section" id="rosalind">
+<h3>Rosalind<a class="headerlink" href="#rosalind" title="Link permanente para este título">¶</a></h3>
+<p><a class="reference external" href="http://rosalind.info/about/">Rosalind</a> é uma plataforma disponível em linha para a aprendizagem de bioinformática pela resolução de problemas.</p>
+<p>Na seção <a class="reference external" href="http://rosalind.info/problems/list-view/?location=bioinformatics-armory">Bioinformatics Armory</a> privilegia-se a resolução de problemas usando ferramentas já disponíveis. O primeiro problema ilustra a utilização de Biopython no separador <em>Programming Shortcut</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">Bio.Seq</span> <span class="kn">import</span> <span class="n">Seq</span>
+<span class="n">my_seq</span> <span class="o">=</span> <span class="n">Seq</span><span class="p">(</span><span class="s2">&quot;AGTACACTGGT&quot;</span><span class="p">)</span>
+<span class="n">my_seq</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<p>Sugere-se a resolução desses exercícios.</p>
+</div>
+<div class="section" id="cookbook">
+<h3>Cookbook<a class="headerlink" href="#cookbook" title="Link permanente para este título">¶</a></h3>
+<p>Em <a class="reference external" href="https://biopython.org/wiki/Category%3ACookbook">Cookbook Entries</a> estão disponíveis vários exemplos que facilitam a familiarização com este módulo.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          De Margarida Madeira e Moura<br/>
+        
+            &copy; direito autoral 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

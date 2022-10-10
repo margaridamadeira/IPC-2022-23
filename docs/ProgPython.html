@@ -1,0 +1,839 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operações lógicas e controlo de execução &#8212; Introdução à programação científica</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2022-23/docs/ProgPython.html" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Primeiros passos na programação em Python" href="Primeiros_passos.html" />
+    <link rel="prev" title="Tipos de dados, variáveis e funções" href="IniciarProgramar.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à programação científica</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquise este livro ..." aria-label="Pesquise este livro ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introdução à programação científica
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preâmbulo
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Apresenta%C3%A7%C3%A3o.html">
+   A unidade curricular
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Resumos dos temas
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Introdu%C3%A7%C3%A3o.html">
+   Introdução
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="IniciarProgramar.html">
+   Tipos de dados, variáveis e funções
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Operações lógicas e controlo de execução
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Guiões práticos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Primeiros_passos.html">
+   Primeiros passos na programação em Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Submiss%C3%A3oMooshak.html">
+   Submissão ao Mooshak
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab0.html">
+   Lab0
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab1.html">
+   Lab1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab2.html">
+   Lab2
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/ProgPython.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/margaridamadeira/IPC-2022-23/main?urlpath=tree/docs/docs/ProgPython.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lançamento Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Conteúdo
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introducao">
+   Introdução
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objetivos-de-aprendizagem">
+   Objetivos de aprendizagem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operacoes-com-resultado-logico">
+   Operações com resultado lógico
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comparacao">
+     Comparação
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores-logicos">
+     Operadores lógicos
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#recordar-os-operadores-logicos">
+       Recordar os operadores lógicos
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#not-negacao">
+         not (Negação)
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#and-e-logico">
+         and (e lógico)
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#or-ou-logico">
+         or ( ou lógico)
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interrogacoes-e-ciclo-while">
+   Interrogações e ciclo
+   <em>
+    while
+   </em>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemplos">
+     Exemplos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resumo">
+   Resumo
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="operacoes-logicas-e-controlo-de-execucao">
+<h1>Operações lógicas e controlo de execução<a class="headerlink" href="#operacoes-logicas-e-controlo-de-execucao" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="introducao">
+<h2>Introdução<a class="headerlink" href="#introducao" title="Link permanente para este título">¶</a></h2>
+<p>Para criar uma solução informática temos que saber resolvê-lo e programar essa forma de resolução.
+A abordagem que adotamos para resolvermos um problema é designada algoritmo. O programa é a tradução desse algoritmo numa linguagem de programação.</p>
+<p>O que deve ser feito nas diferentes etapas do problema pode variar conforme a situação. É pois importante que sejamos capazes de definir se algo deve ser feito, ou enquanto algo deve ser feito.</p>
+</div>
+<div class="section" id="objetivos-de-aprendizagem">
+<h2>Objetivos de aprendizagem<a class="headerlink" href="#objetivos-de-aprendizagem" title="Link permanente para este título">¶</a></h2>
+<p>Nesta lição exploramos o desenvolvimento de soluções. Depois desta lição deveremos ser capazes de</p>
+<ol class="simple">
+<li><p>Construir expressões lógicas com tipos de dados nativos simples</p></li>
+<li><p>Construir instruções de controlo de fluxo usando <em>if</em> e <em>while</em></p></li>
+</ol>
+</div>
+<div class="section" id="operacoes-com-resultado-logico">
+<h2>Operações com resultado lógico<a class="headerlink" href="#operacoes-com-resultado-logico" title="Link permanente para este título">¶</a></h2>
+<p>Um dos tipos de dados nativos do Python é o tipo lógico (<em>bool</em>).
+Um valor lógico pode ser <strong>False</strong> ou <strong>True</strong> e é o resultado de uma comparação ou da avaliação de uma expressão lógica.</p>
+<div class="section" id="comparacao">
+<h3>Comparação<a class="headerlink" href="#comparacao" title="Link permanente para este título">¶</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Operador</p></th>
+<th class="head"><p>Avalia</p></th>
+<th class="head"><p>Exemplo</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>==</p></td>
+<td><p>igual</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">==</span> <span class="pre">b</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>!=</p></td>
+<td><p>diferente</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">!=</span> <span class="pre">b</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>&lt;</p></td>
+<td><p>menor</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;</span> <span class="pre">b</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;=</p></td>
+<td><p>menor ou igual</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;=</span> <span class="pre">b</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>&gt;</p></td>
+<td><p>maior</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&gt;</span> <span class="pre">b</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>&gt;=</p></td>
+<td><p>maior ou igual</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&gt;=</span> <span class="pre">b</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Experimente: altere os valores de a, b, e o operador usado</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">a</span> <span class="o">==</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="operadores-logicos">
+<h3>Operadores lógicos<a class="headerlink" href="#operadores-logicos" title="Link permanente para este título">¶</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Operador</p></th>
+<th class="head"><p>Operação</p></th>
+<th class="head"><p>Exemplo</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>not()</p></td>
+<td><p>Negação</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">not(a)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>and</p></td>
+<td><p>e lógico</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">and</span> <span class="pre">b</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>or</p></td>
+<td><p>ou lógico</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">or</span> <span class="pre">b</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="recordar-os-operadores-logicos">
+<h4>Recordar os operadores lógicos<a class="headerlink" href="#recordar-os-operadores-logicos" title="Link permanente para este título">¶</a></h4>
+<div class="section" id="not-negacao">
+<h5>not (Negação)<a class="headerlink" href="#not-negacao" title="Link permanente para este título">¶</a></h5>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>A</p></th>
+<th class="head"><p>not A</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>True</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>False</p></td>
+<td><p>True</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="and-e-logico">
+<h5>and (e lógico)<a class="headerlink" href="#and-e-logico" title="Link permanente para este título">¶</a></h5>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>A</p></th>
+<th class="head"><p>B</p></th>
+<th class="head"><p>A and B</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>False</p></td>
+<td><p>True</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>True</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>True</p></td>
+<td><p>True</p></td>
+<td><p>True</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="or-ou-logico">
+<h5>or ( ou lógico)<a class="headerlink" href="#or-ou-logico" title="Link permanente para este título">¶</a></h5>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>A</p></th>
+<th class="head"><p>B</p></th>
+<th class="head"><p>A or B</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>False</p></td>
+<td><p>False</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>False</p></td>
+<td><p>True</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-even"><td><p>True</p></td>
+<td><p>False</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-odd"><td><p>True</p></td>
+<td><p>True</p></td>
+<td><p>True</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Experimente: faça variar os valores de a, b e o operador usado</span>
+<span class="n">a</span> <span class="o">=</span> <span class="kc">True</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">a</span><span class="p">;</span> <span class="n">a</span> <span class="ow">and</span> <span class="n">b</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="interrogacoes-e-ciclo-while">
+<h2>Interrogações e ciclo <em>while</em><a class="headerlink" href="#interrogacoes-e-ciclo-while" title="Link permanente para este título">¶</a></h2>
+<p>As ações a desempenhar na resolução de um problema podem depender das circunstâncias.</p>
+<p>Para controlarmos o que deve ou não ser feito (controlo de execução) procedemos à avaliação das circunstâncias pela interrogação de estados significativos e decidimos se é de prosseguir ou repetir.</p>
+<p>Vejamos então, duas formas de controlar o fluxo de execução.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- if
+    Se &lt;algo se verifica&gt; &lt;faça-se&gt;
+    Se &lt;acabou o filme&gt; &lt;acender luzes&gt;
+    
+- while
+    Enquanto &lt;algo se verifica&gt; &lt;faça-se&gt;
+    Enquanto &lt;o filme decorre&gt; &lt;luzes apagadas&gt;
+</pre></div>
+</div>
+<div class="section" id="exemplos">
+<h3>Exemplos<a class="headerlink" href="#exemplos" title="Link permanente para este título">¶</a></h3>
+<p>Queremos apresentar uma mensagem a indicar se um número é maior, igual, ou menor que zero.</p>
+<p>Vamos esboçar a solução e melhorando progressivamente.</p>
+<p>A variável <em>num</em> representará o nosso número neste caso.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para começar, queremos a mensagem para indicar se o número é maior que zero</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+    <span class="c1"># a identação é importante</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> é maior que zero&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4 é maior que zero
+</pre></div>
+</div>
+</div>
+</div>
+<p>Agora que isso está, acrescentamos outro caso. E para testar esse caso, mudamos o valor de <em>num</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> é maior que zero&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> não é maior que zero&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2 não é maior que zero
+</pre></div>
+</div>
+</div>
+</div>
+<p>Mas não ser maior que zero, não é suficiente.</p>
+<p>Agora precisávamos de outro teste para saber se é zero, ou menor que zero.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="mi">0</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> é maior que zero&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
+<span class="k">elif</span> <span class="p">(</span><span class="n">num</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> é igual a zero&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> é menor que zero&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 é igual a zero
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vejamos outro exemplo: queremos saber se um número é par.</p>
+<p>Ora um número par é divisível por 2, ou seja, o resto da divisão por dois é zero.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="mi">6</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">num</span><span class="o">%</span><span class="k">2</span>) == 0:
+    <span class="c1"># a indentação é importante</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="s1">&#39;é par&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6 é par
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">num</span><span class="o">%</span><span class="k">2</span>) == 0:
+   <span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="s1">&#39;é par&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+   <span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="s1">&#39;não é par&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5 não é par
+</pre></div>
+</div>
+</div>
+</div>
+<p>Por vezes, queremos tratar toda uma gama de elementos, mas não sabemos quantos são.
+Sabemos, isso sim, em que condições queremos fazer esse «tratamento».</p>
+<p>Por exemplo, queremos apresentar os elementos <span class="math notranslate nohighlight">\(a\)</span> do intervalo <span class="math notranslate nohighlight">\( [0, 5[ \)</span> sabendo que <span class="math notranslate nohighlight">\(a \in N\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># condição inicial</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">):</span> <span class="c1"># condição de &#39;validade&#39;</span>
+    <span class="c1"># a indentação é importante</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">a</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># O passo, como varia entre repetições</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+3
+4
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se quisessemos os valores de <span class="math notranslate nohighlight">\([0, 3]\)</span> por ordem decrescente, podíamos fazer</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1"># condição inicial</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">):</span> 
+    <span class="nb">print</span> <span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">a</span> <span class="o">-=</span> <span class="mi">1</span> <span class="c1"># O passo</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+2
+1
+0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Criando expressões com estes operadores e conseguindo moldar o nosso programa às circunstâncias, já conseguimos fazer muitas coisas.</p>
+<p>Vejamos agora o cálculo do fatorial de um número.</p>
+<p>Queremos calcular o fatorial de um número usando a expressão <span class="math notranslate nohighlight">\(n! = n * (n-1)!\)</span>, para  <span class="math notranslate nohighlight">\(n &gt; 1\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fatorial_r</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Calculo do fatorial de um número.</span>
+<span class="sd">    n! = n * (n-1)! para n &gt; 1</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">resultado</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># Elemento neutro da multiplicação </span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">resultado</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="n">fatorial_r</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">resultado</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">fatorial_r</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>120
+</pre></div>
+</div>
+</div>
+</div>
+<p>Queremos agora calcular o fatorial de um número usando a expressão <span class="math notranslate nohighlight">\(n! = n * (n-1) * ... * 2\)</span>, para  <span class="math notranslate nohighlight">\(n &gt; 0\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fatorial_i</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Calculo do fatorial de um número.</span>
+<span class="sd">    n! = n * (n-1) * ... * 2</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">resultado</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># Elemento neutro da multiplicação </span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">n</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">resultado</span> <span class="o">*=</span> <span class="n">n</span> 
+        <span class="n">n</span> <span class="o">-=</span> <span class="mi">1</span>        
+    
+    <span class="k">return</span> <span class="n">resultado</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">fatorial_i</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>120
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="resumo">
+<h2>Resumo<a class="headerlink" href="#resumo" title="Link permanente para este título">¶</a></h2>
+<p>Para criarmos uma solução há que decidir o que fazer ou não fazer e quando.</p>
+<p>Aprendemos como podemos construir expressões que têm um resultado do tipo lógico (<em>bool</em>) usando comparações ou operações lógicas. Usamos essas expressões para representar condições ou estados.</p>
+<p>Aprendemos a regular o que deve ser feito ou não e quando, usando interrogações (<code class="docutils literal notranslate"><span class="pre">if</span></code>) e ciclos condicionais (<code class="docutils literal notranslate"><span class="pre">while</span></code>). Já somos capazes de resolver problemas que requerem a avaliação de estados como condição para executar determinadas operações.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="IniciarProgramar.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Tipos de dados, variáveis e funções</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Primeiros_passos.html" title="próximo page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">próximo</p>
+        <p class="prev-next-title">Primeiros passos na programação em Python</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          De Margarida Madeira e Moura<br/>
+        
+            &copy; direito autoral 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

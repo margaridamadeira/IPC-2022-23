@@ -1,0 +1,716 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipos de dados, variáveis e funções &#8212; Introdução à programação científica</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2022-23/docs/IniciarProgramar.html" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Operações lógicas e controlo de execução" href="ProgPython.html" />
+    <link rel="prev" title="Introdução" href="Introdu%C3%A7%C3%A3o.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à programação científica</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquise este livro ..." aria-label="Pesquise este livro ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introdução à programação científica
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preâmbulo
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Apresenta%C3%A7%C3%A3o.html">
+   A unidade curricular
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Resumos dos temas
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Introdu%C3%A7%C3%A3o.html">
+   Introdução
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Tipos de dados, variáveis e funções
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ProgPython.html">
+   Operações lógicas e controlo de execução
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Guiões práticos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Primeiros_passos.html">
+   Primeiros passos na programação em Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Submiss%C3%A3oMooshak.html">
+   Submissão ao Mooshak
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab0.html">
+   Lab0
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab1.html">
+   Lab1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab2.html">
+   Lab2
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/IniciarProgramar.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/margaridamadeira/IPC-2022-23/main?urlpath=tree/docs/docs/IniciarProgramar.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lançamento Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Conteúdo
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objetivos-de-aprendizagem">
+   Objetivos de aprendizagem
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tipos-de-dados-nativos-simples">
+     Tipos de dados nativos simples
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tipos-de-dados-numericos">
+       Tipos de dados númericos
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tipos-de-dados-alfanumericos">
+       Tipos de dados alfanuméricos
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tipo-logico">
+       Tipo lógico
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tipo-nonetype">
+       Tipo
+       <em>
+        NoneType
+       </em>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#criar-e-usar-variaveis">
+     Criar e usar variáveis
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#usar-e-definir-funcoes">
+     Usar e definir funções
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#em-resumo">
+   Em resumo
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="tipos-de-dados-variaveis-e-funcoes">
+<h1>Tipos de dados, variáveis e funções<a class="headerlink" href="#tipos-de-dados-variaveis-e-funcoes" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="objetivos-de-aprendizagem">
+<h2>Objetivos de aprendizagem<a class="headerlink" href="#objetivos-de-aprendizagem" title="Link permanente para este título">¶</a></h2>
+<p>Nesta lição:</p>
+<ol class="simple">
+<li><p>conhecemos os diferentes tipos de dados nativos simples (numéricos, alfanumérico, lógico e <em>None</em>)</p></li>
+<li><p>saberemos criar e usar variáveis</p></li>
+<li><p>saberemos usar e definir funções</p></li>
+</ol>
+<div class="section" id="tipos-de-dados-nativos-simples">
+<h3>Tipos de dados nativos simples<a class="headerlink" href="#tipos-de-dados-nativos-simples" title="Link permanente para este título">¶</a></h3>
+<p>Para resolvermos o nosso problema e criarmos uma solução, temos que ser capazes de representar a realidade.
+A linguagem Python considera de raiz (nativamente) tipos de dados, uns simples outros nem tanto. Começemos pelos tipos de dados simples.</p>
+<div class="section" id="tipos-de-dados-numericos">
+<h4>Tipos de dados númericos<a class="headerlink" href="#tipos-de-dados-numericos" title="Link permanente para este título">¶</a></h4>
+<p>Na semana passada tivemos a oportunidade de experimentar o uso do Python como calculadora e começar a trabalhar com números. Os tipos de dados numéricos incluem os números inteiros (<em>int</em>), os números reais (<em>float</em>, ou seja, com vírgula flutuante) e os números complexos (<em>complex</em>).</p>
+<p>Já conhecemos, da Matemática, os números inteiros (<span class="math notranslate nohighlight">\(Z\)</span>) e os números reais (<span class="math notranslate nohighlight">\(R\)</span>). Pode ser que conheçam
+Por exemplo,</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\( 2 \in N\)</span></p>
+</div></blockquote>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\( 2.0 \notin N\)</span></p>
+</div></blockquote>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\( 2.0 \in R\)</span></p>
+</div></blockquote>
+<p>Há uma forma de determinarmos qual o tipo de dados, usando a função nativa do Python <em>type</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>int
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>float
+</pre></div>
+</div>
+</div>
+</div>
+<p>Os números complexos são representados em Python usando a forma algébrica, usando-se “j” ou “J” na parte imaginária.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span><span class="n">j</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>complex
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="tipos-de-dados-alfanumericos">
+<h4>Tipos de dados alfanuméricos<a class="headerlink" href="#tipos-de-dados-alfanumericos" title="Link permanente para este título">¶</a></h4>
+<p>Se podemos representar números, também podemos representar caracteres. Os caracteres incluem letras e também algarismos, o caracter &lt;espaço&gt; e sinais de pontuação. O que recebemos do teclado é uma sequência de caracteres.</p>
+<p>O Python inclui um tipo para cadeias de caracteres, o tipo <em>str</em>  (em inglês <em>string</em>), usado para sequências imutáveis de dados textuais.</p>
+<p>Palavras e frases são do tipo <em>str</em>. É necessário delimitar a cadeia de caracteres, usando aspas, para que se saiba onde começa e acaba. As aspas podem ser simples (“) ou duplas («).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="s1">&#39;Nome&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>str
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>str
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="s2">&quot;2.0&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>str
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="tipo-logico">
+<h4>Tipo lógico<a class="headerlink" href="#tipo-logico" title="Link permanente para este título">¶</a></h4>
+<p>Este tipo, <em>bool</em>, inclui as constantes <em>True</em> e <em>False</em>. Há um conjunto de operações, entre as quais conjunção, disjunção e negação, que usamos muito na programação.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bool
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bool
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="tipo-nonetype">
+<h4>Tipo <em>NoneType</em><a class="headerlink" href="#tipo-nonetype" title="Link permanente para este título">¶</a></h4>
+<p>E para terminar, há que referir o tipo <em>NoneType</em>. O único valor deste tipo é a constante <em>None</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NoneType
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="criar-e-usar-variaveis">
+<h3>Criar e usar variáveis<a class="headerlink" href="#criar-e-usar-variaveis" title="Link permanente para este título">¶</a></h3>
+<p>As constantes, como <em>True</em>, <em>False</em> ou <em>None</em>, nunca mudam. São <em>constantes</em>.</p>
+<p>Já as variáveis, são como caixas, onde colocamos conteúdo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">distancia_em_polegadas</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">centimetros_por_polegada</span> <span class="o">=</span> <span class="mf">2.54</span>
+<span class="n">ponto</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span><span class="n">j</span>
+<span class="n">nome</span> <span class="o">=</span> <span class="s1">&#39;Maria&#39;</span>
+<span class="n">resposta</span> <span class="o">=</span> <span class="s1">&#39;A Maria escolheu 5&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>É muito útil pois assim conseguimos fazer programas que se podem aplicar em mais de um caso.
+Para usar, preferimos o nome ao conteúdo. Por exemplo,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># distância em centímetros</span>
+<span class="n">distancia_em_polegadas</span> <span class="o">*</span> <span class="n">centimetros_por_polegada</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>76.2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">distancia_em_polegadas</span> <span class="o">=</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># distância em centímetros</span>
+<span class="n">distancia_em_polegadas</span> <span class="o">*</span> <span class="n">centimetros_por_polegada</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>25.4
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="usar-e-definir-funcoes">
+<h3>Usar e definir funções<a class="headerlink" href="#usar-e-definir-funcoes" title="Link permanente para este título">¶</a></h3>
+<p>A linguagem Python considera de raiz algumas funções, e permite-nos criar funções novas.
+No nosso primeiro programa, vimos a função <em>print</em>, e usámo-la para apresentar uma cadeia de carateres.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Olá mundo&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Olá mundo
+</pre></div>
+</div>
+</div>
+</div>
+<p>Usamos funções para reunir um conjunto de ações que vão considerar o que está dentro de parênteses.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="n">distancia_em_polegadas</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se a função <em>print</em> apresenta o que está entre parênteses (argumento ou argumentos), podemos usar a função <em>print</em> para apresentar algo mais.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Distância (in):&#39;</span><span class="p">,</span> <span class="n">distancia_em_polegadas</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Distância (cm):&#39;</span><span class="p">,</span> <span class="n">distancia_em_polegadas</span> <span class="o">*</span> <span class="n">centimetros_por_polegada</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Distância (in): 10
+Distância (cm): 25.4
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se quisermos agilizar o processo, podemos criar uma função que recebe a distância em polegadas e a apresenta em centímetros.</p>
+<p>A ideia seria poder fazer</p>
+<blockquote>
+<div><p>print (“Distância (in):”, distancia_em_polegadas)</p>
+</div></blockquote>
+<blockquote>
+<div><p>resultado = converte_polegada_para_centimetro(distancia_em_polegadas)</p>
+</div></blockquote>
+<blockquote>
+<div><p>print(“Distância (cm):”, resultado)</p>
+</div></blockquote>
+<p>ou mesmo</p>
+<blockquote>
+<div><p>print (“Distância (in):”, distancia_em_polegadas)</p>
+</div></blockquote>
+<blockquote>
+<div><p>print(“Distância (cm):”, converte_polegada_para_centimetro(distancia_em_polegadas))</p>
+</div></blockquote>
+<p>Em qualquer dos casos, queremos uma função com o nome <em>converte_polegada_para_centimento</em> que recebe a distância em polegadas e devolve a distância em centímetros.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">converte_polegada_para_centimetro</span><span class="p">(</span><span class="n">dist_polegadas</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Função que converte uma distância de polegadas para centímetros.&quot;&quot;&quot;</span>
+
+    <span class="n">centimetros_por_polegada</span> <span class="o">=</span> <span class="mf">2.54</span>
+    <span class="n">resultado</span> <span class="o">=</span> <span class="n">dist_polegadas</span> <span class="o">*</span> <span class="n">centimetros_por_polegada</span>
+    <span class="k">return</span> <span class="n">resultado</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note que as instruções dentro da função estão alinhadas a quatro espaços (ou um <code class="docutils literal notranslate"><span class="pre">&lt;tab&gt;</span></code>).
+O alinhamento é <em>muito</em> importante em Python, pois indica um bloco de código.</p>
+<p>Testemos então.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Distância (in):&#39;</span><span class="p">,</span> <span class="n">distancia_em_polegadas</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Distância (cm):&#39;</span><span class="p">,</span> <span class="n">converte_polegada_para_centimetro</span><span class="p">(</span><span class="n">distancia_em_polegadas</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Distância (in): 10
+Distância (cm): 25.4
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ou</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="n">distancia_em_polegadas</span><span class="p">,</span> <span class="s1">&#39;(in) corresponde a&#39;</span><span class="p">,</span> <span class="n">converte_polegada_para_centimetro</span><span class="p">(</span><span class="n">distancia_em_polegadas</span><span class="p">),</span> <span class="s1">&#39;(cm)&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10 (in) corresponde a 25.4 (cm)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Agora é muito mais simples usar.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">distancia_em_polegadas</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">distancia_em_polegadas</span><span class="p">,</span> <span class="s1">&#39;(in) corresponde a&#39;</span><span class="p">,</span> <span class="n">converte_polegada_para_centimetro</span><span class="p">(</span><span class="n">distancia_em_polegadas</span><span class="p">),</span> <span class="s1">&#39;(cm)&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15 (in) corresponde a 38.1 (cm)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="em-resumo">
+<h2>Em resumo<a class="headerlink" href="#em-resumo" title="Link permanente para este título">¶</a></h2>
+<p>A linguagem Python considera diferentes tipos de dados. De entre os tipos de dados simples, vimos exemplos de dados numéricos, alfanuméricos, lógicos e do tipo TypeNone. Para saber qual é o tipo, podemos usar a função <em>type</em>.</p>
+<p>As variáveis são identificadas por um nome (identificador) e são criadas de forma dinâmica quando lhes atribuímos conteúdo. Depois de criada uma variável, em vez de referirmos o conteúdo, referimos o nome.</p>
+<p>Para usar uma função, indicamos dentro dos parênteses o valor ou variável que a função deve considerar. Para criarmos uma função, usamos <code class="docutils literal notranslate"><span class="pre">def</span> </code> seguido do nome que queremos dar à função e indicando dentro de parênteses o identificador do argumento. Entre as três aspas duplas colocamos a informação de ajuda. As instruções que fazem parte da função devem estar alinhadas a quatro espaços (ou um <code class="docutils literal notranslate"><span class="pre">&lt;tab&gt;</span></code>), pelo menos. Usamos o return para indicar o valor ou variável que a função calculou.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Introdu%C3%A7%C3%A3o.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Introdução</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="ProgPython.html" title="próximo page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">próximo</p>
+        <p class="prev-next-title">Operações lógicas e controlo de execução</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          De Margarida Madeira e Moura<br/>
+        
+            &copy; direito autoral 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

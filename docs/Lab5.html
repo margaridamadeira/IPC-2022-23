@@ -1,0 +1,620 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab5 &#8212; Introdução à programação científica</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2022-23/docs/Lab5.html" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à programação científica</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquise este livro ..." aria-label="Pesquise este livro ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introdução à programação científica
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preâmbulo
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Apresenta%C3%A7%C3%A3o.html">
+   A unidade curricular
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Resumos dos temas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Introdu%C3%A7%C3%A3o.html">
+   Introdução
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="IniciarProgramar.html">
+   Tipos de dados, variáveis e funções
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ProgPython.html">
+   Operações lógicas e controlo de execução
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Guiões práticos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Primeiros_passos.html">
+   Primeiros passos na programação em Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Submiss%C3%A3oMooshak.html">
+   Submissão ao Mooshak
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab0.html">
+   Lab0
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab1.html">
+   Lab1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab2.html">
+   Lab2
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/Lab5.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Conteúdo
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objetivos-de-aprendizagem">
+   Objetivos de aprendizagem
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tarefa-a">
+     Tarefa A
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#casos-de-teste">
+       Casos de teste
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tarefa-b">
+     Tarefa B
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Casos de teste
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tarefa-c">
+     Tarefa C
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Casos de teste
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tarefa-d">
+     Tarefa D
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Casos de teste
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="lab5">
+<h1>Lab5<a class="headerlink" href="#lab5" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="objetivos-de-aprendizagem">
+<h2>Objetivos de aprendizagem<a class="headerlink" href="#objetivos-de-aprendizagem" title="Link permanente para este título">¶</a></h2>
+<p>Com este guião, exercitaremos:</p>
+<ol class="simple">
+<li><p>a leitura da consola, vários valores por linha e até ao fim dos dados</p></li>
+<li><p>escrita formatada</p></li>
+<li><p>a utilização de listas</p></li>
+</ol>
+<div class="section" id="tarefa-a">
+<h3>Tarefa A<a class="headerlink" href="#tarefa-a" title="Link permanente para este título">¶</a></h3>
+<p>Pretende-se a ordenação crescente de sequências de números. Não sabemos quantas sequências temos nem quantos elementos por sequência. Para cada linha lida, ordenamos os elementos e apresentamos a sequência ordenada.</p>
+<p>Vamos então preparar um programa que receba da consola, até ao fim dos dados, linhas com sequências de inteiros e, para cada linha, apresente a sequência por ordem crescente, com cada elemento separado por um espaço.</p>
+<p>Porque queremos um programa «completo», começamos pelas linhas que indicam ao Python que deve começar pela função de teste, ou seja</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">test_ordem_crescente</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Em seguida, sabemos que precisaremos da função de  <em>test_ordem_crescente</em>, responsável pela leitura, da função <em>ordem_crescente</em> e de uma função para apresentação dos resultados, seja <em>mostra_sequência_separada_por_espaços</em>.
+Mantemos as funções vazias (<em>pass</em> para indicar que não há nada a fazer).</p>
+<p>O esboço do nosso programa fica assim:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="sd">&quot;&quot;&quot;Resolução guiada</span>
+<span class="sd">L4 - A</span>
+<span class="sd">Programa que recebe da consola, até ao fim dos dados, </span>
+<span class="sd">linhas com sequências de inteiros e, </span>
+<span class="sd">para cada linha, apresenta a sequência por ordem crescente, </span>
+<span class="sd">com cada elemento separado por um espaço.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<span class="k">def</span> <span class="nf">ordem_crescente</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Ordena uma sequência de números inteiros&quot;&quot;&quot;</span>
+    <span class="k">pass</span>
+
+<span class="k">def</span> <span class="nf">mostra_sequência_separada_por_espaços</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Apresenta os números inteiros separados por espaço&quot;&quot;&quot;</span>
+    <span class="k">pass</span>
+
+<span class="k">def</span> <span class="nf">test_ordem_crescente</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Lê várias linhas e, para cada linha lida, manda ordenar e mostrar.&quot;&quot;&quot;</span>
+    <span class="k">pass</span>  
+
+<span class="n">test_ordem_crescente</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Usamos a abordagem apresentada para a <a class="reference internal" href="ProgPython3.html#leitura"><span class="std std-ref">Leitura da consola</span></a>.
+Começamos por passar cada linha para uma lista e, para verificar, usamos uma primeira versão da função <em>mostra_sequência_separada_por_espaços</em>, que apresenta a lista ainda não formatada.</p>
+<p>Usamos também algo que nos ajuda quando as funções começam a ser muitas: identificamos os tipos de dados, para que fique claro como estamos a organizar as atividades do programa. E depois a ajuda em linha também apresenta essa informação. Isto é opcional e apenas indicativo, o Python não vai verificar se os argumentos usados na chamada da função são ou não do tipo sugerido.</p>
+<p>O nosso programa ficaria então assim:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="sd">&quot;&quot;&quot;Resolução guiada</span>
+<span class="sd">L4 - A</span>
+<span class="sd">Programa que recebe da consola, até ao fim dos dados, </span>
+<span class="sd">linhas com sequências de inteiros e, </span>
+<span class="sd">para cada linha, apresenta a sequência por ordem crescente, </span>
+<span class="sd">com cada elemento separado por um espaço.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="k">def</span> <span class="nf">ordem_crescente</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Ordena uma sequência de números inteiros&quot;&quot;&quot;</span>
+    <span class="k">pass</span>
+
+<span class="k">def</span> <span class="nf">mostra_sequência_separada_por_espaços</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Função que apresenta uma lista, cada elemento separado por espaço.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">test_ordem_crescente</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Lê várias linhas e, para cada linha lida, manda ordenar e mostrar.&quot;&quot;&quot;</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">linha</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+        <span class="k">except</span> <span class="p">(</span><span class="ne">EOFError</span><span class="p">,</span> <span class="ne">KeyboardInterrupt</span><span class="p">):</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">linha</span><span class="p">:</span>
+            <span class="n">mostra_sequência_separada_por_espaços</span><span class="p">(</span><span class="n">linha</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+    
+
+<span class="n">test_ordem_crescente</span><span class="p">()</span>
+
+</pre></div>
+</div>
+<p>Com o nosso código num ficheiro chamado <em>ordenar_lista.py</em>, experimentamos.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">ordenar_lista</span><span class="o">.</span><span class="n">py</span> 
+<span class="mi">1</span> <span class="mi">4</span> <span class="mi">7</span> <span class="mi">3</span> <span class="mi">6</span> <span class="mi">2</span>
+<span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="s1">&#39;7&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="s1">&#39;6&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>O resultado ainda não é exatamente o que pretendíamos.</p>
+<p>Em primeiro lugar, a lista devia ser de inteiros. Há que converter! Podemos conseguir isso alterando o bloco do <em>try</em> para</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>            <span class="n">linha</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+            <span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">linha</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>e, claro, revendo as utilizações da lista <em>linha</em>.</p>
+<p>Em segundo lugar, era pedido que entre cada dois elementos existisse um espaço.
+Aliás, deve haver um espaço entre cada dois elementos, mas não pode haver um espaço antes do primeiro elemento nem um espaço depois do último.</p>
+<p>A nossa função <em>mostra_sequência_separada_por_espaços</em> poderia ficar assim, criando a string de saída e depois apresentando-a.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mostra_sequência_separada_por_espaços</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Função que apresenta uma lista, cada elemento separado por espaços.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">resultado</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span> 
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">resultado</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">resultado</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">resultado</span> <span class="o">=</span> <span class="n">resultado</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">resultado</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Experimentemos outra vez. Deveremos ver o que introduzimos.</p>
+<p>Ora o que falta agora é a ordenação da lista. O Python tem essa função mas há que ter cuidado pois essa função altera a lista original. Complete agora a função <em>ordem_crescente</em> para a ordenação crescente dos elementos inteiros de uma lista, inclua a chamada na função <em>test_ordem_crescente</em> e teste.</p>
+<div class="section" id="casos-de-teste">
+<h4>Casos de teste<a class="headerlink" href="#casos-de-teste" title="Link permanente para este título">¶</a></h4>
+<p><strong>Input 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="mi">9</span> <span class="mi">1</span> <span class="mi">8</span> <span class="mi">6</span>
+
+</pre></div>
+</div>
+<p><strong>Output 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">6</span> <span class="mi">8</span> <span class="mi">9</span>
+</pre></div>
+</div>
+<p><strong>Input 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="mi">4</span> <span class="mi">7</span> <span class="mi">3</span> <span class="mi">6</span> <span class="mi">2</span>
+<span class="mi">34</span> <span class="mi">27</span> <span class="mi">39</span> <span class="mi">6</span> <span class="mi">2</span> <span class="mi">100</span>
+<span class="mi">5</span> <span class="o">-</span><span class="mi">5</span> <span class="mi">10</span> <span class="o">-</span><span class="mi">10</span> <span class="o">-</span><span class="mi">50</span> <span class="mi">250</span>
+
+
+</pre></div>
+</div>
+<p><strong>Output 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">6</span> <span class="mi">7</span>
+<span class="mi">2</span> <span class="mi">6</span> <span class="mi">27</span> <span class="mi">34</span> <span class="mi">39</span> <span class="mi">100</span>
+<span class="o">-</span><span class="mi">50</span> <span class="o">-</span><span class="mi">10</span> <span class="o">-</span><span class="mi">5</span> <span class="mi">5</span> <span class="mi">10</span> <span class="mi">250</span>
+</pre></div>
+</div>
+<p>Submeta no problema A do concurso Lab4.</p>
+</div>
+</div>
+<div class="section" id="tarefa-b">
+<h3>Tarefa B<a class="headerlink" href="#tarefa-b" title="Link permanente para este título">¶</a></h3>
+<p>Fizemos uma série de experiências e a duração foi cronometrada de forma automática, em segundos. Queremos saber a duração de cada experiência em horas, minutos e segundos.</p>
+<p>Prepare um programa em Python que leia uma sequência de números, um por linha e, para cada número lido, apresente esse valor no formato HH:MM:SS.</p>
+<div class="section" id="id1">
+<h4>Casos de teste<a class="headerlink" href="#id1" title="Link permanente para este título">¶</a></h4>
+<p><strong>Input 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">7505</span>
+</pre></div>
+</div>
+<p><strong>Output 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">02</span><span class="p">:</span><span class="mi">05</span><span class="p">:</span><span class="mi">05</span>
+</pre></div>
+</div>
+<p><strong>Input 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">44135</span>
+</pre></div>
+</div>
+<p><strong>Output 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">12</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="mi">35</span>
+</pre></div>
+</div>
+<p><strong>Input 3</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">7505</span>
+<span class="mi">44135</span>
+</pre></div>
+</div>
+<p><strong>Output 3</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">02</span><span class="p">:</span><span class="mi">05</span><span class="p">:</span><span class="mi">05</span>
+<span class="mi">12</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="mi">35</span>
+</pre></div>
+</div>
+<p>Submeta no problema B do Lab4.</p>
+</div>
+</div>
+<div class="section" id="tarefa-c">
+<h3>Tarefa C<a class="headerlink" href="#tarefa-c" title="Link permanente para este título">¶</a></h3>
+<p>Atualizamos os equipamentos e agora os tempos das experiências são apresentados em horas, minutos e segundos. Queremos saber o tempo total gasto nas experiências, em dias, horas, minutos e segundos.</p>
+<p>Podíamos converter os tempos para segundos e depois de termos um total, converter então para o formato desejado. Mas a nossa conversão não considerava a possibilidade de traduzir valores de horas superiores a 24 em dias e horas. Assim, vamos lendo a duração das experiências e atualizando o tempo total.</p>
+<p>Prepare um programa que leia os tempos da consola, um por linha, até ao fim dos dados e apresente, para cada linha lida, o tempo acumulado em dias, horas, minutos e segundos. Cada linha contém uma string com o formato <em>HH:MM:SS</em> em que <em>HH</em> correponde às horas, <em>MM</em> corresponde aos minutos e <em>SS</em> aos segundos. O tempo total, que deve ser apresentado num única linha, deverá respeitar o formato «DD:HH:MM:SS» (sem as aspas), em que <em>DD</em>, <em>HH</em>, <em>MM</em> e <em>SS</em> correspondem ao valores de dias, horas, minutos e segundos, respetivamente. Note que deve usar dois dígitos para cada valor.</p>
+<div class="section" id="id2">
+<h4>Casos de teste<a class="headerlink" href="#id2" title="Link permanente para este título">¶</a></h4>
+<p><strong>Input 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">02</span><span class="p">:</span><span class="mi">05</span><span class="p">:</span><span class="mi">05</span>
+</pre></div>
+</div>
+<p><strong>Output 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">00</span><span class="p">:</span><span class="mi">02</span><span class="p">:</span><span class="mi">05</span><span class="p">:</span><span class="mi">05</span>
+</pre></div>
+</div>
+<p><strong>Input 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">02</span><span class="p">:</span><span class="mi">05</span><span class="p">:</span><span class="mi">05</span>
+<span class="mi">12</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="mi">35</span>
+<span class="mi">24</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span>
+<span class="mi">12</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">20</span>
+</pre></div>
+</div>
+<p><strong>Output 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">00</span><span class="p">:</span><span class="mi">02</span><span class="p">:</span><span class="mi">05</span><span class="p">:</span><span class="mi">05</span>
+<span class="mi">00</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="mi">20</span><span class="p">:</span><span class="mi">40</span>
+<span class="mi">01</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="mi">20</span><span class="p">:</span><span class="mi">40</span>
+<span class="mi">02</span><span class="p">:</span><span class="mi">03</span><span class="p">:</span><span class="mi">06</span><span class="p">:</span><span class="mi">00</span>
+</pre></div>
+</div>
+<p>Submeta no problema C do Lab4.</p>
+</div>
+</div>
+<div class="section" id="tarefa-d">
+<h3>Tarefa D<a class="headerlink" href="#tarefa-d" title="Link permanente para este título">¶</a></h3>
+<p>Estamos a registar o trabalho e verificámos que muitas vezes há erros na introdução das datas. É preciso então validar as datas introduzidas.</p>
+<p>Usamos o <a class="reference external" href="https://pt.wikipedia.org/wiki/ISO_8601">formato padrão</a>, <em>YYYY-MM-DD</em> em que <em>YYYY</em> representa o ano, <em>MM</em> representa o mês e <em>DD</em> o dia. Para simplificar, vamos considerar o <a class="reference external" href="https://pt.wikipedia.org/wiki/Ano_bissexto">calendário gregoriano</a>, ou seja, que temos datas a partir de 1582.</p>
+<p>Relembremos agora as regras para as datas. Os meses são 12, isso é simples. Os dias variam, como sabemos do ditado popular: «Trinta dias tem novembro, abril, junho e setembro, vinte e oito terá um e os mais têm trinta e um». Fevereiro terá 28 dias, ou, num ano bissexto, 29. Um ano bissexto é divisível por quatro mas, se for um ano secular só será bissexto se for divisível por 400. E um ano secular é um ano divisível por 100.</p>
+<p>Prepare um programa que leia as datas da consola, uma por linha, até ao fim dos dados. Por cada linha lida, o seu programa deve repetir a data lida, indicando se é válida ou não. Cada linha do input conterá <em>YYYY-MM-DD</em> em que <em>YYYY</em>, <em>MM</em> e <em>DD</em> são inteiros maiores que zero e representam ano, mês e dia, respetivamente.
+Cada linha do output repetirá o input acrescentando » -&gt; Válida» (sem as aspas) ou » -&gt; Inválida» (sem as aspas), se a data for válida ou não, respetivamente.</p>
+<div class="section" id="id3">
+<h4>Casos de teste<a class="headerlink" href="#id3" title="Link permanente para este título">¶</a></h4>
+<p><strong>Input 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2020</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">31</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">45</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">30</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">31</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">45</span>
+<span class="mi">2019</span><span class="o">-</span><span class="mi">02</span><span class="o">-</span><span class="mi">28</span>
+<span class="mi">2019</span><span class="o">-</span><span class="mi">02</span><span class="o">-</span><span class="mi">29</span>
+<span class="mi">1600</span><span class="o">-</span><span class="mi">02</span><span class="o">-</span><span class="mi">29</span>
+<span class="mi">1700</span><span class="o">-</span><span class="mi">02</span><span class="o">-</span><span class="mi">29</span>
+<span class="mi">1800</span><span class="o">-</span><span class="mi">02</span><span class="o">-</span><span class="mi">29</span>
+<span class="mi">1900</span><span class="o">-</span><span class="mi">02</span><span class="o">-</span><span class="mi">29</span>
+<span class="mi">2000</span><span class="o">-</span><span class="mi">02</span><span class="o">-</span><span class="mi">29</span>
+<span class="mi">2019</span><span class="o">-</span><span class="mi">02</span><span class="o">-</span><span class="mi">29</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">02</span><span class="o">-</span><span class="mi">29</span>
+<span class="mi">2020</span><span class="o">-</span><span class="mi">02</span><span class="o">-</span><span class="mi">30</span>
+</pre></div>
+</div>
+<p><strong>Output 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2020</span><span class="p">:</span><span class="mi">03</span><span class="p">:</span><span class="mi">31</span> <span class="o">-&gt;</span> <span class="n">Válida</span>
+<span class="mi">2020</span><span class="p">:</span><span class="mi">03</span><span class="p">:</span><span class="mi">45</span> <span class="o">-&gt;</span> <span class="n">Inválida</span>
+<span class="mi">2020</span><span class="p">:</span><span class="mi">04</span><span class="p">:</span><span class="mi">30</span> <span class="o">-&gt;</span> <span class="n">Válida</span>
+<span class="mi">2020</span><span class="p">:</span><span class="mi">04</span><span class="p">:</span><span class="mi">31</span> <span class="o">-&gt;</span> <span class="n">Inválida</span>
+<span class="mi">2020</span><span class="p">:</span><span class="mi">04</span><span class="p">:</span><span class="mi">45</span> <span class="o">-&gt;</span> <span class="n">Inválida</span>
+<span class="mi">2019</span><span class="p">:</span><span class="mi">02</span><span class="p">:</span><span class="mi">28</span> <span class="o">-&gt;</span> <span class="n">Válida</span>
+<span class="mi">2019</span><span class="p">:</span><span class="mi">02</span><span class="p">:</span><span class="mi">29</span> <span class="o">-&gt;</span> <span class="n">Inválida</span>
+<span class="mi">1600</span><span class="p">:</span><span class="mi">02</span><span class="p">:</span><span class="mi">29</span> <span class="o">-&gt;</span> <span class="n">Válida</span>
+<span class="mi">1700</span><span class="p">:</span><span class="mi">02</span><span class="p">:</span><span class="mi">29</span> <span class="o">-&gt;</span> <span class="n">Inválida</span>
+<span class="mi">1800</span><span class="p">:</span><span class="mi">02</span><span class="p">:</span><span class="mi">29</span> <span class="o">-&gt;</span> <span class="n">Inválida</span>
+<span class="mi">1900</span><span class="p">:</span><span class="mi">02</span><span class="p">:</span><span class="mi">29</span> <span class="o">-&gt;</span> <span class="n">Inválida</span>
+<span class="mi">2000</span><span class="p">:</span><span class="mi">02</span><span class="p">:</span><span class="mi">29</span> <span class="o">-&gt;</span> <span class="n">Válida</span>
+<span class="mi">2019</span><span class="p">:</span><span class="mi">02</span><span class="p">:</span><span class="mi">29</span> <span class="o">-&gt;</span> <span class="n">Inválida</span>
+<span class="mi">2020</span><span class="p">:</span><span class="mi">02</span><span class="p">:</span><span class="mi">29</span> <span class="o">-&gt;</span> <span class="n">Válida</span>
+<span class="mi">2020</span><span class="p">:</span><span class="mi">02</span><span class="p">:</span><span class="mi">30</span> <span class="o">-&gt;</span> <span class="n">Inválida</span>
+</pre></div>
+</div>
+<p>Submeta no problema D do Lab4.</p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          De Margarida Madeira e Moura<br/>
+        
+            &copy; direito autoral 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

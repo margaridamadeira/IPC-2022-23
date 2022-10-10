@@ -1,0 +1,846 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Criação de soluções &#8212; Introdução à programação científica</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2022-23/docs/MódulosTestes.html" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à programação científica</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquise este livro ..." aria-label="Pesquise este livro ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introdução à programação científica
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preâmbulo
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Apresenta%C3%A7%C3%A3o.html">
+   A unidade curricular
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Resumos dos temas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Introdu%C3%A7%C3%A3o.html">
+   Introdução
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="IniciarProgramar.html">
+   Tipos de dados, variáveis e funções
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ProgPython.html">
+   Operações lógicas e controlo de execução
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Guiões práticos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Primeiros_passos.html">
+   Primeiros passos na programação em Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Submiss%C3%A3oMooshak.html">
+   Submissão ao Mooshak
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab0.html">
+   Lab0
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab1.html">
+   Lab1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab2.html">
+   Lab2
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/MódulosTestes.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/margaridamadeira/IPC-2022-23/main?urlpath=tree/docs/docs/MódulosTestes.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lançamento Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Conteúdo
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objetivos-de-aprendizagem">
+   Objetivos de aprendizagem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#criacao-de-uma-solucao-computacional">
+   Criação de uma solução computacional
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#algoritmo">
+     Algoritmo
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#carateristicas-desejaveis-de-um-algoritmo">
+       Caraterísticas desejáveis de um algoritmo
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#como-descrever-solucoes">
+   Como descrever soluções
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemplo-de-pseudo-codigo">
+     Exemplo de pseudo-código
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#simbolos-mais-comuns-num-fluxograma">
+     Símbolos mais comuns num fluxograma
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemplo-de-fluxograma">
+     Exemplo de fluxograma
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercicios-propostos">
+     Exercícios propostos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#codificacao-testes-e-documentacao">
+   Codificação, testes e documentação
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemplo-paridade">
+     Exemplo: paridade
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Exemplo de pseudo-código
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#codificacao-e-documentacao">
+     Codificação e documentação
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#alguns-pontos-curiosos">
+   Alguns pontos curiosos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#efeitos-colaterais">
+     Efeitos colaterais
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#outros-cuidados-a-ter">
+     Outros cuidados a ter
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercicio-proposto">
+   Exercício proposto
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="criacao-de-solucoes">
+<h1>Criação de soluções<a class="headerlink" href="#criacao-de-solucoes" title="Link permanente para este título">¶</a></h1>
+<p>Hoje vamos ver algumas técnicas para criar soluções mais robustas, aproveitando para consolidar o que já vimos de programação.</p>
+<div class="section" id="objetivos-de-aprendizagem">
+<h2>Objetivos de aprendizagem<a class="headerlink" href="#objetivos-de-aprendizagem" title="Link permanente para este título">¶</a></h2>
+<p>Vamos ver algumas técnicas usadas no processo de criação de soluções computacionais, nomeadamente:</p>
+<ul class="simple">
+<li><p>Etapas para a criação de uma solução</p></li>
+<li><p>Fluxogramas</p></li>
+<li><p>Pseudo-código</p></li>
+<li><p>documentação</p></li>
+<li><p>asserções</p></li>
+</ul>
+</div>
+<div class="section" id="criacao-de-uma-solucao-computacional">
+<h2>Criação de uma solução computacional<a class="headerlink" href="#criacao-de-uma-solucao-computacional" title="Link permanente para este título">¶</a></h2>
+<div class="figure align-default" id="passos">
+<a class="reference internal image-reference" href="../_images/passos.png"><img alt="../_images/passos.png" src="../_images/passos.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Passos para uma solução computacional</span><a class="headerlink" href="#passos" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>Identificar o problema</p></li>
+<li><p>Análise do problema</p></li>
+<li><p>Formulação de um <em>algoritmo</em> para resolver o problema</p></li>
+<li><p>Descrição do <em>algoritmo</em> de forma simples, eventualmente escrevendo o programa</p></li>
+<li><p>Execução ou validação</p></li>
+<li><p>Solução</p></li>
+</ol>
+<p>A qualidade de uma solução computacional (6) está pois associada à escolha do algoritmo (3).</p>
+<div class="section" id="algoritmo">
+<h3>Algoritmo<a class="headerlink" href="#algoritmo" title="Link permanente para este título">¶</a></h3>
+<div class="math notranslate nohighlight">
+\[ Algoritmo + Linguagem\ Programação = Programa \]</div>
+<p>Um algoritmo é uma sequência precisa de operações ou atividades que resolvem um problema num tempo finito.</p>
+<p>Um programa (ou <em>script</em>) é a expressão de um algoritmo usando uma linguagem de programação.</p>
+<p>Juntando tudo isto, na resolução de problemas, tradicionalmente identificavam-se as fases:</p>
+<div class="figure align-default" id="etapas1">
+<a class="reference internal image-reference" href="../_images/etapas_1.jpg"><img alt="../_images/etapas_1.jpg" src="../_images/etapas_1.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Análise e desenho</span><a class="headerlink" href="#etapas1" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>Fase de <strong>Análise</strong>: decidir o que temos que fazer.</p></li>
+<li><p>Fase de <strong>Desenho</strong> (conceção de uma solução): decidir como se fará, é o desenvolvimento do <em>algoritmo</em>.</p>
+<ul>
+<li><p>Uma abordagem popular é <em>TOP-DOWN</em>, onde um problema complexo se resolve dividindo o problema em subproblemas, e assim sucesivamente até que a resolução de um problema seja de fácil solução.</p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="carateristicas-desejaveis-de-um-algoritmo">
+<h4>Caraterísticas desejáveis de um algoritmo<a class="headerlink" href="#carateristicas-desejaveis-de-um-algoritmo" title="Link permanente para este título">¶</a></h4>
+<ul class="simple">
+<li><p>Terminar <em>sempre</em></p></li>
+<li><p>Concreto e sem ambiguidade</p></li>
+<li><p>Simples e, se tiver várias etapas, com ordem de aplicação definida</p></li>
+<li><p>Funcionar <em>sempre</em>, independentemente dos dados de entrada (eficaz)</p></li>
+<li><p>Factível</p></li>
+<li><p>Independente da linguagem de programação e plataforma de implementação</p></li>
+</ul>
+<div class="figure align-default" id="etapas2">
+<a class="reference internal image-reference" href="../_images/etapas_2.jpg"><img alt="../_images/etapas_2.jpg" src="../_images/etapas_2.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Codificação, testes e documentação</span><a class="headerlink" href="#etapas2" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>Fase de <strong>Codificação</strong>: a implementação do algoritmo numa linguagem de programação adequada.</p></li>
+<li><p>Fase de <strong>Testes</strong>: não basta terminar o programa; há que garantir que o programa não falha e funciona para todos os casos possíveis.</p></li>
+<li><p>Fase de <strong>Documentação</strong>: produzir a documentação do programa, facilitando a reutilização futura bem como eventuais alterações.</p></li>
+</ul>
+<p>A abordagem que <strong>nós</strong> usamos na fase de análise é decompor o nosso problema:</p>
+<ul class="simple">
+<li><p>em pequenas unidades, que identificamos com uma função, com nome mas vazia</p></li>
+<li><p>descrevemos sucintamente o objetivo na documentação</p></li>
+<li><p>esboçamos os testes para definir o que cada função deve fazer.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="como-descrever-solucoes">
+<h2>Como descrever soluções<a class="headerlink" href="#como-descrever-solucoes" title="Link permanente para este título">¶</a></h2>
+<p>Numa abordagem inicial, é frequente sugerir-se o uso de:</p>
+<ul class="simple">
+<li><p>pseudocódigo para enunciar o algoritmo</p></li>
+<li><p>diagramas de fluxo para visualização do algoritmo</p></li>
+</ul>
+<div class="section" id="exemplo-de-pseudo-codigo">
+<h3>Exemplo de pseudo-código<a class="headerlink" href="#exemplo-de-pseudo-codigo" title="Link permanente para este título">¶</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Paridade (número n)
+
+Início:
+
+Avaliar:
+    se n = 2
+        escreve &quot;Par&quot;
+        Vai para Fim
+    senão
+        se n = 1
+            escreve &quot;Ímpar&quot;
+            Vai para Fim
+        senão
+            n = n - 2
+            Vai para Avaliar
+        fim se
+    fim se
+
+Fim: Termina
+</pre></div>
+</div>
+</div>
+<div class="section" id="simbolos-mais-comuns-num-fluxograma">
+<h3>Símbolos mais comuns num fluxograma<a class="headerlink" href="#simbolos-mais-comuns-num-fluxograma" title="Link permanente para este título">¶</a></h3>
+<div class="figure align-default" id="simbolos">
+<a class="reference internal image-reference" href="../_images/SimbFluxogr.jpg"><img alt="../_images/SimbFluxogr.jpg" src="../_images/SimbFluxogr.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Símbolos</span><a class="headerlink" href="#simbolos" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="exemplo-de-fluxograma">
+<h3>Exemplo de fluxograma<a class="headerlink" href="#exemplo-de-fluxograma" title="Link permanente para este título">¶</a></h3>
+<div class="figure align-default" id="paridade">
+<a class="reference internal image-reference" href="../_images/AlgParidade.jpg"><img alt="../_images/AlgParidade.jpg" src="../_images/AlgParidade.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Paridade</span><a class="headerlink" href="#paridade" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="exercicios-propostos">
+<h3>Exercícios propostos<a class="headerlink" href="#exercicios-propostos" title="Link permanente para este título">¶</a></h3>
+<p>Como faria (pseudo-código ou fluxograma) para:</p>
+<ul class="simple">
+<li><p>Troca</p>
+<ul>
+<li><p>Em <span class="math notranslate nohighlight">\(a\)</span> e <span class="math notranslate nohighlight">\(b\)</span> tenho duas quantidades em que <span class="math notranslate nohighlight">\(a &gt; b\)</span>. Pretendo garantir que <span class="math notranslate nohighlight">\(a &lt; b\)</span>.</p></li>
+</ul>
+</li>
+<li><p>Enumeração</p>
+<ul>
+<li><p>Tenho uma coleção de elementos. Pretendo saber quantos elementos contém.</p></li>
+<li><p>Tenho uma coleção de elementos. Pretendo examiná-los todos.</p></li>
+</ul>
+</li>
+<li><p>Acumulação</p>
+<ul>
+<li><p>Tenho uma coleção de elementos. Pretendo o valor do somatório.</p></li>
+</ul>
+</li>
+<li><p>Ordenação</p>
+<ul>
+<li><p>Tenho uma coleção de elementos. Pretendo que o conjunto fique ordenado crescentemente.</p></li>
+</ul>
+</li>
+<li><p>Procura</p>
+<ul>
+<li><p>Tenho uma coleção de elementos. Pretendo saber se determinado elemento existe.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="codificacao-testes-e-documentacao">
+<h2>Codificação, testes e documentação<a class="headerlink" href="#codificacao-testes-e-documentacao" title="Link permanente para este título">¶</a></h2>
+<p>O conceito de programação imperativa (ou declarativa) é um estilo de programação em que a atividade de um computador é orientada por instruções.</p>
+<p>Essas instruções traduzirão então as ordens a cumprir, seja <em>ler</em>, <em>escrever</em>, <em>somar</em>, <em>repetir até</em> entre outras.</p>
+<p>Normalmente a programação imperativa deseja-se <em>estruturada</em> em atividades bem delimitadas, que se pretendem simples e pequenas (<em>Keep it simple, keep it small</em>).</p>
+<p>Na programação estruturada tipicamente ocorre a leitura de dados, o processamento e a escrita de resultados. O processamento é organizado numa sequência de atividades, cada uma delas concretizada por pequenos conjuntos de instruções (<em>procedimentos</em> ou <em>funções</em>).</p>
+<div class="section" id="exemplo-paridade">
+<h3>Exemplo: paridade<a class="headerlink" href="#exemplo-paridade" title="Link permanente para este título">¶</a></h3>
+<p>Como exemplo de um algoritmo, foi referido o teste de paridade de um número. No caso geral teríamos:</p>
+<div class="section" id="id1">
+<h4>Exemplo de pseudo-código<a class="headerlink" href="#id1" title="Link permanente para este título">¶</a></h4>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Início:
+    Ler dados
+    Avaliar se é par
+    Escrever resultado
+    
+Fim: Termina
+</pre></div>
+</div>
+<p>Ler os dados e escrever os resultados é normalmente o mais simples.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Ler dados:
+    pedir entrada
+    enquanto entrada inválida
+        pedir entrada
+    fim enquanto
+        
+Escrever resultado:
+    mostrar resultado
+</pre></div>
+</div>
+<p>Avaliar a paridade pode ser feito de várias maneiras. Como tínhamos à pouco:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Avaliar:
+    se n = 2
+        resultado é &quot;Par&quot;            
+    senão
+        se n = 1
+            resultado é &quot;Ímpar&quot;                
+        senão
+            n = n - 2
+            Avaliar 
+    fim se
+</pre></div>
+</div>
+<p>E como implementamos a função avaliar? De forma recursiva ou iterativa?</p>
+<p>A abordagem pretentida (iterativa ou recursiva) pode ficar clara na definição do algoritmo. Assim:</p>
+<img src="./figures/Alg_paridade_2.jpg" alt="Paridade" style="width: 400px;"/><p>ou seja:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Avaliar:
+    enquanto n &gt; 2
+        n = n - 2     &lt; == iterativo
+    fim enquanto
+    
+    se n = 2
+        resultado é &quot;Par&quot;
+    senão
+        resultado é &quot;Ímpar&quot;                
+    fim se
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="codificacao-e-documentacao">
+<h3>Codificação e documentação<a class="headerlink" href="#codificacao-e-documentacao" title="Link permanente para este título">¶</a></h3>
+<p>E como ficaria em Python?</p>
+<p>Vamos incluir a documentação, usando uma <em>docstring</em> mais completa e garantindo a qualidade do bloco de código usando asserções (<em>assert</em>). Considere a função na forma que a seguir se apresenta, <em>com erro</em> na terceira linha de documentação.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">paridade_2</span> <span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Função que determina se um número natural positivo é par ou ímpar.</span>
+<span class="sd">    </span>
+<span class="sd">    Argumento:</span>
+<span class="sd">        n (int): número a avaliar</span>
+
+<span class="sd">    Devolve:</span>
+<span class="sd">        str: &quot;Par&quot; ou &quot;Ímpar&quot;</span>
+
+<span class="sd">    Exemplos:</span>
+<span class="sd">        &gt;&gt;&gt; paridade_2 (3)</span>
+<span class="sd">        &#39;Ímpar&#39;</span>
+<span class="sd">        &gt;&gt;&gt; paridade_2 (4)</span>
+<span class="sd">        &#39;Par&#39;</span>
+<span class="sd">        &gt;&gt;&gt; paridade_2 (25)</span>
+<span class="sd">        &#39;Par&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">int</span><span class="p">,</span> <span class="s2">&quot;n não é um inteiro: </span><span class="si">%r</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">n</span>
+    <span class="k">assert</span> <span class="n">n</span> <span class="o">&gt;</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;n não é maior que zero: </span><span class="si">%r</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">n</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">n</span><span class="o">&gt;</span><span class="mi">2</span><span class="p">):</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="o">-</span><span class="mi">2</span>
+        
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">2</span><span class="p">):</span>
+        <span class="n">resultado</span> <span class="o">=</span> <span class="s1">&#39;Par&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">resultado</span> <span class="o">=</span> <span class="s1">&#39;Ímpar&#39;</span>
+    
+    <span class="k">return</span> <span class="n">resultado</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">paridade_2</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Ímpar&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">paridade_2</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Par&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para verificarmos que a função poderíamos fazer</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">doctest</span>
+<span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>
+<span class="n">paridade_2</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>**********************************************************************
+File &quot;__main__&quot;, line 15, in __main__.paridade_2
+Failed example:
+    paridade_2 (25)
+Expected:
+    &#39;Par&#39;
+Got:
+    &#39;Ímpar&#39;
+**********************************************************************
+1 items had failures:
+   1 of   3 in __main__.paridade_2
+***Test Failed*** 1 failures.
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Par&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Garantimos que a função não é usada de forma incorreta.</span>
+<span class="c1"># Retire o comentário da próxima linha para ver o erro.</span>
+<span class="c1"># paridade_2(5.0)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Garantimos que a função não é usada de forma incorreta.</span>
+<span class="c1"># Retire o comentário da próxima linha para ver o erro.</span>
+<span class="c1"># paridade_2(-3)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">paridade_2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function paridade_2 in module __main__:
+
+paridade_2(n)
+    Função que determina se um número natural positivo é par ou ímpar.
+    
+    Argumento:
+        n (int): número a avaliar
+    
+    Devolve:
+        str: &quot;Par&quot; ou &quot;Ímpar&quot;
+    
+    Exemplos:
+        &gt;&gt;&gt; paridade_2 (3)
+        &#39;Ímpar&#39;
+        &gt;&gt;&gt; paridade_2 (4)
+        &#39;Par&#39;
+        &gt;&gt;&gt; paridade_2 (25)
+        &#39;Par&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note que o uso de asserções não dispensa a validação dos dados.</p>
+<p>Quando uma asserção não se verifica, o programa termina de forma abrupta, em erro, e isso não é adequado.</p>
+<p>Mas as funções que são feitas podem ser usados noutros contextos, que não o do programa inicial. O uso de asserções ajuda a criar soluções mais robustas, pois numa função podemos verificar que as condições necessárias para a sua utilização.</p>
+</div>
+</div>
+<div class="section" id="alguns-pontos-curiosos">
+<h2>Alguns pontos curiosos<a class="headerlink" href="#alguns-pontos-curiosos" title="Link permanente para este título">¶</a></h2>
+<div class="section" id="efeitos-colaterais">
+<h3>Efeitos colaterais<a class="headerlink" href="#efeitos-colaterais" title="Link permanente para este título">¶</a></h3>
+<p>Porque criamos as funções, há que ter cuidado com as atividades das funções.
+Por exemplo,</p>
+<p>Se em vez de um inteiro, desenhassemos a função para trabalhar com o primeiro elemento de uma lista de inteiros, usando a mesma abordagem …</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">paridade_3</span> <span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Função que determina se o primeiro elemento de uma lista </span>
+<span class="sd">        de números naturais positivos é par ou ímpar.</span>
+<span class="sd">    </span>
+<span class="sd">    Argumento:</span>
+<span class="sd">        n (lista)</span>
+
+<span class="sd">    Devolve:</span>
+<span class="sd">        str: &quot;Par&quot; ou &quot;Ímpar&quot;</span>
+
+<span class="sd">    Exemplos:</span>
+<span class="sd">        &gt;&gt;&gt;</span>
+<span class="sd">        &gt;&gt;&gt; paridade_3 (3)</span>
+<span class="sd">        &#39;Ímpar&#39;</span>
+<span class="sd">        &gt;&gt;&gt; paridade_3 (4)</span>
+<span class="sd">        &#39;Par&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">n</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="ow">is</span> <span class="nb">int</span><span class="p">,</span> <span class="s2">&quot;n não é um inteiro: </span><span class="si">%r</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">n</span>
+    <span class="k">assert</span> <span class="n">n</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;n não é maior que zero: </span><span class="si">%r</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">n</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">n</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">2</span><span class="p">):</span>
+        <span class="n">n</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">n</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="mi">2</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">):</span>
+        <span class="n">resultado</span> <span class="o">=</span> <span class="s1">&#39;Par&#39;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">resultado</span> <span class="o">=</span> <span class="s1">&#39;Ímpar&#39;</span>
+    
+    <span class="k">return</span> <span class="n">resultado</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Muito importante! </span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">m</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">paridade_2</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">n</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">paridade_3</span><span class="p">(</span><span class="n">m</span><span class="p">),</span> <span class="n">m</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Par 6
+Par [2]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="outros-cuidados-a-ter">
+<h3>Outros cuidados a ter<a class="headerlink" href="#outros-cuidados-a-ter" title="Link permanente para este título">¶</a></h3>
+<p>Não deve existir uma saída abrupta (return dentro do ciclo de controlo, p. exemplo).</p>
+<p>Cada função deve ter apenas um return.</p>
+<p>A aglutinação de operadores torna</p>
+<ul class="simple">
+<li><p>o código mais compacto</p></li>
+<li><p>menos legível</p></li>
+<li><p>pode esconder eventuais efeitos colaterais</p></li>
+</ul>
+<p>portanto deve ser usada com cuidado.</p>
+</div>
+</div>
+<div class="section" id="exercicio-proposto">
+<h2>Exercício proposto<a class="headerlink" href="#exercicio-proposto" title="Link permanente para este título">¶</a></h2>
+<ol class="simple">
+<li><p>Inclua documentação e testes na função que fez para validar uma data na tarefa D do Lab4.</p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          De Margarida Madeira e Moura<br/>
+        
+            &copy; direito autoral 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

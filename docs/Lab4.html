@@ -1,0 +1,598 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab4 &#8212; Introdução à programação científica</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2022-23/docs/Lab4.html" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à programação científica</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquise este livro ..." aria-label="Pesquise este livro ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introdução à programação científica
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preâmbulo
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Apresenta%C3%A7%C3%A3o.html">
+   A unidade curricular
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Resumos dos temas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Introdu%C3%A7%C3%A3o.html">
+   Introdução
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="IniciarProgramar.html">
+   Tipos de dados, variáveis e funções
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ProgPython.html">
+   Operações lógicas e controlo de execução
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Guiões práticos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Primeiros_passos.html">
+   Primeiros passos na programação em Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Submiss%C3%A3oMooshak.html">
+   Submissão ao Mooshak
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab0.html">
+   Lab0
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab1.html">
+   Lab1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab2.html">
+   Lab2
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/Lab4.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Conteúdo
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objetivos-de-aprendizagem">
+   Objetivos de aprendizagem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#enunciado">
+   Enunciado
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tarefa-a">
+     Tarefa A
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#casos-de-teste">
+       Casos de teste
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tarefa-b">
+     Tarefa B
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Casos de teste
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tarefa-c">
+     Tarefa C
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Casos de teste
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tarefa-d">
+     Tarefa D
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Casos de teste
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="lab4">
+<h1>Lab4<a class="headerlink" href="#lab4" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="objetivos-de-aprendizagem">
+<h2>Objetivos de aprendizagem<a class="headerlink" href="#objetivos-de-aprendizagem" title="Link permanente para este título">¶</a></h2>
+<p>Com este guião, exercitaremos:</p>
+<ol class="simple">
+<li><p>a validação de dados de entrada</p></li>
+<li><p>o uso de condições no controlo de fluxo do programa (com <em>if</em> e <em>while</em>)</p></li>
+<li><p>o desenvolvimento de programas</p></li>
+</ol>
+</div>
+<div class="section" id="enunciado">
+<h2>Enunciado<a class="headerlink" href="#enunciado" title="Link permanente para este título">¶</a></h2>
+<div class="section" id="tarefa-a">
+<h3>Tarefa A<a class="headerlink" href="#tarefa-a" title="Link permanente para este título">¶</a></h3>
+<p>Na aula vimos o desenvolvimento de funções para o cálculo do fatorial de um número.</p>
+<p>Pretendemos agora incluir uma dessas funções num programa, incluindo na função de teste a verificação de que a entrada é válida.</p>
+<p>Note que o fatorial de um número está definido para números inteiros positivos (<span class="math notranslate nohighlight">\(N_0^+\)</span>). Ou seja, não se aceitam valores negativos ou strings.</p>
+<p>Assim, se o cálculo não puder ser efetuado, o seu programa deverá produzir a mensagem (sem as aspas):
+«A função fatorial está definida para números inteiros maiores ou iguais a zero.»
+a um pedido de cálculo ilegal.</p>
+<p>Prepare então um programa calcule o fatorial de um número e valide os dados de entrada.</p>
+<p><strong>Dicas</strong>:</p>
+<p>Veja a ajuda sobre a função <em>str.isnumeric</em></p>
+<p>Para os diferentes casos de input, experimente na consola do Spyder:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="n">temp</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="section" id="casos-de-teste">
+<h4>Casos de teste<a class="headerlink" href="#casos-de-teste" title="Link permanente para este título">¶</a></h4>
+<p><strong>Input 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span>
+</pre></div>
+</div>
+<p><strong>Output 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">120</span>
+</pre></div>
+</div>
+<p><strong>Input 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">5.0</span>
+</pre></div>
+</div>
+<p><strong>Output 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="n">função</span> <span class="n">fatorial</span> <span class="n">está</span> <span class="n">definida</span> <span class="n">para</span> <span class="n">números</span> <span class="n">inteiros</span> <span class="n">maiores</span> <span class="n">ou</span> <span class="n">iguais</span> <span class="n">a</span> <span class="n">zero</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><strong>Input 3</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="mi">5</span>
+</pre></div>
+</div>
+<p><strong>Output 3</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="n">função</span> <span class="n">fatorial</span> <span class="n">está</span> <span class="n">definida</span> <span class="n">para</span> <span class="n">números</span> <span class="n">inteiros</span> <span class="n">maiores</span> <span class="n">ou</span> <span class="n">iguais</span> <span class="n">a</span> <span class="n">zero</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><strong>Input 4</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">asd</span>
+</pre></div>
+</div>
+<p><strong>Output 4</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="n">função</span> <span class="n">fatorial</span> <span class="n">está</span> <span class="n">definida</span> <span class="n">para</span> <span class="n">números</span> <span class="n">inteiros</span> <span class="n">maiores</span> <span class="n">ou</span> <span class="n">iguais</span> <span class="n">a</span> <span class="n">zero</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Submeta no problema A do Lab2.</p>
+</div>
+</div>
+<div class="section" id="tarefa-b">
+<h3>Tarefa B<a class="headerlink" href="#tarefa-b" title="Link permanente para este título">¶</a></h3>
+<p>Pretende-se determinar os números pares de um intervalo. Para o efeito, considere o esboço apresentado em <em>proto_B.py</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Determinar os números pares de um intervalo</span>
+<span class="sd">(c) Margarida Madeira e Moura, 2021</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="k">def</span> <span class="nf">par</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Função que determina se um número é par.</span>
+<span class="sd">    </span>
+<span class="sd">    par(n) devolve True se n for par; caso contrário, devolve False&quot;&quot;&quot;</span>
+    <span class="c1">## Apague esta linha e acrescente aqui o seu código</span>
+
+<span class="k">def</span> <span class="nf">escreve</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Função que imprime um valor&quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    
+<span class="k">def</span> <span class="nf">test_par</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Função de teste da função par</span>
+<span class="sd">    Apresenta o valor sse o número for par&quot;&quot;&quot;</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">par</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
+        <span class="n">escreve</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">pares_intervalo</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Função que apresenta os números pares de um intervalo&quot;&quot;&quot;</span>
+    
+    <span class="c1">## Apague esta linha e acrescente aqui o seu código</span>
+
+
+<span class="k">def</span> <span class="nf">test_intervalo_inteiros</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Função que lê os valores extremos de um intervalo de números inteiros&quot;&quot;&quot;</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+    <span class="n">valido</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="c1"># acrescente a validação</span>
+    <span class="c1"># # x tem que ser inferior a y</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">valido</span><span class="p">):</span>
+        <span class="n">pares_intervalo</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Valores inválidos.&#39;</span><span class="p">)</span>
+
+
+<span class="n">test_par</span><span class="p">()</span>
+<span class="c1"># test_intervalo_inteiros()</span>
+
+</pre></div>
+</div>
+<p>Comece por completar a função <em>par</em>.</p>
+<p>Depois, comente a chamada à função <em>test_par</em> e descomente a linha seguinte que contém a chamada à função <em>test_intervalo_inteiros</em>.</p>
+<p>Depois, conclua a validação na função <em>test_intervalo_inteiros</em> e, finalmente, complete a função <em>pares_intervalo</em>.</p>
+<div class="section" id="id1">
+<h4>Casos de teste<a class="headerlink" href="#id1" title="Link permanente para este título">¶</a></h4>
+<p><strong>Input 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>
+<span class="mi">5</span>
+</pre></div>
+</div>
+<p><strong>Output 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span>
+<span class="mi">4</span>
+</pre></div>
+</div>
+<p><strong>Input 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span>
+<span class="mi">1</span>
+</pre></div>
+</div>
+<p><strong>Output 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Valores</span> <span class="n">inválidos</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><strong>Input 3</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="mi">5</span>
+<span class="o">-</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p><strong>Output 3</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="mi">4</span>
+<span class="o">-</span><span class="mi">2</span>
+</pre></div>
+</div>
+<p><strong>Input 4</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>
+<span class="mi">10</span>
+</pre></div>
+</div>
+<p><strong>Output 4</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span>
+<span class="mi">4</span>
+<span class="mi">6</span>
+<span class="mi">8</span>
+<span class="mi">10</span>
+</pre></div>
+</div>
+<p>Submeta no problema B do Lab2.</p>
+</div>
+</div>
+<div class="section" id="tarefa-c">
+<h3>Tarefa C<a class="headerlink" href="#tarefa-c" title="Link permanente para este título">¶</a></h3>
+<p>Pretende-se determinar os números de um intervalo de inteiros que são múltiplos de três e múltiplos de cinco.</p>
+<div class="section" id="id2">
+<h4>Casos de teste<a class="headerlink" href="#id2" title="Link permanente para este título">¶</a></h4>
+<p><strong>Input 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>
+<span class="mi">20</span>
+</pre></div>
+</div>
+<p><strong>Output 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">15</span>
+</pre></div>
+</div>
+<p><strong>Input 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span>
+<span class="mi">1</span>
+</pre></div>
+</div>
+<p><strong>Output 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Valores</span> <span class="n">inválidos</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Submeta no problema C do Lab2.</p>
+</div>
+</div>
+<div class="section" id="tarefa-d">
+<h3>Tarefa D<a class="headerlink" href="#tarefa-d" title="Link permanente para este título">¶</a></h3>
+<p>Pretende-se determinar um termo da <a class="reference external" href="https://www.wolframalpha.com/input/?i=fibonacci+sequence">sequência de Fibonacci</a>.</p>
+<p>Prepare um programa que leia um inteiro <span class="math notranslate nohighlight">\(n\)</span> e apresente o <span class="math notranslate nohighlight">\(n\)</span>-ésimo termo da sequência <span class="math notranslate nohighlight">\(F(n)\)</span>, considerando que</p>
+<p><span class="math notranslate nohighlight">\( F(n) = F(n-1) + F(n-2)\)</span> para <span class="math notranslate nohighlight">\(n \in N_0^+ \)</span></p>
+<p>sendo</p>
+<p><span class="math notranslate nohighlight">\(F(0) = 0\)</span> e <span class="math notranslate nohighlight">\( F(1) = 1\)</span>.</p>
+<p>Se o termo pedido não for válido, o programa apresenta a mensagem «Valor inválido.» (sem as aspas).</p>
+<p>Inclua a validação do inteiro lido na função de teste.</p>
+<div class="section" id="id3">
+<h4>Casos de teste<a class="headerlink" href="#id3" title="Link permanente para este título">¶</a></h4>
+<p><strong>Input 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="mi">5</span>
+</pre></div>
+</div>
+<p><strong>Output 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Valor</span> <span class="n">inválido</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><strong>Input 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span>
+</pre></div>
+</div>
+<p><strong>Output 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span>
+</pre></div>
+</div>
+<p><strong>Input 3</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>
+</pre></div>
+</div>
+<p><strong>Output 3</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>
+</pre></div>
+</div>
+<p><strong>Input 4</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span>
+</pre></div>
+</div>
+<p><strong>Output 4</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">13</span>
+</pre></div>
+</div>
+<p>Submeta no problema D do Lab2.</p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          De Margarida Madeira e Moura<br/>
+        
+            &copy; direito autoral 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

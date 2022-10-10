@@ -1,0 +1,418 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Primeiros passos na programação em Python &#8212; Introdução à programação científica</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2022-23/docs/Primeiros_passos.html" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Submissão ao Mooshak" href="Submiss%C3%A3oMooshak.html" />
+    <link rel="prev" title="Operações lógicas e controlo de execução" href="ProgPython.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à programação científica</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquise este livro ..." aria-label="Pesquise este livro ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introdução à programação científica
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preâmbulo
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Apresenta%C3%A7%C3%A3o.html">
+   A unidade curricular
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Resumos dos temas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Introdu%C3%A7%C3%A3o.html">
+   Introdução
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="IniciarProgramar.html">
+   Tipos de dados, variáveis e funções
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ProgPython.html">
+   Operações lógicas e controlo de execução
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Guiões práticos
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Primeiros passos na programação em Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Submiss%C3%A3oMooshak.html">
+   Submissão ao Mooshak
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab0.html">
+   Lab0
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab1.html">
+   Lab1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab2.html">
+   Lab2
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/Primeiros_passos.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/margaridamadeira/IPC-2022-23/main?urlpath=tree/docs/docs/Primeiros_passos.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lançamento Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Conteúdo
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#usar-o-posto-de-trabalho">
+   Usar o posto de trabalho
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#criar-uma-area-de-trabalho-para-introducao-a-programacao-cientifica">
+   Criar uma área de trabalho para Introdução à programação científica
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#primeiros-passos">
+   Primeiros passos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#notebook">
+   Notebook
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="primeiros-passos-na-programacao-em-python">
+<h1>Primeiros passos na programação em Python<a class="headerlink" href="#primeiros-passos-na-programacao-em-python" title="Link permanente para este título">¶</a></h1>
+<p>Nas primeiras aulas práticas vamos ensaiar algumas das ferramentas que temos disponíveis.</p>
+<div class="section" id="usar-o-posto-de-trabalho">
+<h2>Usar o posto de trabalho<a class="headerlink" href="#usar-o-posto-de-trabalho" title="Link permanente para este título">¶</a></h2>
+<p>Entrar no computador faz-se usando o identificador oficial da Universidade do Algarve, estilo a12345, (sem a parte &#64;ualg.pt), e dando a password atribuída. Por vezes demora mais tempo do que esperaríamos, mas é mesmo assim.</p>
+<p>Na escolha das imagens, usamos a configuração do DEEI.</p>
+<p>Experimente, mesmo que tenha o seu computador pessoal consigo.</p>
+</div>
+<div class="section" id="criar-uma-area-de-trabalho-para-introducao-a-programacao-cientifica">
+<h2>Criar uma área de trabalho para Introdução à programação científica<a class="headerlink" href="#criar-uma-area-de-trabalho-para-introducao-a-programacao-cientifica" title="Link permanente para este título">¶</a></h2>
+<ol class="simple">
+<li><p>Na pasta <em>Documents</em> da sua área crie uma pasta IPC. Dentro desta, crie uma pasta geral.
+Guarde tudo o que tiver a ver com a nossa cadeira nessa pasta!</p></li>
+<li><p>Abra o IDE Spyder (menu <em>Iniciar</em> &gt; <em>Anaconda</em> &gt; <em>Spyder</em>)  e crie um pequeno texto, como quiser e com o que quiser. Guarde-o na sua pasta geral.
+E, se for essa a sua opção, faça isto no seu computador pessoal também. Mantenha os dois computadores “iguais”, por assim dizer. Use a sua área do <a class="reference external" href="https://onedrive.live.com/about/en-us/signin/">OneDrive</a> para manter a informação: no fim da aula, passe para lá os seus ficheiros, e em casa trabalhe nessa pasta; quando voltar à aula, terá lá tudo o que fez fora da aula.</p></li>
+<li><p>Se estiver a usar o computador da sala, saia da sessão. Depois volte a entrar, noutro computador. Verifique que o seu ficheiro está lá.</p></li>
+</ol>
+</div>
+<div class="section" id="primeiros-passos">
+<h2>Primeiros passos<a class="headerlink" href="#primeiros-passos" title="Link permanente para este título">¶</a></h2>
+<ol>
+<li><p>No menu <em>Iniciar</em> do computador, localize o <em>Anaconda Prompt</em>.</p></li>
+<li><p>Para iniciar uma sessão de Python, escreva</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> python
+</pre></div>
+</div>
+<p>A linha de comando do python é representada por “&gt;&gt;&gt;”, designada <em>prompt</em>. Na linha de comando, a introdução de uma instrução completa é seguida pela sua execução.</p>
+<p>Usando o exemplo mais famoso da informática, escreva:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> print (&quot;Olá mundo&quot;)
+</pre></div>
+</div>
+<p>e pressione <em>Enter</em>. Fará com que seja apresentado:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> Olá mundo
+</pre></div>
+</div>
+<p>Para sair, escreva:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> exit()
+</pre></div>
+</div>
+</li>
+<li><p>Inicie uma sessão de IPython, escrevendo</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> ipython
+</pre></div>
+</div>
+<p>A <em>prompt</em> de comando do ipython é numerada e colorida. Faça também aqui o exemplo anterior. Para sair, escreva:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> exit()
+</pre></div>
+</div>
+</li>
+<li><p>Uma das utilizações típicas da linha de comando do python é como calculadora. Teste agora os exemplos apresentados na <a class="reference external" href="https://tutoria.ualg.pt/2021/mod/resource/view.php?id=16235">Introdução</a>.</p></li>
+</ol>
+</div>
+<div class="section" id="notebook">
+<h2>Notebook<a class="headerlink" href="#notebook" title="Link permanente para este título">¶</a></h2>
+<ol>
+<li><p>Descarregue o ficheiro <em>Introdução_fresh.ipynb</em> que está na Tutoria para a sua área.</p></li>
+<li><p>A partir do menu <em>Iniciar</em> abra agora o <em>Jupyter Notebook</em>. No separador do explorador que foi aberto, localize o ficheiro descarregado e abra-o.</p></li>
+<li><p>Vá pressionando as teclas <em>Shift</em>+<em>Enter</em> para executar as células. Experimente mudar o seu conteúdo.</p></li>
+<li><p>Os números das células de código indicam a ordem de execução. Note que se uma instrução depender de uma anterior e essa anterior ainda não tiver sido executada, haverá um erro.
+Apague a saída de todas as células. Se, nos exemplos de uso de bibliotecas, executar a instrução que refere</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> cos(pi)
+</pre></div>
+</div>
+<p>haverá um erro.
+Se, no futuro, se deparar com uma situação destas, mande executar todas as células anteriores e repita então a execução da célula corrente.</p>
+</li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="ProgPython.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Operações lógicas e controlo de execução</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Submiss%C3%A3oMooshak.html" title="próximo page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">próximo</p>
+        <p class="prev-next-title">Submissão ao Mooshak</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          De Margarida Madeira e Moura<br/>
+        
+            &copy; direito autoral 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

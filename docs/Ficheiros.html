@@ -1,0 +1,690 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ficheiros &#8212; Introdução à programação científica</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2022-23/docs/Ficheiros.html" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à programação científica</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquise este livro ..." aria-label="Pesquise este livro ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introdução à programação científica
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preâmbulo
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Apresenta%C3%A7%C3%A3o.html">
+   A unidade curricular
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Resumos dos temas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Introdu%C3%A7%C3%A3o.html">
+   Introdução
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="IniciarProgramar.html">
+   Tipos de dados, variáveis e funções
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ProgPython.html">
+   Operações lógicas e controlo de execução
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Guiões práticos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Primeiros_passos.html">
+   Primeiros passos na programação em Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Submiss%C3%A3oMooshak.html">
+   Submissão ao Mooshak
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab0.html">
+   Lab0
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab1.html">
+   Lab1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab2.html">
+   Lab2
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/Ficheiros.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/margaridamadeira/IPC-2022-23/main?urlpath=tree/docs/docs/Ficheiros.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lançamento Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Conteúdo
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objetivos-de-aprendizagem">
+   Objetivos de aprendizagem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aceder-a-um-ficheiro">
+   Aceder a um ficheiro
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ler-informacao-de-um-ficheiro">
+   Ler informação de um ficheiro
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#usos-comuns">
+     Usos comuns
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#escrever-informacao-num-ficheiro">
+   Escrever informação num ficheiro
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercicio-exemplificativo">
+   Exercício exemplificativo
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#extrair-informacao">
+     Extrair informação
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercicios">
+   Exercícios
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="ficheiros">
+<h1>Ficheiros<a class="headerlink" href="#ficheiros" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="objetivos-de-aprendizagem">
+<h2>Objetivos de aprendizagem<a class="headerlink" href="#objetivos-de-aprendizagem" title="Link permanente para este título">¶</a></h2>
+<p>Vamos começar a ver como se trabalha com ficheiros de texto, nomeadamente:</p>
+<ul class="simple">
+<li><p>ler informação de ficheiros e</p></li>
+<li><p>escrever informação em ficheiros.</p></li>
+</ul>
+<p>Os ficheiros permitem o armazenamento <em>persistente</em> de informação. Essa informação pode estar organizada de diferentes formas e a forma de organização é por vezes indicada pelo tipo do ficheiro.</p>
+<p>Python tem muitas funções para ler e escrever ficheiros e vamos começar com ficheiros de texto.</p>
+</div>
+<div class="section" id="aceder-a-um-ficheiro">
+<h2>Aceder a um ficheiro<a class="headerlink" href="#aceder-a-um-ficheiro" title="Link permanente para este título">¶</a></h2>
+<p>Para trabalharmos com um ficheiro, temos primeiro de o abrir. Para tal, podemos utilizar a função <em>open</em>, que requer dois parâmetros: o nome do ficheiro-alvo e o modo. Há três modos possíveis:</p>
+<ul class="simple">
+<li><p>r - do inglês read, indica modo de leitura (o ficheiro está aberto para leitura);</p></li>
+<li><p>w - do inglês write, indica modo de escrita (o ficheiro é aberto para escrita, e se existir um ficheiro com o mesmo nome, será apagado);</p></li>
+<li><p>a - do inglês append, indica modo de adição (o ficheiro é aberto para acrescentar, o que significa que os dados só devem ser escritos depois dos dados existentes no ficheiro).</p></li>
+</ul>
+<p>E o ficheiro deve ser fechado assim que já não seja necessário.</p>
+</div>
+<div class="section" id="ler-informacao-de-um-ficheiro">
+<h2>Ler informação de um ficheiro<a class="headerlink" href="#ler-informacao-de-um-ficheiro" title="Link permanente para este título">¶</a></h2>
+<p>Para abrir um ficheiro com o nome “entrada.txt” para leitura, fazemos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;entrada.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Esta instrução indicou ao Python que deve guardar no objeto de ficheiro <em>f</em> o resultado da operação de abertura do ficheiro em modo de leitura.</p>
+<p>Para obtermos os dados do objeto de ficheiro <em>f</em> criado, podemos aplicar os seguintes métodos:</p>
+<ul class="simple">
+<li><p>f.read(n) - que devolve <em>n</em> bytes de dados do ficheiro como uma cadeia de carateres (<em>string</em>). Quando o parâmetro de tamanho é omitido, todo o conteúdo do ficheiro será lido e devolvido.</p></li>
+<li><p>f.readline() - que obtém uma única linha do ficheiro. Todas as linhas (exceto a última linha de ficheiro) terminam num carácter de quebra de linha (\n) <em>newline</em> . Para remover este carácter da extremidade de uma linha lida podemos utilizar o método .strip(). Note que cada vez que chamar .readline() obtém a próxima linha do ficheiro.</p></li>
+<li><p>f.readlines() - devolve uma lista contendo todas as linhas do ficheiro.</p></li>
+</ul>
+<div class="section" id="usos-comuns">
+<h3>Usos comuns<a class="headerlink" href="#usos-comuns" title="Link permanente para este título">¶</a></h3>
+<p>Se precisarmos de obter uma determinada linha, podemos indicar o índice do item de lista.</p>
+<p>Por exemplo,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Para saber mais sobre os princípios de Python\n&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>devolve a segunda linha do objeto de ficheiro <em>f</em>.</p>
+<p>Aproveitando a ideia, uma forma alternativa de ler linhas é iterar sobre o objeto de ficheiro, com</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;entrada.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">linha</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">linha</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Programar em Python!
+Para saber mais sobre os princípios de Python
+abra uma consola e execute
+import this
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note que como não retiramos o carácter quebra de linha, não podemos permitir que o <em>print</em> termine com esse carácter.</p>
+<p>Usando ciclos semelhantes a este, podemos fazer o que for preciso para todas e cada uma das linhas do ficheiro.</p>
+<p>Se os dados do ficheiro não forem separados por novas linhas, mas sim por espaços brancos, vírgulas ou qualquer outro delimitador, então os comandos tal como apresentados acima e que devolvem os dados apenas sob a forma de linhas são insuficientes.
+Nesses casos, podemos utilizar a instrução linha.split(). Esta instrução considera como delimitador o carácter quebra de linha e bem como o carácter branco ou seuqências de caracteres brancos. Por exemplo,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Programar em Python!&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Programar&#39;, &#39;em&#39;, &#39;Python!&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Podemos especificar qual o delimitador que deve ser considerado.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Para programar, uso Python!&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Para programar&#39;, &#39; uso Python!&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ao usarmos <em>.read()</em>, se não indicarmos quantos bytes queremos ler então todo o ficheiro é lido. Isto deve ser usado com cuidado pois o ficheiro poderá ocupar uma porção significativa da memória disponível.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;entrada.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">tudo</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">tudo</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Programar em Python!\nPara saber mais sobre os princípios de Python\nabra uma consola e execute\nimport this\n&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nesse caso, podemos usar <em>.splitlines()</em> para separar a string no caráter quebra de linha e guardar cada segmento num item de uma lista.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">linhas</span> <span class="o">=</span> <span class="n">tudo</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+<span class="n">linhas</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Programar em Python!&#39;,
+ &#39;Para saber mais sobre os princípios de Python&#39;,
+ &#39;abra uma consola e execute&#39;,
+ &#39;import this&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se tentar ler para além do fim do ficheiro o resultado é nulo. Mas o ficheiro ainda está aberto e, se a leitura está terminada, devemos fechar o ficheiro.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;entrada.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">linha</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">linha</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+<span class="c1"># Mudar de linha    </span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="n">vazio</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">vazio</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Fechado?&#39;</span><span class="p">,</span><span class="n">f</span><span class="o">.</span><span class="n">closed</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Fechado?&#39;</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">closed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Programar em Python!
+Para saber mais sobre os princípios de Python
+abra uma consola e execute
+import this
+
+0
+Fechado? False
+Fechado? True
+</pre></div>
+</div>
+</div>
+</div>
+<p>É uma boa prática usar <em>with</em> ao trabalhar com ficheiros. Com a vantagem que, ao terminar o ficheiro é fechado.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;entrada.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">tudo</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">tudo</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Fechado?&#39;</span><span class="p">,</span><span class="n">f</span><span class="o">.</span><span class="n">closed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Programar em Python!
+Para saber mais sobre os princípios de Python
+abra uma consola e execute
+import this
+
+Fechado? True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Outro exemplo do uso de <em>with</em> na leitura linha a linha:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;entrada.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">linha</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&gt; </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">linha</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-&gt; Programar em Python!
+
+-&gt; Para saber mais sobre os princípios de Python
+
+-&gt; abra uma consola e execute
+
+-&gt; import this
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="escrever-informacao-num-ficheiro">
+<h2>Escrever informação num ficheiro<a class="headerlink" href="#escrever-informacao-num-ficheiro" title="Link permanente para este título">¶</a></h2>
+<p>A escrita faz-se com o método <em>.write()</em>.
+Para uma escrita bem sucedida há que ter em atenção que:</p>
+<ul class="simple">
+<li><p>o ficheiro deve ter sido aberto de forma apropriada. O modo “w” cria um ficheiro, o modo “a” adiciona a um ficheiro se o ficheiro existir, senão cria-o.</p></li>
+<li><p>A instrução <em>f.write (string)</em> escreve o conteúdo da string no ficheiro <em>f</em>. Se quisermos escrever algo que não uma string então devemos converter primeiro para <em>string</em> com a função str(). Se/quando quisermos mudança de linha, devemos incluir o carácter quebra de linha.</p></li>
+<li><p>Se não estiver a usar a palavra-chave <em>with</em> o ficheiro deve ser fechado com <em>f.close()</em>. Caso o programa termine e o ficheiro não tenha sido fechado poderão perder-se dados.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;saida.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{0:&gt;2s}{1:&gt;8s}{2:&gt;6s}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">idx</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">idx</span><span class="o">**</span><span class="mi">10</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="n">idx</span><span class="p">)))</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{0:&gt;2s}{1:&gt;8s}{2:&gt;6s}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">idx</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">idx</span><span class="o">**</span><span class="mi">10</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="n">idx</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 0       0     1
+ 1       1    10
+ 2    1024   100
+ 3   59049  1000
+ 4 1048576 10000
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exercicio-exemplificativo">
+<h2>Exercício exemplificativo<a class="headerlink" href="#exercicio-exemplificativo" title="Link permanente para este título">¶</a></h2>
+<p>(adaptado de <a class="reference external" href="https://justinbois.github.io/bootcamp/2020/lessons/l11_file_io.html">Introduction to Programming in the Biological Sciences Bootcamp - Lesson 11</a>, (c)2020 Justin Bois, CC-BY 4.0)</p>
+<p>Considere o ficheiro 10LG.pdb, de <a class="reference external" href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1olg">Protein Databank</a> com informação sobre a proteína <a class="reference external" href="https://pt.wikipedia.org/wiki/P53">p53</a>.</p>
+<p>Se o ficheiro não estiver na directoria corrente, descarregamos.
+Para isso, precisamos do módulo <code class="docutils literal notranslate"><span class="pre">wget</span></code>. Se não estiver disponível, há que o obter.</p>
+<p>Procure esse método no navegador da distribuição Anaconda e selecione a sua instalação.
+Ou, em alternativa, na <em>Anaconda command prompt</em> faça
+<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">wget</span></code>
+ou
+<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">wget</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">wget</span><span class="o">,</span> <span class="nn">os</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># help(wget.download)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="s1">&#39;1OLG.pdb&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">():</span>
+    <span class="n">wget</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s2">&quot;http://files.rcsb.org/download/1OLG.pdb&quot;</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="s2">&quot;1OLG.pdb&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="extrair-informacao">
+<h3>Extrair informação<a class="headerlink" href="#extrair-informacao" title="Link permanente para este título">¶</a></h3>
+<p>Queremos isolar os registos ATOM da primeira cadeia e escrevê-los para um novo ficheiro.</p>
+<p>Consultando a <a class="reference external" href="http://www.wwpdb.org/documentation/file-format-content/format33/sect9.html#ATOM">especificação do formato PDB</a>, notamos que a coluna 22 nas linhas <em>ATOM</em> correspondem ao <em>ID</em> da cadeia (que corresponderá à posição 21 da <em>string</em> em Python).</p>
+<p>Podemos usar mais que um ficheiro no bloco <em>with</em> e usamos um ficheiro para a leitura e outro para a escrita.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;1OLG.pdb&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_in</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;atoms_chain_A.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_out</span><span class="p">:</span>
+    <span class="c1"># Put the ATOM lines from chain A in new file</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f_in</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">21</span> <span class="ow">and</span> <span class="n">line</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;ATOM&#39;</span> <span class="ow">and</span> <span class="n">line</span><span class="p">[</span><span class="mi">21</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;A&#39;</span><span class="p">:</span>
+            <span class="n">f_out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vejamos as primeiras 10 linhas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;atoms_chain_A.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">9</span><span class="p">:</span>
+            <span class="k">break</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ATOM      1  N   LYS A 319      18.634  25.437  10.685  1.00  4.81           N  
+
+ATOM      2  CA  LYS A 319      17.984  25.295   9.354  1.00  4.32           C  
+
+ATOM      3  C   LYS A 319      18.160  23.876   8.818  1.00  3.74           C  
+
+ATOM      4  O   LYS A 319      19.259  23.441   8.537  1.00  3.67           O  
+
+ATOM      5  CB  LYS A 319      18.609  26.282   8.371  1.00  4.67           C  
+
+ATOM      6  CG  LYS A 319      18.003  26.056   6.986  1.00  5.15           C  
+
+ATOM      7  CD  LYS A 319      16.476  26.057   7.091  1.00  5.90           C  
+
+ATOM      8  CE  LYS A 319      16.014  27.341   7.784  1.00  6.51           C  
+
+ATOM      9  NZ  LYS A 319      16.388  28.518   6.952  1.00  7.33           N  
+
+ATOM     10  H1  LYS A 319      18.414  24.606  11.281  1.00  5.09           H  
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exercicios">
+<h2>Exercícios<a class="headerlink" href="#exercicios" title="Link permanente para este título">¶</a></h2>
+<p>Quantos elementos diferentes existem nesta cadeia?</p>
+<p>Que elementos são?</p>
+<p>Quantos átomos de cada elemento existem?</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          De Margarida Madeira e Moura<br/>
+        
+            &copy; direito autoral 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
