@@ -1,5 +1,12 @@
 # Lab4
 
+Note bem:
+
++ Cotação deste guião: 2 pontos
++ Submeta cada uma das tarefas no problema correspondente do concurso IPC_L4.
++ Prazo limite de submissão: 23h59m de 25 de outubro
++ Prazo limite de validação das submissões aceites: **31 de outubro**, horário de atendimento de segunda-feira (11h às 12h).
+
 ## Objetivos de aprendizagem
 
 Com este guião, exercitaremos:
@@ -12,9 +19,9 @@ Com este guião, exercitaremos:
 
 ### Tarefa A
 
-Na aula vimos o desenvolvimento de funções para o cálculo do fatorial de um número. 
+Numa aula passada vimos o desenvolvimento de funções para o cálculo do fatorial de um número. 
 
-Pretendemos agora incluir uma dessas funções num programa, incluindo na função de teste a verificação de que a entrada é válida.
+Pretendemos agora incluir uma dessas funções num programa completo, incluindo na função de teste a verificação de que a entrada é válida.
 
 Note que o fatorial de um número está definido para números inteiros positivos ($N_0^+$). Ou seja, não se aceitam valores negativos ou strings. 
 
@@ -89,7 +96,7 @@ Submeta no problema A do Lab2.
 
 ### Tarefa B
 
-Pretende-se determinar os números pares de um intervalo. Para o efeito, considere o esboço apresentado em *proto_B.py*
+Pretende-se determinar os números pares de um intervalo. Para o efeito, pretende-se que complete o esboço apresentado em *proto_B.py*
 
 ```
 # -*- coding: utf-8 -*-
@@ -112,7 +119,7 @@ def escreve(n):
 def test_par():
     """Função de teste da função par
     Apresenta o valor sse o número for par"""
-    x = int(input())
+    x = int(input()) # altere para considerar a validação dos dados lidos
     if (par(x)):
         escreve(x)
 
@@ -134,18 +141,19 @@ def test_intervalo_inteiros():
     else:
         print('Valores inválidos.')
 
-
-test_par()
-# test_intervalo_inteiros()
+if __name__ == '__main__':
+    test_par()
+    # test_intervalo_inteiros()
 
 ```
 
+Para ser bem sucedido nesta tarefa, sugere-se que:
 
-Comece por completar a função *par*. 
-
-Depois, comente a chamada à função *test_par* e descomente a linha seguinte que contém a chamada à função *test_intervalo_inteiros*. 
-
-Depois, conclua a validação na função *test_intervalo_inteiros* e, finalmente, complete a função *pares_intervalo*.
++ Comece por completar a função *par* e incluir a validação apropriada na função test_par. Teste como apropriado.
++ De seguida, comente a chamada à função *test_par* e retire o comentário da linha seguinte que contém a chamada à função *test_intervalo_inteiros*
+    + conclua a validação na função *test_intervalo_inteiros*
+    + finalmente, complete a função *pares_intervalo*.
++ Ensaie a sua solução com os casos de teste e verifique que o resultado obtido corresponde ao esperado.
 
 #### Casos de teste
 
@@ -207,7 +215,7 @@ Valores inválidos.
 10
 ```
 
-Submeta no problema B do Lab2.
+Submeta no problema B.
 
 ### Tarefa C
 
@@ -241,7 +249,7 @@ Pretende-se determinar os números de um intervalo de inteiros que são múltipl
 Valores inválidos.
 ```
 
-Submeta no problema C do Lab2.
+Submeta no problema C.
 
 ### Tarefa D
 

@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/myfile.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -55,6 +56,8 @@
     <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2022-23/docs/Lab3.html" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Lab4" href="Lab4.html" />
+    <link rel="prev" title="Primeira Festa de Programação" href="F1-2022.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="pt">
     
@@ -137,7 +140,7 @@
   Guiões práticos
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Primeiros_passos.html">
    Primeiros passos na programação em Python
@@ -161,6 +164,21 @@
  <li class="toctree-l1">
   <a class="reference internal" href="Lab2.html">
    Lab2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="F1-2022.html">
+   Primeira Festa de Programação
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Lab3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab4.html">
+   Lab4
   </a>
  </li>
 </ul>
@@ -238,6 +256,11 @@
   <a class="reference internal nav-link" href="#objetivos-de-aprendizagem">
    Objetivos de aprendizagem
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelo-geral-de-um-programa">
+   Modelo geral de um programa
+  </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tarefa-a">
@@ -295,6 +318,13 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="lab3">
 <h1>Lab3<a class="headerlink" href="#lab3" title="Link permanente para este título">¶</a></h1>
+<p>Note bem:</p>
+<ul class="simple">
+<li><p>Cotação deste guião: 2 pontos</p></li>
+<li><p>Submeta cada uma das tarefas no problema correspondente do concurso IPC_L3.</p></li>
+<li><p>Prazo limite de submissão: 23h59m de 18 de outubro</p></li>
+<li><p>Prazo limite de validação das submissões aceites: 25 de outubro, horário de atendimento de terça-feira (9h30 às 10h30).</p></li>
+</ul>
 <div class="section" id="objetivos-de-aprendizagem">
 <h2>Objetivos de aprendizagem<a class="headerlink" href="#objetivos-de-aprendizagem" title="Link permanente para este título">¶</a></h2>
 <p>Com este guião, exercitaremos:</p>
@@ -302,8 +332,50 @@
 <li><p>a utilização de strings</p></li>
 <li><p>o uso de condições no controlo de fluxo do programa</p></li>
 <li><p>a utilização de funções do Python</p></li>
+<li><p>desenvolvimento de programas</p></li>
 </ol>
-<p>e continuaremos a usar o Mooshak para verificar o resultado dos programas desenvolvidos.</p>
+<p>e continuaremos a usar o Mooshak para verificar o resultado das soluções desenvolvidas.</p>
+</div>
+<div class="section" id="modelo-geral-de-um-programa">
+<h2>Modelo geral de um programa<a class="headerlink" href="#modelo-geral-de-um-programa" title="Link permanente para este título">¶</a></h2>
+<p>Em Python, como em muitas linguagens, um programa é essencialmente uma coleção de funções. Entre elas há uma função especial, a função main. Esta função main é especial porque é pela função main que o programa começa as operações, quando o mandamos correr. Inversamente, quando a função main esgota as suas instruções, o programa termina.</p>
+<p>Considere o exemplo apresentado abaixo de um programa completo que informa se um número é par ou ímpar.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Informar se um número é par</span>
+<span class="sd">(c) Margarida Madeira e Moura, 2022</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="k">def</span> <span class="nf">par</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Função que determina se um número é par.</span>
+<span class="sd">    </span>
+<span class="sd">    par(n) devolve True se n for par; caso contrário, devolve False&quot;&quot;&quot;</span>
+    <span class="n">resultado</span> <span class="o">=</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">resultado</span>
+
+<span class="k">def</span> <span class="nf">informa_par</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Função que imprime um valor com a informação que é par.&quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> é par&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+    
+<span class="k">def</span> <span class="nf">informa_impar</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Função que imprime um valor com a informação que é ímpar&quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> é impar&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">test_par</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Função de teste da função par</span>
+<span class="sd">    Apresenta o valor sse o número for par&quot;&quot;&quot;</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">par</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
+        <span class="n">informa_par</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">informa_impar</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">test_par</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Estude-o bem, para perceber onde estão as ideias e como as funções estão organizadas. De agora em diante, a submissão de soluções deverá considerar a organização que é ilustrada no exemplo acima.</p>
 <div class="section" id="tarefa-a">
 <h3>Tarefa A<a class="headerlink" href="#tarefa-a" title="Link permanente para este título">¶</a></h3>
 <p>Considere o <a class="reference external" href="http://rosalind.info/problems/dna/">problema do DNA</a> em que se pretende apresentar, numa única linha, o número de carateres “A”, “C”, “G” e “T” existentes numa string.</p>
@@ -333,7 +405,7 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">32</span> <span class="mi">0</span> <span class="mi">17</span> <span class="mi">21</span>
 </pre></div>
 </div>
-<p>Submeta no problema A do Lab3.</p>
+<p>Submeta no problema A.</p>
 </div>
 </div>
 <div class="section" id="tarefa-b">
@@ -358,7 +430,7 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">AGCAAAACAAACAGACA</span>
 </pre></div>
 </div>
-<p>Submeta no problema B do Lab3.</p>
+<p>Submeta no problema B.</p>
 </div>
 </div>
 <div class="section" id="tarefa-c">
@@ -419,7 +491,21 @@
               
         
             <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="F1-2022.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Primeira Festa de Programação</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Lab4.html" title="próximo page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">próximo</p>
+        <p class="prev-next-title">Lab4</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
         
         </div>
@@ -430,7 +516,7 @@
         
           De Margarida Madeira e Moura<br/>
         
-            &copy; direito autoral 2021.<br/>
+            &copy; direito autoral 2022.<br/>
       </p>
     </div>
   </footer>

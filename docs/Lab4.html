@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/myfile.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -55,6 +56,7 @@
     <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2022-23/docs/Lab4.html" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="prev" title="Lab3" href="Lab3.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="pt">
     
@@ -137,7 +139,7 @@
   Guiões práticos
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Primeiros_passos.html">
    Primeiros passos na programação em Python
@@ -161,6 +163,21 @@
  <li class="toctree-l1">
   <a class="reference internal" href="Lab2.html">
    Lab2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="F1-2022.html">
+   Primeira Festa de Programação
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab3.html">
+   Lab3
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Lab4
   </a>
  </li>
 </ul>
@@ -307,6 +324,13 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="lab4">
 <h1>Lab4<a class="headerlink" href="#lab4" title="Link permanente para este título">¶</a></h1>
+<p>Note bem:</p>
+<ul class="simple">
+<li><p>Cotação deste guião: 2 pontos</p></li>
+<li><p>Submeta cada uma das tarefas no problema correspondente do concurso IPC_L4.</p></li>
+<li><p>Prazo limite de submissão: 23h59m de 25 de outubro</p></li>
+<li><p>Prazo limite de validação das submissões aceites: <strong>31 de outubro</strong>, horário de atendimento de segunda-feira (11h às 12h).</p></li>
+</ul>
 <div class="section" id="objetivos-de-aprendizagem">
 <h2>Objetivos de aprendizagem<a class="headerlink" href="#objetivos-de-aprendizagem" title="Link permanente para este título">¶</a></h2>
 <p>Com este guião, exercitaremos:</p>
@@ -320,8 +344,8 @@
 <h2>Enunciado<a class="headerlink" href="#enunciado" title="Link permanente para este título">¶</a></h2>
 <div class="section" id="tarefa-a">
 <h3>Tarefa A<a class="headerlink" href="#tarefa-a" title="Link permanente para este título">¶</a></h3>
-<p>Na aula vimos o desenvolvimento de funções para o cálculo do fatorial de um número.</p>
-<p>Pretendemos agora incluir uma dessas funções num programa, incluindo na função de teste a verificação de que a entrada é válida.</p>
+<p>Numa aula passada vimos o desenvolvimento de funções para o cálculo do fatorial de um número.</p>
+<p>Pretendemos agora incluir uma dessas funções num programa completo, incluindo na função de teste a verificação de que a entrada é válida.</p>
 <p>Note que o fatorial de um número está definido para números inteiros positivos (<span class="math notranslate nohighlight">\(N_0^+\)</span>). Ou seja, não se aceitam valores negativos ou strings.</p>
 <p>Assim, se o cálculo não puder ser efetuado, o seu programa deverá produzir a mensagem (sem as aspas):
 «A função fatorial está definida para números inteiros maiores ou iguais a zero.»
@@ -373,7 +397,7 @@ a um pedido de cálculo ilegal.</p>
 </div>
 <div class="section" id="tarefa-b">
 <h3>Tarefa B<a class="headerlink" href="#tarefa-b" title="Link permanente para este título">¶</a></h3>
-<p>Pretende-se determinar os números pares de um intervalo. Para o efeito, considere o esboço apresentado em <em>proto_B.py</em></p>
+<p>Pretende-se determinar os números pares de um intervalo. Para o efeito, pretende-se que complete o esboço apresentado em <em>proto_B.py</em></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
@@ -394,7 +418,7 @@ a um pedido de cálculo ilegal.</p>
 <span class="k">def</span> <span class="nf">test_par</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;Função de teste da função par</span>
 <span class="sd">    Apresenta o valor sse o número for par&quot;&quot;&quot;</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span> <span class="c1"># altere para considerar a validação dos dados lidos</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">par</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
         <span class="n">escreve</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
@@ -416,15 +440,23 @@ a um pedido de cálculo ilegal.</p>
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Valores inválidos.&#39;</span><span class="p">)</span>
 
-
-<span class="n">test_par</span><span class="p">()</span>
-<span class="c1"># test_intervalo_inteiros()</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">test_par</span><span class="p">()</span>
+    <span class="c1"># test_intervalo_inteiros()</span>
 
 </pre></div>
 </div>
-<p>Comece por completar a função <em>par</em>.</p>
-<p>Depois, comente a chamada à função <em>test_par</em> e descomente a linha seguinte que contém a chamada à função <em>test_intervalo_inteiros</em>.</p>
-<p>Depois, conclua a validação na função <em>test_intervalo_inteiros</em> e, finalmente, complete a função <em>pares_intervalo</em>.</p>
+<p>Para ser bem sucedido nesta tarefa, sugere-se que:</p>
+<ul class="simple">
+<li><p>Comece por completar a função <em>par</em> e incluir a validação apropriada na função test_par. Teste como apropriado.</p></li>
+<li><p>De seguida, comente a chamada à função <em>test_par</em> e retire o comentário da linha seguinte que contém a chamada à função <em>test_intervalo_inteiros</em></p>
+<ul>
+<li><p>conclua a validação na função <em>test_intervalo_inteiros</em></p></li>
+<li><p>finalmente, complete a função <em>pares_intervalo</em>.</p></li>
+</ul>
+</li>
+<li><p>Ensaie a sua solução com os casos de teste e verifique que o resultado obtido corresponde ao esperado.</p></li>
+</ul>
 <div class="section" id="id1">
 <h4>Casos de teste<a class="headerlink" href="#id1" title="Link permanente para este título">¶</a></h4>
 <p><strong>Input 1</strong></p>
@@ -469,7 +501,7 @@ a um pedido de cálculo ilegal.</p>
 <span class="mi">10</span>
 </pre></div>
 </div>
-<p>Submeta no problema B do Lab2.</p>
+<p>Submeta no problema B.</p>
 </div>
 </div>
 <div class="section" id="tarefa-c">
@@ -495,7 +527,7 @@ a um pedido de cálculo ilegal.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Valores</span> <span class="n">inválidos</span><span class="o">.</span>
 </pre></div>
 </div>
-<p>Submeta no problema C do Lab2.</p>
+<p>Submeta no problema C.</p>
 </div>
 </div>
 <div class="section" id="tarefa-d">
@@ -571,7 +603,14 @@ a um pedido de cálculo ilegal.</p>
               
         
             <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Lab3.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Lab3</p>
+        </div>
+    </a>
 </div>
         
         </div>
@@ -582,7 +621,7 @@ a um pedido de cálculo ilegal.</p>
         
           De Margarida Madeira e Moura<br/>
         
-            &copy; direito autoral 2021.<br/>
+            &copy; direito autoral 2022.<br/>
       </p>
     </div>
   </footer>

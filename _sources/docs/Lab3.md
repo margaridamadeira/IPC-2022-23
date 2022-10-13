@@ -1,5 +1,12 @@
 # Lab3
 
+Note bem:
+
++ Cotação deste guião: 2 pontos
++ Submeta cada uma das tarefas no problema correspondente do concurso IPC_L3.
++ Prazo limite de submissão: 23h59m de 18 de outubro
++ Prazo limite de validação das submissões aceites: 25 de outubro, horário de atendimento de terça-feira (9h30 às 10h30).
+
 ## Objetivos de aprendizagem
 
 Com este guião, exercitaremos:
@@ -7,9 +14,53 @@ Com este guião, exercitaremos:
 1. a utilização de strings
 1. o uso de condições no controlo de fluxo do programa 
 1. a utilização de funções do Python
+1. desenvolvimento de programas
 
-e continuaremos a usar o Mooshak para verificar o resultado dos programas desenvolvidos.
+e continuaremos a usar o Mooshak para verificar o resultado das soluções desenvolvidas.
 
+## Modelo geral de um programa
+
+Em Python, como em muitas linguagens, um programa é essencialmente uma coleção de funções. Entre elas há uma função especial, a função main. Esta função main é especial porque é pela função main que o programa começa as operações, quando o mandamos correr. Inversamente, quando a função main esgota as suas instruções, o programa termina.
+
+Considere o exemplo apresentado abaixo de um programa completo que informa se um número é par ou ímpar.
+
+```
+# -*- coding: utf-8 -*-
+
+"""
+Informar se um número é par
+(c) Margarida Madeira e Moura, 2022
+"""
+
+def par(n):
+    """Função que determina se um número é par.
+    
+    par(n) devolve True se n for par; caso contrário, devolve False"""
+    resultado = n % 2 == 0
+    return resultado
+
+def informa_par(n):
+    """Função que imprime um valor com a informação que é par."""
+    print('{} é par'.format(n))
+    
+def informa_impar(n):
+    """Função que imprime um valor com a informação que é ímpar"""
+    print('{} é impar'.format(n))
+
+def test_par():
+    """Função de teste da função par
+    Apresenta o valor sse o número for par"""
+    x = int(input())
+    if (par(x)):
+        informa_par(x)
+    else:
+        informa_impar(x)
+
+if __name__ == '__main__':
+    test_par()
+```
+
+Estude-o bem, para perceber onde estão as ideias e como as funções estão organizadas. De agora em diante, a submissão de soluções deverá considerar a organização que é ilustrada no exemplo acima.
 
 
 ### Tarefa A
@@ -56,7 +107,7 @@ AGATTTTAATTATGAATGAAAAGGGAAATATGTATATGTGTGGATTAAAAAAAGAGTGTATGATAGAAGA
 ```
 
 
-Submeta no problema A do Lab3.
+Submeta no problema A.
 
 ### Tarefa B
 
@@ -90,7 +141,7 @@ AGCAAAACAAACAGACA
 AGCAAAACAAACAGACA
 ```
 
-Submeta no problema B do Lab3.
+Submeta no problema B.
 
 ### Tarefa C
 
