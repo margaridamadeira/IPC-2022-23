@@ -12,7 +12,7 @@ parts:
   - file: docs/Introdução
   - file: docs/IniciarProgramar
   - file: docs/ProgPython
-#  - file: docs/ProgPython2
+  - file: docs/ProgPython2
 #  - file: docs/ProgPython3
 #  - file: docs/ProgPython4
 #  - file: docs/Ficheiros
