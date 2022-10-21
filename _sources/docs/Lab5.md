@@ -1,5 +1,12 @@
 # Lab5
 
+Note bem:
+
++ Cotação deste guião: 2 pontos
++ Submeta cada uma das tarefas no problema correspondente do concurso IPC_L5.
++ Prazo limite de submissão: 23h59m de 31 de outubro
++ Prazo limite de validação das submissões aceites: 8 de novembro, horário de atendimento de terça-feira (9h30 às 10h30).
+
 ## Objetivos de aprendizagem
 
 Com este guião, exercitaremos:
@@ -185,7 +192,7 @@ Ora o que falta agora é a ordenação da lista. O Python tem essa função mas 
 -50 -10 -5 5 10 250
 ```
 
-Submeta no problema A do concurso Lab4.
+Submeta no problema A.
 
 ### Tarefa B
 
@@ -234,7 +241,7 @@ Prepare um programa em Python que leia uma sequência de números, um por linha 
 12:15:35
 ```
 
-Submeta no problema B do Lab4.
+Submeta no problema B.
 
 ### Tarefa C
 
@@ -242,7 +249,7 @@ Atualizamos os equipamentos e agora os tempos das experiências são apresentado
 
 Podíamos converter os tempos para segundos e depois de termos um total, converter então para o formato desejado. Mas a nossa conversão não considerava a possibilidade de traduzir valores de horas superiores a 24 em dias e horas. Assim, vamos lendo a duração das experiências e atualizando o tempo total.
 
-Prepare um programa que leia os tempos da consola, um por linha, até ao fim dos dados e apresente, para cada linha lida, o tempo acumulado em dias, horas, minutos e segundos. Cada linha contém uma string com o formato *HH:MM:SS* em que *HH* correponde às horas, *MM* corresponde aos minutos e *SS* aos segundos. O tempo total, que deve ser apresentado num única linha, deverá respeitar o formato "DD:HH:MM:SS" (sem as aspas), em que *DD*, *HH*, *MM* e *SS* correspondem ao valores de dias, horas, minutos e segundos, respetivamente. Note que deve usar dois dígitos para cada valor.
+Prepare um programa que leia os tempos da consola, um por linha, até ao fim dos dados e apresente, para cada linha lida, o tempo acumulado em dias, horas, minutos e segundos. Cada linha contém uma string com o formato *HH:MM:SS* em que *HH* corresponde às horas, *MM* corresponde aos minutos e *SS* aos segundos. O tempo total, que deve ser apresentado num única linha, deverá respeitar o formato "DD:HH:MM:SS" (sem as aspas), em que *DD*, *HH*, *MM* e *SS* correspondem ao valores de dias, horas, minutos e segundos, respetivamente. Note que deve usar dois dígitos para cada valor.
 
 
 
@@ -278,7 +285,7 @@ Prepare um programa que leia os tempos da consola, um por linha, até ao fim dos
 02:03:06:00
 ```
 
-Submeta no problema C do Lab4.
+Submeta no problema C.
 
 ### Tarefa D
 
@@ -334,4 +341,4 @@ Cada linha do output repetirá o input acrescentando " -> Válida" (sem as aspas
 ```
 
 
-Submeta no problema D do Lab4.
+Submeta no problema D.

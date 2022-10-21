@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Strings: indexação e controlo de execução &#8212; Introdução à programação científica</title>
+    <title>Strings: indexação e controlo de execução usando for &#8212; Introdução à programação científica</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -56,6 +56,8 @@
     <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2022-23/docs/ProgPython2.html" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Listas e Programação em Python - parte 3" href="ProgPython3.html" />
+    <link rel="prev" title="Operações lógicas e controlo de execução" href="ProgPython.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="pt">
     
@@ -116,7 +118,7 @@
   Resumos dos temas
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Introdu%C3%A7%C3%A3o.html">
    Introdução
@@ -130,6 +132,16 @@
  <li class="toctree-l1">
   <a class="reference internal" href="ProgPython.html">
    Operações lógicas e controlo de execução
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Strings: indexação e controlo de execução usando for
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ProgPython3.html">
+   Listas e Programação em Python - parte 3
   </a>
  </li>
 </ul>
@@ -177,6 +189,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="Lab4.html">
    Lab4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab5.html">
+   Lab5
   </a>
  </li>
 </ul>
@@ -357,8 +374,8 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="strings-indexacao-e-controlo-de-execucao">
-<h1>Strings: indexação e controlo de execução<a class="headerlink" href="#strings-indexacao-e-controlo-de-execucao" title="Link permanente para este título">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="strings-indexacao-e-controlo-de-execucao-usando-for">
+<h1>Strings: indexação e controlo de execução usando for<a class="headerlink" href="#strings-indexacao-e-controlo-de-execucao-usando-for" title="Link permanente para este título">¶</a></h1>
 <div class="section" id="objetivos-de-aprendizagem">
 <h2>Objetivos de aprendizagem<a class="headerlink" href="#objetivos-de-aprendizagem" title="Link permanente para este título">¶</a></h2>
 <p>Nesta lição, vamos dedicar especial atenção à manipulação de strings.  Teremos assim oportunidade de conhecer outra forma de controlar ciclos de execução e usar algumas das funções do Python. Em particular:</p>
@@ -805,6 +822,21 @@ count(...) method of builtins.str instance
 </div>
 </div>
 </div>
+<p>Suponha que tem uma string com uma data na variável <code class="docutils literal notranslate"><span class="pre">data_lida</span></code>. Para separarmos os elementos dessa data (dia, mês e ano) e os apresentarmos novamente com o mesmo formato poderíamos fazer</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_lida</span> <span class="o">=</span> <span class="s1">&#39;05-10-2022&#39;</span>
+<span class="n">dia</span><span class="p">,</span> <span class="n">mes</span><span class="p">,</span> <span class="n">ano</span> <span class="o">=</span> <span class="n">data_lida</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dia</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">mes</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">ano</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>05-10-2022
+</pre></div>
+</div>
+</div>
+</div>
 <p>Veja que outras funções para strings existem e experimente-as.</p>
 </div>
 </div>
@@ -852,7 +884,21 @@ count(...) method of builtins.str instance
               
         
             <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="ProgPython.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Operações lógicas e controlo de execução</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="ProgPython3.html" title="próximo page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">próximo</p>
+        <p class="prev-next-title">Listas e Programação em Python - parte 3</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
         
         </div>

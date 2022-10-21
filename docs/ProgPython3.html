@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Programação em Python - parte 3 &#8212; Introdução à programação científica</title>
+    <title>Listas e leitura e escrita &#8212; Introdução à programação científica</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -54,6 +54,8 @@
     <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2022-23/docs/ProgPython3.html" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Primeiros passos na programação em Python" href="Primeiros_passos.html" />
+    <link rel="prev" title="Strings: indexação e controlo de execução usando for" href="ProgPython2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="pt">
     
@@ -114,7 +116,7 @@
   Resumos dos temas
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Introdu%C3%A7%C3%A3o.html">
    Introdução
@@ -128,6 +130,16 @@
  <li class="toctree-l1">
   <a class="reference internal" href="ProgPython.html">
    Operações lógicas e controlo de execução
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ProgPython2.html">
+   Strings: indexação e controlo de execução usando for
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Listas e leitura e escrita
   </a>
  </li>
 </ul>
@@ -175,6 +187,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="Lab4.html">
    Lab4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab5.html">
+   Lab5
   </a>
  </li>
 </ul>
@@ -342,8 +359,8 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="programacao-em-python-parte-3">
-<h1>Programação em Python - parte 3<a class="headerlink" href="#programacao-em-python-parte-3" title="Link permanente para este título">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="listas-e-leitura-e-escrita">
+<h1>Listas e leitura e escrita<a class="headerlink" href="#listas-e-leitura-e-escrita" title="Link permanente para este título">¶</a></h1>
 <div class="section" id="objetivos-de-aprendizagem">
 <h2>Objetivos de aprendizagem<a class="headerlink" href="#objetivos-de-aprendizagem" title="Link permanente para este título">¶</a></h2>
 <p>Com esta lição saberemos:</p>
@@ -1111,15 +1128,32 @@ O valor de pi é aproximadamente 3.142.
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{0:d}{1:&gt; 6d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">10</span><span class="o">**</span><span class="n">i</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{0:d}</span><span class="s1"> </span><span class="si">{1:06d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">10</span><span class="o">**</span><span class="n">i</span><span class="p">))</span> <span class="c1"># forçamos o uso de zeros à esquerda</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1    10
-2   100
-3  1000
-4 10000
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 000010
+2 000100
+3 001000
+4 010000
+</pre></div>
+</div>
+</div>
+</div>
+<p>ou</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{0:d}</span><span class="s1"> </span><span class="si">{1:&gt; 6d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">10</span><span class="o">**</span><span class="n">i</span><span class="p">))</span> <span class="c1"># alinhamos o segundo valor à direita</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1     10
+2    100
+3   1000
+4  10000
 </pre></div>
 </div>
 </div>
@@ -1196,7 +1230,21 @@ O valor de pi é aproximadamente 3.142.
               
         
             <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="ProgPython2.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Strings: indexação e controlo de execução usando for</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Primeiros_passos.html" title="próximo page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">próximo</p>
+        <p class="prev-next-title">Primeiros passos na programação em Python</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
         
         </div>

@@ -54,6 +54,7 @@
     <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2022-23/docs/Lab5.html" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="prev" title="Lab4" href="Lab4.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="pt">
     
@@ -130,13 +131,23 @@
    Operações lógicas e controlo de execução
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ProgPython2.html">
+   Strings: indexação e controlo de execução usando for
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ProgPython3.html">
+   Listas e Programação em Python - parte 3
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Guiões práticos
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Primeiros_passos.html">
    Primeiros passos na programação em Python
@@ -175,6 +186,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="Lab4.html">
    Lab4
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Lab5
   </a>
  </li>
 </ul>
@@ -316,6 +332,13 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="lab5">
 <h1>Lab5<a class="headerlink" href="#lab5" title="Link permanente para este título">¶</a></h1>
+<p>Note bem:</p>
+<ul class="simple">
+<li><p>Cotação deste guião: 2 pontos</p></li>
+<li><p>Submeta cada uma das tarefas no problema correspondente do concurso IPC_L5.</p></li>
+<li><p>Prazo limite de submissão: 23h59m de 31 de outubro</p></li>
+<li><p>Prazo limite de validação das submissões aceites: 8 de novembro, horário de atendimento de terça-feira (9h30 às 10h30).</p></li>
+</ul>
 <div class="section" id="objetivos-de-aprendizagem">
 <h2>Objetivos de aprendizagem<a class="headerlink" href="#objetivos-de-aprendizagem" title="Link permanente para este título">¶</a></h2>
 <p>Com este guião, exercitaremos:</p>
@@ -464,7 +487,7 @@ Aliás, deve haver um espaço entre cada dois elementos, mas não pode haver um 
 <span class="o">-</span><span class="mi">50</span> <span class="o">-</span><span class="mi">10</span> <span class="o">-</span><span class="mi">5</span> <span class="mi">5</span> <span class="mi">10</span> <span class="mi">250</span>
 </pre></div>
 </div>
-<p>Submeta no problema A do concurso Lab4.</p>
+<p>Submeta no problema A.</p>
 </div>
 </div>
 <div class="section" id="tarefa-b">
@@ -499,14 +522,14 @@ Aliás, deve haver um espaço entre cada dois elementos, mas não pode haver um 
 <span class="mi">12</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="mi">35</span>
 </pre></div>
 </div>
-<p>Submeta no problema B do Lab4.</p>
+<p>Submeta no problema B.</p>
 </div>
 </div>
 <div class="section" id="tarefa-c">
 <h3>Tarefa C<a class="headerlink" href="#tarefa-c" title="Link permanente para este título">¶</a></h3>
 <p>Atualizamos os equipamentos e agora os tempos das experiências são apresentados em horas, minutos e segundos. Queremos saber o tempo total gasto nas experiências, em dias, horas, minutos e segundos.</p>
 <p>Podíamos converter os tempos para segundos e depois de termos um total, converter então para o formato desejado. Mas a nossa conversão não considerava a possibilidade de traduzir valores de horas superiores a 24 em dias e horas. Assim, vamos lendo a duração das experiências e atualizando o tempo total.</p>
-<p>Prepare um programa que leia os tempos da consola, um por linha, até ao fim dos dados e apresente, para cada linha lida, o tempo acumulado em dias, horas, minutos e segundos. Cada linha contém uma string com o formato <em>HH:MM:SS</em> em que <em>HH</em> correponde às horas, <em>MM</em> corresponde aos minutos e <em>SS</em> aos segundos. O tempo total, que deve ser apresentado num única linha, deverá respeitar o formato «DD:HH:MM:SS» (sem as aspas), em que <em>DD</em>, <em>HH</em>, <em>MM</em> e <em>SS</em> correspondem ao valores de dias, horas, minutos e segundos, respetivamente. Note que deve usar dois dígitos para cada valor.</p>
+<p>Prepare um programa que leia os tempos da consola, um por linha, até ao fim dos dados e apresente, para cada linha lida, o tempo acumulado em dias, horas, minutos e segundos. Cada linha contém uma string com o formato <em>HH:MM:SS</em> em que <em>HH</em> corresponde às horas, <em>MM</em> corresponde aos minutos e <em>SS</em> aos segundos. O tempo total, que deve ser apresentado num única linha, deverá respeitar o formato «DD:HH:MM:SS» (sem as aspas), em que <em>DD</em>, <em>HH</em>, <em>MM</em> e <em>SS</em> correspondem ao valores de dias, horas, minutos e segundos, respetivamente. Note que deve usar dois dígitos para cada valor.</p>
 <div class="section" id="id2">
 <h4>Casos de teste<a class="headerlink" href="#id2" title="Link permanente para este título">¶</a></h4>
 <p><strong>Input 1</strong></p>
@@ -531,7 +554,7 @@ Aliás, deve haver um espaço entre cada dois elementos, mas não pode haver um 
 <span class="mi">02</span><span class="p">:</span><span class="mi">03</span><span class="p">:</span><span class="mi">06</span><span class="p">:</span><span class="mi">00</span>
 </pre></div>
 </div>
-<p>Submeta no problema C do Lab4.</p>
+<p>Submeta no problema C.</p>
 </div>
 </div>
 <div class="section" id="tarefa-d">
@@ -579,7 +602,7 @@ Cada linha do output repetirá o input acrescentando » -&gt; Válida» (sem as 
 <span class="mi">2020</span><span class="p">:</span><span class="mi">02</span><span class="p">:</span><span class="mi">30</span> <span class="o">-&gt;</span> <span class="n">Inválida</span>
 </pre></div>
 </div>
-<p>Submeta no problema D do Lab4.</p>
+<p>Submeta no problema D.</p>
 </div>
 </div>
 </div>
@@ -609,7 +632,14 @@ Cada linha do output repetirá o input acrescentando » -&gt; Válida» (sem as 
               
         
             <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Lab4.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Lab4</p>
+        </div>
+    </a>
 </div>
         
         </div>
