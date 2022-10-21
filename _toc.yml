@@ -12,8 +12,8 @@ parts:
   - file: docs/Introdução
   - file: docs/IniciarProgramar
   - file: docs/ProgPython
-#  - file: docs/ProgPython2
-#  - file: docs/ProgPython3
+  - file: docs/ProgPython2
+  - file: docs/ProgPython3
 #  - file: docs/ProgPython4
 #  - file: docs/Ficheiros
 #  - file: docs/MódulosTestes
@@ -31,7 +31,7 @@ parts:
   - file: docs/F1-2022
   - file: docs/Lab3
   - file: docs/Lab4
-#  - file: docs/Lab5
+  - file: docs/Lab5
 #  - file: docs/Lab6
 #  - file: docs/Lab7
 #  - file: docs/F2-2021
