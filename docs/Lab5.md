@@ -4,7 +4,7 @@ Note bem:
 
 + Cotação deste guião: 2 pontos
 + Submeta cada uma das tarefas no problema correspondente do concurso IPC_L5.
-+ Prazo limite de submissão: 23h59m de 31 de outubro
++ Prazo limite de submissão: 23h59m de 2 de Novembro (extraordinariamente)
 + Prazo limite de validação das submissões aceites: 8 de novembro, horário de atendimento de terça-feira (9h30 às 10h30).
 
 ## Objetivos de aprendizagem
@@ -40,7 +40,7 @@ O esboço do nosso programa fica assim:
 # -*- coding: utf-8 -*-
 
 """Resolução guiada
-L4 - A
+L5 - A
 Programa que recebe da consola, até ao fim dos dados, 
 linhas com sequências de inteiros e, 
 para cada linha, apresenta a sequência por ordem crescente, 
@@ -77,7 +77,7 @@ O nosso programa ficaria então assim:
 # -*- coding: utf-8 -*-
 
 """Resolução guiada
-L4 - A
+L5 - A
 Programa que recebe da consola, até ao fim dos dados, 
 linhas com sequências de inteiros e, 
 para cada linha, apresenta a sequência por ordem crescente, 
@@ -132,7 +132,7 @@ Em primeiro lugar, a lista devia ser de inteiros. Há que converter! Podemos con
             lista = [int(x) for x in linha]
 ```
 
-e, claro, revendo as utilizações da lista *linha*.
+e revendo as utilizações da lista *linha*.
 
 
 Em segundo lugar, era pedido que entre cada dois elementos existisse um espaço.
