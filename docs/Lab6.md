@@ -34,7 +34,7 @@ O fluxo elementar dos programas é ler, processar, escrever. Ao começarmos por 
 
 A partir de <a href="https://images-of-elements.com/element-properties.php">List of chemical elements with properties</a> foi criado um ficheiro com os elementos da tabela periódica, um elemento por linha.
 
-Cada linha contém, para um elemento, número, período, grupo, símbolo, nome e massa atómica. O número corresponde à quantidade de protões do núcleo do átomo; o período e grupo indicam, respetivamente, a linha e coluna do elemento na tabela perídica; a massa atómica está expressa em $u$ ou $g/mol$, que corresponde por definição a $1/12$ da massa de $C_{12}$.
+Cada linha contém, para um elemento, número, período, grupo, símbolo, nome e massa atómica. O número corresponde à quantidade de protões do núcleo do átomo; o período e grupo indicam, respetivamente, a linha e coluna do elemento na tabela periódica; a massa atómica está expressa em $u$ ou $g/mol$, que corresponde por definição a $1/12$ da massa de $C_{12}$.
 
 A tabela abaixo apresenta alguns elementos.
 Temos pois seis campos de dados em cada linha. Comece por identificar o tipo (em Python) de cada campo.
@@ -55,9 +55,9 @@ Temos pois seis campos de dados em cada linha. Comece por identificar o tipo (em
 Deverá ter concluído que número, período e grupo são inteiros positivos, que o símbolo e o nome do elemento são strings e que a massa atómica é um float. 
 
 ### Tarefa A: ler e escrever
-A primeira tarefa é preparar um *script* em python que leia da consola linhas com as propriedades de elementos e, para cada linha, apresente a informação com o formato desejado.
+A primeira tarefa é preparar um programa em python que leia da consola linhas com as propriedades de elementos e, para cada linha, apresente a informação com o formato desejado.
 
-Pretende-se ler obter uma listagem com o nome do elemento justificado à direita, o símbolo entre parênteses e finalmente a massa atómica em notação científica com três casas decimais. Para efeito de formatação, considere que a dimensão de 15 e dois carateres para os campos nome e símbolo, respetivamente.
+Pretende-se ler os dados e obter uma listagem com o nome do elemento justificado à direita, o símbolo entre parênteses e finalmente a massa atómica em notação científica com três casas decimais. Para efeito de formatação, considere que a dimensão de 15 e dois carateres para os campos nome e símbolo, respetivamente.
 
 O ficheiro não terá mais de 150 linhas e cada linha não terá mais de oitenta caracteres.
 
