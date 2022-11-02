@@ -1,284 +1,203 @@
 # Lab6
 
+Note bem:
 
-Esta foi a primeira festa do ano letivo de 2020-2021.
++ Cotação deste guião: 2 pontos
++ Submeta cada uma das tarefas no problema correspondente do concurso IPC_L6.
++ Prazo limite de submissão: 23h59m de 8 de Novembro
++ Prazo limite de validação das submissões aceites: 16 de novembro, imediatamente após a aula teórica.
 
-Com este este exercício, exercitaremos uma festa de programação. 
-Reveja a [Informação sobre as Festas de Programação](https://tutoria.ualg.pt/2021/mod/resource/view.php?id=37418).
-Idealmente, reserve três horas e tente resolver os exercícios da festa de forma contínua.
+## Objetivos de aprendizagem
 
-Antes disso, reúna todos os seus materiais para consulta durante a festa e os seus programas anteriores (os que estão no Mooshak pode sempre ir lá buscá-los). Prepare uma pasta para cada problema que vai abordar, e a versão inicial da sua resolução.
+Com este guião exercitaremos:
 
+1. a leitura da consola
+1. escrita formatada
+1. uso de dicionários
 
-## IMC
+## Elementos da tabela periódica
 
-```{figure} ./figures/Laurel_and_Hardy_Silhouette.jpg
+Vamos preparar uma solução em Python para calcular o peso de algumas moléculas.
+
+```{figure} ./figures/Elements_Pics_Simple_w2000.png
 ---
-height: 300px
-name: LaurelHardy
+width: 500px
+name: TabelaPeriodica
 ---
-[Laurel and Hardy Silhouette](https://commons.wikimedia.org/wiki/File:Laurel_and_Hardy_Silhouette.jpg), de Cls14 em English Wikipedia, Public domain, via Wikimedia Commons.
-```
-
-Foi noticiado em Março de 2020 que a [OMS aponta Portugal como referência para prevenir obesidade nas crianças](https://news.un.org/pt/story/2020/03/1706141).
-
-Manter um peso saudável é muito importante. A [Fundação Portuguesa de Cardiologia](http://www.fpcardiologia.pt/saude-do-coracao/factores-de-risco/obesidade/) refere que a obesidade afeta a longevidade e a qualidade de vida e indica como calcular o índice de massa corporal (IMC) e até como classificar o peso de um indivíduo.
-
-Sabemos que $IMC = \frac{peso}{altura^2}$ e que os valores normais estão entre $18.5$ e $24.9$.
-
-Para ajudar, vamos preparar um programa que, a partir do peso e da altura, apresente o IMC.
-
-### Tarefa A
-
-Prepare um programa em Python que receba o peso e altura de uma pessoa e apresente o índice de massa corporal (IMC). O índice de massa corporal, em $kg / m^2$, calcula-se dividindo o peso pelo quadrado da altura.
-
-O input é uma única linha contendo dois números reais separados pelo caráter espaço e que correspondem ao peso e altura. 
-O output é um número real, com três casas decimais, que corresponde ao valor do índice de massa corporal.
-Se o peso ou altura não forem maiores que zero, o programa deverá produzir a mensagem "Dados inválidos." (sem as aspas).
-
-
-
-**Casos de teste**
-
-**Input 1**
-
-```
-50.0 1.50
-```
-
-**Output 1**
-
-```
-22.222
-```
-
-**Input 2**
-
-```
-45.0 1.50
-```
-
-**Output 2**
-
-```
-20.000
-```
-
-**Input 3**
-
-```
--45 1.50
-```
-
-**Output 3**
-
-```
-Dados inválidos.
-```
-
-**Input 4**
-
-```
-45 0
+[Tabela Periódica, em imagens. © 2005-2016 Keith Enevoldsen](https://elements.wlonk.com/) 
 
 ```
 
-**Output 4**
+### Descrição do caso
 
-```
-Dados inválidos.
-```
+O fluxo elementar dos programas é ler, processar, escrever. Ao começarmos por ler e escrever sabemos que estamos a tratar *bem* os dados e podemos depois concentrar a atenção no processamento.
 
-Submeta na tarefa A do concurso IPC_L5.
+A partir de <a href="https://images-of-elements.com/element-properties.php">List of chemical elements with properties</a> foi criado um ficheiro com os elementos da tabela periódica, um elemento por linha.
 
-<div style="page-break-after: always"></div>
+Cada linha contém, para um elemento, número, período, grupo, símbolo, nome e massa atómica. O número corresponde à quantidade de protões do núcleo do átomo; o período e grupo indicam, respetivamente, a linha e coluna do elemento na tabela periódica; a massa atómica está expressa em $u$ ou $g/mol$, que corresponde por definição a $1/12$ da massa de $C_{12}$.
 
-## Pluviosidade
+A tabela abaixo apresenta alguns elementos.
+Temos pois seis campos de dados em cada linha. Comece por identificar o tipo (em Python) de cada campo.
 
-
-```{figure} ./figures/chuva-pexels-pixabay-459451.jpg
----
-height: 300px
-name: chuva
----
-[Chuva](https://www.pexels.com/photo/rain-drops-459451/), de Pixabay em [Pexels](https://www.pexels.com/), CC0.
-```
-
-
-Temos tido alguma chuva ultimamente, mas pouco chove no Algarve. O [Sistema Nacional de Informação de Recursos Hídricos](https://snirh.apambiente.pt/) disponibiliza, entre outros dados, os valores diários da precipitação.
-
-Vamos querer alguns valores estatísticos pelo que, para testar o programa, fomos [buscar](https://snirh.apambiente.pt/snirh/_dadosbase/site/janela_verdados.php?sites=920685102&pars=413026594&tmin=01/01/2020&tmax=30/09/2021) os valores de precipitação diária da estação de Barranco do Velho desde o início do ano. Retirámos a informação que não precisávamos e ficámos apenas com os valores da precipitação: em cada dia, numa linha, um valor real. 
-
-Queremos saber qual o valor da precipitação acumulada, qual o maior valor de precipitação diária e em quantos dias choveu.
-
-### Tarefa B
-
-Prepare um programa em Python que leia da consola, até ao fim do input, uma sequência de números e apresente a soma dos valores lidos, o maior valor e o número de dias em que choveu (ou seja, o valor da precipitação é maior que zero).
-
-O programa lerá tantas linhas quantos os dias contidos no registo. Em cada linha haverá um número (inteiro ou real) correspondente à precipitação num dia. Quando não choveu, o valor da precipitação é 0 (zero).
-Ao terminar a leitura, o programa escreverá na mesma linha três valores separados por espaços. Os primeiros dois valores, em notação científica, correspondem à soma dos valores lidos e ao maior valor registado; o terceiro valor é um número inteiro que indica quantos dias choveu. 
-
-**Casos de teste**
-
-**Input 1**
-
-```
-0.1
-0.6
-1.8
-2.7
-1.5
-6.4
-0
-0
-```
-
-**Output 1**
-
-```
-1.310000e+01 6.400000e+00 6
-```
-
-**Input 2**
-
-```
-0
-0
-0
-0
-0
-0
-0.1
-0
-0
-0
-0
-0
-0
-```
-
-**Output 2**
-
-```
-1.000000e-01 1.000000e-01 1
-```
-
-**Input 3**
-
-```
-0
-0
-0
-0
-0
-0
-0.6
-1.8
-2.7
-1.5
-6.4
-0
-0
-0.2
-0.4
-0.5
-20.2
-4.9
-0.3
-```
-
-**Output 3**
-
-```
-3.950000e+01 2.020000e+01 11
-```
-
-Submeta na tarefa B do concurso IPC_Lab5.
-
-<div style="page-break-after: always"></div>
-
-## Química à toa
-
-```{figure} ./figures/tp-ualg.jpeg
----
-height: 300px
-name: Tabela Periódica
----
-[Exposição “Desafios da Tabela Periódica”, na Biblioteca da UAlg](https://ualg.pt/pt/content/exposicao-desafios-da-tabela-periodica-pode-ser-visitada-na-biblioteca-da-ualg)
-```
-
-Fonte: [Problema C do ToPAS 2016](https://eventos.fct.unl.pt/sites/default/files/topas-lx/files/problemas_topaslx_2016.pdf)
-
-Quando o Rui estava a estudar Química, escrevendo fórmulas
-de compostos no caderno (como $CaCO_3$ , $Na_2CO_3$ e $H_ 2SO_4$ ),
-apareceu a irmã mais nova, que ficou fascinada com aquelas
-sequências de letras e algarismos. O pior é que ela não se calava,
-exigindo que ele lhe explicasse como dividia uma sequência
-grande em pedacinhos. Desesperado, o Rui enunciou as regras:
-
-* Cada sequência de letras que começa com uma letra
-grande (a irmã não conhecia a palavra “maiúscula”) representa um elemento;
-
-* Se houver algum número a seguir ao elemento, esse é o número de átomos do elemento;
-se não houver, o número de átomos do elemento é 1.
+| número | período | grupo | símbolo | nome | massa atómica|
+|------- |---------|-------|---------|------|--------------| 
+| 1 | 1 | 1 | H | Hydrogen | 1.008|
+| 2 | 1 | 18 | He | Helium |4.003|
+| 3 | 2 | 1 | Li | Lithium |6.941|
+| 4 | 2 | 2 | Be | Beryllium |9.012|
+| 5 | 2 | 13 | B | Boron |10.81|
+| 6 | 2 | 14 | C | Carbon |12.011|
+| 7 | 2 | 15 | N | Nitrogen |14.007|
+| 8 | 2 | 16 | O | Oxygen |15.999|
+| 9 | 2 | 17 | F | Fluorine |18.998|
 
 
-Depois, exemplificou com a fórmula do carbonato de cálcio, $CaCO_3$ , que tem um átomo de
-cálcio (Ca), um átomo de carbono (C) e três átomos de oxigénio (O).
-A irmã ficou muito contente e queria aprender mais Química. Mas ele convenceu-a a praticar.
-Para poder regressar ao estudo rapidamente, decidiu escrever “fórmulas químicas” à toa e
-até inventou símbolos químicos com 1, 2, 3, 4 e 5 letras. Por exemplo, deu-lhe a fórmula
-$Ai_{19}Xpto_5Uus$ (que tem tamanho 12) para decompor.
+Deverá ter concluído que número, período e grupo são inteiros positivos, que o símbolo e o nome do elemento são strings e que a massa atómica é um float. 
 
-### Tarefa C
+### Tarefa A: ler e escrever
+A primeira tarefa é preparar um programa em python que leia da consola linhas com as propriedades de elementos e, para cada linha, apresente a informação com o formato desejado.
 
-Escreva um programa que, dada uma fórmula química inventada pelo Rui e terminada por
-“.”, apresenta os elementos que ocorrem na fórmula e o número de átomos de cada um.
+Pretende-se ler os dados e obter uma listagem com o nome do elemento justificado à direita, o símbolo entre parênteses e finalmente a massa atómica em notação científica com três casas decimais. Para efeito de formatação, considere que a dimensão de 15 e dois carateres para os campos nome e símbolo, respetivamente.
+
+O ficheiro não terá mais de 150 linhas e cada linha não terá mais de oitenta caracteres.
+
+#### Caso de teste
 
 **Input**
 
-Uma linha com uma fórmula química (inventada pelo Rui) terminada por “.”. A fórmula é
-uma sequência de $n$ letras e algarismos, que começa com uma letra maiúscula e que não tem o
-algarismo zero imediatamente a seguir a uma letra, nem uma letra minúscula imediatamente
-a seguir a um algarismo. Nenhum elemento tem mais de cinco letras, nem ocorre mais do que
-uma vez na fórmula. O número de algarismos seguidos não excede $n − 1$.
-
+```
+1 1 1 H Hydrogen 1.008
+2 1 18 He Helium 4.003
+3 2 1 Li Lithium 6.941
+4 2 2 Be Beryllium 9.012
+5 2 13 B Boron 10.81
+6 2 14 C Carbon 12.011
+7 2 15 N Nitrogen 14.007
+8 2 16 O Oxygen 15.999
+9 2 17 F Fluorine 18.998
+```
 
 **Output**
 
-O output tem uma linha por cada elemento que ocorre na fórmula. Cada linha tem um
-elemento, um espaço, o número de átomos desse elemento e uma mudança de linha. Os
-elementos têm de aparecer pela ordem em que ocorrem na fórmula.
+```
+       Hydrogen (H ) 1.008e+00
+         Helium (He) 4.003e+00
+        Lithium (Li) 6.941e+00
+      Beryllium (Be) 9.012e+00
+          Boron (B ) 1.081e+01
+         Carbon (C ) 1.201e+01
+       Nitrogen (N ) 1.401e+01
+         Oxygen (O ) 1.600e+01
+       Fluorine (F ) 1.900e+01
+```
 
+Submeta no problema A.
 
-**Casos de teste**
+### Tarefa B: organizar por símbolo químico
+
+Agora que já conseguimos ler e escrever dados, podemos avançar para algo mais interessante. Vamos organizar os elementos por símbolo químico e usar um novo tipo de dados, dicionário, para apresentar a informação dos elementos que nos forem pedidos.
+
+Neste caso, duas etapas: ler a informação dos elementos para um dicionário e depois, para cada símbolo, apresentamos a informação do elemento correspondente. 
+
+Prepare o seu programa para ler o número de elementos a considerar para o dicionário, as linhas com esses elementos e os símbolos pretendidos e apresentar, para cada símbolo pretendido e com a mesma formatação da tarefa anterior, o nome do elemento justificado à direita, o símbolo entre parênteses e finalmente a massa atómica em notação científica com três casas decimais. Se um símbolo pedido não existir, escreva "None" (sem as aspas).
+
+É requerido que guarde a informação num dicionário considerando que a chave (*key*) é o símbolo químico.
+
+#### Casos de teste
 
 **Input 1**
 
 ```
-CaCO3.
+9
+1 1 1 H Hydrogen 1.008
+2 1 18 He Helium 4.003
+3 2 1 Li Lithium 6.941
+4 2 2 Be Beryllium 9.012
+5 2 13 B Boron 10.81
+6 2 14 C Carbon 12.011
+7 2 15 N Nitrogen 14.007
+8 2 16 O Oxygen 15.999
+9 2 17 F Fluorine 18.998
+H
+O
 ```
 
 **Output 1**
 
 ```
-Ca 1
-C 1
-O 3
+       Hydrogen (H ) 1.008e+00
+         Oxygen (O ) 1.600e+01
 ```
 
 **Input 2**
 
 ```
-Ai19Xpto5Uus.
+9
+1 1 1 H Hydrogen 1.008
+2 1 18 He Helium 4.003
+3 2 1 Li Lithium 6.941
+4 2 2 Be Beryllium 9.012
+5 2 13 B Boron 10.81
+6 2 14 C Carbon 12.011
+7 2 15 N Nitrogen 14.007
+8 2 16 O Oxygen 15.999
+9 2 17 F Fluorine 18.998
+S
+O
 ```
 
 **Output 2**
 
 ```
-Ai 19
-Xpto 5
-Uus 1
+None
+         Oxygen (O ) 1.600e+01
 ```
 
-Submeta na tarefa C do concurso IPC_L5.
+Submeta no problema B.
+
+### Tarefa C: calcular peso de moléculas
+
+Já estamos quase a concluir. Se se recorda da Química, ótimo. Senão, relembramos algumas fórmulas moleculares simples.
+
+| Molécula | Fórmula molecular  |
+| -------- | ------- |
+| Água | $H_2 O$ |
+| Oxigénio | $O_2$|
+| Cloreto de sódio | $Na Cl$ |
+| Dióxido de carbono | $C O_2$ |   
+
+
+A massa molecular de um elemento ou de um composto pode ser estimado pelo somatório, para cada elemento químico que surge na molécula, do produto do número de átomos desse elemento pela respetiva massa atómica. 
+
+Parece complicado? Não é! Consideremos a água, $H_2 O$. Os elementos são $H$ e $O$. E se existir mais do que um átomo de um dado elemento, a seguir ao símbolo surge um inteiro. Assim, no caso da água, existem dois átomos de oxigénio e um de hidrogénio e teríamos ``` 1.008e+00 * 2 + 1.600e+01 ```.
+
+
+Prepare o seu programa para ler o número de elementos a considerar, as linhas com esses elementos e as fórmulas moleculares pretendidas e apresentar, para cada molécula, a massa molecular em notação científica com três casas decimais. 
+
+#### Caso de teste
+
+**Input**
+
+```
+9
+1 1 1 H Hydrogen 1.008
+2 1 18 He Helium 4.003
+3 2 1 Li Lithium 6.941
+4 2 2 Be Beryllium 9.012
+5 2 13 B Boron 10.81
+6 2 14 C Carbon 12.011
+7 2 15 N Nitrogen 14.007
+8 2 16 O Oxygen 15.999
+9 2 17 F Fluorine 18.998
+H2O
+CO2
+```
+
+**Output**
+
+```
+1.802e+01
+4.401e+01
+```
+
+Submeta no problema C.

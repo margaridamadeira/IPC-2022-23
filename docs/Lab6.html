@@ -56,6 +56,8 @@
     <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2022-23/docs/Lab6.html" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Lab7" href="Lab7-F2-2021.html" />
+    <link rel="prev" title="Lab5" href="Lab5.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="pt">
     
@@ -139,7 +141,12 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="ProgPython3.html">
-   Listas e Programação em Python - parte 3
+   Listas e leitura e escrita
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ProgPython4.html">
+   Tuplos, conjuntos e dicionários
   </a>
  </li>
 </ul>
@@ -148,7 +155,7 @@
   Guiões práticos
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Primeiros_passos.html">
    Primeiros passos na programação em Python
@@ -192,6 +199,16 @@
  <li class="toctree-l1">
   <a class="reference internal" href="Lab5.html">
    Lab5
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Lab6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab7-F2-2021.html">
+   Lab7
   </a>
  </li>
 </ul>
@@ -266,38 +283,55 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#imc">
-   IMC
+  <a class="reference internal nav-link" href="#objetivos-de-aprendizagem">
+   Objetivos de aprendizagem
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tarefa-a">
-     Tarefa A
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pluviosidade">
-   Pluviosidade
+  <a class="reference internal nav-link" href="#elementos-da-tabela-periodica">
+   Elementos da tabela periódica
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tarefa-b">
-     Tarefa B
+    <a class="reference internal nav-link" href="#descricao-do-caso">
+     Descrição do caso
     </a>
    </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#quimica-a-toa">
-   Química à toa
-  </a>
-  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tarefa-c">
-     Tarefa C
+    <a class="reference internal nav-link" href="#tarefa-a-ler-e-escrever">
+     Tarefa A: ler e escrever
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#caso-de-teste">
+       Caso de teste
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tarefa-b-organizar-por-simbolo-quimico">
+     Tarefa B: organizar por símbolo químico
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#casos-de-teste">
+       Casos de teste
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tarefa-c-calcular-peso-de-moleculas">
+     Tarefa C: calcular peso de moléculas
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Caso de teste
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -314,206 +348,250 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="lab6">
 <h1>Lab6<a class="headerlink" href="#lab6" title="Link permanente para este título">¶</a></h1>
-<p>Esta foi a primeira festa do ano letivo de 2020-2021.</p>
-<p>Com este este exercício, exercitaremos uma festa de programação.
-Reveja a <a class="reference external" href="https://tutoria.ualg.pt/2021/mod/resource/view.php?id=37418">Informação sobre as Festas de Programação</a>.
-Idealmente, reserve três horas e tente resolver os exercícios da festa de forma contínua.</p>
-<p>Antes disso, reúna todos os seus materiais para consulta durante a festa e os seus programas anteriores (os que estão no Mooshak pode sempre ir lá buscá-los). Prepare uma pasta para cada problema que vai abordar, e a versão inicial da sua resolução.</p>
-<div class="section" id="imc">
-<h2>IMC<a class="headerlink" href="#imc" title="Link permanente para este título">¶</a></h2>
-<div class="figure align-default" id="laurelhardy">
-<a class="reference internal image-reference" href="../_images/Laurel_and_Hardy_Silhouette.jpg"><img alt="../_images/Laurel_and_Hardy_Silhouette.jpg" src="../_images/Laurel_and_Hardy_Silhouette.jpg" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-text"><a class="reference external" href="https://commons.wikimedia.org/wiki/File:Laurel_and_Hardy_Silhouette.jpg">Laurel and Hardy Silhouette</a>, de Cls14 em English Wikipedia, Public domain, via Wikimedia Commons.</span><a class="headerlink" href="#laurelhardy" title="Permalink to this image">¶</a></p>
-</div>
-<p>Foi noticiado em Março de 2020 que a <a class="reference external" href="https://news.un.org/pt/story/2020/03/1706141">OMS aponta Portugal como referência para prevenir obesidade nas crianças</a>.</p>
-<p>Manter um peso saudável é muito importante. A <a class="reference external" href="http://www.fpcardiologia.pt/saude-do-coracao/factores-de-risco/obesidade/">Fundação Portuguesa de Cardiologia</a> refere que a obesidade afeta a longevidade e a qualidade de vida e indica como calcular o índice de massa corporal (IMC) e até como classificar o peso de um indivíduo.</p>
-<p>Sabemos que <span class="math notranslate nohighlight">\(IMC = \frac{peso}{altura^2}\)</span> e que os valores normais estão entre <span class="math notranslate nohighlight">\(18.5\)</span> e <span class="math notranslate nohighlight">\(24.9\)</span>.</p>
-<p>Para ajudar, vamos preparar um programa que, a partir do peso e da altura, apresente o IMC.</p>
-<div class="section" id="tarefa-a">
-<h3>Tarefa A<a class="headerlink" href="#tarefa-a" title="Link permanente para este título">¶</a></h3>
-<p>Prepare um programa em Python que receba o peso e altura de uma pessoa e apresente o índice de massa corporal (IMC). O índice de massa corporal, em <span class="math notranslate nohighlight">\(kg / m^2\)</span>, calcula-se dividindo o peso pelo quadrado da altura.</p>
-<p>O input é uma única linha contendo dois números reais separados pelo caráter espaço e que correspondem ao peso e altura.
-O output é um número real, com três casas decimais, que corresponde ao valor do índice de massa corporal.
-Se o peso ou altura não forem maiores que zero, o programa deverá produzir a mensagem «Dados inválidos.» (sem as aspas).</p>
-<p><strong>Casos de teste</strong></p>
-<p><strong>Input 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">50.0</span> <span class="mf">1.50</span>
-</pre></div>
-</div>
-<p><strong>Output 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">22.222</span>
-</pre></div>
-</div>
-<p><strong>Input 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">45.0</span> <span class="mf">1.50</span>
-</pre></div>
-</div>
-<p><strong>Output 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">20.000</span>
-</pre></div>
-</div>
-<p><strong>Input 3</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="mi">45</span> <span class="mf">1.50</span>
-</pre></div>
-</div>
-<p><strong>Output 3</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Dados</span> <span class="n">inválidos</span><span class="o">.</span>
-</pre></div>
-</div>
-<p><strong>Input 4</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">45</span> <span class="mi">0</span>
-
-</pre></div>
-</div>
-<p><strong>Output 4</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Dados</span> <span class="n">inválidos</span><span class="o">.</span>
-</pre></div>
-</div>
-<p>Submeta na tarefa A do concurso IPC_L5.</p>
-<div style="page-break-after: always"></div>
-</div>
-</div>
-<div class="section" id="pluviosidade">
-<h2>Pluviosidade<a class="headerlink" href="#pluviosidade" title="Link permanente para este título">¶</a></h2>
-<div class="figure align-default" id="chuva">
-<a class="reference internal image-reference" href="../_images/chuva-pexels-pixabay-459451.jpg"><img alt="../_images/chuva-pexels-pixabay-459451.jpg" src="../_images/chuva-pexels-pixabay-459451.jpg" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-text"><a class="reference external" href="https://www.pexels.com/photo/rain-drops-459451/">Chuva</a>, de Pixabay em <a class="reference external" href="https://www.pexels.com/">Pexels</a>, CC0.</span><a class="headerlink" href="#chuva" title="Permalink to this image">¶</a></p>
-</div>
-<p>Temos tido alguma chuva ultimamente, mas pouco chove no Algarve. O <a class="reference external" href="https://snirh.apambiente.pt/">Sistema Nacional de Informação de Recursos Hídricos</a> disponibiliza, entre outros dados, os valores diários da precipitação.</p>
-<p>Vamos querer alguns valores estatísticos pelo que, para testar o programa, fomos <a class="reference external" href="https://snirh.apambiente.pt/snirh/_dadosbase/site/janela_verdados.php?sites=920685102&amp;pars=413026594&amp;tmin=01/01/2020&amp;tmax=30/09/2021">buscar</a> os valores de precipitação diária da estação de Barranco do Velho desde o início do ano. Retirámos a informação que não precisávamos e ficámos apenas com os valores da precipitação: em cada dia, numa linha, um valor real.</p>
-<p>Queremos saber qual o valor da precipitação acumulada, qual o maior valor de precipitação diária e em quantos dias choveu.</p>
-<div class="section" id="tarefa-b">
-<h3>Tarefa B<a class="headerlink" href="#tarefa-b" title="Link permanente para este título">¶</a></h3>
-<p>Prepare um programa em Python que leia da consola, até ao fim do input, uma sequência de números e apresente a soma dos valores lidos, o maior valor e o número de dias em que choveu (ou seja, o valor da precipitação é maior que zero).</p>
-<p>O programa lerá tantas linhas quantos os dias contidos no registo. Em cada linha haverá um número (inteiro ou real) correspondente à precipitação num dia. Quando não choveu, o valor da precipitação é 0 (zero).
-Ao terminar a leitura, o programa escreverá na mesma linha três valores separados por espaços. Os primeiros dois valores, em notação científica, correspondem à soma dos valores lidos e ao maior valor registado; o terceiro valor é um número inteiro que indica quantos dias choveu.</p>
-<p><strong>Casos de teste</strong></p>
-<p><strong>Input 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">0.1</span>
-<span class="mf">0.6</span>
-<span class="mf">1.8</span>
-<span class="mf">2.7</span>
-<span class="mf">1.5</span>
-<span class="mf">6.4</span>
-<span class="mi">0</span>
-<span class="mi">0</span>
-</pre></div>
-</div>
-<p><strong>Output 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.310000e+01</span> <span class="mf">6.400000e+00</span> <span class="mi">6</span>
-</pre></div>
-</div>
-<p><strong>Input 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span>
-<span class="mi">0</span>
-<span class="mi">0</span>
-<span class="mi">0</span>
-<span class="mi">0</span>
-<span class="mi">0</span>
-<span class="mf">0.1</span>
-<span class="mi">0</span>
-<span class="mi">0</span>
-<span class="mi">0</span>
-<span class="mi">0</span>
-<span class="mi">0</span>
-<span class="mi">0</span>
-</pre></div>
-</div>
-<p><strong>Output 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.000000e-01</span> <span class="mf">1.000000e-01</span> <span class="mi">1</span>
-</pre></div>
-</div>
-<p><strong>Input 3</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span>
-<span class="mi">0</span>
-<span class="mi">0</span>
-<span class="mi">0</span>
-<span class="mi">0</span>
-<span class="mi">0</span>
-<span class="mf">0.6</span>
-<span class="mf">1.8</span>
-<span class="mf">2.7</span>
-<span class="mf">1.5</span>
-<span class="mf">6.4</span>
-<span class="mi">0</span>
-<span class="mi">0</span>
-<span class="mf">0.2</span>
-<span class="mf">0.4</span>
-<span class="mf">0.5</span>
-<span class="mf">20.2</span>
-<span class="mf">4.9</span>
-<span class="mf">0.3</span>
-</pre></div>
-</div>
-<p><strong>Output 3</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">3.950000e+01</span> <span class="mf">2.020000e+01</span> <span class="mi">11</span>
-</pre></div>
-</div>
-<p>Submeta na tarefa B do concurso IPC_Lab5.</p>
-<div style="page-break-after: always"></div>
-</div>
-</div>
-<div class="section" id="quimica-a-toa">
-<h2>Química à toa<a class="headerlink" href="#quimica-a-toa" title="Link permanente para este título">¶</a></h2>
-<div class="figure align-default" id="tabela-periodica">
-<a class="reference internal image-reference" href="../_images/tp-ualg.jpeg"><img alt="../_images/tp-ualg.jpeg" src="../_images/tp-ualg.jpeg" style="height: 300px;" /></a>
-<p class="caption"><span class="caption-text"><a class="reference external" href="https://ualg.pt/pt/content/exposicao-desafios-da-tabela-periodica-pode-ser-visitada-na-biblioteca-da-ualg">Exposição “Desafios da Tabela Periódica”, na Biblioteca da UAlg</a></span><a class="headerlink" href="#tabela-periodica" title="Permalink to this image">¶</a></p>
-</div>
-<p>Fonte: <a class="reference external" href="https://eventos.fct.unl.pt/sites/default/files/topas-lx/files/problemas_topaslx_2016.pdf">Problema C do ToPAS 2016</a></p>
-<p>Quando o Rui estava a estudar Química, escrevendo fórmulas
-de compostos no caderno (como <span class="math notranslate nohighlight">\(CaCO_3\)</span> , <span class="math notranslate nohighlight">\(Na_2CO_3\)</span> e <span class="math notranslate nohighlight">\(H_ 2SO_4\)</span> ),
-apareceu a irmã mais nova, que ficou fascinada com aquelas
-sequências de letras e algarismos. O pior é que ela não se calava,
-exigindo que ele lhe explicasse como dividia uma sequência
-grande em pedacinhos. Desesperado, o Rui enunciou as regras:</p>
+<p>Note bem:</p>
 <ul class="simple">
-<li><p>Cada sequência de letras que começa com uma letra
-grande (a irmã não conhecia a palavra “maiúscula”) representa um elemento;</p></li>
-<li><p>Se houver algum número a seguir ao elemento, esse é o número de átomos do elemento;
-se não houver, o número de átomos do elemento é 1.</p></li>
+<li><p>Cotação deste guião: 2 pontos</p></li>
+<li><p>Submeta cada uma das tarefas no problema correspondente do concurso IPC_L6.</p></li>
+<li><p>Prazo limite de submissão: 23h59m de 8 de Novembro</p></li>
+<li><p>Prazo limite de validação das submissões aceites: 16 de novembro, imediatamente após a aula teórica.</p></li>
 </ul>
-<p>Depois, exemplificou com a fórmula do carbonato de cálcio, <span class="math notranslate nohighlight">\(CaCO_3\)</span> , que tem um átomo de
-cálcio (Ca), um átomo de carbono (C) e três átomos de oxigénio (O).
-A irmã ficou muito contente e queria aprender mais Química. Mas ele convenceu-a a praticar.
-Para poder regressar ao estudo rapidamente, decidiu escrever “fórmulas químicas” à toa e
-até inventou símbolos químicos com 1, 2, 3, 4 e 5 letras. Por exemplo, deu-lhe a fórmula
-<span class="math notranslate nohighlight">\(Ai_{19}Xpto_5Uus\)</span> (que tem tamanho 12) para decompor.</p>
-<div class="section" id="tarefa-c">
-<h3>Tarefa C<a class="headerlink" href="#tarefa-c" title="Link permanente para este título">¶</a></h3>
-<p>Escreva um programa que, dada uma fórmula química inventada pelo Rui e terminada por
-“.”, apresenta os elementos que ocorrem na fórmula e o número de átomos de cada um.</p>
+<div class="section" id="objetivos-de-aprendizagem">
+<h2>Objetivos de aprendizagem<a class="headerlink" href="#objetivos-de-aprendizagem" title="Link permanente para este título">¶</a></h2>
+<p>Com este guião exercitaremos:</p>
+<ol class="simple">
+<li><p>a leitura da consola</p></li>
+<li><p>escrita formatada</p></li>
+<li><p>uso de dicionários</p></li>
+</ol>
+</div>
+<div class="section" id="elementos-da-tabela-periodica">
+<h2>Elementos da tabela periódica<a class="headerlink" href="#elementos-da-tabela-periodica" title="Link permanente para este título">¶</a></h2>
+<p>Vamos preparar uma solução em Python para calcular o peso de algumas moléculas.</p>
+<div class="figure align-default" id="tabelaperiodica">
+<a class="reference internal image-reference" href="../_images/Elements_Pics_Simple_w2000.png"><img alt="../_images/Elements_Pics_Simple_w2000.png" src="../_images/Elements_Pics_Simple_w2000.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text"><a class="reference external" href="https://elements.wlonk.com/">Tabela Periódica, em imagens. © 2005-2016 Keith Enevoldsen</a></span><a class="headerlink" href="#tabelaperiodica" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="descricao-do-caso">
+<h3>Descrição do caso<a class="headerlink" href="#descricao-do-caso" title="Link permanente para este título">¶</a></h3>
+<p>O fluxo elementar dos programas é ler, processar, escrever. Ao começarmos por ler e escrever sabemos que estamos a tratar <em>bem</em> os dados e podemos depois concentrar a atenção no processamento.</p>
+<p>A partir de <a href="https://images-of-elements.com/element-properties.php">List of chemical elements with properties</a> foi criado um ficheiro com os elementos da tabela periódica, um elemento por linha.</p>
+<p>Cada linha contém, para um elemento, número, período, grupo, símbolo, nome e massa atómica. O número corresponde à quantidade de protões do núcleo do átomo; o período e grupo indicam, respetivamente, a linha e coluna do elemento na tabela periódica; a massa atómica está expressa em <span class="math notranslate nohighlight">\(u\)</span> ou <span class="math notranslate nohighlight">\(g/mol\)</span>, que corresponde por definição a <span class="math notranslate nohighlight">\(1/12\)</span> da massa de <span class="math notranslate nohighlight">\(C_{12}\)</span>.</p>
+<p>A tabela abaixo apresenta alguns elementos.
+Temos pois seis campos de dados em cada linha. Comece por identificar o tipo (em Python) de cada campo.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>número</p></th>
+<th class="head"><p>período</p></th>
+<th class="head"><p>grupo</p></th>
+<th class="head"><p>símbolo</p></th>
+<th class="head"><p>nome</p></th>
+<th class="head"><p>massa atómica</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>H</p></td>
+<td><p>Hydrogen</p></td>
+<td><p>1.008</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>1</p></td>
+<td><p>18</p></td>
+<td><p>He</p></td>
+<td><p>Helium</p></td>
+<td><p>4.003</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>2</p></td>
+<td><p>1</p></td>
+<td><p>Li</p></td>
+<td><p>Lithium</p></td>
+<td><p>6.941</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>2</p></td>
+<td><p>2</p></td>
+<td><p>Be</p></td>
+<td><p>Beryllium</p></td>
+<td><p>9.012</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>2</p></td>
+<td><p>13</p></td>
+<td><p>B</p></td>
+<td><p>Boron</p></td>
+<td><p>10.81</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>2</p></td>
+<td><p>14</p></td>
+<td><p>C</p></td>
+<td><p>Carbon</p></td>
+<td><p>12.011</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>2</p></td>
+<td><p>15</p></td>
+<td><p>N</p></td>
+<td><p>Nitrogen</p></td>
+<td><p>14.007</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>2</p></td>
+<td><p>16</p></td>
+<td><p>O</p></td>
+<td><p>Oxygen</p></td>
+<td><p>15.999</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>2</p></td>
+<td><p>17</p></td>
+<td><p>F</p></td>
+<td><p>Fluorine</p></td>
+<td><p>18.998</p></td>
+</tr>
+</tbody>
+</table>
+<p>Deverá ter concluído que número, período e grupo são inteiros positivos, que o símbolo e o nome do elemento são strings e que a massa atómica é um float.</p>
+</div>
+<div class="section" id="tarefa-a-ler-e-escrever">
+<h3>Tarefa A: ler e escrever<a class="headerlink" href="#tarefa-a-ler-e-escrever" title="Link permanente para este título">¶</a></h3>
+<p>A primeira tarefa é preparar um programa em python que leia da consola linhas com as propriedades de elementos e, para cada linha, apresente a informação com o formato desejado.</p>
+<p>Pretende-se ler os dados e obter uma listagem com o nome do elemento justificado à direita, o símbolo entre parênteses e finalmente a massa atómica em notação científica com três casas decimais. Para efeito de formatação, considere que a dimensão de 15 e dois carateres para os campos nome e símbolo, respetivamente.</p>
+<p>O ficheiro não terá mais de 150 linhas e cada linha não terá mais de oitenta caracteres.</p>
+<div class="section" id="caso-de-teste">
+<h4>Caso de teste<a class="headerlink" href="#caso-de-teste" title="Link permanente para este título">¶</a></h4>
 <p><strong>Input</strong></p>
-<p>Uma linha com uma fórmula química (inventada pelo Rui) terminada por “.”. A fórmula é
-uma sequência de <span class="math notranslate nohighlight">\(n\)</span> letras e algarismos, que começa com uma letra maiúscula e que não tem o
-algarismo zero imediatamente a seguir a uma letra, nem uma letra minúscula imediatamente
-a seguir a um algarismo. Nenhum elemento tem mais de cinco letras, nem ocorre mais do que
-uma vez na fórmula. O número de algarismos seguidos não excede <span class="math notranslate nohighlight">\(n − 1\)</span>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="n">H</span> <span class="n">Hydrogen</span> <span class="mf">1.008</span>
+<span class="mi">2</span> <span class="mi">1</span> <span class="mi">18</span> <span class="n">He</span> <span class="n">Helium</span> <span class="mf">4.003</span>
+<span class="mi">3</span> <span class="mi">2</span> <span class="mi">1</span> <span class="n">Li</span> <span class="n">Lithium</span> <span class="mf">6.941</span>
+<span class="mi">4</span> <span class="mi">2</span> <span class="mi">2</span> <span class="n">Be</span> <span class="n">Beryllium</span> <span class="mf">9.012</span>
+<span class="mi">5</span> <span class="mi">2</span> <span class="mi">13</span> <span class="n">B</span> <span class="n">Boron</span> <span class="mf">10.81</span>
+<span class="mi">6</span> <span class="mi">2</span> <span class="mi">14</span> <span class="n">C</span> <span class="n">Carbon</span> <span class="mf">12.011</span>
+<span class="mi">7</span> <span class="mi">2</span> <span class="mi">15</span> <span class="n">N</span> <span class="n">Nitrogen</span> <span class="mf">14.007</span>
+<span class="mi">8</span> <span class="mi">2</span> <span class="mi">16</span> <span class="n">O</span> <span class="n">Oxygen</span> <span class="mf">15.999</span>
+<span class="mi">9</span> <span class="mi">2</span> <span class="mi">17</span> <span class="n">F</span> <span class="n">Fluorine</span> <span class="mf">18.998</span>
+</pre></div>
+</div>
 <p><strong>Output</strong></p>
-<p>O output tem uma linha por cada elemento que ocorre na fórmula. Cada linha tem um
-elemento, um espaço, o número de átomos desse elemento e uma mudança de linha. Os
-elementos têm de aparecer pela ordem em que ocorrem na fórmula.</p>
-<p><strong>Casos de teste</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>       <span class="n">Hydrogen</span> <span class="p">(</span><span class="n">H</span> <span class="p">)</span> <span class="mf">1.008e+00</span>
+         <span class="n">Helium</span> <span class="p">(</span><span class="n">He</span><span class="p">)</span> <span class="mf">4.003e+00</span>
+        <span class="n">Lithium</span> <span class="p">(</span><span class="n">Li</span><span class="p">)</span> <span class="mf">6.941e+00</span>
+      <span class="n">Beryllium</span> <span class="p">(</span><span class="n">Be</span><span class="p">)</span> <span class="mf">9.012e+00</span>
+          <span class="n">Boron</span> <span class="p">(</span><span class="n">B</span> <span class="p">)</span> <span class="mf">1.081e+01</span>
+         <span class="n">Carbon</span> <span class="p">(</span><span class="n">C</span> <span class="p">)</span> <span class="mf">1.201e+01</span>
+       <span class="n">Nitrogen</span> <span class="p">(</span><span class="n">N</span> <span class="p">)</span> <span class="mf">1.401e+01</span>
+         <span class="n">Oxygen</span> <span class="p">(</span><span class="n">O</span> <span class="p">)</span> <span class="mf">1.600e+01</span>
+       <span class="n">Fluorine</span> <span class="p">(</span><span class="n">F</span> <span class="p">)</span> <span class="mf">1.900e+01</span>
+</pre></div>
+</div>
+<p>Submeta no problema A.</p>
+</div>
+</div>
+<div class="section" id="tarefa-b-organizar-por-simbolo-quimico">
+<h3>Tarefa B: organizar por símbolo químico<a class="headerlink" href="#tarefa-b-organizar-por-simbolo-quimico" title="Link permanente para este título">¶</a></h3>
+<p>Agora que já conseguimos ler e escrever dados, podemos avançar para algo mais interessante. Vamos organizar os elementos por símbolo químico e usar um novo tipo de dados, dicionário, para apresentar a informação dos elementos que nos forem pedidos.</p>
+<p>Neste caso, duas etapas: ler a informação dos elementos para um dicionário e depois, para cada símbolo, apresentamos a informação do elemento correspondente.</p>
+<p>Prepare o seu programa para ler o número de elementos a considerar para o dicionário, as linhas com esses elementos e os símbolos pretendidos e apresentar, para cada símbolo pretendido e com a mesma formatação da tarefa anterior, o nome do elemento justificado à direita, o símbolo entre parênteses e finalmente a massa atómica em notação científica com três casas decimais. Se um símbolo pedido não existir, escreva «None» (sem as aspas).</p>
+<p>É requerido que guarde a informação num dicionário considerando que a chave (<em>key</em>) é o símbolo químico.</p>
+<div class="section" id="casos-de-teste">
+<h4>Casos de teste<a class="headerlink" href="#casos-de-teste" title="Link permanente para este título">¶</a></h4>
 <p><strong>Input 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CaCO3</span><span class="o">.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">9</span>
+<span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="n">H</span> <span class="n">Hydrogen</span> <span class="mf">1.008</span>
+<span class="mi">2</span> <span class="mi">1</span> <span class="mi">18</span> <span class="n">He</span> <span class="n">Helium</span> <span class="mf">4.003</span>
+<span class="mi">3</span> <span class="mi">2</span> <span class="mi">1</span> <span class="n">Li</span> <span class="n">Lithium</span> <span class="mf">6.941</span>
+<span class="mi">4</span> <span class="mi">2</span> <span class="mi">2</span> <span class="n">Be</span> <span class="n">Beryllium</span> <span class="mf">9.012</span>
+<span class="mi">5</span> <span class="mi">2</span> <span class="mi">13</span> <span class="n">B</span> <span class="n">Boron</span> <span class="mf">10.81</span>
+<span class="mi">6</span> <span class="mi">2</span> <span class="mi">14</span> <span class="n">C</span> <span class="n">Carbon</span> <span class="mf">12.011</span>
+<span class="mi">7</span> <span class="mi">2</span> <span class="mi">15</span> <span class="n">N</span> <span class="n">Nitrogen</span> <span class="mf">14.007</span>
+<span class="mi">8</span> <span class="mi">2</span> <span class="mi">16</span> <span class="n">O</span> <span class="n">Oxygen</span> <span class="mf">15.999</span>
+<span class="mi">9</span> <span class="mi">2</span> <span class="mi">17</span> <span class="n">F</span> <span class="n">Fluorine</span> <span class="mf">18.998</span>
+<span class="n">H</span>
+<span class="n">O</span>
 </pre></div>
 </div>
 <p><strong>Output 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Ca</span> <span class="mi">1</span>
-<span class="n">C</span> <span class="mi">1</span>
-<span class="n">O</span> <span class="mi">3</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>       <span class="n">Hydrogen</span> <span class="p">(</span><span class="n">H</span> <span class="p">)</span> <span class="mf">1.008e+00</span>
+         <span class="n">Oxygen</span> <span class="p">(</span><span class="n">O</span> <span class="p">)</span> <span class="mf">1.600e+01</span>
 </pre></div>
 </div>
 <p><strong>Input 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Ai19Xpto5Uus</span><span class="o">.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">9</span>
+<span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="n">H</span> <span class="n">Hydrogen</span> <span class="mf">1.008</span>
+<span class="mi">2</span> <span class="mi">1</span> <span class="mi">18</span> <span class="n">He</span> <span class="n">Helium</span> <span class="mf">4.003</span>
+<span class="mi">3</span> <span class="mi">2</span> <span class="mi">1</span> <span class="n">Li</span> <span class="n">Lithium</span> <span class="mf">6.941</span>
+<span class="mi">4</span> <span class="mi">2</span> <span class="mi">2</span> <span class="n">Be</span> <span class="n">Beryllium</span> <span class="mf">9.012</span>
+<span class="mi">5</span> <span class="mi">2</span> <span class="mi">13</span> <span class="n">B</span> <span class="n">Boron</span> <span class="mf">10.81</span>
+<span class="mi">6</span> <span class="mi">2</span> <span class="mi">14</span> <span class="n">C</span> <span class="n">Carbon</span> <span class="mf">12.011</span>
+<span class="mi">7</span> <span class="mi">2</span> <span class="mi">15</span> <span class="n">N</span> <span class="n">Nitrogen</span> <span class="mf">14.007</span>
+<span class="mi">8</span> <span class="mi">2</span> <span class="mi">16</span> <span class="n">O</span> <span class="n">Oxygen</span> <span class="mf">15.999</span>
+<span class="mi">9</span> <span class="mi">2</span> <span class="mi">17</span> <span class="n">F</span> <span class="n">Fluorine</span> <span class="mf">18.998</span>
+<span class="n">S</span>
+<span class="n">O</span>
 </pre></div>
 </div>
 <p><strong>Output 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Ai</span> <span class="mi">19</span>
-<span class="n">Xpto</span> <span class="mi">5</span>
-<span class="n">Uus</span> <span class="mi">1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kc">None</span>
+         <span class="n">Oxygen</span> <span class="p">(</span><span class="n">O</span> <span class="p">)</span> <span class="mf">1.600e+01</span>
 </pre></div>
 </div>
-<p>Submeta na tarefa C do concurso IPC_L5.</p>
+<p>Submeta no problema B.</p>
+</div>
+</div>
+<div class="section" id="tarefa-c-calcular-peso-de-moleculas">
+<h3>Tarefa C: calcular peso de moléculas<a class="headerlink" href="#tarefa-c-calcular-peso-de-moleculas" title="Link permanente para este título">¶</a></h3>
+<p>Já estamos quase a concluir. Se se recorda da Química, ótimo. Senão, relembramos algumas fórmulas moleculares simples.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Molécula</p></th>
+<th class="head"><p>Fórmula molecular</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Água</p></td>
+<td><p><span class="math notranslate nohighlight">\(H_2 O\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Oxigénio</p></td>
+<td><p><span class="math notranslate nohighlight">\(O_2\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Cloreto de sódio</p></td>
+<td><p><span class="math notranslate nohighlight">\(Na Cl\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Dióxido de carbono</p></td>
+<td><p><span class="math notranslate nohighlight">\(C O_2\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>A massa molecular de um elemento ou de um composto pode ser estimado pelo somatório, para cada elemento químico que surge na molécula, do produto do número de átomos desse elemento pela respetiva massa atómica.</p>
+<p>Parece complicado? Não é! Consideremos a água, <span class="math notranslate nohighlight">\(H_2 O\)</span>. Os elementos são <span class="math notranslate nohighlight">\(H\)</span> e <span class="math notranslate nohighlight">\(O\)</span>. E se existir mais do que um átomo de um dado elemento, a seguir ao símbolo surge um inteiro. Assim, no caso da água, existem dois átomos de oxigénio e um de hidrogénio e teríamos <code class="docutils literal notranslate"><span class="pre">1.008e+00</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">+</span> <span class="pre">1.600e+01</span></code>.</p>
+<p>Prepare o seu programa para ler o número de elementos a considerar, as linhas com esses elementos e as fórmulas moleculares pretendidas e apresentar, para cada molécula, a massa molecular em notação científica com três casas decimais.</p>
+<div class="section" id="id1">
+<h4>Caso de teste<a class="headerlink" href="#id1" title="Link permanente para este título">¶</a></h4>
+<p><strong>Input</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">9</span>
+<span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="n">H</span> <span class="n">Hydrogen</span> <span class="mf">1.008</span>
+<span class="mi">2</span> <span class="mi">1</span> <span class="mi">18</span> <span class="n">He</span> <span class="n">Helium</span> <span class="mf">4.003</span>
+<span class="mi">3</span> <span class="mi">2</span> <span class="mi">1</span> <span class="n">Li</span> <span class="n">Lithium</span> <span class="mf">6.941</span>
+<span class="mi">4</span> <span class="mi">2</span> <span class="mi">2</span> <span class="n">Be</span> <span class="n">Beryllium</span> <span class="mf">9.012</span>
+<span class="mi">5</span> <span class="mi">2</span> <span class="mi">13</span> <span class="n">B</span> <span class="n">Boron</span> <span class="mf">10.81</span>
+<span class="mi">6</span> <span class="mi">2</span> <span class="mi">14</span> <span class="n">C</span> <span class="n">Carbon</span> <span class="mf">12.011</span>
+<span class="mi">7</span> <span class="mi">2</span> <span class="mi">15</span> <span class="n">N</span> <span class="n">Nitrogen</span> <span class="mf">14.007</span>
+<span class="mi">8</span> <span class="mi">2</span> <span class="mi">16</span> <span class="n">O</span> <span class="n">Oxygen</span> <span class="mf">15.999</span>
+<span class="mi">9</span> <span class="mi">2</span> <span class="mi">17</span> <span class="n">F</span> <span class="n">Fluorine</span> <span class="mf">18.998</span>
+<span class="n">H2O</span>
+<span class="n">CO2</span>
+</pre></div>
+</div>
+<p><strong>Output</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.802e+01</span>
+<span class="mf">4.401e+01</span>
+</pre></div>
+</div>
+<p>Submeta no problema C.</p>
+</div>
 </div>
 </div>
 </div>
@@ -542,7 +620,21 @@ elementos têm de aparecer pela ordem em que ocorrem na fórmula.</p>
               
         
             <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Lab5.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Lab5</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Lab7-F2-2021.html" title="próximo page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">próximo</p>
+        <p class="prev-next-title">Lab7</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
         
         </div>

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Programação em Python - parte 4 &#8212; Introdução à programação científica</title>
+    <title>Tuplos, conjuntos e dicionários &#8212; Introdução à programação científica</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -54,6 +54,8 @@
     <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2022-23/docs/ProgPython4.html" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Primeiros passos na programação em Python" href="Primeiros_passos.html" />
+    <link rel="prev" title="Listas e leitura e escrita" href="ProgPython3.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="pt">
     
@@ -114,7 +116,7 @@
   Resumos dos temas
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Introdu%C3%A7%C3%A3o.html">
    Introdução
@@ -137,7 +139,12 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="ProgPython3.html">
-   Listas e Programação em Python - parte 3
+   Listas e leitura e escrita
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Tuplos, conjuntos e dicionários
   </a>
  </li>
 </ul>
@@ -190,6 +197,16 @@
  <li class="toctree-l1">
   <a class="reference internal" href="Lab5.html">
    Lab5
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab6.html">
+   Lab6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab7-F2-2021.html">
+   Lab7
   </a>
  </li>
 </ul>
@@ -286,7 +303,7 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tuplos-conjuntos-e-dicionarios">
+  <a class="reference internal nav-link" href="#id1">
    Tuplos, conjuntos e dicionários
   </a>
   <ul class="nav section-nav flex-column">
@@ -340,8 +357,8 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="programacao-em-python-parte-4">
-<h1>Programação em Python - parte 4<a class="headerlink" href="#programacao-em-python-parte-4" title="Link permanente para este título">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="tuplos-conjuntos-e-dicionarios">
+<h1>Tuplos, conjuntos e dicionários<a class="headerlink" href="#tuplos-conjuntos-e-dicionarios" title="Link permanente para este título">¶</a></h1>
 <div class="section" id="objetivos-de-aprendizagem">
 <h2>Objetivos de aprendizagem<a class="headerlink" href="#objetivos-de-aprendizagem" title="Link permanente para este título">¶</a></h2>
 <p>Com esta lição, continuamos a conhecer tipos de dados compostos.
@@ -351,11 +368,11 @@ Em particular, para os tipos</p>
 <li><p>conjuntos</p></li>
 <li><p>dicionários</p></li>
 </ul>
-<p>veremos como criar e usar objetos desses tipo e alguns dos métodos definidos para cada um dos tipos de dados.</p>
-<p>Veremos também as propriedades mutabilidade e ordenação destes tipos de dados.</p>
+<p>saberemos como criar e usar objetos desses tipos e identificaremos alguns dos métodos definidos para cada um dos tipos de dados.</p>
+<p>Seremos também capazes de distinguir as propriedades mutabilidade e ordenação destes tipos de dados.</p>
 </div>
-<div class="section" id="tuplos-conjuntos-e-dicionarios">
-<h2>Tuplos, conjuntos e dicionários<a class="headerlink" href="#tuplos-conjuntos-e-dicionarios" title="Link permanente para este título">¶</a></h2>
+<div class="section" id="id1">
+<h2>Tuplos, conjuntos e dicionários<a class="headerlink" href="#id1" title="Link permanente para este título">¶</a></h2>
 <div class="section" id="enquadramento">
 <h3>Enquadramento<a class="headerlink" href="#enquadramento" title="Link permanente para este título">¶</a></h3>
 <p>Já sabemos que se o valor que está associado a um objeto é sempre o mesmo, o tipo diz-se <em>imutável</em>; se existirem métodos para alterar o valor associado a um objeto então o tipo diz-se <em>mutável</em>.</p>
@@ -410,7 +427,7 @@ As strings e as listas (e range) são tipos de sequências.</p>
 </div>
 </div>
 </div>
-<p>Já vimos  uma utilização muito conveniente dos tuplos, na troca do conteúdo das variáveis.</p>
+<p>Uma utilização muito conveniente dos tuplos é usada na troca do conteúdo das variáveis.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
@@ -427,7 +444,7 @@ As strings e as listas (e range) são tipos de sequências.</p>
 </div>
 </div>
 <p>E não foi preciso uma variável auxiliar.
-Se se pretender que uma função devolva dois (ou mais) valores, podemos usar tuplos como fizemos na função <em>maior_onde</em> da aula passada, aqui repetida.</p>
+Se se pretender que uma função devolva dois (ou mais) valores, podemos usar tuplos como fizemos na função <em>maior_onde</em> dos exemplos da anterior secção, aqui repetida.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A minha lista de teste</span>
@@ -560,7 +577,7 @@ Se se pretender que uma função devolva dois (ou mais) valores, podemos usar tu
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;j&#39;, &#39;y&#39;, &#39;t&#39;, &#39;n&#39;, &#39;m&#39;, &#39;u&#39;, &#39;o&#39;, &#39;b&#39;, &#39;d&#39;, &#39;a&#39;, &#39;z&#39;, &#39;w&#39;, &#39;f&#39;, &#39;h&#39;, &#39;e&#39;, &#39;s&#39;, &#39;p&#39;, &#39;q&#39;, &#39;k&#39;, &#39;r&#39;, &#39;v&#39;, &#39;x&#39;, &#39;i&#39;, &#39;g&#39;, &#39;l&#39;, &#39;c&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;l&#39;, &#39;c&#39;, &#39;b&#39;, &#39;s&#39;, &#39;e&#39;, &#39;g&#39;, &#39;u&#39;, &#39;p&#39;, &#39;h&#39;, &#39;d&#39;, &#39;v&#39;, &#39;z&#39;, &#39;n&#39;, &#39;q&#39;, &#39;a&#39;, &#39;o&#39;, &#39;y&#39;, &#39;j&#39;, &#39;t&#39;, &#39;m&#39;, &#39;k&#39;, &#39;r&#39;, &#39;f&#39;, &#39;w&#39;, &#39;i&#39;, &#39;x&#39;}
 </pre></div>
 </div>
 </div>
@@ -574,7 +591,7 @@ Se se pretender que uma função devolva dois (ou mais) valores, podemos usar tu
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;j&#39;, &#39;z&#39;, &#39;t&#39;, &#39;f&#39;, &#39;h&#39;, &#39;n&#39;, &#39;s&#39;, &#39;p&#39;, &#39;m&#39;, &#39;q&#39;, &#39;k&#39;, &#39;r&#39;, &#39;v&#39;, &#39;d&#39;, &#39;x&#39;, &#39;g&#39;, &#39;b&#39;, &#39;l&#39;, &#39;c&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;v&#39;, &#39;l&#39;, &#39;c&#39;, &#39;z&#39;, &#39;n&#39;, &#39;q&#39;, &#39;b&#39;, &#39;s&#39;, &#39;g&#39;, &#39;j&#39;, &#39;t&#39;, &#39;m&#39;, &#39;k&#39;, &#39;r&#39;, &#39;p&#39;, &#39;f&#39;, &#39;h&#39;, &#39;d&#39;, &#39;x&#39;}
 </pre></div>
 </div>
 </div>
@@ -821,7 +838,7 @@ O número da FE é 289800915
 </div>
 <div class="section" id="resumo">
 <h2>Resumo<a class="headerlink" href="#resumo" title="Link permanente para este título">¶</a></h2>
-<p>A classificação dos tipos de dados quanto à mudabilidade e à ordenação oferece uma forma de distinguir os diferentes tipos de dados compostos.</p>
+<p>A classificação dos tipos de dados quanto à mutabilidade e à ordenação oferece uma forma de distinguir os diferentes tipos de dados compostos.</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Tipo</p></th>
@@ -834,9 +851,20 @@ O número da FE é 289800915
 <td><p>Sim</p></td>
 <td><p>Sim</p></td>
 </tr>
+<tr class="row-odd"><td><p>Tuplos</p></td>
+<td><p>Não</p></td>
+<td><p>Sim</p></td>
+</tr>
+<tr class="row-even"><td><p>Conjuntos</p></td>
+<td><p>Sim</p></td>
+<td><p>Não</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dicionários</p></td>
+<td><p>Sim</p></td>
+<td><p>Não</p></td>
+</tr>
 </tbody>
 </table>
-<p>Revendo os tipos de dados compostos,</p>
 </div>
 </div>
 
@@ -864,7 +892,21 @@ O número da FE é 289800915
               
         
             <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="ProgPython3.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Listas e leitura e escrita</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Primeiros_passos.html" title="próximo page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">próximo</p>
+        <p class="prev-next-title">Primeiros passos na programação em Python</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
         
         </div>
