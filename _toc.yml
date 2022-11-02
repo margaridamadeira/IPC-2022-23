@@ -14,7 +14,7 @@ parts:
   - file: docs/ProgPython
   - file: docs/ProgPython2
   - file: docs/ProgPython3
-#  - file: docs/ProgPython4
+  - file: docs/ProgPython4
 #  - file: docs/Ficheiros
 #  - file: docs/MódulosTestes
 #  - file: docs/Matplotlib
@@ -32,9 +32,9 @@ parts:
   - file: docs/Lab3
   - file: docs/Lab4
   - file: docs/Lab5
-#  - file: docs/Lab6
+  - file: docs/Lab6
+  - file: docs/Lab7-F2-2021
 #  - file: docs/Lab7
-#  - file: docs/F2-2021
 #  - file: docs/Lab8
 #  - file: docs/Lab9
 #  - file: docs/F3-2122
