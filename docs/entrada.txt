@@ -1,0 +1,4 @@
+Programar em Python!
+Para saber mais sobre os princípios de Python
+abra uma consola e execute
+import this
