@@ -598,17 +598,18 @@ Para uma escrita bem sucedida há que ter em atenção que:</p>
 <div class="section" id="exercicio-exemplificativo">
 <h2>Exercício exemplificativo<a class="headerlink" href="#exercicio-exemplificativo" title="Link permanente para este título">¶</a></h2>
 <p>(adaptado de <a class="reference external" href="https://justinbois.github.io/bootcamp/2020/lessons/l11_file_io.html">Introduction to Programming in the Biological Sciences Bootcamp - Lesson 11</a>, (c)2020 Justin Bois, CC-BY 4.0)</p>
-<p>Considere o ficheiro 10LG.pdb, de <a class="reference external" href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1olg">Protein Databank</a> com informação sobre a proteína <a class="reference external" href="https://pt.wikipedia.org/wiki/P53">p53</a>.</p>
+<p>Considere o ficheiro 1OLG.pdb, de <a class="reference external" href="http://www.rcsb.org/pdb/explore/explore.do?structureId=1olg">Protein Databank</a> com informação sobre a proteína <a class="reference external" href="https://pt.wikipedia.org/wiki/P53">p53</a>.</p>
 <p>Se o ficheiro não estiver na directoria corrente, descarregamos.
 Para isso, precisamos do módulo <code class="docutils literal notranslate"><span class="pre">wget</span></code>. Se não estiver disponível, há que o obter.</p>
-<p>Procure esse método no navegador da distribuição Anaconda e selecione a sua instalação.
-Ou, em alternativa, na <em>Anaconda command prompt</em> faça
-<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">wget</span></code>
-ou
+<p>Procure esse método no navegador da distribuição Anaconda e selecione a sua instalação.</p>
+<p>Ou, em alternativa, na <em>Anaconda command prompt</em> faça
+<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">anaconda</span> <span class="pre">pywget</span></code></p>
+<p>Ou, se não instalou a distribuição Anaconda faça
 <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">wget</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">wget</span><span class="o">,</span> <span class="nn">os</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">wget</span>
 </pre></div>
 </div>
 </div>
