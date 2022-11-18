@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lab2 &#8212; Introdução à programação científica</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -57,7 +57,10 @@
     <link rel="next" title="Primeira Festa de Programação" href="F1-2022.html" />
     <link rel="prev" title="Lab1" href="Lab1.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -96,7 +99,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Preâmbulo
  </span>
@@ -108,7 +111,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Resumos dos temas
  </span>
@@ -149,8 +152,13 @@
    Ficheiros
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M%C3%B3dulosTestes.html">
+   Criação de soluções
+  </a>
+ </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Guiões práticos
  </span>
@@ -330,7 +338,7 @@
 <h2>Câmbio<a class="headerlink" href="#cambio" title="Link permanente para este título">¶</a></h2>
 <div class="figure align-default" id="exchanging-money">
 <a class="reference internal image-reference" href="../_images/MoneyExchange.jpg"><img alt="../_images/MoneyExchange.jpg" src="../_images/MoneyExchange.jpg" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text"><a class="reference external" href="https://www.vectorstock.com/royalty-free-vector/money-exchange-vector-7778171">Fonte da imagem: Money exchange vector image de art-sonik365. Acedido a 30 setembro 2022</a></span><a class="headerlink" href="#exchanging-money" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text"><a class="reference external" href="https://www.vectorstock.com/royalty-free-vector/money-exchange-vector-7778171">Fonte da imagem: Money exchange vector image de art-sonik365. Acedido a 30 setembro 2022</a></span><a class="headerlink" href="#exchanging-money" title="Permalink to this image">¶</a></p>
 </div>
 <p>Vivemos num mundo global. Nem sempre a moeda é euros.
 E para fazer compras online, é útil ter uns programas em Python para calcular os preços. Para já, quero saber qual o preço de um produto que está listado em libras esterlinas.</p>
@@ -375,7 +383,7 @@ E para fazer compras online, é útil ter uns programas em Python para calcular 
 <h2>Imperial para métrico<a class="headerlink" href="#imperial-para-metrico" title="Link permanente para este título">¶</a></h2>
 <div class="figure align-default" id="imperial-to-metric">
 <a class="reference internal image-reference" href="../_images/imperial2metric.png"><img alt="../_images/imperial2metric.png" src="../_images/imperial2metric.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text"><a class="reference external" href="http://www.mathsisfun.com/metric-imperial-conversion-charts.html">Conversão de medidas de distância entre os sistemas imperial e métrico. Fonte da imagem: Pierce, Rod. «Metric - US/Imperial Conversion Charts» Math Is Fun. Ed. Rod Pierce. 15 Dec 2020. Acedido a 24 Nov 2021</a></span><a class="headerlink" href="#imperial-to-metric" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text"><a class="reference external" href="http://www.mathsisfun.com/metric-imperial-conversion-charts.html">Conversão de medidas de distância entre os sistemas imperial e métrico. Fonte da imagem: Pierce, Rod. «Metric - US/Imperial Conversion Charts» Math Is Fun. Ed. Rod Pierce. 15 Dec 2020. Acedido a 24 Nov 2021</a></span><a class="headerlink" href="#imperial-to-metric" title="Permalink to this image">¶</a></p>
 </div>
 <p>O sistema imperial é usado por poucos países, mas queremos ser inclusivos. Vamos facilitar a conversão de medidas de distância do sistema imperial para o sistema métrico.</p>
 <p>Sabemos que uma polegada corresponde a 2.54 centímetro e que um pé corresponde a 12 polegadas.</p>
@@ -440,31 +448,22 @@ O output é um número real que corresponde à distância em centímetro.</p>
               </div>
               
         
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="Lab1.html" title="anterior page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">anterior</p>
-                <p class="prevnext-title">Lab1</p>
-            </div>
-        </a>
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Lab1.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Lab1</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="F1-2022.html" title="próximo page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">próximo</p>
+        <p class="prev-next-title">Primeira Festa de Programação</p>
     </div>
-     <div id="next">
-        <a class="right-next" href="F1-2022.html" title="próximo page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">próximo</p>
-                <p class="prevnext-title">Primeira Festa de Programação</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
         
         </div>
@@ -485,8 +484,7 @@ O output é um número real que corresponde à distância em centímetro.</p>
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

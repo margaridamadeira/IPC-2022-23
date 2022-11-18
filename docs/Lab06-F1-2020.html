@@ -1,0 +1,599 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab6 &#8212; Introdução à programação científica</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/myfile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2022-23/docs/Lab06-F1-2020.html" />
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à programação científica</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquise este livro ..." aria-label="Pesquise este livro ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introdução à programação científica
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preâmbulo
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Apresenta%C3%A7%C3%A3o.html">
+   A unidade curricular
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Resumos dos temas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Introdu%C3%A7%C3%A3o.html">
+   Introdução
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="IniciarProgramar.html">
+   Tipos de dados, variáveis e funções
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ProgPython.html">
+   Operações lógicas e controlo de execução
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ProgPython2.html">
+   Strings: indexação e controlo de execução usando for
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ProgPython3.html">
+   Listas e leitura e escrita
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ProgPython4.html">
+   Tuplos, conjuntos e dicionários
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Ficheiros.html">
+   Ficheiros
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="M%C3%B3dulosTestes.html">
+   Criação de soluções
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Guiões práticos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Primeiros_passos.html">
+   Primeiros passos na programação em Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Submiss%C3%A3oMooshak.html">
+   Submissão ao Mooshak
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab0.html">
+   Lab0
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab1.html">
+   Lab1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab2.html">
+   Lab2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="F1-2022.html">
+   Primeira Festa de Programação
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab3.html">
+   Lab3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab4.html">
+   Lab4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab5.html">
+   Lab5
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab6.html">
+   Lab6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab7-F2-2021.html">
+   Lab7
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="F2-2022.html">
+   Segunda Festa de Programação
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/Lab06-F1-2020.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Conteúdo
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#imc">
+   IMC
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tarefa-a">
+     Tarefa A
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pluviosidade">
+   Pluviosidade
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tarefa-b">
+     Tarefa B
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quimica-a-toa">
+   Química à toa
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tarefa-c">
+     Tarefa C
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="lab6">
+<h1>Lab6<a class="headerlink" href="#lab6" title="Link permanente para este título">¶</a></h1>
+<p>Esta foi a primeira festa do ano letivo de 2020-2021.</p>
+<p>Com este este exercício, exercitaremos uma festa de programação.
+Reveja a <a class="reference external" href="https://tutoria.ualg.pt/2021/mod/resource/view.php?id=37418">Informação sobre as Festas de Programação</a>.
+Idealmente, reserve três horas e tente resolver os exercícios da festa de forma contínua.</p>
+<p>Antes disso, reúna todos os seus materiais para consulta durante a festa e os seus programas anteriores (os que estão no Mooshak pode sempre ir lá buscá-los). Prepare uma pasta para cada problema que vai abordar, e a versão inicial da sua resolução.</p>
+<div class="section" id="imc">
+<h2>IMC<a class="headerlink" href="#imc" title="Link permanente para este título">¶</a></h2>
+<div class="figure align-default" id="laurelhardy">
+<a class="reference internal image-reference" href="../_images/Laurel_and_Hardy_Silhouette.jpg"><img alt="../_images/Laurel_and_Hardy_Silhouette.jpg" src="../_images/Laurel_and_Hardy_Silhouette.jpg" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://commons.wikimedia.org/wiki/File:Laurel_and_Hardy_Silhouette.jpg">Laurel and Hardy Silhouette</a>, de Cls14 em English Wikipedia, Public domain, via Wikimedia Commons.</span><a class="headerlink" href="#laurelhardy" title="Permalink to this image">¶</a></p>
+</div>
+<p>Foi noticiado em Março de 2020 que a <a class="reference external" href="https://news.un.org/pt/story/2020/03/1706141">OMS aponta Portugal como referência para prevenir obesidade nas crianças</a>.</p>
+<p>Manter um peso saudável é muito importante. A <a class="reference external" href="http://www.fpcardiologia.pt/saude-do-coracao/factores-de-risco/obesidade/">Fundação Portuguesa de Cardiologia</a> refere que a obesidade afeta a longevidade e a qualidade de vida e indica como calcular o índice de massa corporal (IMC) e até como classificar o peso de um indivíduo.</p>
+<p>Sabemos que <span class="math notranslate nohighlight">\(IMC = \frac{peso}{altura^2}\)</span> e que os valores normais estão entre <span class="math notranslate nohighlight">\(18.5\)</span> e <span class="math notranslate nohighlight">\(24.9\)</span>.</p>
+<p>Para ajudar, vamos preparar um programa que, a partir do peso e da altura, apresente o IMC.</p>
+<div class="section" id="tarefa-a">
+<h3>Tarefa A<a class="headerlink" href="#tarefa-a" title="Link permanente para este título">¶</a></h3>
+<p>Prepare um programa em Python que receba o peso e altura de uma pessoa e apresente o índice de massa corporal (IMC). O índice de massa corporal, em <span class="math notranslate nohighlight">\(kg / m^2\)</span>, calcula-se dividindo o peso pelo quadrado da altura.</p>
+<p>O input é uma única linha contendo dois números reais separados pelo caráter espaço e que correspondem ao peso e altura.
+O output é um número real, com três casas decimais, que corresponde ao valor do índice de massa corporal.
+Se o peso ou altura não forem maiores que zero, o programa deverá produzir a mensagem «Dados inválidos.» (sem as aspas).</p>
+<p><strong>Casos de teste</strong></p>
+<p><strong>Input 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">50.0</span> <span class="mf">1.50</span>
+</pre></div>
+</div>
+<p><strong>Output 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">22.222</span>
+</pre></div>
+</div>
+<p><strong>Input 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">45.0</span> <span class="mf">1.50</span>
+</pre></div>
+</div>
+<p><strong>Output 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">20.000</span>
+</pre></div>
+</div>
+<p><strong>Input 3</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="mi">45</span> <span class="mf">1.50</span>
+</pre></div>
+</div>
+<p><strong>Output 3</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Dados</span> <span class="n">inválidos</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><strong>Input 4</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">45</span> <span class="mi">0</span>
+
+</pre></div>
+</div>
+<p><strong>Output 4</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Dados</span> <span class="n">inválidos</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Submeta na tarefa A do concurso IPC_L5.</p>
+<div style="page-break-after: always"></div>
+</div>
+</div>
+<div class="section" id="pluviosidade">
+<h2>Pluviosidade<a class="headerlink" href="#pluviosidade" title="Link permanente para este título">¶</a></h2>
+<div class="figure align-default" id="chuva">
+<a class="reference internal image-reference" href="../_images/chuva-pexels-pixabay-459451.jpg"><img alt="../_images/chuva-pexels-pixabay-459451.jpg" src="../_images/chuva-pexels-pixabay-459451.jpg" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://www.pexels.com/photo/rain-drops-459451/">Chuva</a>, de Pixabay em <a class="reference external" href="https://www.pexels.com/">Pexels</a>, CC0.</span><a class="headerlink" href="#chuva" title="Permalink to this image">¶</a></p>
+</div>
+<p>Temos tido alguma chuva ultimamente, mas pouco chove no Algarve. O <a class="reference external" href="https://snirh.apambiente.pt/">Sistema Nacional de Informação de Recursos Hídricos</a> disponibiliza, entre outros dados, os valores diários da precipitação.</p>
+<p>Vamos querer alguns valores estatísticos pelo que, para testar o programa, fomos <a class="reference external" href="https://snirh.apambiente.pt/snirh/_dadosbase/site/janela_verdados.php?sites=920685102&amp;pars=413026594&amp;tmin=01/01/2020&amp;tmax=30/09/2021">buscar</a> os valores de precipitação diária da estação de Barranco do Velho desde o início do ano. Retirámos a informação que não precisávamos e ficámos apenas com os valores da precipitação: em cada dia, numa linha, um valor real.</p>
+<p>Queremos saber qual o valor da precipitação acumulada, qual o maior valor de precipitação diária e em quantos dias choveu.</p>
+<div class="section" id="tarefa-b">
+<h3>Tarefa B<a class="headerlink" href="#tarefa-b" title="Link permanente para este título">¶</a></h3>
+<p>Prepare um programa em Python que leia da consola, até ao fim do input, uma sequência de números e apresente a soma dos valores lidos, o maior valor e o número de dias em que choveu (ou seja, o valor da precipitação é maior que zero).</p>
+<p>O programa lerá tantas linhas quantos os dias contidos no registo. Em cada linha haverá um número (inteiro ou real) correspondente à precipitação num dia. Quando não choveu, o valor da precipitação é 0 (zero).
+Ao terminar a leitura, o programa escreverá na mesma linha três valores separados por espaços. Os primeiros dois valores, em notação científica, correspondem à soma dos valores lidos e ao maior valor registado; o terceiro valor é um número inteiro que indica quantos dias choveu.</p>
+<p><strong>Casos de teste</strong></p>
+<p><strong>Input 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">0.1</span>
+<span class="mf">0.6</span>
+<span class="mf">1.8</span>
+<span class="mf">2.7</span>
+<span class="mf">1.5</span>
+<span class="mf">6.4</span>
+<span class="mi">0</span>
+<span class="mi">0</span>
+</pre></div>
+</div>
+<p><strong>Output 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.310000e+01</span> <span class="mf">6.400000e+00</span> <span class="mi">6</span>
+</pre></div>
+</div>
+<p><strong>Input 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span>
+<span class="mi">0</span>
+<span class="mi">0</span>
+<span class="mi">0</span>
+<span class="mi">0</span>
+<span class="mi">0</span>
+<span class="mf">0.1</span>
+<span class="mi">0</span>
+<span class="mi">0</span>
+<span class="mi">0</span>
+<span class="mi">0</span>
+<span class="mi">0</span>
+<span class="mi">0</span>
+</pre></div>
+</div>
+<p><strong>Output 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.000000e-01</span> <span class="mf">1.000000e-01</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p><strong>Input 3</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span>
+<span class="mi">0</span>
+<span class="mi">0</span>
+<span class="mi">0</span>
+<span class="mi">0</span>
+<span class="mi">0</span>
+<span class="mf">0.6</span>
+<span class="mf">1.8</span>
+<span class="mf">2.7</span>
+<span class="mf">1.5</span>
+<span class="mf">6.4</span>
+<span class="mi">0</span>
+<span class="mi">0</span>
+<span class="mf">0.2</span>
+<span class="mf">0.4</span>
+<span class="mf">0.5</span>
+<span class="mf">20.2</span>
+<span class="mf">4.9</span>
+<span class="mf">0.3</span>
+</pre></div>
+</div>
+<p><strong>Output 3</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">3.950000e+01</span> <span class="mf">2.020000e+01</span> <span class="mi">11</span>
+</pre></div>
+</div>
+<p>Submeta na tarefa B do concurso IPC_Lab5.</p>
+<div style="page-break-after: always"></div>
+</div>
+</div>
+<div class="section" id="quimica-a-toa">
+<h2>Química à toa<a class="headerlink" href="#quimica-a-toa" title="Link permanente para este título">¶</a></h2>
+<div class="figure align-default" id="tabela-periodica">
+<a class="reference internal image-reference" href="../_images/tp-ualg.jpeg"><img alt="../_images/tp-ualg.jpeg" src="../_images/tp-ualg.jpeg" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://ualg.pt/pt/content/exposicao-desafios-da-tabela-periodica-pode-ser-visitada-na-biblioteca-da-ualg">Exposição “Desafios da Tabela Periódica”, na Biblioteca da UAlg</a></span><a class="headerlink" href="#tabela-periodica" title="Permalink to this image">¶</a></p>
+</div>
+<p>Fonte: <a class="reference external" href="https://eventos.fct.unl.pt/sites/default/files/topas-lx/files/problemas_topaslx_2016.pdf">Problema C do ToPAS 2016</a></p>
+<p>Quando o Rui estava a estudar Química, escrevendo fórmulas
+de compostos no caderno (como <span class="math notranslate nohighlight">\(CaCO_3\)</span> , <span class="math notranslate nohighlight">\(Na_2CO_3\)</span> e <span class="math notranslate nohighlight">\(H_ 2SO_4\)</span> ),
+apareceu a irmã mais nova, que ficou fascinada com aquelas
+sequências de letras e algarismos. O pior é que ela não se calava,
+exigindo que ele lhe explicasse como dividia uma sequência
+grande em pedacinhos. Desesperado, o Rui enunciou as regras:</p>
+<ul class="simple">
+<li><p>Cada sequência de letras que começa com uma letra
+grande (a irmã não conhecia a palavra “maiúscula”) representa um elemento;</p></li>
+<li><p>Se houver algum número a seguir ao elemento, esse é o número de átomos do elemento;
+se não houver, o número de átomos do elemento é 1.</p></li>
+</ul>
+<p>Depois, exemplificou com a fórmula do carbonato de cálcio, <span class="math notranslate nohighlight">\(CaCO_3\)</span> , que tem um átomo de
+cálcio (Ca), um átomo de carbono (C) e três átomos de oxigénio (O).
+A irmã ficou muito contente e queria aprender mais Química. Mas ele convenceu-a a praticar.
+Para poder regressar ao estudo rapidamente, decidiu escrever “fórmulas químicas” à toa e
+até inventou símbolos químicos com 1, 2, 3, 4 e 5 letras. Por exemplo, deu-lhe a fórmula
+<span class="math notranslate nohighlight">\(Ai_{19}Xpto_5Uus\)</span> (que tem tamanho 12) para decompor.</p>
+<div class="section" id="tarefa-c">
+<h3>Tarefa C<a class="headerlink" href="#tarefa-c" title="Link permanente para este título">¶</a></h3>
+<p>Escreva um programa que, dada uma fórmula química inventada pelo Rui e terminada por
+“.”, apresenta os elementos que ocorrem na fórmula e o número de átomos de cada um.</p>
+<p><strong>Input</strong></p>
+<p>Uma linha com uma fórmula química (inventada pelo Rui) terminada por “.”. A fórmula é
+uma sequência de <span class="math notranslate nohighlight">\(n\)</span> letras e algarismos, que começa com uma letra maiúscula e que não tem o
+algarismo zero imediatamente a seguir a uma letra, nem uma letra minúscula imediatamente
+a seguir a um algarismo. Nenhum elemento tem mais de cinco letras, nem ocorre mais do que
+uma vez na fórmula. O número de algarismos seguidos não excede <span class="math notranslate nohighlight">\(n − 1\)</span>.</p>
+<p><strong>Output</strong></p>
+<p>O output tem uma linha por cada elemento que ocorre na fórmula. Cada linha tem um
+elemento, um espaço, o número de átomos desse elemento e uma mudança de linha. Os
+elementos têm de aparecer pela ordem em que ocorrem na fórmula.</p>
+<p><strong>Casos de teste</strong></p>
+<p><strong>Input 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CaCO3</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><strong>Output 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Ca</span> <span class="mi">1</span>
+<span class="n">C</span> <span class="mi">1</span>
+<span class="n">O</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<p><strong>Input 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Ai19Xpto5Uus</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><strong>Output 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Ai</span> <span class="mi">19</span>
+<span class="n">Xpto</span> <span class="mi">5</span>
+<span class="n">Uus</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>Submeta na tarefa C do concurso IPC_L5.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          De Margarida Madeira e Moura<br/>
+        
+            &copy; direito autoral 2022.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

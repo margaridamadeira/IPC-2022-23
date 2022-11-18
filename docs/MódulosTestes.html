@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Criação de soluções &#8212; Introdução à programação científica</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -44,7 +44,7 @@
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
@@ -56,8 +56,13 @@
     <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2022-23/docs/MódulosTestes.html" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Primeiros passos na programação em Python" href="Primeiros_passos.html" />
+    <link rel="prev" title="Ficheiros" href="Ficheiros.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -96,7 +101,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Preâmbulo
  </span>
@@ -108,12 +113,12 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Resumos dos temas
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Introdu%C3%A7%C3%A3o.html">
    Introdução
@@ -149,8 +154,13 @@
    Ficheiros
   </a>
  </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Criação de soluções
+  </a>
+ </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Guiões práticos
  </span>
@@ -380,25 +390,32 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#alguns-pontos-curiosos">
-   Alguns pontos curiosos
+  <a class="reference internal nav-link" href="#desenvolvimento-de-solucoes-modulares">
+   Desenvolvimento de soluções modulares
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#efeitos-colaterais">
-     Efeitos colaterais
+    <a class="reference internal nav-link" href="#exemplos">
+     Exemplos
     </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#outros-cuidados-a-ter">
-     Outros cuidados a ter
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#math">
+       math
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#temperaturas">
+       Temperaturas
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercicio-proposto">
-   Exercício proposto
+  <a class="reference internal nav-link" href="#excecoes">
+   Exceções
   </a>
  </li>
 </ul>
@@ -414,23 +431,34 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="criacao-de-solucoes">
 <h1>Criação de soluções<a class="headerlink" href="#criacao-de-solucoes" title="Link permanente para este título">¶</a></h1>
-<p>Hoje vamos ver algumas técnicas para criar soluções mais robustas, aproveitando para consolidar o que já vimos de programação.</p>
+<p>Hoje vamos ver algumas técnicas para criar soluções mais robustas, aproveitando para consolidar o que já vimos de programação, nomeadamente:</p>
+<ul class="simple">
+<li><p>as etapas para a criação de uma solução</p></li>
+<li><p>os algoritmos e a sua representação através de pseudo-código e fluxogramas</p></li>
+<li><p>as várias vertentes da resolução de problemas computacionais</p></li>
+<li><p>a documentação e testes</p></li>
+<li><p>uso de asserções</p></li>
+<li><p>os módulos e as soluções modulares</p></li>
+<li><p>instruções para considerar casos excecionais</p></li>
+</ul>
 <div class="section" id="objetivos-de-aprendizagem">
 <h2>Objetivos de aprendizagem<a class="headerlink" href="#objetivos-de-aprendizagem" title="Link permanente para este título">¶</a></h2>
-<p>Vamos ver algumas técnicas usadas no processo de criação de soluções computacionais, nomeadamente:</p>
+<p>No final deste capítulo devemos ser capazes de:</p>
 <ul class="simple">
-<li><p>Etapas para a criação de uma solução</p></li>
-<li><p>Fluxogramas</p></li>
-<li><p>Pseudo-código</p></li>
-<li><p>documentação</p></li>
-<li><p>asserções</p></li>
+<li><p>identificar e definir as etapas necessárias para a criação de uma solução computacional</p></li>
+<li><p>desenvolver algoritmos usando pseudo-código e fluxogramas</p></li>
+<li><p>gerir as várias vertentes da resolução de problemas no desenvolvimento de uma solução computacional</p></li>
+<li><p>gerar a documentação necessária no desenvolvimento de uma solução computacional</p></li>
+<li><p>usar asserções para garantir condições durante a execução</p></li>
+<li><p>criar e usar módulos no desenvolvimento de uma solução computacional</p></li>
+<li><p>usar as instruções try e except</p></li>
 </ul>
 </div>
 <div class="section" id="criacao-de-uma-solucao-computacional">
 <h2>Criação de uma solução computacional<a class="headerlink" href="#criacao-de-uma-solucao-computacional" title="Link permanente para este título">¶</a></h2>
 <div class="figure align-default" id="passos">
 <a class="reference internal image-reference" href="../_images/passos.png"><img alt="../_images/passos.png" src="../_images/passos.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">Passos para uma solução computacional</span><a class="headerlink" href="#passos" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Passos para uma solução computacional</span><a class="headerlink" href="#passos" title="Permalink to this image">¶</a></p>
 </div>
 <ol class="simple">
 <li><p>Identificar o problema</p></li>
@@ -450,7 +478,7 @@
 <p>Juntando tudo isto, na resolução de problemas, tradicionalmente identificavam-se as fases:</p>
 <div class="figure align-default" id="etapas1">
 <a class="reference internal image-reference" href="../_images/etapas_1.jpg"><img alt="../_images/etapas_1.jpg" src="../_images/etapas_1.jpg" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">Análise e desenho</span><a class="headerlink" href="#etapas1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Análise e desenho</span><a class="headerlink" href="#etapas1" title="Permalink to this image">¶</a></p>
 </div>
 <ul class="simple">
 <li><p>Fase de <strong>Análise</strong>: decidir o que temos que fazer.</p></li>
@@ -472,7 +500,7 @@
 </ul>
 <div class="figure align-default" id="etapas2">
 <a class="reference internal image-reference" href="../_images/etapas_2.jpg"><img alt="../_images/etapas_2.jpg" src="../_images/etapas_2.jpg" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">Codificação, testes e documentação</span><a class="headerlink" href="#etapas2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Codificação, testes e documentação</span><a class="headerlink" href="#etapas2" title="Permalink to this image">¶</a></p>
 </div>
 <ul class="simple">
 <li><p>Fase de <strong>Codificação</strong>: a implementação do algoritmo numa linguagem de programação adequada.</p></li>
@@ -523,14 +551,14 @@ Fim: Termina
 <h3>Símbolos mais comuns num fluxograma<a class="headerlink" href="#simbolos-mais-comuns-num-fluxograma" title="Link permanente para este título">¶</a></h3>
 <div class="figure align-default" id="simbolos">
 <a class="reference internal image-reference" href="../_images/SimbFluxogr.jpg"><img alt="../_images/SimbFluxogr.jpg" src="../_images/SimbFluxogr.jpg" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">Símbolos</span><a class="headerlink" href="#simbolos" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Símbolos</span><a class="headerlink" href="#simbolos" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="exemplo-de-fluxograma">
 <h3>Exemplo de fluxograma<a class="headerlink" href="#exemplo-de-fluxograma" title="Link permanente para este título">¶</a></h3>
 <div class="figure align-default" id="paridade">
 <a class="reference internal image-reference" href="../_images/AlgParidade.jpg"><img alt="../_images/AlgParidade.jpg" src="../_images/AlgParidade.jpg" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">Paridade</span><a class="headerlink" href="#paridade" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Paridade</span><a class="headerlink" href="#paridade" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="exercicios-propostos">
@@ -769,82 +797,170 @@ paridade_2(n)
 <p>Mas as funções que são feitas podem ser usados noutros contextos, que não o do programa inicial. O uso de asserções ajuda a criar soluções mais robustas, pois numa função podemos verificar que as condições necessárias para a sua utilização.</p>
 </div>
 </div>
-<div class="section" id="alguns-pontos-curiosos">
-<h2>Alguns pontos curiosos<a class="headerlink" href="#alguns-pontos-curiosos" title="Link permanente para este título">¶</a></h2>
-<div class="section" id="efeitos-colaterais">
-<h3>Efeitos colaterais<a class="headerlink" href="#efeitos-colaterais" title="Link permanente para este título">¶</a></h3>
-<p>Porque criamos as funções, há que ter cuidado com as atividades das funções.
-Por exemplo,</p>
-<p>Se em vez de um inteiro, desenhassemos a função para trabalhar com o primeiro elemento de uma lista de inteiros, usando a mesma abordagem …</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">paridade_3</span> <span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Função que determina se o primeiro elemento de uma lista </span>
-<span class="sd">        de números naturais positivos é par ou ímpar.</span>
-<span class="sd">    </span>
-<span class="sd">    Argumento:</span>
-<span class="sd">        n (lista)</span>
-
-<span class="sd">    Devolve:</span>
-<span class="sd">        str: &quot;Par&quot; ou &quot;Ímpar&quot;</span>
-
-<span class="sd">    Exemplos:</span>
-<span class="sd">        &gt;&gt;&gt;</span>
-<span class="sd">        &gt;&gt;&gt; paridade_3 (3)</span>
-<span class="sd">        &#39;Ímpar&#39;</span>
-<span class="sd">        &gt;&gt;&gt; paridade_3 (4)</span>
-<span class="sd">        &#39;Par&#39;</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">n</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="ow">is</span> <span class="nb">int</span><span class="p">,</span> <span class="s2">&quot;n não é um inteiro: </span><span class="si">%r</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">n</span>
-    <span class="k">assert</span> <span class="n">n</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;n não é maior que zero: </span><span class="si">%r</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">n</span>
-    <span class="k">while</span> <span class="p">(</span><span class="n">n</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">2</span><span class="p">):</span>
-        <span class="n">n</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">n</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="mi">2</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">n</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">):</span>
-        <span class="n">resultado</span> <span class="o">=</span> <span class="s1">&#39;Par&#39;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">n</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span>
-        <span class="n">resultado</span> <span class="o">=</span> <span class="s1">&#39;Ímpar&#39;</span>
-    
-    <span class="k">return</span> <span class="n">resultado</span>
+<div class="section" id="desenvolvimento-de-solucoes-modulares">
+<h2>Desenvolvimento de soluções modulares<a class="headerlink" href="#desenvolvimento-de-solucoes-modulares" title="Link permanente para este título">¶</a></h2>
+<p>Quando os problemas computacionais se tornam mais complexos, o código do programa tende a ficar muito longo. No entanto, o desenvolvimento de uma solução computacional não implica que todo o código esteja no mesmo ficheiro e pode estar dividido por vários scripts.</p>
+<p>Dividir o programa em várias partes tem grandes vantagens:</p>
+<ul class="simple">
+<li><p>maior facilidade em testar a funcionalidade das várias partes do problema,</p></li>
+<li><p>maior facilidade na manutenção do programa através de alterações, atualizações, etc.,</p></li>
+<li><p>possibilidade de reutilização destes módulos na solução de outros problemas.</p></li>
+</ul>
+<p>Assim, quando criamos uma solução mais complexa podemos dividir o problema criando vários scripts que contêm as várias partes da solução e depois, usando a funcionalidade <code class="docutils literal notranslate"><span class="pre">import</span></code> do Python, reunimos essas partes.</p>
+<div class="section" id="exemplos">
+<h3>Exemplos<a class="headerlink" href="#exemplos" title="Link permanente para este título">¶</a></h3>
+<div class="section" id="math">
+<h4>math<a class="headerlink" href="#math" title="Link permanente para este título">¶</a></h4>
+<p>Usando o módulo <em>math</em> como exemplo, e assumindo que pretendemos a função cosseno e <span class="math notranslate nohighlight">\(\pi\)</span>,</p>
+<p>As opções são:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import math
+math.cos(math.pi/4)
 </pre></div>
 </div>
+<p>ou</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from math import *
+cos(pi/4)
+</pre></div>
 </div>
+<p>ou ainda</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from math import pi, cos
+cos(pi/4)
+</pre></div>
 </div>
+<p>É de notar que há uma diferença entre executar <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">math</span></code> e <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">math</span> <span class="pre">import</span> <span class="pre">*</span></code>. Embora em ambas as situações estejamos a importar o módulo todo, na última não é necessário prefixar as funções com o nome do módulo (math).</p>
+</div>
+<div class="section" id="temperaturas">
+<h4>Temperaturas<a class="headerlink" href="#temperaturas" title="Link permanente para este título">¶</a></h4>
+<p>Consideremos o tema da conversão de unidades de temperatura e que no ficheiro <code class="docutils literal notranslate"><span class="pre">temperaturas.py</span></code> temos todas as funções para as conversões de temperatura.</p>
+<p>Para usarmos essas funções noutros programas podemos fazer</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Muito importante! </span>
-<span class="n">n</span> <span class="o">=</span> <span class="mi">6</span>
-<span class="n">m</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">]</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">paridade_2</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">n</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">paridade_3</span><span class="p">(</span><span class="n">m</span><span class="p">),</span> <span class="n">m</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">temperaturas</span>
+
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">20</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;fahrenheit: </span><span class="si">{0:2}</span><span class="s1"> --&gt; kelvin: </span><span class="si">{1:.3}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">temperaturas</span><span class="o">.</span><span class="n">f2k</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Par 6
-Par [2]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>fahrenheit:  0 --&gt; kelvin: 2.55e+02
+fahrenheit: 20 --&gt; kelvin: 2.66e+02
+fahrenheit: 40 --&gt; kelvin: 2.78e+02
+fahrenheit: 60 --&gt; kelvin: 2.89e+02
+fahrenheit: 80 --&gt; kelvin: 3e+02
+</pre></div>
+</div>
+</div>
+</div>
+<p>ou</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">temperaturas</span> <span class="kn">import</span> <span class="n">f2k</span>
+
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">20</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;fahrenheit: </span><span class="si">{0:2}</span><span class="s1"> --&gt; kelvin: </span><span class="si">{1:.3}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f2k</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>fahrenheit:  0 --&gt; kelvin: 2.55e+02
+fahrenheit: 20 --&gt; kelvin: 2.66e+02
+fahrenheit: 40 --&gt; kelvin: 2.78e+02
+fahrenheit: 60 --&gt; kelvin: 2.89e+02
+fahrenheit: 80 --&gt; kelvin: 3e+02
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="outros-cuidados-a-ter">
-<h3>Outros cuidados a ter<a class="headerlink" href="#outros-cuidados-a-ter" title="Link permanente para este título">¶</a></h3>
-<p>Não deve existir uma saída abrupta (return dentro do ciclo de controlo, p. exemplo).</p>
-<p>Cada função deve ter apenas um return.</p>
-<p>A aglutinação de operadores torna</p>
+</div>
+</div>
+<div class="section" id="excecoes">
+<h2>Exceções<a class="headerlink" href="#excecoes" title="Link permanente para este título">¶</a></h2>
+<p>Já vimos vários casos em que o Python devolve mensagens de erro. Por vezes queremos intercetar o erro por forma a não permitir que o programa termine por sua causa ou, se terminar, que não haja mensagens de erro. Esta interceção pode ser conseguida através das instruções <code class="docutils literal notranslate"><span class="pre">try</span></code> e <code class="docutils literal notranslate"><span class="pre">except</span></code>.</p>
+<p>Estas instruções são normalmente divididas em blocos: o bloco do <code class="docutils literal notranslate"><span class="pre">try</span></code> e o bloco (ou blocos) do <code class="docutils literal notranslate"><span class="pre">except</span></code>. No bloco do <code class="docutils literal notranslate"><span class="pre">try</span></code> incluímos as instruções que poderão dar origem a erros. Nos blocos do <code class="docutils literal notranslate"><span class="pre">except</span></code> indicamos quais os erros que desejamos tratar e incluímos o modo como lidamos com este erros.</p>
+<p>Para exemplificarmos considere o seguinte programa que deve ser guardado num ficheiro chamado test_try_except.py,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; Função fatorial - teste à instrução try-except  &quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="k">def</span> <span class="nf">fatorial_r</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Calculo do fatorial de um número.</span>
+
+<span class="sd">    n! = n * (n-1)! para n &gt; 1</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">int</span><span class="p">,</span> <span class="s2">&quot;n não é um inteiro: </span><span class="si">%r</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">n</span>
+    <span class="k">assert</span> <span class="n">n</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;n não é maior que zero: </span><span class="si">%r</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">n</span>
+
+    <span class="n">resultado</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># Elemento neutro da multiplicação </span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">resultado</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="n">fatorial_r</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">resultado</span>
+
+<span class="k">def</span> <span class="nf">test_try_except</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Exemplo de uso de try-except&quot;&quot;&quot;</span>
+
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Insira um número inteiro: &#39;</span><span class="p">))</span>
+            <span class="n">z</span> <span class="o">=</span> <span class="n">fatorial_r</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;O fatorial de </span><span class="si">{}</span><span class="s1"> é </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">z</span><span class="p">))</span>
+
+        <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> Terminado.&#39;</span><span class="p">)</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tente novamente.&#39;</span><span class="p">)</span>
+
+        <span class="k">except</span> <span class="ne">EOFError</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> Fim dos dados. Terminado.&#39;</span><span class="p">)</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">test_try_except</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_349101</span><span class="o">/</span><span class="mf">3165337542.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">39</span> 
+<span class="g g-Whitespace">     </span><span class="mi">40</span> <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">41</span>     <span class="n">test_try_except</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">42</span> 
+
+<span class="nn">/tmp/ipykernel_349101/3165337542.py</span> in <span class="ni">test_try_except</span><span class="nt">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span>     <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">24</span>         <span class="k">try</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">25</span>             <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Insira um número inteiro: &#39;</span><span class="p">))</span>
+<span class="g g-Whitespace">     </span><span class="mi">26</span>             <span class="n">z</span> <span class="o">=</span> <span class="n">fatorial_r</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">27</span>             <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;O fatorial de </span><span class="si">{}</span><span class="s1"> é </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">z</span><span class="p">))</span>
+
+<span class="nn">~/venvs/IPC-2021/lib/python3.9/site-packages/ipykernel/kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1039</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1040</span><span class="s2">         if not self._allow_stdin:</span>
+<span class="ne">-&gt; </span><span class="mi">1041</span><span class="s2">             raise StdinNotImplementedError(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1042</span><span class="s2">                 &quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1043</span><span class="s2">             )</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note:</p>
 <ul class="simple">
-<li><p>o código mais compacto</p></li>
-<li><p>menos legível</p></li>
-<li><p>pode esconder eventuais efeitos colaterais</p></li>
+<li><p>lê vários elementos</p></li>
+<li><p>distingue duas formas de terminação do programa</p></li>
+<li><p>interceta a entrada se não puder ser convertida para inteiro</p></li>
+<li><p>a função não pode ser chamada com valores negativos</p></li>
 </ul>
-<p>portanto deve ser usada com cuidado.</p>
-</div>
-</div>
-<div class="section" id="exercicio-proposto">
-<h2>Exercício proposto<a class="headerlink" href="#exercicio-proposto" title="Link permanente para este título">¶</a></h2>
-<ol class="simple">
-<li><p>Inclua documentação e testes na função que fez para validar uma data na tarefa D do Lab4.</p></li>
-</ol>
 </div>
 </div>
 
@@ -871,13 +987,22 @@ Par [2]
               </div>
               
         
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Ficheiros.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Ficheiros</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Primeiros_passos.html" title="próximo page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">próximo</p>
+        <p class="prev-next-title">Primeiros passos na programação em Python</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
         
         </div>
@@ -898,8 +1023,7 @@ Par [2]
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>
