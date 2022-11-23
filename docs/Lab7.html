@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lab6 &#8212; Introdução à programação científica</title>
+    <title>Lab7 &#8212; Introdução à programação científica</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -53,11 +53,9 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2022-23/docs/Lab6.html" />
+    <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2022-23/docs/Lab7.html" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
-    <link rel="next" title="Lab7" href="Lab7-F2-2021.html" />
-    <link rel="prev" title="Lab5" href="Lab5.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -178,7 +176,7 @@
   Guiões práticos
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Primeiros_passos.html">
    Primeiros passos na programação em Python
@@ -224,8 +222,8 @@
    Lab5
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab6.html">
    Lab6
   </a>
  </li>
@@ -280,7 +278,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/docs/Lab6.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/docs/Lab7.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -374,15 +372,8 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="lab6">
-<h1>Lab6<a class="headerlink" href="#lab6" title="Link permanente para este título">¶</a></h1>
-<p>Note bem:</p>
-<ul class="simple">
-<li><p>Cotação deste guião: 2 pontos</p></li>
-<li><p>Submeta cada uma das tarefas no problema correspondente do concurso IPC_L6.</p></li>
-<li><p>Prazo limite de submissão: 23h59m de 8 de Novembro</p></li>
-<li><p>Prazo limite de validação das submissões aceites: 16 de novembro, imediatamente após a aula teórica.</p></li>
-</ul>
+  <div class="tex2jax_ignore mathjax_ignore section" id="lab7">
+<h1>Lab7<a class="headerlink" href="#lab7" title="Link permanente para este título">¶</a></h1>
 <div class="section" id="objetivos-de-aprendizagem">
 <h2>Objetivos de aprendizagem<a class="headerlink" href="#objetivos-de-aprendizagem" title="Link permanente para este título">¶</a></h2>
 <p>Com este guião exercitaremos:</p>
@@ -394,16 +385,16 @@
 </div>
 <div class="section" id="elementos-da-tabela-periodica">
 <h2>Elementos da tabela periódica<a class="headerlink" href="#elementos-da-tabela-periodica" title="Link permanente para este título">¶</a></h2>
-<p>Vamos preparar uma solução em Python para calcular o peso de algumas moléculas.</p>
+<p>Acompanhado pela irmã, o Rui continua a estudar química. Para que possa verificar os resultados, vamos preparar uma solução em Python para calcular o peso de algumas moléculas.</p>
 <div class="figure align-default" id="tabelaperiodica">
 <a class="reference internal image-reference" href="../_images/Elements_Pics_Simple_w2000.png"><img alt="../_images/Elements_Pics_Simple_w2000.png" src="../_images/Elements_Pics_Simple_w2000.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text"><a class="reference external" href="https://elements.wlonk.com/">Tabela Periódica, em imagens. © 2005-2016 Keith Enevoldsen</a></span><a class="headerlink" href="#tabelaperiodica" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://elements.wlonk.com/">Tabela Periódica, em imagens. © 2005-2016 Keith Enevoldsen</a></span><a class="headerlink" href="#tabelaperiodica" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="descricao-do-caso">
 <h3>Descrição do caso<a class="headerlink" href="#descricao-do-caso" title="Link permanente para este título">¶</a></h3>
 <p>O fluxo elementar dos programas é ler, processar, escrever. Ao começarmos por ler e escrever sabemos que estamos a tratar <em>bem</em> os dados e podemos depois concentrar a atenção no processamento.</p>
 <p>A partir de <a href="https://images-of-elements.com/element-properties.php">List of chemical elements with properties</a> foi criado um ficheiro com os elementos da tabela periódica, um elemento por linha.</p>
-<p>Cada linha contém, para um elemento, número, período, grupo, símbolo, nome e massa atómica. O número corresponde à quantidade de protões do núcleo do átomo; o período e grupo indicam, respetivamente, a linha e coluna do elemento na tabela periódica; a massa atómica está expressa em <span class="math notranslate nohighlight">\(u\)</span> ou <span class="math notranslate nohighlight">\(g/mol\)</span>, que corresponde por definição a <span class="math notranslate nohighlight">\(1/12\)</span> da massa de <span class="math notranslate nohighlight">\(C_{12}\)</span>.</p>
+<p>Cada linha contém, para um elemento, número, período, grupo, símbolo, nome e massa atómica. O número corresponde à quantidade de protões do núcleo do átomo; o período e grupo indicam, respetivamente, a linha e coluna do elemento na tabela perídica; a massa atómica está expressa em <span class="math notranslate nohighlight">\(u\)</span> ou <span class="math notranslate nohighlight">\(g/mol\)</span>, que corresponde por definição a <span class="math notranslate nohighlight">\(1/12\)</span> da massa de <span class="math notranslate nohighlight">\(C_{12}\)</span>.</p>
 <p>A tabela abaixo apresenta alguns elementos.
 Temos pois seis campos de dados em cada linha. Comece por identificar o tipo (em Python) de cada campo.</p>
 <table class="colwidths-auto table">
@@ -486,8 +477,8 @@ Temos pois seis campos de dados em cada linha. Comece por identificar o tipo (em
 </div>
 <div class="section" id="tarefa-a-ler-e-escrever">
 <h3>Tarefa A: ler e escrever<a class="headerlink" href="#tarefa-a-ler-e-escrever" title="Link permanente para este título">¶</a></h3>
-<p>A primeira tarefa é preparar um programa em python que leia da consola linhas com as propriedades de elementos e, para cada linha, apresente a informação com o formato desejado.</p>
-<p>Pretende-se ler os dados e obter uma listagem com o nome do elemento justificado à direita, o símbolo entre parênteses e finalmente a massa atómica em notação científica com três casas decimais. Para efeito de formatação, considere que a dimensão de 15 e dois carateres para os campos nome e símbolo, respetivamente.</p>
+<p>A primeira tarefa é preparar um <em>script</em> em python que leia da consola linhas com as propriedades de elementos e, para cada linha, apresente a informação com o formato desejado.</p>
+<p>Pretende-se ler obter uma listagem com o nome do elemento justificado à direita, o símbolo entre parênteses e finalmente a massa atómica em notação científica com três casas decimais. Para efeito de formatação, considere que a dimensão de 15 e dois carateres para os campos nome e símbolo, respetivamente.</p>
 <p>O ficheiro não terá mais de 150 linhas e cada linha não terá mais de oitenta caracteres.</p>
 <div class="section" id="caso-de-teste">
 <h4>Caso de teste<a class="headerlink" href="#caso-de-teste" title="Link permanente para este título">¶</a></h4>
@@ -515,7 +506,7 @@ Temos pois seis campos de dados em cada linha. Comece por identificar o tipo (em
        <span class="n">Fluorine</span> <span class="p">(</span><span class="n">F</span> <span class="p">)</span> <span class="mf">1.900e+01</span>
 </pre></div>
 </div>
-<p>Submeta no problema A.</p>
+<p>Submeta no problema A do concurso IPC_L6.</p>
 </div>
 </div>
 <div class="section" id="tarefa-b-organizar-por-simbolo-quimico">
@@ -566,7 +557,7 @@ Temos pois seis campos de dados em cada linha. Comece por identificar o tipo (em
          <span class="n">Oxygen</span> <span class="p">(</span><span class="n">O</span> <span class="p">)</span> <span class="mf">1.600e+01</span>
 </pre></div>
 </div>
-<p>Submeta no problema B.</p>
+<p>Submeta no problema B do concurso IPC_L6.</p>
 </div>
 </div>
 <div class="section" id="tarefa-c-calcular-peso-de-moleculas">
@@ -618,7 +609,7 @@ Temos pois seis campos de dados em cada linha. Comece por identificar o tipo (em
 <span class="mf">4.401e+01</span>
 </pre></div>
 </div>
-<p>Submeta no problema C.</p>
+<p>Submeta no problema C do concurso IPC_L6.</p>
 </div>
 </div>
 </div>
@@ -653,24 +644,6 @@ Temos pois seis campos de dados em cada linha. Comece por identificar o tipo (em
 
 <div class='prev-next-bottom'>
     
-    <div id="prev">
-        <a class="left-prev" href="Lab5.html" title="anterior page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">anterior</p>
-                <p class="prevnext-title">Lab5</p>
-            </div>
-        </a>
-    </div>
-     <div id="next">
-        <a class="right-next" href="Lab7-F2-2021.html" title="próximo page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">próximo</p>
-                <p class="prevnext-title">Lab7</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
 
 </div>
         

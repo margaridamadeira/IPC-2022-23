@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lab7 &#8212; Introdução à programação científica</title>
+    <title>Segunda Festa de Programação &#8212; Introdução à programação científica</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,11 +51,9 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2022-23/docs/Lab7-F2-2021.html" />
+    <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2022-23/docs/F2-2021.html" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
-    <link rel="next" title="Segunda Festa de Programação" href="F2-2022.html" />
-    <link rel="prev" title="Lab6" href="Lab6.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -176,7 +174,7 @@
   Guiões práticos
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Primeiros_passos.html">
    Primeiros passos na programação em Python
@@ -227,8 +225,8 @@
    Lab6
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lab7-F2-2021.html">
    Lab7
   </a>
  </li>
@@ -278,7 +276,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/docs/Lab7-F2-2021.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/docs/F2-2021.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -303,7 +301,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/margaridamadeira/IPC-2022-23/main?urlpath=tree/docs/docs/Lab7-F2-2021.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/margaridamadeira/IPC-2022-23/main?urlpath=tree/docs/docs/F2-2021.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Lançamento Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -372,22 +370,16 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="lab7">
-<h1>Lab7<a class="headerlink" href="#lab7" title="Link permanente para este título">¶</a></h1>
-<p>Neste laboratório revisitaremos a segunda festa de programação de 2021-2022.</p>
-<p>Na resolução, tente simular o ambiente da festa: concentre-se e tente resolver em duas horas.</p>
-<p>Note bem:</p>
-<ul class="simple">
-<li><p>Cotação deste guião: 2 pontos</p></li>
-<li><p>Submeta cada uma das tarefas no problema correspondente do concurso IPC_L7.</p></li>
-<li><p>Prazo limite de submissão: 23h59m de 15 de Novembro</p></li>
-<li><p>Prazo limite de validação das submissões aceites: 22 de novembro, durante o atendimento.</p></li>
-</ul>
+  <div class="tex2jax_ignore mathjax_ignore section" id="segunda-festa-de-programacao">
+<h1>Segunda Festa de Programação<a class="headerlink" href="#segunda-festa-de-programacao" title="Link permanente para este título">¶</a></h1>
+<p><strong>Introdução à programação científica - Bioengenharia</strong></p>
+<p><strong>14 de dezembro de 2020, das 16h00 às 19h00</strong></p>
+<p>Considere a <a class="reference external" href="https://tutoria.ualg.pt/2021/mod/resource/view.php?id=37418">Informação sobre as Festas de Programação</a>.</p>
 <hr><div class="section" id="noves-fora">
 <h2>Noves fora<a class="headerlink" href="#noves-fora" title="Link permanente para este título">¶</a></h2>
 <div class="figure align-default" id="prova-dos-nove">
 <a class="reference internal image-reference" href="../_images/Fig1.png"><img alt="../_images/Fig1.png" src="../_images/Fig1.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">Ilustração da <em>prova dos noves</em> na adição</span><a class="headerlink" href="#prova-dos-nove" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Ilustração da <em>prova dos noves</em> na adição</span><a class="headerlink" href="#prova-dos-nove" title="Permalink to this image">¶</a></p>
 </div>
 <p>Antigamente, na escola primária, para verificarmos rapidamente se uma operação aritmética estava certa, fazíamos a <em>prova dos nove</em>. Acho que nos pediam isso para fomentar o cálculo mental, porque a prova dos noves não garante a correção da operação.</p>
 <p>Na base dessa <em>prova dos noves</em>, fazíamos «noves fora», ou seja, íamos somando os algarismos e quando o resultado fosse nove, consideramos zero e continuamos a somar os algarismos até termos um único algarismo.</p>
@@ -430,14 +422,14 @@ Numa adição, em que <code class="docutils literal notranslate"><span class="pr
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="o">+</span><span class="mi">5</span><span class="o">=</span><span class="mi">7</span> <span class="o">-&gt;</span> <span class="n">não</span> <span class="n">corresponde</span>
 </pre></div>
 </div>
-<p>Submeta na tarefa A.</p>
+<p>Submeta na tarefa A do concurso IPC_F2.</p>
 <div style="page-break-after: always"></div></div>
 </div>
 <div class="section" id="mutacoes">
 <h2>Mutações<a class="headerlink" href="#mutacoes" title="Link permanente para este título">¶</a></h2>
 <div class="figure align-default" id="id1">
 <a class="reference internal image-reference" href="../_images/hamming.png"><img alt="../_images/hamming.png" src="../_images/hamming.png" style="width: 100px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text">Ilustração da distância de Hamming numa sequência de DNA</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Ilustração da distância de Hamming numa sequência de DNA</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>Queremos analisar algumas sequências de DNA e determinar a distância Hamming entre duas sequências.</p>
 <p>A distância Hamming é o número de elementos diferentes numa sequência.</p>
@@ -475,7 +467,7 @@ Numa adição, em que <code class="docutils literal notranslate"><span class="pr
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">25</span>
 </pre></div>
 </div>
-<p>Submeta na tarefa B.</p>
+<p>Submeta na tarefa B do concurso IPC_F2.</p>
 <div style="page-break-after: always"></div>
 </div>
 </div>
@@ -483,7 +475,7 @@ Numa adição, em que <code class="docutils literal notranslate"><span class="pr
 <h2>Adivinha!<a class="headerlink" href="#adivinha" title="Link permanente para este título">¶</a></h2>
 <div class="figure align-default" id="arte-ou-engenho">
 <a class="reference internal image-reference" href="../_images/ae.jpg"><img alt="../_images/ae.jpg" src="../_images/ae.jpg" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">Adivinha</span><a class="headerlink" href="#arte-ou-engenho" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Adivinha</span><a class="headerlink" href="#arte-ou-engenho" title="Permalink to this image">¶</a></p>
 </div>
 <p>– Mário, eu consigo adivinhar números por telepatia. – disse a Marta. – Pensa num número e não mo digas.</p>
 <p>– Já pensei – respondeu o Mário acenando com a cabeça.</p>
@@ -522,7 +514,7 @@ Caso não exista um número inteiro que possa dar origem ao número que o Mário
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Acho</span> <span class="n">que</span> <span class="n">te</span> <span class="n">enganaste</span> <span class="n">nas</span> <span class="n">contas</span><span class="o">.</span>
 </pre></div>
 </div>
-<p>Submeta na tarefa C.</p>
+<p>Submeta na tarefa C do concurso IPC_F2.</p>
 </div>
 </div>
 </div>
@@ -556,24 +548,6 @@ Caso não exista um número inteiro que possa dar origem ao número que o Mário
 
 <div class='prev-next-bottom'>
     
-    <div id="prev">
-        <a class="left-prev" href="Lab6.html" title="anterior page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">anterior</p>
-                <p class="prevnext-title">Lab6</p>
-            </div>
-        </a>
-    </div>
-     <div id="next">
-        <a class="right-next" href="F2-2022.html" title="próximo page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">próximo</p>
-                <p class="prevnext-title">Segunda Festa de Programação</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
 
 </div>
         
