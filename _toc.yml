@@ -17,7 +17,7 @@ parts:
   - file: docs/ProgPython4
   - file: docs/Ficheiros
   - file: docs/MódulosTestes
-#  - file: docs/Matplotlib
+  - file: docs/Matplotlib
 #  - file: docs/Numpy
 #  - file: docs/Biopython_introd
 #  - file: docs/Apresent_sympy
