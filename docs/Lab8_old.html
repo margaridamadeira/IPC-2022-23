@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Segunda Festa de Programação &#8212; Introdução à programação científica</title>
+    <title>Lab8 &#8212; Introdução à programação científica</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,10 +53,9 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2022-23/docs/F2-2022.html" />
+    <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2022-23/docs/Lab8_old.html" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
-    <link rel="prev" title="Lab7" href="Lab7-F2-2021.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="pt">
     
@@ -180,7 +179,7 @@
   Guiões práticos
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Primeiros_passos.html">
    Primeiros passos na programação em Python
@@ -236,9 +235,14 @@
    Lab7
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="F2-2022.html">
    Segunda Festa de Programação
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="F3-2122.html">
+   Lab8
   </a>
  </li>
 </ul>
@@ -282,7 +286,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/docs/F2-2022.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/docs/Lab8_old.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -330,12 +334,31 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#temperatura">
-   Temperatura
+  <a class="reference internal nav-link" href="#eficacia">
+   Eficácia
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
+    <a class="reference internal nav-link" href="#id2">
+     Tarefa
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Exemplos
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#maior-subida-de-temperatura">
+   Maior subida de temperatura
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
      Tarefa
     </a>
     <ul class="nav section-nav flex-column">
@@ -359,18 +382,12 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="segunda-festa-de-programacao">
-<h1>Segunda Festa de Programação<a class="headerlink" href="#segunda-festa-de-programacao" title="Link permanente para este título">¶</a></h1>
-<p><strong>Introdução à programação científica - Bioengenharia</strong></p>
-<p><strong>17 de novembro de 2022, das 9h30 às 11h30</strong></p>
-<hr>
-Note bem:
-<ul class="simple">
-<li><p>Submeta cada uma das tarefas no problema correspondente do concurso IPC_F2 do <em>Mooshak</em> em http://deei-mooshak.ualg.pt/~mmadeira</p></li>
-<li><p>Prazo limite das validações das submissões aceites: 24 de novembro de 2022</p></li>
-<li><p>A cotação das submissões aceites no <em>Mooshak</em> e validadas: 20 pontos cada.</p></li>
-</ul>
-<hr>
+  <div class="tex2jax_ignore mathjax_ignore section" id="lab8">
+<h1>Lab8<a class="headerlink" href="#lab8" title="Link permanente para este título">¶</a></h1>
+<p>Estas tarefas foram apresentadas na segunda festa do ano letivo de 2020-2021. Este guião vai ajudar a preparar a próxima festa.</p>
+<p>Reveja a <a class="reference external" href="https://tutoria.ualg.pt/2021/mod/resource/view.php?id=37418">Informação sobre as Festas de Programação</a>.
+Idealmente, reserve três horas e tente resolver os exercícios da festa de forma contínua.</p>
+<p>Antes disso, reúna todos os seus materiais para consulta durante a festa e os seus programas anteriores (os que estão no Mooshak pode sempre ir lá buscá-los). Prepare uma pasta para cada problema que vai abordar, e a versão inicial da sua resolução.</p>
 <div class="section" id="produtos">
 <h2>Produtos<a class="headerlink" href="#produtos" title="Link permanente para este título">¶</a></h2>
 <div class="figure align-default" id="reagentes">
@@ -391,7 +408,7 @@ Note bem:
 <p>Preciso de um programa para determinar o dígito de controlo.</p>
 <div class="section" id="tarefa">
 <h3>Tarefa<a class="headerlink" href="#tarefa" title="Link permanente para este título">¶</a></h3>
-<p>Prepare um programa em Python que determine o dígito de controlo de um código universal de produto. O programa recebe, da consola, uma única linha contendo 11 carateres numéricos e a letra “x” e devolverá o dígito de controlo.</p>
+<p>Prepare um programa em Python completando que determine o dígito de controlo de um código universal de produto. O programa recebe, da consola, uma única linha contendo 11 carateres numéricos e a letra “x” e devolverá o dígito de controlo.</p>
 </div>
 <div class="section" id="exemplos">
 <h3>Exemplos<a class="headerlink" href="#exemplos" title="Link permanente para este título">¶</a></h3>
@@ -419,20 +436,81 @@ Note bem:
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span>
 </pre></div>
 </div>
-<p>Submeta na tarefa A.</p>
-<div style="page-break-after: always"></div>
+<p>Submeta no problema A do concurso IPC_L7.</p>
 </div>
 </div>
-<div class="section" id="temperatura">
-<h2>Temperatura<a class="headerlink" href="#temperatura" title="Link permanente para este título">¶</a></h2>
+<div class="section" id="eficacia">
+<h2>Eficácia<a class="headerlink" href="#eficacia" title="Link permanente para este título">¶</a></h2>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/eficacia.jpeg"><img alt="../_images/eficacia.jpeg" src="../_images/eficacia.jpeg" style="height: 300px;" /></a>
+</div>
+<p>Pretende-se proceder à avaliação de uma experiência. Cada um de <em>n</em> produtos é ensaiado num número indeterminado de amostras.</p>
+<p>A eficácia de um produto numa amostra é marcada com <em>1</em> se o produto é eficaz ou <em>0</em> se o produto não é eficaz. Para já, considera-se a eficácia do produto como a média aritmética  dos resultados desse produto nas diferentes amostras.</p>
+<p>Pretendo uma listagem ordenada dos produtos que têm uma eficácia superior a um valor <em>v</em>.</p>
+<div class="section" id="id2">
+<h3>Tarefa<a class="headerlink" href="#id2" title="Link permanente para este título">¶</a></h3>
+<p>Prepare um programa em Python para produzir a listagem pretendida.</p>
+<p>O seu programa deve ler, numa primeira linha, um número inteiro e um número real separados por espaços, números esses que correspondem ao número de produtos <em>n</em> e ao patamar de eficiência <em>v</em>, respetivamente.
+As <em>n</em> linhas seguintes contêm a informação de cada produto sendo que em cada linha surgem, separados por vírgulas, o nome do produto e a eficácia desse produto em cada uma das amostras.</p>
+<p>O seu programa deve produzir uma listagem dos produtos onde se verificou uma eficácia superior ou igual ao patamar <em>v</em>. Nessa listagem, os produtos devem surgir por ordem alfabética e apenas um por linha.
+Caso não existam produtos a apresentar o seu programa deverá apresentar a mensagem «Não há produtos com a eficácia pretendida.» (sem as aspas).</p>
+<p><strong>Requisito técnico</strong>: deve usar, pelo menos, um dicionário.</p>
+<div class="section" id="id3">
+<h4>Exemplos<a class="headerlink" href="#id3" title="Link permanente para este título">¶</a></h4>
+<p><strong>Input 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="mf">0.3</span>
+<span class="n">Silicato</span> <span class="n">de</span> <span class="n">sódio</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+<span class="n">Oxido</span> <span class="n">de</span> <span class="n">chumbo</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span>
+<span class="n">Acetato</span> <span class="n">de</span> <span class="n">chumbo</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span>
+</pre></div>
+</div>
+<p><strong>Output 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Acetato</span> <span class="n">de</span> <span class="n">chumbo</span>
+<span class="n">Oxido</span> <span class="n">de</span> <span class="n">chumbo</span>
+<span class="n">Silicato</span> <span class="n">de</span> <span class="n">sódio</span>
+</pre></div>
+</div>
+<p><strong>Input 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span> <span class="mf">0.5</span>
+<span class="n">Carbonato</span> <span class="n">de</span> <span class="n">bário</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span>
+<span class="n">Violeta</span> <span class="n">de</span> <span class="n">genciana</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+<span class="n">Cloreto</span> <span class="n">de</span> <span class="n">cálcio</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span>
+<span class="n">Acetona</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span>
+<span class="n">Azul</span> <span class="n">de</span> <span class="n">metileno</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p><strong>Output 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Acetona</span>
+<span class="n">Azul</span> <span class="n">de</span> <span class="n">metileno</span>
+</pre></div>
+</div>
+<p><strong>Input 3</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span> <span class="mf">0.7</span>
+<span class="n">Carbonato</span> <span class="n">de</span> <span class="n">bário</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span>
+<span class="n">Violeta</span> <span class="n">de</span> <span class="n">genciana</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+<span class="n">Cloreto</span> <span class="n">de</span> <span class="n">cálcio</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span>
+<span class="n">Acetona</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span>
+<span class="n">Azul</span> <span class="n">de</span> <span class="n">metileno</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p><strong>Output 3</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Não</span> <span class="n">há</span> <span class="n">produtos</span> <span class="n">com</span> <span class="n">a</span> <span class="n">eficácia</span> <span class="n">pretendida</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Submeta no problema B do concurso IPC_L7.</p>
+</div>
+</div>
+</div>
+<div class="section" id="maior-subida-de-temperatura">
+<h2>Maior subida de temperatura<a class="headerlink" href="#maior-subida-de-temperatura" title="Link permanente para este título">¶</a></h2>
 <div class="figure align-default" id="subida-de-temperatura">
 <a class="reference internal image-reference" href="../_images/subida-temperatura.jpeg"><img alt="../_images/subida-temperatura.jpeg" src="../_images/subida-temperatura.jpeg" style="height: 300px;" /></a>
 </div>
 <p>Porque muitas das nossas experiências que funcionaram de forma anómala dependem da temperatura, passámos então a recolher a temperatura no laboratório de hora a hora.
 Houve alturas em que se verificou uma sequência crescente, ou seja, um conjunto de medidas T em que <span class="math notranslate nohighlight">\(t_n &lt; t_{n+1}\)</span>.
 Para analisarmos a evolução das temperaturas, queremos identificar a maior amplitude das sequências crescentes de temperatura.</p>
-<div class="section" id="id1">
-<h3>Tarefa<a class="headerlink" href="#id1" title="Link permanente para este título">¶</a></h3>
+<div class="section" id="id4">
+<h3>Tarefa<a class="headerlink" href="#id4" title="Link permanente para este título">¶</a></h3>
 <p>Dada uma série de medidas de temperatura obtidas durante a realização de uma experiência, pretende-se identificar qual a maior amplitude das sequências crescentes de temperatura.</p>
 <p>O seu programa deve ler, da consola, uma única linha contendo números reais separados por espaços.</p>
 <p>O programa deve apresentar um número real com 4 casas decimais que corresponde à maior amplitude das sequências crescentes.</p>
@@ -487,8 +565,7 @@ Para analisarmos a evolução das temperaturas, queremos identificar a maior amp
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">32.0000</span>
 </pre></div>
 </div>
-<p>Submeta na tarefa B.</p>
-<div style="page-break-after: always"></div>
+<p>Submeta no problema C do concurso IPC_L7.</p>
 </div>
 </div>
 </div>
@@ -518,14 +595,7 @@ Para analisarmos a evolução das temperaturas, queremos identificar a maior amp
               
         
             <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="Lab7-F2-2021.html" title="anterior page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">anterior</p>
-            <p class="prev-next-title">Lab7</p>
-        </div>
-    </a>
+<div class='prev-next-area'>
 </div>
         
         </div>

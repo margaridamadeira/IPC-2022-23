@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Terceira Festa de Programação &#8212; Introdução à programação científica</title>
+    <title>Lab8 &#8212; Introdução à programação científica</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -44,7 +44,7 @@
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
@@ -56,8 +56,12 @@
     <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2022-23/docs/F3-2122.html" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="prev" title="Segunda Festa de Programação" href="F2-2022.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -96,7 +100,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Preâmbulo
  </span>
@@ -108,7 +112,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Resumos dos temas
  </span>
@@ -171,12 +175,12 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Guiões práticos
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Primeiros_passos.html">
    Primeiros passos na programação em Python
@@ -235,6 +239,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="F2-2022.html">
    Segunda Festa de Programação
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Lab8
   </a>
  </li>
 </ul>
@@ -370,16 +379,20 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="terceira-festa-de-programacao">
-<h1>Terceira Festa de Programação<a class="headerlink" href="#terceira-festa-de-programacao" title="Link permanente para este título">¶</a></h1>
-<p><strong>Introdução à programação científica - Bioengenharia</strong></p>
-<p><strong>18 de janeiro de 2021, das 16h00 às 19h00</strong></p>
-<p>Considere a <a class="reference external" href="https://tutoria.ualg.pt/2021/mod/resource/view.php?id=37418">Informação sobre as Festas de Programação</a>.</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="lab8">
+<h1>Lab8<a class="headerlink" href="#lab8" title="Link permanente para este título">¶</a></h1>
+<p>Note bem:</p>
+<ul class="simple">
+<li><p>Cotação deste guião: 2 pontos</p></li>
+<li><p>Submeta cada uma das tarefas no problema correspondente do concurso IPC_L8.</p></li>
+<li><p>Prazo limite de submissão: 23h59m de 29 de Novembro</p></li>
+<li><p>Prazo limite de validação das submissões aceites: 07 de dezembro, imediatamente após a aula teórica.</p></li>
+</ul>
 <hr><div class="section" id="tres-medias">
 <h2>Três médias<a class="headerlink" href="#tres-medias" title="Link permanente para este título">¶</a></h2>
 <div class="figure align-default" id="medias">
 <a class="reference internal image-reference" href="../_images/512px-MathematicalMeans.svg.png"><img alt="../_images/512px-MathematicalMeans.svg.png" src="../_images/512px-MathematicalMeans.svg.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">Médias (Imagem de <a class="reference external" href="https://commons.wikimedia.org/wiki/File:MathematicalMeans.svg">Dzenanz, Public domain, via Wikimedia Commons. Acedido a 13 Jan 2022</a>)</span><a class="headerlink" href="#medias" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">Médias (Imagem de <a class="reference external" href="https://commons.wikimedia.org/wiki/File:MathematicalMeans.svg">Dzenanz, Public domain, via Wikimedia Commons. Acedido a 13 Jan 2022</a>)</span><a class="headerlink" href="#medias" title="Permalink to this image">¶</a></p>
 </div>
 <p>Há tempos pediram-me a média de uns dados… e fiquei a pensar cá para mim: <em>Média? Que média? Há tantas …</em></p>
 <p>Como não diziam mais nada, pretendiam provavelmente a média aritmética. Mas para estar preparada, resolvi preparar o cálculo de algumas delas para ir usando conforme necessário.</p>
@@ -431,14 +444,14 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.867e+01</span> <span class="mf">1.771e+01</span> <span class="mf">1.680e+01</span>
 </pre></div>
 </div>
-<p>Submeta na tarefa A do concurso IPC_F3.</p>
+<p>Submeta na tarefa A do concurso IPC_L8.</p>
 <div style="page-break-after: always"></div></div>
 </div>
 <div class="section" id="transicao-transcricao">
 <h2>Transição/transcrição<a class="headerlink" href="#transicao-transcricao" title="Link permanente para este título">¶</a></h2>
 <div class="figure align-default" id="grafo-colorido">
 <a class="reference internal image-reference" href="../_images/Fig2.png"><img alt="../_images/Fig2.png" src="../_images/Fig2.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">Transições e transversões</span><a class="headerlink" href="#grafo-colorido" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text">Transições e transversões</span><a class="headerlink" href="#grafo-colorido" title="Permalink to this image">¶</a></p>
 </div>
 <p>Queremos analisar algumas sequências de DNA e determinar o rácio transição/transcrição de pares dessas sequências (<a class="reference external" href="https://rosalind.info/problems/tran/">Fonte</a>).</p>
 <p>Essas sequências estão no formato FASTA. Uma sequência no formato FASTA começa com uma linha de descrição seguida por linhas com sequência de dados. A linha de descrição distingue-se das com sequências de dados por iniciar com o carácter <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> (maior-que).</p>
@@ -499,7 +512,7 @@
 
 </pre></div>
 </div>
-<p>Submeta na tarefa B do concurso IPC_F3.</p>
+<p>Submeta na tarefa B do concurso IPC_L8.</p>
 <div style="page-break-after: always"></div>
 </div>
 </div>
@@ -507,7 +520,7 @@
 <h2>Processo<a class="headerlink" href="#processo" title="Link permanente para este título">¶</a></h2>
 <div class="figure align-default" id="amostragem">
 <a class="reference internal image-reference" href="../_images/processo.png"><img alt="../_images/processo.png" src="../_images/processo.png" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">Referência, amostra do sensor e diferença</span><a class="headerlink" href="#amostragem" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 22 </span><span class="caption-text">Referência, amostra do sensor e diferença</span><a class="headerlink" href="#amostragem" title="Permalink to this image">¶</a></p>
 </div>
 <p>Queremos controlar um processo, com um sensor e um atuador. Sabemos qual o valor de referência pretendido mas ainda não temos um modelo. Além disso, a resolução do sensor e do atuador são diferentes.</p>
 <p>A forma como pretendemos implementar a abordagem inicial é a seguinte: começamos por ler o valor de referência e a resolução do atuador; depois vamos lendo os valores do sensor e decidimos de forma a compensar a distância ao valor de referência; se for adequado, podemos comandar o atuador usando múltiplos da resolução.</p>
@@ -570,7 +583,7 @@ Ao lermos 30, comandamos o atuador com -9; na leitura seguinte obtemos 24, atuam
 <span class="mi">15</span>
 </pre></div>
 </div>
-<p>Submeta na tarefa C do concurso IPC_F3.</p>
+<p>Submeta na tarefa C do concurso IPC_L8.</p>
 </div>
 </div>
 
@@ -597,13 +610,15 @@ Ao lermos 30, comandamos o atuador com -9; na leitura seguinte obtemos 24, atuam
               </div>
               
         
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="F2-2022.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Segunda Festa de Programação</p>
+        </div>
+    </a>
 </div>
         
         </div>
@@ -624,8 +639,7 @@ Ao lermos 30, comandamos o atuador com -9; na leitura seguinte obtemos 24, atuam
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>
