@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Primeira Festa de Programação &#8212; Introdução à programação científica</title>
+    <title>Segunda Festa de Programação &#8212; Introdução à programação científica</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -44,8 +44,6 @@
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -53,11 +51,9 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2022-23/docs/F1-2022.html" />
+    <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2022-23/docs/F2-2021.html" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
-    <link rel="next" title="Lab3" href="Lab3.html" />
-    <link rel="prev" title="Lab2" href="Lab2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -178,7 +174,7 @@
   Guiões práticos
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Primeiros_passos.html">
    Primeiros passos na programação em Python
@@ -204,8 +200,8 @@
    Lab2
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="F1-2022.html">
    Primeira Festa de Programação
   </a>
  </li>
@@ -285,9 +281,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/docs/F1-2022.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/docs/F2-2021.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -305,6 +301,23 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/margaridamadeira/IPC-2022-23/main?urlpath=tree/docs/docs/F2-2021.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lançamento Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -316,8 +329,8 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#area-de-um-circulo">
-   Área de um círculo
+  <a class="reference internal nav-link" href="#noves-fora">
+   Noves fora
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -328,8 +341,8 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#soma-dos-termos-de-uma-progressao-aritmetica">
-   Soma dos termos de uma progressão aritmética
+  <a class="reference internal nav-link" href="#mutacoes">
+   Mutações
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -340,8 +353,8 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#area-de-um-triangulo">
-   Área de um triângulo
+  <a class="reference internal nav-link" href="#adivinha">
+   Adivinha!
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -362,134 +375,151 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="primeira-festa-de-programacao">
-<h1>Primeira Festa de Programação<a class="headerlink" href="#primeira-festa-de-programacao" title="Link permanente para este título">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="segunda-festa-de-programacao">
+<h1>Segunda Festa de Programação<a class="headerlink" href="#segunda-festa-de-programacao" title="Link permanente para este título">¶</a></h1>
 <p><strong>Introdução à programação científica - Bioengenharia</strong></p>
-<p><strong>13 de outubro de 2022, das 9h30 às 11h00</strong></p>
-<hr>
-Note bem:
-<ul class="simple">
-<li><p>Cotação deste guião: 10, 10 e 20 pontos para as tarefas A, B e C, respetivamente.</p></li>
-<li><p>Submeta cada uma das tarefas no problema correspondente do concurso IPC_F1.</p></li>
-<li><p>Prazo limite de validação das submissões aceites: 18 de outubro, horário de atendimento de terça-feira (9h30 às 10h30).</p></li>
-</ul>
-<hr>
-<div class="section" id="area-de-um-circulo">
-<h2>Área de um círculo<a class="headerlink" href="#area-de-um-circulo" title="Link permanente para este título">¶</a></h2>
-<p>Prepare um programa em Python calcule que a área de um círculo de raio <em>r</em>, sabendo que <span class="math notranslate nohighlight">\(A = \pi r^2\)</span>. Considere que o valor aproximado de <span class="math notranslate nohighlight">\(pi\)</span> de <span class="math notranslate nohighlight">\(3.1415\)</span>.</p>
+<p><strong>14 de dezembro de 2020, das 16h00 às 19h00</strong></p>
+<p>Considere a <a class="reference external" href="https://tutoria.ualg.pt/2021/mod/resource/view.php?id=37418">Informação sobre as Festas de Programação</a>.</p>
+<hr><div class="section" id="noves-fora">
+<h2>Noves fora<a class="headerlink" href="#noves-fora" title="Link permanente para este título">¶</a></h2>
+<div class="figure align-default" id="prova-dos-nove">
+<a class="reference internal image-reference" href="../_images/Fig1.png"><img alt="../_images/Fig1.png" src="../_images/Fig1.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Ilustração da <em>prova dos noves</em> na adição</span><a class="headerlink" href="#prova-dos-nove" title="Permalink to this image">¶</a></p>
+</div>
+<p>Antigamente, na escola primária, para verificarmos rapidamente se uma operação aritmética estava certa, fazíamos a <em>prova dos nove</em>. Acho que nos pediam isso para fomentar o cálculo mental, porque a prova dos noves não garante a correção da operação.</p>
+<p>Na base dessa <em>prova dos noves</em>, fazíamos «noves fora», ou seja, íamos somando os algarismos e quando o resultado fosse nove, consideramos zero e continuamos a somar os algarismos até termos um único algarismo.</p>
+<p>Passamos então a designar por <code class="docutils literal notranslate"><span class="pre">9f</span></code> a função que faz «noves fora» a um número natural.
+Com exemplos é mais claro:</p>
+<p><code class="docutils literal notranslate"><span class="pre">9f(13)</span></code> = 4  porque 1 + 3</p>
+<p><code class="docutils literal notranslate"><span class="pre">9f(325)</span></code> = 1 porque 3 + 2 + 5 = 10 e 1 + 0 = 1</p>
+<p><code class="docutils literal notranslate"><span class="pre">9f(7234)</span></code> = 7 porque 7 + 2 + 3 + 4 = 16 e 1 + 6 = 7</p>
+<p>Usávamos a prova dos noves para verificar adições, subtrações, multiplicações ou divisões.
+Numa adição, em que <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span> <span class="pre">=</span> <span class="pre">c</span></code>, a prova consistia em verificar que noves fora das parcelas era igual a noves fora do resultado.</p>
+<p>Por exemplo, para verificar <code class="docutils literal notranslate"><span class="pre">13</span> <span class="pre">+</span> <span class="pre">325</span> <span class="pre">=</span> <span class="pre">338</span></code> verificávamos <code class="docutils literal notranslate"><span class="pre">9f(13)</span> <span class="pre">+</span> <span class="pre">9f(325)</span> <span class="pre">=</span> <span class="pre">9f(338)</span></code>, que é o mesmo que verificar que <code class="docutils literal notranslate"><span class="pre">9f(13325)</span> <span class="pre">=</span> <span class="pre">9f(338)</span></code>.</p>
 <div class="section" id="tarefa-a">
 <h3>Tarefa A<a class="headerlink" href="#tarefa-a" title="Link permanente para este título">¶</a></h3>
-<p>Prepare um programa que calcule a área de um círculo. O seu programa deverá conter uma função <em>area_circ(r)</em> que devolve a área de um círculo com raio <em>r</em>.</p>
-<p>O input é uma única linha contendo um real que corresponde ao raio <em>r</em> do círculo.
-O output é um número real que corresponde à área do círculo.</p>
+<p>Pretende-se usar a <em>prova dos noves</em> para analisar uma expressão.</p>
+<p>O input é uma única linha onde dois termos estão separados pelo sinal de igual («=», sem as aspas). O primeiro termo é composto por duas ou mais parcelas, sendo as parcelas separadas pelo sinal de soma (“+”, sem as aspas). O segundo termo representa a soma. As parcelas e a soma são formadas pelos caracteres correspondentes aos algarismos de zero a nove.</p>
+<p>O output é uma única linha onde se apresenta a expressão lida seguida por » -&gt; corresponde» ou » -&gt; não corresponde» (sem as aspas) conforme se verifica ou não a igualdade da <em>prova dos noves</em>, respetivamente.</p>
+<p><strong>Requisito técnico:</strong> Não é permitido o uso de subtração, divisão (inteira ou real) ou resto da divisão inteira.</p>
 <p><strong>Casos de teste</strong></p>
 <p><strong>Input 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.0</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">254</span><span class="o">+</span><span class="mi">325</span><span class="o">=</span><span class="mi">579</span>
 </pre></div>
 </div>
 <p><strong>Output 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">3.1415</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">254</span><span class="o">+</span><span class="mi">325</span><span class="o">=</span><span class="mi">579</span> <span class="o">-&gt;</span> <span class="n">corresponde</span>
 </pre></div>
 </div>
 <p><strong>Input 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">5.0</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">12</span><span class="o">+</span><span class="mi">45</span><span class="o">+</span><span class="mi">67</span><span class="o">=</span><span class="mi">124</span>
 </pre></div>
 </div>
 <p><strong>Output 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">78.53750000000001</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">12</span><span class="o">+</span><span class="mi">45</span><span class="o">+</span><span class="mi">67</span><span class="o">=</span><span class="mi">124</span> <span class="o">-&gt;</span> <span class="n">corresponde</span>
 </pre></div>
 </div>
 <p><strong>Input 3</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">3.5</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="o">+</span><span class="mi">5</span><span class="o">=</span><span class="mi">7</span>
 </pre></div>
 </div>
 <p><strong>Output 3</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">38.483375</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="o">+</span><span class="mi">5</span><span class="o">=</span><span class="mi">7</span> <span class="o">-&gt;</span> <span class="n">não</span> <span class="n">corresponde</span>
 </pre></div>
 </div>
-<p>Submeta na tarefa A do concurso IPC_F1.</p>
-<div style="page-break-after: always"></div>
+<p>Submeta na tarefa A do concurso IPC_F2.</p>
+<div style="page-break-after: always"></div></div>
 </div>
+<div class="section" id="mutacoes">
+<h2>Mutações<a class="headerlink" href="#mutacoes" title="Link permanente para este título">¶</a></h2>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/hamming.png"><img alt="../_images/hamming.png" src="../_images/hamming.png" style="width: 100px;" /></a>
+<p class="caption"><span class="caption-text">Ilustração da distância de Hamming numa sequência de DNA</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="soma-dos-termos-de-uma-progressao-aritmetica">
-<h2>Soma dos termos de uma progressão aritmética<a class="headerlink" href="#soma-dos-termos-de-uma-progressao-aritmetica" title="Link permanente para este título">¶</a></h2>
-<p><a class="reference external" href="https://mathworld.wolfram.com/ArithmeticSeries.html">Referência</a></p>
-<p>A soma dos <span class="math notranslate nohighlight">\(n\)</span> primeiros termos de uma progressão aritmética pode ser calculada pela fórmula</p>
-<p><span class="math notranslate nohighlight">\(S_{n}={\frac{n}{2}}\cdot \left(a_{1}+a_{n}\right)\)</span></p>
-<p>Por exemplo, para a soma dos quatro primeiros termos da progressão <span class="math notranslate nohighlight">\(P_A = ( 15, 12, 9, 6, 3)\)</span>, como <span class="math notranslate nohighlight">\(n = 4\)</span>, <span class="math notranslate nohighlight">\(a_i = 15\)</span> e <span class="math notranslate nohighlight">\(a_n = 6\)</span>, a soma dos quatro primeiros números, <span class="math notranslate nohighlight">\(S(4)\)</span>, é <span class="math notranslate nohighlight">\(42\)</span>.</p>
+<p>Queremos analisar algumas sequências de DNA e determinar a distância Hamming entre duas sequências.</p>
+<p>A distância Hamming é o número de elementos diferentes numa sequência.</p>
+<p>Queremos ler da consola duas sequências de DNA da mesma dimensão e apresentar a distância Hamming.</p>
 <div class="section" id="tarefa-b">
 <h3>Tarefa B<a class="headerlink" href="#tarefa-b" title="Link permanente para este título">¶</a></h3>
-<p>Faça um programa em Python que calcule o valor da soma dos <span class="math notranslate nohighlight">\(n\)</span> primeiros números de uma progressão aritmética.</p>
-<p>O input consiste em três inteiros, um por linha, que correspondem respetivamente à quantidade de números a considerar, ao primeiro termo e ao n-ésimo termo.
-O output é um número real que corresponde à soma dos <span class="math notranslate nohighlight">\(n\)</span> primeiros termos.</p>
+<p>Faça um programa em Python para permitir determinar a distância entre duas sequências de DNA.</p>
+<p>O input consiste em duas linhas de igual dimensão.</p>
+<p>O output consiste num número inteiro correspondente à distância Hamming entre as duas sequências lidas.</p>
 <p><strong>Casos de teste</strong></p>
 <p><strong>Input 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span>
-<span class="mi">15</span>
-<span class="mi">6</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GAGC</span>
+<span class="n">CATC</span>
 </pre></div>
 </div>
 <p><strong>Output 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">42.0</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span>
 </pre></div>
 </div>
 <p><strong>Input 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span>
-<span class="mi">1</span>
-<span class="mi">7</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GAGCCTACTAACGGGAT</span>
+<span class="n">CATCGTAATGACGGCCT</span>
 </pre></div>
 </div>
 <p><strong>Output 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">28.0</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span>
 </pre></div>
 </div>
 <p><strong>Input 3</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">100</span>
-<span class="mi">1</span>
-<span class="mi">100</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CGGGTCGGGGCTAGCTAAGCTTGAACCGAGAAGGTTTGAG</span>
+<span class="n">TGAGCGCACAGTATAATACCTGAGACCGTTCTAAATTGAC</span>
 </pre></div>
 </div>
 <p><strong>Output 3</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">5050.0</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">25</span>
 </pre></div>
 </div>
-<p>Submeta na tarefa B do concurso IPC_F1.</p>
+<p>Submeta na tarefa B do concurso IPC_F2.</p>
 <div style="page-break-after: always"></div>
 </div>
 </div>
-<div class="section" id="area-de-um-triangulo">
-<h2>Área de um triângulo<a class="headerlink" href="#area-de-um-triangulo" title="Link permanente para este título">¶</a></h2>
-<p><a class="reference external" href="https://mathworld.wolfram.com/HeronsFormula.html">Referência</a></p>
-<p>A área de um triângulo pode ser calculada pela fórmula de Heron.</p>
-<p>Sendo conhecidas as dimensões <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span> e <span class="math notranslate nohighlight">\(c\)</span> das arestas de um triângulo, calculamos o semiperímetro <span class="math notranslate nohighlight">\(s\)</span> com a fórmula <span class="math notranslate nohighlight">\(s=1/2(a+b+c)\)</span> e a área <span class="math notranslate nohighlight">\(A\)</span> com a fórmula <span class="math notranslate nohighlight">\(A=sqrt(s(s-a)(s-b)(s-c))\)</span>.</p>
+<div class="section" id="adivinha">
+<h2>Adivinha!<a class="headerlink" href="#adivinha" title="Link permanente para este título">¶</a></h2>
+<div class="figure align-default" id="arte-ou-engenho">
+<a class="reference internal image-reference" href="../_images/ae.jpg"><img alt="../_images/ae.jpg" src="../_images/ae.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Adivinha</span><a class="headerlink" href="#arte-ou-engenho" title="Permalink to this image">¶</a></p>
+</div>
+<p>– Mário, eu consigo adivinhar números por telepatia. – disse a Marta. – Pensa num número e não mo digas.</p>
+<p>– Já pensei – respondeu o Mário acenando com a cabeça.</p>
+<p>– Se o número que pensaste é par, multiplica por cinco; senão, multiplica por sete – continuou a Marta. – Agora, soma-lhe cinco; multiplica por dois; soma-lhe 10; divide por dois… já está? Soma cinco outra vez e multiplica por três. Ainda não te perdeste, pois não? Bem, se o número em que tinhas pensado era ímpar, soma-lhe agora o quádruplo desse número. Já está quase, só falta dividires por cinco. Ora agora, acho que já pensaste suficientemente no número para eu o adivinhar. Quanto é que te deu?
+– Trinta e três. – responde o Mário, curioso.
+– Aah! Ah! – exclama a Marta, vitoriosa mas cansada de tantas contas de cabeça – Então pensaste no número oito, certo?
+– Foi, foi. – assentiu o Mário, muito intrigado. E disse para com os seus botões: «Isto será arte ou engenho? Telepatia ou truque?»</p>
 <div class="section" id="tarefa-c">
 <h3>Tarefa C<a class="headerlink" href="#tarefa-c" title="Link permanente para este título">¶</a></h3>
-<p>Prepare um programa em Python que leia da consola as dimensões dos três lados de um triângulo e apresente a área desse triângulo.</p>
-<p>O input consiste em três números reais, um por linha, que correspondem ao comprimento dos lados do triângulo.
-O output é um número real que corresponde à área do triângulo.</p>
-<p><strong>Requisito técnico</strong>: considere uma função apenas para o cálculo do semiperímetro e a <em>outra</em> função para o cálculo da área deverá chamar a função do semiperímetro.</p>
+<p>Fazer um programa para ajudar a Marta a adivinhar o número que o Mário pensou. O programa deve determinar o número que o Mário pensou.</p>
+<p>O input é constituído por uma linha, que contém um inteiro positivo que representa a resposta do Mário.</p>
+<p>O output é uma linha com apenas um número inteiro que representa a resposta da Marta, adivinhando o número em que o Mário pensou inicialmente.
+Caso não exista um número inteiro que possa dar origem ao número que o Mário sugere, a Marta responderá: “Acho que te enganaste nas contas.”</p>
 <p><strong>Casos de teste</strong></p>
 <p><strong>Input 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">9.0</span>
-<span class="mf">7.0</span>
-<span class="mf">14.0</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">27</span>
 </pre></div>
 </div>
 <p><strong>Output 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">26.832815729997478</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">6</span>
 </pre></div>
 </div>
 <p><strong>Input 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">3.0</span>
-<span class="mf">4.0</span>
-<span class="mf">5.0</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">24</span>
 </pre></div>
 </div>
 <p><strong>Output 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">6.0</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span>
 </pre></div>
 </div>
-<p>Submeta na tarefa C do concurso IPC_F1.</p>
+<p><strong>Input 3</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">30</span>
+</pre></div>
+</div>
+<p><strong>Output 3</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Acho</span> <span class="n">que</span> <span class="n">te</span> <span class="n">enganaste</span> <span class="n">nas</span> <span class="n">contas</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Submeta na tarefa C do concurso IPC_F2.</p>
 </div>
 </div>
 </div>
@@ -523,24 +553,6 @@ O output é um número real que corresponde à área do triângulo.</p>
 
 <div class='prev-next-bottom'>
     
-    <div id="prev">
-        <a class="left-prev" href="Lab2.html" title="anterior page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">anterior</p>
-                <p class="prevnext-title">Lab2</p>
-            </div>
-        </a>
-    </div>
-     <div id="next">
-        <a class="right-next" href="Lab3.html" title="próximo page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">próximo</p>
-                <p class="prevnext-title">Lab3</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
 
 </div>
         

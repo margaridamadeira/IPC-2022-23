@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lab8 &#8212; Introdução à programação científica</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -44,7 +44,7 @@
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
@@ -58,10 +58,7 @@
     <link rel="search" title="Pesquisar" href="../search.html" />
     <link rel="prev" title="Segunda Festa de Programação" href="F2-2022.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="pt">
-    
-
-    <!-- Google Analytics -->
+    <meta name="docsearch:language" content="en" />
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -100,7 +97,7 @@
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption" role="heading">
  <span class="caption-text">
   Preâmbulo
  </span>
@@ -112,7 +109,7 @@
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption" role="heading">
  <span class="caption-text">
   Resumos dos temas
  </span>
@@ -175,7 +172,7 @@
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption" role="heading">
  <span class="caption-text">
   Guiões práticos
  </span>
@@ -362,11 +359,13 @@
   <a class="reference internal nav-link" href="#processo">
    Processo
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tarefa-c">
-   Tarefa C
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tarefa-c">
+     Tarefa C
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -526,9 +525,8 @@
 <p>A forma como pretendemos implementar a abordagem inicial é a seguinte: começamos por ler o valor de referência e a resolução do atuador; depois vamos lendo os valores do sensor e decidimos de forma a compensar a distância ao valor de referência; se for adequado, podemos comandar o atuador usando múltiplos da resolução.</p>
 <p>Por exemplo, queremos manter o valor (ie, a referência) a 20 e um atuador com resolução de 3.
 Ao lermos 30, comandamos o atuador com -9; na leitura seguinte obtemos 24, atuamos com -3; na leitura seguinte obtemos 16, atuamos com 3; obtemos em seguida 18 e indicamos 0, decidindo não atuar, porque a diferença é menor ou igual à resolução.</p>
-</div>
 <div class="section" id="tarefa-c">
-<h2>Tarefa C<a class="headerlink" href="#tarefa-c" title="Link permanente para este título">¶</a></h2>
+<h3>Tarefa C<a class="headerlink" href="#tarefa-c" title="Link permanente para este título">¶</a></h3>
 <p>Faça um programa em Python para o controlo do processo descrito acima. Pretende-se pois determinar para cada leitura do valor corrente, qual o maior múltiplo do valor do atuador cabe na diferença entre a referência e o valor corrente; se a resolução for menor ou igual à diferença entre a referência e o valor corrente optamos por não alterar, ou seja, atuador a zero.</p>
 <p>O seu programa começará por ler da consola dois números inteiros separados por espaço que correspondem à referência e resolução, respetivamente. Depois, o seu programa deverá ler da consola e até ao fim do input, um número indeterminado de linhas, cada uma contendo um número inteiro que corresponde ao valor corrente do sensor. Para cada linha lida com o valor corrente do sensor, o seu programa escreverá numa linha o valor inteiro do atuador.</p>
 <p><strong>Casos de teste</strong></p>
@@ -586,6 +584,7 @@ Ao lermos 30, comandamos o atuador com -9; na leitura seguinte obtemos 24, atuam
 <p>Submeta na tarefa C do concurso IPC_L8.</p>
 </div>
 </div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -610,15 +609,22 @@ Ao lermos 30, comandamos o atuador com -9; na leitura seguinte obtemos 24, atuam
               </div>
               
         
-            <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="F2-2022.html" title="anterior page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">anterior</p>
-            <p class="prev-next-title">Segunda Festa de Programação</p>
-        </div>
-    </a>
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="F2-2022.html" title="anterior page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">anterior</p>
+                <p class="prevnext-title">Segunda Festa de Programação</p>
+            </div>
+        </a>
+    </div>
+
 </div>
         
         </div>
@@ -639,7 +645,8 @@ Ao lermos 30, comandamos o atuador com -9; na leitura seguinte obtemos 24, atuam
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
+  
   </body>
 </html>
