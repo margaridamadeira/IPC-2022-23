@@ -29,7 +29,7 @@ Esses dados estão num ficheiro `.csv` um formato também considerado pelo Micro
 
 Para já, vou manter as coisas simples. `csv` quer dizer *comma-separated values*, ou seja, valores separados por *ponto e vírgula*. 
 
-Um extrato do ficheiro está disponível em [extrato_Postos.csv](https://tutoria.ualg.pt/2022/mod/resource/view.php?id=82660).
+Um extrato do ficheiro está disponível em [extrato_Postos.csv](https://tutoria.ualg.pt/2022/mod/resource/view.php?id=84649).
 
 ### Ler e escrever
 
@@ -109,6 +109,8 @@ Pretendo ler e apresentar o cabeçalho e, até ao fim dos dados, ler as demais l
 Prepare um programa em Python que leia os dados até ao fim do input e apresente as linhas lidas.
 A primeira linha de input contém o cabeçalho sendo seguida pelas linhas de dados. Cada linha de dados contém três campos, separados por ';' e delimitados por '"'; a informação nesses campos corresponde respetivamente à data, ao tipo de combustível e ao preço do combustível. O formato usado no preço inclui a vírgula como separador decimal e o símbolo da moeda usada (€).
 
+Para o resultado pretendido, apresente os campos sem as aspas e o preço com o formato comum de um número real, usando o ponto como separador da parte inteira e parte decimal.
+
 
 
 Para o efeito, acrescente a função `converte_dados` ao programa da tarefa anterior e complete-a.
@@ -134,6 +136,9 @@ Para o efeito, acrescente a função `converte_dados` ao programa da tarefa ante
         """
         pass
 
+
+
+Adapte uma versão da função `mostra_linha` para apresentar os dados convertidos.
 
 Submeta na tarefa B.
 
