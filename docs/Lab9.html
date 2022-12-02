@@ -44,8 +44,6 @@
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -56,6 +54,7 @@
     <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2022-23/docs/Lab9.html" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="prev" title="Lab8" href="F3-2122.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -176,7 +175,7 @@
   Guiões práticos
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Primeiros_passos.html">
    Primeiros passos na programação em Python
@@ -240,6 +239,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="F3-2122.html">
    Lab8
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Lab9
   </a>
  </li>
 </ul>
@@ -314,86 +318,47 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#eleicoes">
-   Eleições
+  <a class="reference internal nav-link" href="#objetivos-de-aprendizagem">
+   Objetivos de aprendizagem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#combustiveis">
+   Combustíveis
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tarefa-a">
-     Tarefa A
+    <a class="reference internal nav-link" href="#ler-e-escrever">
+     Ler e escrever
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#input">
-       Input
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#output">
-       Output
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#exemplo">
-       Exemplo
+      <a class="reference internal nav-link" href="#tarefa-a">
+       Tarefa A
       </a>
      </li>
     </ul>
    </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#triangulo-de-pascal">
-   Triângulo de Pascal
-  </a>
-  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tarefa">
-     Tarefa
+    <a class="reference internal nav-link" href="#tratar-os-dados-lidos">
+     Tratar os dados lidos
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id2">
-       Input
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id3">
-       Output
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#exemplos">
-       Exemplos
+      <a class="reference internal nav-link" href="#tarefa-b">
+       Tarefa B
       </a>
      </li>
     </ul>
    </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conjetura-de-collatz">
-   Conjetura de Collatz
-  </a>
-  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id4">
-     Tarefa
+    <a class="reference internal nav-link" href="#separar-os-tipos-de-combustiveis">
+     Separar os tipos de combustíveis
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id5">
-       Input
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id6">
-       Output
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id7">
-       Exemplos
+      <a class="reference internal nav-link" href="#tarefa-c">
+       Tarefa C
       </a>
      </li>
     </ul>
@@ -413,203 +378,224 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="lab9">
 <h1>Lab9<a class="headerlink" href="#lab9" title="Link permanente para este título">¶</a></h1>
-<p>Esta era a Festa de Janeiro prevista para o ano letivo de 2020-2021, que não aconteceu.</p>
-<div style="page-break-after: always"></div>
-<div class="section" id="eleicoes">
-<h2>Eleições<a class="headerlink" href="#eleicoes" title="Link permanente para este título">¶</a></h2>
-<div class="figure align-default" id="votar">
-<a class="reference internal image-reference" href="../_images/Votar.jpg"><img alt="../_images/Votar.jpg" src="../_images/Votar.jpg" style="height: 100px;" /></a>
+<p>Note bem:</p>
+<ul class="simple">
+<li><p>Cotação deste guião: 2 pontos</p></li>
+<li><p>Submeta cada uma das tarefas no problema correspondente do concurso IPC_L9.</p></li>
+<li><p>Prazo limite de submissão: 23h59m de 9 de dezembro</p></li>
+<li><p>Prazo limite de validação das submissões aceites: 16 de dezembro.</p></li>
+</ul>
+<div class="section" id="objetivos-de-aprendizagem">
+<h2>Objetivos de aprendizagem<a class="headerlink" href="#objetivos-de-aprendizagem" title="Link permanente para este título">¶</a></h2>
+<p>Com este guião, exercitaremos:</p>
+<ul class="simple">
+<li><p>o uso de listas</p></li>
+<li><p>o uso de dicionários</p></li>
+</ul>
 </div>
-<p>Neste fim de semana teremos a Eleição para a Presidência da República.
-Cada secção de voto, apurará os resultados dos candidatos e preciso do apuramento de votos de cada freguesia.</p>
-<p>A ordem com que os candidatos surgem no boletim eleitoral é já conhecida:
-Eduardo Nelson da Costa Baptista, Marisa Isabel dos Santos Matias, Marcelo Nuno Duarte Rebelo de Sousa, Tiago Pedro de Sousa Mayan Gonçalves, André Claro Amaral Ventura, Vitorino Francisco da Rocha e Silva, João Manuel Peixoto Ferreira e Ana Maria Rosa Martins Gomes.
-Os votos em Eduardo Nelson da Costa Baptista serão nulos mas até ao apuramento final nacional serão mantidos.</p>
-<p>Cada secção de voto apurará os votos de cada candidato, os brancos e os nulos e produzirá um ficheiro com o formato indicado em seguida, substituindo o 0 (zero) pelo valor adequado.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Eduardo</span> <span class="n">Nelson</span> <span class="n">da</span> <span class="n">Costa</span> <span class="n">Baptista</span><span class="p">,</span><span class="mi">0</span>
-<span class="n">Marisa</span> <span class="n">Isabel</span> <span class="n">dos</span> <span class="n">Santos</span> <span class="n">Matias</span><span class="p">,</span><span class="mi">0</span>
-<span class="n">Marcelo</span> <span class="n">Nuno</span> <span class="n">Duarte</span> <span class="n">Rebelo</span> <span class="n">de</span> <span class="n">Sousa</span><span class="p">,</span><span class="mi">0</span>
-<span class="n">Tiago</span> <span class="n">Pedro</span> <span class="n">de</span> <span class="n">Sousa</span> <span class="n">Mayan</span> <span class="n">Gonçalves</span><span class="p">,</span><span class="mi">0</span> 
-<span class="n">André</span> <span class="n">Claro</span> <span class="n">Amaral</span> <span class="n">Ventura</span><span class="p">,</span><span class="mi">0</span>
-<span class="n">Vitorino</span> <span class="n">Francisco</span> <span class="n">da</span> <span class="n">Rocha</span> <span class="n">e</span> <span class="n">Silva</span><span class="p">,</span><span class="mi">0</span>
-<span class="n">João</span> <span class="n">Manuel</span> <span class="n">Peixoto</span> <span class="n">Ferreira</span><span class="p">,</span><span class="mi">0</span>
-<span class="n">Ana</span> <span class="n">Maria</span> <span class="n">Rosa</span> <span class="n">Martins</span> <span class="n">Gomes</span><span class="p">,</span><span class="mi">0</span>
-<span class="n">Votos</span> <span class="n">brancos</span><span class="p">,</span><span class="mi">0</span>
-<span class="n">Votos</span> <span class="n">nulos</span><span class="p">,</span><span class="mi">0</span>
-</pre></div>
-</div>
-<p>Cada frequesia tem um número variável de secções de voto.
-A ideia era que o programa aceitasse ficheiros com a designação geral <nome>*&lt;.extensão&gt;. Mas alguns não querem nome, outros não usam extensão, outros nem nome nem extensão. Enfim, acordou-se que cada freguesia escolherá a designação que pretender, sendo o número da secção será representado pelo caracter *.</p>
-<p>Preciso de consolidar essa informação e assim quero um programa que leia a designação geral do ficheiro e o número de ficheiros e apresente o resultado apurado.</p>
+<div class="section" id="combustiveis">
+<h2>Combustíveis<a class="headerlink" href="#combustiveis" title="Link permanente para este título">¶</a></h2>
+<p>Felizmente o preço dos combustíveis parece estar a baixar, ou assim ouvi nos noticiários. Para verificar, fui ao <a class="reference external" href="https://precoscombustiveis.dgeg.gov.pt/estatistica/preco-medio-diario/#download">site oficial</a> e obtive os dados do último mês.</p>
+<p>Agora só preciso de os tratar, tirar as minhas próprias conclusões e quem sabe, publicá-las num artigo ou relatório.</p>
+<p>A primeira coisa que preciso é de ser capaz de tratar os dados.</p>
+<p>Depois, nas próximas semanas, tratarei de obter os dados de um ficheiro, bastando indicar o nome.
+Esses dados estão num ficheiro <code class="docutils literal notranslate"><span class="pre">.csv</span></code> um formato também considerado pelo Microsoft Excel. Em Python também há formas de tratar estes ficheiros, e isso será ainda outro aspeto do mesmo tema.</p>
+<p>Para já, vou manter as coisas simples. <code class="docutils literal notranslate"><span class="pre">csv</span></code> quer dizer <em>comma-separated values</em>, ou seja, valores separados por <em>ponto e vírgula</em>.</p>
+<p>Um extrato do ficheiro está disponível em <a class="reference external" href="https://tutoria.ualg.pt/2022/mod/resource/view.php?id=82660">extrato_Postos.csv</a>.</p>
+<div class="section" id="ler-e-escrever">
+<h3>Ler e escrever<a class="headerlink" href="#ler-e-escrever" title="Link permanente para este título">¶</a></h3>
+<p>Para ler esses valores pela linha de comandos, sabendo que os valores estão separados por <em>ponto e vírgula</em>, basta-me indicar que quero uma lista onde o separador dos elementos é o <em>ponto e vírgula</em>.</p>
 <div class="section" id="tarefa-a">
-<h3>Tarefa A<a class="headerlink" href="#tarefa-a" title="Link permanente para este título">¶</a></h3>
-<p>Faça um programa em Python que leia da consola uma linha com o nome genérico dos ficheiros e o número de secções.</p>
-<div class="section" id="input">
-<h4>Input<a class="headerlink" href="#input" title="Link permanente para este título">¶</a></h4>
-<p>O programa deverá ler da consola uma linha com o nome genérico dos ficheiros e o número de secções.</p>
-</div>
-<div class="section" id="output">
-<h4>Output<a class="headerlink" href="#output" title="Link permanente para este título">¶</a></h4>
-<p>O programa deverá escrever na consola o resultado apurado, com o mesmo formato di ficheiro lido e os valores totais.</p>
-</div>
-<div class="section" id="exemplo">
-<h4>Exemplo<a class="headerlink" href="#exemplo" title="Link permanente para este título">¶</a></h4>
-<p>Considere que tinha o ficheiro <em>Freguesia1.txt</em> com o conteúdo</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Eduardo</span> <span class="n">Nelson</span> <span class="n">da</span> <span class="n">Costa</span> <span class="n">Baptista</span><span class="p">,</span><span class="mi">1</span>
-<span class="n">Marisa</span> <span class="n">Isabel</span> <span class="n">dos</span> <span class="n">Santos</span> <span class="n">Matias</span><span class="p">,</span><span class="mi">2</span>
-<span class="n">Marcelo</span> <span class="n">Nuno</span> <span class="n">Duarte</span> <span class="n">Rebelo</span> <span class="n">de</span> <span class="n">Sousa</span><span class="p">,</span><span class="mi">3</span>
-<span class="n">Tiago</span> <span class="n">Pedro</span> <span class="n">de</span> <span class="n">Sousa</span> <span class="n">Mayan</span> <span class="n">Gonçalves</span><span class="p">,</span><span class="mi">4</span> 
-<span class="n">André</span> <span class="n">Claro</span> <span class="n">Amaral</span> <span class="n">Ventura</span><span class="p">,</span><span class="mi">5</span>
-<span class="n">Vitorino</span> <span class="n">Francisco</span> <span class="n">da</span> <span class="n">Rocha</span> <span class="n">e</span> <span class="n">Silva</span><span class="p">,</span><span class="mi">6</span>
-<span class="n">João</span> <span class="n">Manuel</span> <span class="n">Peixoto</span> <span class="n">Ferreira</span><span class="p">,</span><span class="mi">7</span>
-<span class="n">Ana</span> <span class="n">Maria</span> <span class="n">Rosa</span> <span class="n">Martins</span> <span class="n">Gomes</span><span class="p">,</span><span class="mi">8</span>
-<span class="n">Votos</span> <span class="n">brancos</span><span class="p">,</span><span class="mi">9</span>
-<span class="n">Votos</span> <span class="n">nulos</span><span class="p">,</span><span class="mi">10</span>
+<h4>Tarefa A<a class="headerlink" href="#tarefa-a" title="Link permanente para este título">¶</a></h4>
+<p>Pretendo ler e apresentar o cabeçalho e, até ao fim dos dados, ler as demais linhas e apresentá-las.
+Prepare um programa em Python que leia os dados até ao fim do input e apresente as linhas lidas.</p>
+<p>Na apresentação, quer do cabeçalho quer das linhas, considere a formatação definida para o cabeçalho do esboço de programa dado abaixo, ou seja, as barras verticais devem ficar alinhadas. Para tanto, o primeiro campo ocupa 13 espaços, é seguido por » | » (sem as aspas), seguindo-se o segundo campo centrado em 45 espaços, seguido por » | » (sem as aspas) e, finalmente, o terceiro campo com 11 espaços e justificado à direita.</p>
+<p>Para o efeito, considere o esboço de programa fornecido abaixo e complete a função <code class="docutils literal notranslate"><span class="pre">mostra_linha</span></code>.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+&quot;&quot;&quot;
+Created on Tue Nov 29 20:03:19 2022
+
+@author: mmadeira
+&quot;&quot;&quot;
+
+import sys
+
+
+def mostra_linha(linha: list)-&gt; None:
+    &quot;&quot;&quot;
+    Apresenta os dados no formato pedido
+
+    Parameters
+    ----------
+    linha : list
+        linha do ficheiro (excluindo cabeçalho).
+
+    &gt;&gt;&gt; mostra_linha([&#39;&quot;2022-10-30&quot;&#39;, &#39;&quot;Gasolina especial 98&quot;&#39;, &#39;&quot;2,0687 €&quot;&#39;])
+    &quot;2022-10-30&quot;  |             &quot;Gasolina especial 98&quot;            |  &quot;2,0687 €&quot;
+    &gt;&gt;&gt; mostra_linha([&#39;&quot;2022-10-30&quot;&#39;, &#39;&quot;Gasolina 98&quot;&#39;, &#39;&quot;2,0616 €&quot;&#39;])
+    &quot;2022-10-30&quot;  |                 &quot;Gasolina 98&quot;                 |  &quot;2,0616 €&quot;
+    &quot;&quot;&quot;
+    pass
+    
+
+def test_combustíveis():
+    cabeçalho = input().split(&#39;;&#39;)
+    topo_data, topo_tipo_combustível, topo_preço = cabeçalho
+    print(&#39;{0:14s} | {1:45s} | {2:&gt;11s}&#39;.format(topo_data.title(), topo_tipo_combustível.title().center(45), topo_preço.title()))
+    while True:
+        try:
+            line = input().split(&#39;;&#39;)
+        except (EOFError, KeyboardInterrupt):
+            sys.exit(0)
+        if line:
+            mostra_linha(line)
+        else:
+            sys.exit(0)
+
+if __name__ == &#39;__main__&#39;:
+    test_combustíveis()
 </pre></div>
 </div>
-<p>e o ficheiro <em>Freguesia2.txt</em> com o conteúdo</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Eduardo</span> <span class="n">Nelson</span> <span class="n">da</span> <span class="n">Costa</span> <span class="n">Baptista</span><span class="p">,</span><span class="mi">9</span>
-<span class="n">Marisa</span> <span class="n">Isabel</span> <span class="n">dos</span> <span class="n">Santos</span> <span class="n">Matias</span><span class="p">,</span><span class="mi">8</span>
-<span class="n">Marcelo</span> <span class="n">Nuno</span> <span class="n">Duarte</span> <span class="n">Rebelo</span> <span class="n">de</span> <span class="n">Sousa</span><span class="p">,</span><span class="mi">7</span>
-<span class="n">Tiago</span> <span class="n">Pedro</span> <span class="n">de</span> <span class="n">Sousa</span> <span class="n">Mayan</span> <span class="n">Gonçalves</span><span class="p">,</span><span class="mi">6</span>
-<span class="n">André</span> <span class="n">Claro</span> <span class="n">Amaral</span> <span class="n">Ventura</span><span class="p">,</span><span class="mi">5</span>
-<span class="n">Vitorino</span> <span class="n">Francisco</span> <span class="n">da</span> <span class="n">Rocha</span> <span class="n">e</span> <span class="n">Silva</span><span class="p">,</span><span class="mi">4</span>
-<span class="n">João</span> <span class="n">Manuel</span> <span class="n">Peixoto</span> <span class="n">Ferreira</span><span class="p">,</span><span class="mi">3</span>
-<span class="n">Ana</span> <span class="n">Maria</span> <span class="n">Rosa</span> <span class="n">Martins</span> <span class="n">Gomes</span><span class="p">,</span><span class="mi">2</span>
-<span class="n">Votos</span> <span class="n">brancos</span><span class="p">,</span><span class="mi">1</span>
-<span class="n">Votos</span> <span class="n">nulos</span><span class="p">,</span><span class="mi">0</span>
+<p>No Spyder, use o teste da docstring para aferir a correção da apresentação de resultados, fazendo</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import doctest
 </pre></div>
 </div>
-<p><strong>Input 1</strong></p>
-<p>Freguesia*.txt 2</p>
-<p><strong>Output 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Eduardo</span> <span class="n">Nelson</span> <span class="n">da</span> <span class="n">Costa</span> <span class="n">Baptista</span><span class="p">,</span><span class="mi">10</span>
-<span class="n">Marisa</span> <span class="n">Isabel</span> <span class="n">dos</span> <span class="n">Santos</span> <span class="n">Matias</span><span class="p">,</span><span class="mi">10</span>
-<span class="n">Marcelo</span> <span class="n">Nuno</span> <span class="n">Duarte</span> <span class="n">Rebelo</span> <span class="n">de</span> <span class="n">Sousa</span><span class="p">,</span><span class="mi">10</span>
-<span class="n">Tiago</span> <span class="n">Pedro</span> <span class="n">de</span> <span class="n">Sousa</span> <span class="n">Mayan</span> <span class="n">Gonçalves</span><span class="p">,</span><span class="mi">10</span>
-<span class="n">André</span> <span class="n">Claro</span> <span class="n">Amaral</span> <span class="n">Ventura</span><span class="p">,</span><span class="mi">10</span>
-<span class="n">Vitorino</span> <span class="n">Francisco</span> <span class="n">da</span> <span class="n">Rocha</span> <span class="n">e</span> <span class="n">Silva</span><span class="p">,</span><span class="mi">10</span>
-<span class="n">João</span> <span class="n">Manuel</span> <span class="n">Peixoto</span> <span class="n">Ferreira</span><span class="p">,</span><span class="mi">10</span>
-<span class="n">Ana</span> <span class="n">Maria</span> <span class="n">Rosa</span> <span class="n">Martins</span> <span class="n">Gomes</span><span class="p">,</span><span class="mi">10</span>
-<span class="n">Votos</span> <span class="n">brancos</span><span class="p">,</span><span class="mi">10</span>
-<span class="n">Votos</span> <span class="n">nulos</span><span class="p">,</span><span class="mi">10</span>
+<p>e, a cada nova versão da função que carregar para a consola</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>doctest.testmod()
 </pre></div>
 </div>
-<p>Submeta na tarefa A no concurso IPC_L8.</p>
+<p>Submeta na tarefa A.</p>
 </div>
 </div>
-</div>
-<div class="section" id="triangulo-de-pascal">
-<h2>Triângulo de Pascal<a class="headerlink" href="#triangulo-de-pascal" title="Link permanente para este título">¶</a></h2>
-<div class="figure align-default" id="id1">
-<a class="reference internal image-reference" href="../_images/TrianguloPascal.jpg"><img alt="../_images/TrianguloPascal.jpg" src="../_images/TrianguloPascal.jpg" style="height: 300px;" /></a>
-</div>
-<p>O <a class="reference external" href="https://mathworld.wolfram.com/PascalsTriangle.html">triângulo de Pascal</a> é uma representação gráfica usada determinação de coeficientes polinomiais na expansão de binómios.</p>
-<p>A fórmula geral para a determinação dos coeficientes é dada por</p>
-<div class="math notranslate nohighlight">
-\[ C_{n,k} = \binom{n}{k} = \frac{n!}{k!(n-k)!}\]</div>
-<p>para <span class="math notranslate nohighlight">\( n \)</span> e <span class="math notranslate nohighlight">\( k \)</span> inteiros positivos e <span class="math notranslate nohighlight">\( k \in [0, n] \)</span>.</p>
-<div class="section" id="tarefa">
-<h3>Tarefa<a class="headerlink" href="#tarefa" title="Link permanente para este título">¶</a></h3>
-<p>Faça um programa que leia da consola um número inteiro <span class="math notranslate nohighlight">\(n\)</span> e apresente os coeficientes para a expansão de um binómio de grau <span class="math notranslate nohighlight">\(n\)</span>.</p>
-<div class="section" id="id2">
-<h4>Input<a class="headerlink" href="#id2" title="Link permanente para este título">¶</a></h4>
-<p>O programa deve ler da consola um número inteiro.</p>
-</div>
-<div class="section" id="id3">
-<h4>Output<a class="headerlink" href="#id3" title="Link permanente para este título">¶</a></h4>
-<p>O programa deverá apresentar na consola, numa mesma linha, os coeficientes separados por espaços.</p>
-</div>
-<div class="section" id="exemplos">
-<h4>Exemplos<a class="headerlink" href="#exemplos" title="Link permanente para este título">¶</a></h4>
-<p><strong>Input 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span>
+<div class="section" id="tratar-os-dados-lidos">
+<h3>Tratar os dados lidos<a class="headerlink" href="#tratar-os-dados-lidos" title="Link permanente para este título">¶</a></h3>
+<p>Pretendo ler e apresentar o cabeçalho e, até ao fim dos dados, ler as demais linhas e apresentá-las de forma mais cuidada: vou retirar as aspas das strings e vou apresentar o preço depois de convertido para um número real.</p>
+<div class="section" id="tarefa-b">
+<h4>Tarefa B<a class="headerlink" href="#tarefa-b" title="Link permanente para este título">¶</a></h4>
+<p>Prepare um programa em Python que leia os dados até ao fim do input e apresente as linhas lidas.
+A primeira linha de input contém o cabeçalho sendo seguida pelas linhas de dados. Cada linha de dados contém três campos, separados por “;” e delimitados por “»”; a informação nesses campos corresponde respetivamente à data, ao tipo de combustível e ao preço do combustível. O formato usado no preço inclui a vírgula como separador decimal e o símbolo da moeda usada (€).</p>
+<p>Para o efeito, acrescente a função <code class="docutils literal notranslate"><span class="pre">converte_dados</span></code> ao programa da tarefa anterior e complete-a.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def converte_dados(linha:list) -&gt; list:
+    &quot;&quot;&quot;
+    Retira as aspas da data e tipo de combustível e converte o preço para real.
+
+    Parameters
+    ----------
+    linha : list
+        linha do ficheiro (excluindo cabeçalho).
+
+    Returns
+    -------
+    list
+        lista contendo uma strings para data e tipo de combustível e 
+        um número real para preço.
+        
+    &gt;&gt;&gt; converte_dados([&#39;&quot;2022-10-30&quot;&#39;, &#39;&quot;Gasolina especial 98&quot;&#39;, &#39;&quot;2,0687 €&quot;&#39;])
+    [&#39;2022-10-30&#39;, &#39;Gasolina especial 98&#39;, 2.0687]
+    &quot;&quot;&quot;
+    pass
 </pre></div>
 </div>
-<p><strong>Output 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="mi">3</span> <span class="mi">3</span> <span class="mi">1</span>
+<p>Submeta na tarefa B.</p>
+</div>
+</div>
+<div class="section" id="separar-os-tipos-de-combustiveis">
+<h3>Separar os tipos de combustíveis<a class="headerlink" href="#separar-os-tipos-de-combustiveis" title="Link permanente para este título">¶</a></h3>
+<p>Pretendo agora separar os preços de cada tipo de combustível e saber o preço médio de cada tipo de combustível.</p>
+<div class="section" id="tarefa-c">
+<h4>Tarefa C<a class="headerlink" href="#tarefa-c" title="Link permanente para este título">¶</a></h4>
+<p>Prepare um programa em Python que apresente o preço médio de cada tipo de combustível.
+A primeira linha de input contém o cabeçalho sendo seguida pelas linhas de dados. Cada linha de dados contém três campos, separados por “;” e delimitados por “»”; a informação nesses campos corresponde respetivamente à data, ao tipo de combustível e ao preço do combustível. O formato usado no preço inclui a vírgula como separador decimal e o símbolo da moeda usada (€).</p>
+<p>O output é composto por tantas linhas quantos os tipos de combustível e cada linha contém a designação do tipo de combustível seguida por «: » (sem as aspas) e o valor médio desse tipo de combustível.</p>
+<p><strong>Requisito técnico</strong>: carregue os dados lidos para um dicionário onde o tipo de combustível é a chave e associado à chave está uma lista com os preços desse tipo de combustível.</p>
+<p>Sugestão de resolução:</p>
+<ul class="simple">
+<li><p>Implemente uma função que receba uma string e um número real e os apresente no formato pretendido.</p></li>
+<li><p>Implemente uma função que receba uma lista e devolva o valor médio dos elementos dessa lista.</p></li>
+<li><p>Implemente uma função que receba uma linha lida e guarde, num dicionário, o preço na coleção de valores associados à chave que é a designação do tipo de combustível.</p></li>
+<li><p>Implemente uma função que receba um dicionário e, para cada chave do dicionário, obtenha a média dos valores e apresente a chave e valor.</p></li>
+</ul>
+<p>Considere usar os esboços seguintes:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def mostra_combustivel_valor(tipo: str, valor: float) -&gt; None:
+    &quot;&quot;&quot;
+    Apresenta o tipo de combustível e o valor.
+
+    Parameters
+    ----------
+    tipo : str
+        O tipo de combustível
+    valor : float
+        o valor a apresentar
+
+    &gt;&gt;&gt; mostra_combustivel_valor(&#39;Exemplo de tipo de combustível&#39;, 3.5)
+    Exemplo de tipo de combustível: 3.5
+    &quot;&quot;&quot;
+    pass
+
+
+
+def calcula_média(lista: list) -&gt; float:
+    &quot;&quot;&quot;
+    Devolve a média de uma lista de valores numéricos.
+
+    Parameters
+    ----------
+    lista : list
+        Uma lista não nula de valores numéricos.
+
+    Returns
+    -------
+    float
+        A média aritmética dos valores da lista.
+
+    &gt;&gt;&gt; calcula_média([3])
+    3
+    &gt;&gt;&gt; calcula_média([3, 5])
+    4
+    &gt;&gt;&gt; calcula_média([3, 5.0, 12, -1])
+    4.75
+    &quot;&quot;&quot;
+    pass
+
+
+def guarda_no_dicionário(dicio: dict, tipo: str, valor: float) -&gt; dict:
+    &quot;&quot;&quot;
+    Guarda no dicionário o valor associado à chave representada pelo tipo.
+    
+    Se a chave não existir, cria essa chave e associa uma lista com o valor;
+    se a chave existir, acrescenta o valor à lista associada a essa chave.
+
+    Parameters
+    ----------
+    tipo : str
+        DESCRIPTION.
+    valor : real
+        DESCRIPTION.
+
+    &gt;&gt;&gt; guarda_no_dicionário({}, &quot;Gasóleo&quot;, 0.7)
+    {&#39;Gasóleo&#39;: [0.7]}
+    &gt;&gt;&gt; guarda_no_dicionário({&#39;Gasóleo&#39;: [0.7]}, &quot;Gasóleo&quot;, 0.8)
+    {&#39;Gasóleo&#39;: [0.7, 0.8]}
+    &gt;&gt;&gt; guarda_no_dicionário({&#39;Gasóleo&#39;: [0.7, 0.8]}, &quot;Gasolina&quot;, 1.2)
+    {&#39;Gasóleo&#39;: [0.7, 0.8], &#39;Gasolina&#39;: [1.2]}
+    &quot;&quot;&quot;
+    pass
+
+
+def mostra_resultado(dicio: dict) -&gt; None:
+    &quot;&quot;&quot;Percorre o dicionário para produzir a listagem desejada.
+    
+    &gt;&gt;&gt; mostra_resultado({&#39;Gasóleo&#39;: [0.7]})
+    Gasóleo: 0.7
+    &gt;&gt;&gt; mostra_resultado({&#39;Gasóleo&#39;: [0.7, 0.8], &#39;Gasolina&#39;: [1.2]})
+    Gasóleo: 0.75
+    Gasolina: 1.2
+    &quot;&quot;&quot;
+    pass
 </pre></div>
 </div>
-<p><strong>Input 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span>
-</pre></div>
-</div>
-<p><strong>Output 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="mi">7</span> <span class="mi">21</span> <span class="mi">35</span> <span class="mi">35</span> <span class="mi">21</span> <span class="mi">7</span> <span class="mi">1</span>
-</pre></div>
-</div>
-<p>Submeta na tarefa B no concurso IPC_L8.</p>
-</div>
-</div>
-</div>
-<div class="section" id="conjetura-de-collatz">
-<h2>Conjetura de Collatz<a class="headerlink" href="#conjetura-de-collatz" title="Link permanente para este título">¶</a></h2>
-<div class="figure align-default" id="collatz-conjecture">
-<a class="reference internal image-reference" href="../_images/Collatz_conjecture.png"><img alt="../_images/Collatz_conjecture.png" src="../_images/Collatz_conjecture.png" style="height: 300px;" /></a>
-</div>
-<p>Fonte da figura: https://imgs.xkcd.com/comics/collatz_conjecture.png</p>
-<p>Considere a função</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} f(x_n)=\begin{cases}
-			 \frac{1}{2}x_{n-1} &amp; \textrm{se $x_{n-1}$ for um número par}\\
-			 3x_{n-1}+1        &amp; \textrm{se $x_{n-1}$ for ímpar} 
-	     	 \end{cases}
-\end{split}\]</div>
-<p><a class="reference external" href="https://mathworld.wolfram.com/CollatzProblem.html">Collatz</a> conjeturou se a aplicação sucessiva dessa função terminaria sempre com o valor de <span class="math notranslate nohighlight">\(1\)</span> (um) para valores iniciais positivos.</p>
-<div class="section" id="id4">
-<h3>Tarefa<a class="headerlink" href="#id4" title="Link permanente para este título">¶</a></h3>
-<p>Queremos testar a conjetura de Collatz, determinando ao fim de quantos passos se atinge o número <span class="math notranslate nohighlight">\(1\)</span> (um) e qual o maior valor da sequência.</p>
-<div class="section" id="id5">
-<h4>Input<a class="headerlink" href="#id5" title="Link permanente para este título">¶</a></h4>
-<p>O programa deve ler da consola um número inteiro.</p>
-</div>
-<div class="section" id="id6">
-<h4>Output<a class="headerlink" href="#id6" title="Link permanente para este título">¶</a></h4>
-<p>O programa deve apresentar na consola, numa mesma linha e separados pelo espaço, ao fim de quantos passos se atingiu o valor unitário e o maior valor da sequência.</p>
-</div>
-<div class="section" id="id7">
-<h4>Exemplos<a class="headerlink" href="#id7" title="Link permanente para este título">¶</a></h4>
-<p><strong>Input 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>
-</pre></div>
-</div>
-<p><strong>Output 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span> <span class="mi">1</span>
-</pre></div>
-</div>
-<p><strong>Input 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span>
-</pre></div>
-</div>
-<p><strong>Output 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="mi">2</span>
-</pre></div>
-</div>
-<p><strong>Input 3</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span>
-</pre></div>
-</div>
-<p><strong>Output 3</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span> <span class="mi">16</span>
-</pre></div>
-</div>
-<p><strong>Input 4</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span>
-</pre></div>
-</div>
-<p><strong>Output 4</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="mi">4</span>
-</pre></div>
-</div>
-<p><strong>Input 5</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span>
-</pre></div>
-</div>
-<p><strong>Output 5</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span> <span class="mi">16</span>
-</pre></div>
-</div>
-<p>Submeta na tarefa C no concurso IPC_L8.</p>
+<p>Submeta na tarefa C.</p>
 </div>
 </div>
 </div>
@@ -644,6 +630,15 @@ A ideia era que o programa aceitasse ficheiros com a designação geral <nome>*&
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="F3-2122.html" title="anterior page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">anterior</p>
+                <p class="prevnext-title">Lab8</p>
+            </div>
+        </a>
+    </div>
 
 </div>
         

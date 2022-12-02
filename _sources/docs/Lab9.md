@@ -1,252 +1,252 @@
 # Lab9
 
-Esta era a Festa de Janeiro prevista para o ano letivo de 2020-2021, que não aconteceu. 
-
-<div style="page-break-after: always"></div>
-
-## Eleições
-
-```{figure} ./figures/Votar.jpg
----
-height: 100px
-name: Votar
----
-```
-
-
-Neste fim de semana teremos a Eleição para a Presidência da República. 
-Cada secção de voto, apurará os resultados dos candidatos e preciso do apuramento de votos de cada freguesia.
-
-A ordem com que os candidatos surgem no boletim eleitoral é já conhecida:
-Eduardo Nelson da Costa Baptista, Marisa Isabel dos Santos Matias, Marcelo Nuno Duarte Rebelo de Sousa, Tiago Pedro de Sousa Mayan Gonçalves, André Claro Amaral Ventura, Vitorino Francisco da Rocha e Silva, João Manuel Peixoto Ferreira e Ana Maria Rosa Martins Gomes.
-Os votos em Eduardo Nelson da Costa Baptista serão nulos mas até ao apuramento final nacional serão mantidos.
 
-Cada secção de voto apurará os votos de cada candidato, os brancos e os nulos e produzirá um ficheiro com o formato indicado em seguida, substituindo o 0 (zero) pelo valor adequado. 
+Note bem:
 
-```
-Eduardo Nelson da Costa Baptista,0
-Marisa Isabel dos Santos Matias,0
-Marcelo Nuno Duarte Rebelo de Sousa,0
-Tiago Pedro de Sousa Mayan Gonçalves,0 
-André Claro Amaral Ventura,0
-Vitorino Francisco da Rocha e Silva,0
-João Manuel Peixoto Ferreira,0
-Ana Maria Rosa Martins Gomes,0
-Votos brancos,0
-Votos nulos,0
-```
++ Cotação deste guião: 2 pontos
++ Submeta cada uma das tarefas no problema correspondente do concurso IPC_L9.
++ Prazo limite de submissão: 23h59m de 9 de dezembro
++ Prazo limite de validação das submissões aceites: 16 de dezembro.
 
-Cada frequesia tem um número variável de secções de voto. 
-A ideia era que o programa aceitasse ficheiros com a designação geral <nome>\*<.extensão>. Mas alguns não querem nome, outros não usam extensão, outros nem nome nem extensão. Enfim, acordou-se que cada freguesia escolherá a designação que pretender, sendo o número da secção será representado pelo caracter \*. 
+## Objetivos de aprendizagem
 
-Preciso de consolidar essa informação e assim quero um programa que leia a designação geral do ficheiro e o número de ficheiros e apresente o resultado apurado.
+Com este guião, exercitaremos:
 
-### Tarefa A
++ o uso de listas
++ o uso de dicionários
 
-Faça um programa em Python que leia da consola uma linha com o nome genérico dos ficheiros e o número de secções.
 
-#### Input
-O programa deverá ler da consola uma linha com o nome genérico dos ficheiros e o número de secções.
+## Combustíveis
 
-#### Output
-O programa deverá escrever na consola o resultado apurado, com o mesmo formato di ficheiro lido e os valores totais.
+Felizmente o preço dos combustíveis parece estar a baixar, ou assim ouvi nos noticiários. Para verificar, fui ao [site oficial](https://precoscombustiveis.dgeg.gov.pt/estatistica/preco-medio-diario/#download) e obtive os dados do último mês.
 
-#### Exemplo
+Agora só preciso de os tratar, tirar as minhas próprias conclusões e quem sabe, publicá-las num artigo ou relatório.
 
-Considere que tinha o ficheiro *Freguesia1.txt* com o conteúdo
+A primeira coisa que preciso é de ser capaz de tratar os dados.
 
-```
-Eduardo Nelson da Costa Baptista,1
-Marisa Isabel dos Santos Matias,2
-Marcelo Nuno Duarte Rebelo de Sousa,3
-Tiago Pedro de Sousa Mayan Gonçalves,4 
-André Claro Amaral Ventura,5
-Vitorino Francisco da Rocha e Silva,6
-João Manuel Peixoto Ferreira,7
-Ana Maria Rosa Martins Gomes,8
-Votos brancos,9
-Votos nulos,10
-```
-e o ficheiro *Freguesia2.txt* com o conteúdo
+Depois, nas próximas semanas, tratarei de obter os dados de um ficheiro, bastando indicar o nome. 
+Esses dados estão num ficheiro `.csv` um formato também considerado pelo Microsoft Excel. Em Python também há formas de tratar estes ficheiros, e isso será ainda outro aspeto do mesmo tema.
 
-```
-Eduardo Nelson da Costa Baptista,9
-Marisa Isabel dos Santos Matias,8
-Marcelo Nuno Duarte Rebelo de Sousa,7
-Tiago Pedro de Sousa Mayan Gonçalves,6
-André Claro Amaral Ventura,5
-Vitorino Francisco da Rocha e Silva,4
-João Manuel Peixoto Ferreira,3
-Ana Maria Rosa Martins Gomes,2
-Votos brancos,1
-Votos nulos,0
-```
+Para já, vou manter as coisas simples. `csv` quer dizer *comma-separated values*, ou seja, valores separados por *ponto e vírgula*. 
 
-**Input 1**
+Um extrato do ficheiro está disponível em [extrato_Postos.csv](https://tutoria.ualg.pt/2022/mod/resource/view.php?id=82660).
 
-Freguesia*.txt 2
+### Ler e escrever
 
-**Output 1**
+Para ler esses valores pela linha de comandos, sabendo que os valores estão separados por *ponto e vírgula*, basta-me indicar que quero uma lista onde o separador dos elementos é o *ponto e vírgula*.
 
-```
-Eduardo Nelson da Costa Baptista,10
-Marisa Isabel dos Santos Matias,10
-Marcelo Nuno Duarte Rebelo de Sousa,10
-Tiago Pedro de Sousa Mayan Gonçalves,10
-André Claro Amaral Ventura,10
-Vitorino Francisco da Rocha e Silva,10
-João Manuel Peixoto Ferreira,10
-Ana Maria Rosa Martins Gomes,10
-Votos brancos,10
-Votos nulos,10
-```
+#### Tarefa A
+Pretendo ler e apresentar o cabeçalho e, até ao fim dos dados, ler as demais linhas e apresentá-las.
+Prepare um programa em Python que leia os dados até ao fim do input e apresente as linhas lidas.
 
-Submeta na tarefa A no concurso IPC_L8.
+Na apresentação, quer do cabeçalho quer das linhas, considere a formatação definida para o cabeçalho do esboço de programa dado abaixo, ou seja, as barras verticais devem ficar alinhadas. Para tanto, o primeiro campo ocupa 13 espaços, é seguido por " | " (sem as aspas), seguindo-se o segundo campo centrado em 45 espaços, seguido por " | " (sem as aspas) e, finalmente, o terceiro campo com 11 espaços e justificado à direita.
 
-## Triângulo de Pascal
+Para o efeito, considere o esboço de programa fornecido abaixo e complete a função `mostra_linha`.
 
-```{figure} ./figures/TrianguloPascal.jpg
----
-height: 300px
-name: Triângulo de Pascal
----
-```
+    #!/usr/bin/env python3
+    # -*- coding: utf-8 -*-
+    """
+    Created on Tue Nov 29 20:03:19 2022
 
-O [triângulo de Pascal](https://mathworld.wolfram.com/PascalsTriangle.html) é uma representação gráfica usada determinação de coeficientes polinomiais na expansão de binómios.
+    @author: mmadeira
+    """
 
-A fórmula geral para a determinação dos coeficientes é dada por 
+    import sys
 
-$$ C_{n,k} = \binom{n}{k} = \frac{n!}{k!(n-k)!}$$ 
 
-para $ n $ e $ k $ inteiros positivos e $ k \in [0, n] $.
+    def mostra_linha(linha: list)-> None:
+        """
+        Apresenta os dados no formato pedido
 
-### Tarefa
+        Parameters
+        ----------
+        linha : list
+            linha do ficheiro (excluindo cabeçalho).
 
-Faça um programa que leia da consola um número inteiro $n$ e apresente os coeficientes para a expansão de um binómio de grau $n$.
+        >>> mostra_linha(['"2022-10-30"', '"Gasolina especial 98"', '"2,0687 €"'])
+        "2022-10-30"  |             "Gasolina especial 98"            |  "2,0687 €"
+        >>> mostra_linha(['"2022-10-30"', '"Gasolina 98"', '"2,0616 €"'])
+        "2022-10-30"  |                 "Gasolina 98"                 |  "2,0616 €"
+        """
+        pass
+        
 
-#### Input
+    def test_combustíveis():
+        cabeçalho = input().split(';')
+        topo_data, topo_tipo_combustível, topo_preço = cabeçalho
+        print('{0:14s} | {1:45s} | {2:>11s}'.format(topo_data.title(), topo_tipo_combustível.title().center(45), topo_preço.title()))
+        while True:
+            try:
+                line = input().split(';')
+            except (EOFError, KeyboardInterrupt):
+                sys.exit(0)
+            if line:
+                mostra_linha(line)
+            else:
+                sys.exit(0)
 
-O programa deve ler da consola um número inteiro.
+    if __name__ == '__main__':
+        test_combustíveis()
 
-#### Output
 
-O programa deverá apresentar na consola, numa mesma linha, os coeficientes separados por espaços.
+No Spyder, use o teste da docstring para aferir a correção da apresentação de resultados, fazendo
 
-#### Exemplos
+    import doctest
 
-**Input 1**
+e, a cada nova versão da função que carregar para a consola
 
-```
-3
-```
+    doctest.testmod()
 
-**Output 1**
+Submeta na tarefa A.
 
-```
-1 3 3 1
-```
 
-**Input 2**
+### Tratar os dados lidos
 
-```
-7
-```
+Pretendo ler e apresentar o cabeçalho e, até ao fim dos dados, ler as demais linhas e apresentá-las de forma mais cuidada: vou retirar as aspas das strings e vou apresentar o preço depois de convertido para um número real.
 
-**Output 2**
-```
-1 7 21 35 35 21 7 1
-```
+#### Tarefa B
 
-Submeta na tarefa B no concurso IPC_L8.
+Prepare um programa em Python que leia os dados até ao fim do input e apresente as linhas lidas.
+A primeira linha de input contém o cabeçalho sendo seguida pelas linhas de dados. Cada linha de dados contém três campos, separados por ';' e delimitados por '"'; a informação nesses campos corresponde respetivamente à data, ao tipo de combustível e ao preço do combustível. O formato usado no preço inclui a vírgula como separador decimal e o símbolo da moeda usada (€).
 
-## Conjetura de Collatz
 
-```{figure} ./figures/Collatz_conjecture.png
----
-height: 300px
-name: Collatz Conjecture
----
-```
-Fonte da figura: https://imgs.xkcd.com/comics/collatz_conjecture.png
 
-Considere a função 
+Para o efeito, acrescente a função `converte_dados` ao programa da tarefa anterior e complete-a.
 
-$$ f(x_n)=\begin{cases}
-			 \frac{1}{2}x_{n-1} & \textrm{se $x_{n-1}$ for um número par}\\
-			 3x_{n-1}+1        & \textrm{se $x_{n-1}$ for ímpar} 
-	     	 \end{cases}
-$$
 
-[Collatz](https://mathworld.wolfram.com/CollatzProblem.html) conjeturou se a aplicação sucessiva dessa função terminaria sempre com o valor de $1$ (um) para valores iniciais positivos.
+    def converte_dados(linha:list) -> list:
+        """
+        Retira as aspas da data e tipo de combustível e converte o preço para real.
 
-### Tarefa
+        Parameters
+        ----------
+        linha : list
+            linha do ficheiro (excluindo cabeçalho).
 
-Queremos testar a conjetura de Collatz, determinando ao fim de quantos passos se atinge o número $1$ (um) e qual o maior valor da sequência.
+        Returns
+        -------
+        list
+            lista contendo uma strings para data e tipo de combustível e 
+            um número real para preço.
+            
+        >>> converte_dados(['"2022-10-30"', '"Gasolina especial 98"', '"2,0687 €"'])
+        ['2022-10-30', 'Gasolina especial 98', 2.0687]
+        """
+        pass
 
-#### Input 
 
-O programa deve ler da consola um número inteiro.
+Submeta na tarefa B.
 
-#### Output
+### Separar os tipos de combustíveis
 
-O programa deve apresentar na consola, numa mesma linha e separados pelo espaço, ao fim de quantos passos se atingiu o valor unitário e o maior valor da sequência.
+Pretendo agora separar os preços de cada tipo de combustível e saber o preço médio de cada tipo de combustível.
 
-#### Exemplos
+#### Tarefa C
 
-**Input 1**
+Prepare um programa em Python que apresente o preço médio de cada tipo de combustível.
+A primeira linha de input contém o cabeçalho sendo seguida pelas linhas de dados. Cada linha de dados contém três campos, separados por ';' e delimitados por '"'; a informação nesses campos corresponde respetivamente à data, ao tipo de combustível e ao preço do combustível. O formato usado no preço inclui a vírgula como separador decimal e o símbolo da moeda usada (€).
 
-```
-1
-```
+O output é composto por tantas linhas quantos os tipos de combustível e cada linha contém a designação do tipo de combustível seguida por ": " (sem as aspas) e o valor médio desse tipo de combustível.
 
-**Output 1**
+**Requisito técnico**: carregue os dados lidos para um dicionário onde o tipo de combustível é a chave e associado à chave está uma lista com os preços desse tipo de combustível.
 
-```
-0 1
-```
+Sugestão de resolução: 
 
-**Input 2**
++ Implemente uma função que receba uma string e um número real e os apresente no formato pretendido.
 
-```
-2
-```
++ Implemente uma função que receba uma lista e devolva o valor médio dos elementos dessa lista.
++ Implemente uma função que receba uma linha lida e guarde, num dicionário, o preço na coleção de valores associados à chave que é a designação do tipo de combustível. 
++ Implemente uma função que receba um dicionário e, para cada chave do dicionário, obtenha a média dos valores e apresente a chave e valor.
 
-**Output 2**
-```
-1 2
-```
+Considere usar os esboços seguintes:
 
-**Input 3**
+    def mostra_combustivel_valor(tipo: str, valor: float) -> None:
+        """
+        Apresenta o tipo de combustível e o valor.
 
-```
-3
-```
+        Parameters
+        ----------
+        tipo : str
+            O tipo de combustível
+        valor : float
+            o valor a apresentar
 
-**Output 3**
-```
-7 16
-```
+        >>> mostra_combustivel_valor('Exemplo de tipo de combustível', 3.5)
+        Exemplo de tipo de combustível: 3.5
+        """
+        pass
 
-**Input 4**
 
-```
-4
-```
 
-**Output 4**
-```
-2 4
-```
+    def calcula_média(lista: list) -> float:
+        """
+        Devolve a média de uma lista de valores numéricos.
 
-**Input 5**
+        Parameters
+        ----------
+        lista : list
+            Uma lista não nula de valores numéricos.
 
-```
-5
-```
+        Returns
+        -------
+        float
+            A média aritmética dos valores da lista.
 
-**Output 5**
-```
-5 16
-```
+        >>> calcula_média([3])
+        3
+        >>> calcula_média([3, 5])
+        4
+        >>> calcula_média([3, 5.0, 12, -1])
+        4.75
+        """
+        pass
 
-Submeta na tarefa C no concurso IPC_L8.
+
+    def guarda_no_dicionário(dicio: dict, tipo: str, valor: float) -> dict:
+        """
+        Guarda no dicionário o valor associado à chave representada pelo tipo.
+        
+        Se a chave não existir, cria essa chave e associa uma lista com o valor;
+        se a chave existir, acrescenta o valor à lista associada a essa chave.
+
+        Parameters
+        ----------
+        tipo : str
+            DESCRIPTION.
+        valor : real
+            DESCRIPTION.
+
+        >>> guarda_no_dicionário({}, "Gasóleo", 0.7)
+        {'Gasóleo': [0.7]}
+        >>> guarda_no_dicionário({'Gasóleo': [0.7]}, "Gasóleo", 0.8)
+        {'Gasóleo': [0.7, 0.8]}
+        >>> guarda_no_dicionário({'Gasóleo': [0.7, 0.8]}, "Gasolina", 1.2)
+        {'Gasóleo': [0.7, 0.8], 'Gasolina': [1.2]}
+        """
+        pass
+
+
+    def mostra_resultado(dicio: dict) -> None:
+        """Percorre o dicionário para produzir a listagem desejada.
+        
+        >>> mostra_resultado({'Gasóleo': [0.7]})
+        Gasóleo: 0.7
+        >>> mostra_resultado({'Gasóleo': [0.7, 0.8], 'Gasolina': [1.2]})
+        Gasóleo: 0.75
+        Gasolina: 1.2
+        """
+        pass
+
+
+Submeta na tarefa C.
+
+
+
+
+
+
+
+
+
+
+
