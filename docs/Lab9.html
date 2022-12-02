@@ -401,7 +401,7 @@
 <p>Depois, nas próximas semanas, tratarei de obter os dados de um ficheiro, bastando indicar o nome.
 Esses dados estão num ficheiro <code class="docutils literal notranslate"><span class="pre">.csv</span></code> um formato também considerado pelo Microsoft Excel. Em Python também há formas de tratar estes ficheiros, e isso será ainda outro aspeto do mesmo tema.</p>
 <p>Para já, vou manter as coisas simples. <code class="docutils literal notranslate"><span class="pre">csv</span></code> quer dizer <em>comma-separated values</em>, ou seja, valores separados por <em>ponto e vírgula</em>.</p>
-<p>Um extrato do ficheiro está disponível em <a class="reference external" href="https://tutoria.ualg.pt/2022/mod/resource/view.php?id=82660">extrato_Postos.csv</a>.</p>
+<p>Um extrato do ficheiro está disponível em <a class="reference external" href="https://tutoria.ualg.pt/2022/mod/resource/view.php?id=84649">extrato_Postos.csv</a>.</p>
 <div class="section" id="ler-e-escrever">
 <h3>Ler e escrever<a class="headerlink" href="#ler-e-escrever" title="Link permanente para este título">¶</a></h3>
 <p>Para ler esses valores pela linha de comandos, sabendo que os valores estão separados por <em>ponto e vírgula</em>, basta-me indicar que quero uma lista onde o separador dos elementos é o <em>ponto e vírgula</em>.</p>
@@ -475,6 +475,7 @@ if __name__ == &#39;__main__&#39;:
 <h4>Tarefa B<a class="headerlink" href="#tarefa-b" title="Link permanente para este título">¶</a></h4>
 <p>Prepare um programa em Python que leia os dados até ao fim do input e apresente as linhas lidas.
 A primeira linha de input contém o cabeçalho sendo seguida pelas linhas de dados. Cada linha de dados contém três campos, separados por “;” e delimitados por “»”; a informação nesses campos corresponde respetivamente à data, ao tipo de combustível e ao preço do combustível. O formato usado no preço inclui a vírgula como separador decimal e o símbolo da moeda usada (€).</p>
+<p>Para o resultado pretendido, apresente os campos sem as aspas e o preço com o formato comum de um número real, usando o ponto como separador da parte inteira e parte decimal.</p>
 <p>Para o efeito, acrescente a função <code class="docutils literal notranslate"><span class="pre">converte_dados</span></code> ao programa da tarefa anterior e complete-a.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def converte_dados(linha:list) -&gt; list:
     &quot;&quot;&quot;
@@ -497,6 +498,7 @@ A primeira linha de input contém o cabeçalho sendo seguida pelas linhas de dad
     pass
 </pre></div>
 </div>
+<p>Adapte uma versão da função <code class="docutils literal notranslate"><span class="pre">mostra_linha</span></code> para apresentar os dados convertidos.</p>
 <p>Submeta na tarefa B.</p>
 </div>
 </div>
