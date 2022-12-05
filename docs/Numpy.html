@@ -706,7 +706,10 @@
 </div>
 </div>
 </div>
-<img src="./figures/matrizes_nd.png" alt="Exemplos de matrizes" style="height: 350px;"/><div class="section" id="dimensao">
+<div class="figure align-default" id="exemplos-de-matrizes">
+<a class="reference internal image-reference" href="../_images/numpy-slices.png"><img alt="../_images/numpy-slices.png" src="../_images/numpy-slices.png" style="width: 500px;" /></a>
+</div>
+<div class="section" id="dimensao">
 <h3>Dimensão<a class="headerlink" href="#dimensao" title="Link permanente para este título">¶</a></h3>
 <p>Em Python, podemos interpretar a dimensão de uma matriz como o número correspondente de índices. Para determinarmos esta dimensão usamos o método <code class="docutils literal notranslate"><span class="pre">ndim</span></code> que devolve um inteiro com esta informação,</p>
 <div class="cell docutils container">
@@ -971,7 +974,10 @@ matriz d = [[2 3 4]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>matriz c = [20  2  3  4  5]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>matriz c =
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [20  2  3  4  5]
 matriz d = [20  2  3  4  5]
 matriz e = [1 2 3 4 5]
 </pre></div>
@@ -1045,7 +1051,9 @@ matriz b = [1 2 3 4 5 6]
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1 2 3]
-[4 5 6]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[4 5 6]
 </pre></div>
 </div>
 </div>
@@ -1473,9 +1481,7 @@ vector coluna=
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>matriz e: [[25 25]
  [ 9 16]]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>matriz f: [[25 25]
+matriz f: [[25 25]
  [ 9 16]]
 </pre></div>
 </div>
@@ -1683,7 +1689,7 @@ Soma cumulativa: [ 1  3  6 10 15 21 28 36 45]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[65 79 69 98 87 90 97 72 68 51]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[59 89 57 99 61 77 73 84 95 52]
 </pre></div>
 </div>
 </div>
@@ -1709,9 +1715,9 @@ Soma cumulativa: [ 1  3  6 10 15 21 28 36 45]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[69 89]
- [88 92]
- [78 90]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[76 88]
+ [69 83]
+ [97 53]]
 </pre></div>
 </div>
 </div>
@@ -1727,9 +1733,9 @@ Soma cumulativa: [ 1  3  6 10 15 21 28 36 45]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[93.01683708 50.78444976]
- [82.62834645 61.54990957]
- [83.64718233 66.54938868]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[72.48698341 72.37313985]
+ [87.45999122 94.68215596]
+ [51.72586277 52.971587  ]]
 </pre></div>
 </div>
 </div>
@@ -1748,11 +1754,8 @@ Soma cumulativa: [ 1  3  6 10 15 21 28 36 45]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[10.43811367  9.05174385  6.99535195]
- [12.4624003   7.52254165  7.4993998 ]]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 9.5749477  10.79720836  8.85041383]
+ [ 8.54418934 13.06680445  8.61454567]]
 </pre></div>
 </div>
 </div>
@@ -1771,8 +1774,8 @@ Soma cumulativa: [ 1  3  6 10 15 21 28 36 45]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[4 2 4]
- [4 3 6]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[4 1 3]
+ [2 3 4]]
 </pre></div>
 </div>
 </div>
