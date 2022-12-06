@@ -19,8 +19,8 @@ parts:
   - file: docs/MódulosTestes
   - file: docs/Matplotlib
   - file: docs/Numpy
-#  - file: docs/Biopython_introd
-#  - file: docs/Apresent_sympy
+  - file: docs/Biopython_introd
+  - file: docs/Apresent_sympy
 - caption: "Guiões práticos"
   chapters:
   - file: docs/Primeiros_passos 
