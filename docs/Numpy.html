@@ -56,7 +56,7 @@
     <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2022-23/docs/Numpy.html" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
-    <link rel="next" title="Primeiros passos na programação em Python" href="Primeiros_passos.html" />
+    <link rel="next" title="Introdução ao Biopython" href="Biopython_introd.html" />
     <link rel="prev" title="A biblioteca MatplotLib" href="Matplotlib.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -170,6 +170,16 @@
    <em>
     NumPy
    </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Biopython_introd.html">
+   Introdução ao Biopython
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Apresent_sympy.html">
+   Introdução ao SymPy
   </a>
  </li>
 </ul>
@@ -707,7 +717,7 @@
 </div>
 </div>
 <div class="figure align-default" id="exemplos-de-matrizes">
-<a class="reference internal image-reference" href="../_images/numpy-slices.png"><img alt="../_images/numpy-slices.png" src="../_images/numpy-slices.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/numpy-slices.png"><img alt="../_images/numpy-slices.png" src="../_images/numpy-slices.png" style="width: 600px;" /></a>
 </div>
 <div class="section" id="dimensao">
 <h3>Dimensão<a class="headerlink" href="#dimensao" title="Link permanente para este título">¶</a></h3>
@@ -974,10 +984,7 @@ matriz d = [[2 3 4]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>matriz c =
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [20  2  3  4  5]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>matriz c = [20  2  3  4  5]
 matriz d = [20  2  3  4  5]
 matriz e = [1 2 3 4 5]
 </pre></div>
@@ -1051,9 +1058,7 @@ matriz b = [1 2 3 4 5 6]
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1 2 3]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[4 5 6]
+[4 5 6]
 </pre></div>
 </div>
 </div>
@@ -1081,7 +1086,10 @@ matriz b = [1 2 3 4 5 6]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 2 3 4 5 6 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 3 4 5 6 
 </pre></div>
 </div>
 </div>
@@ -1263,6 +1271,9 @@ matriz b = [1 2 3 4 5 6]
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 0  9 18 27]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -1689,7 +1700,7 @@ Soma cumulativa: [ 1  3  6 10 15 21 28 36 45]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[59 89 57 99 61 77 73 84 95 52]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[99 72 94 55 56 98 72 99 78 77]
 </pre></div>
 </div>
 </div>
@@ -1715,9 +1726,9 @@ Soma cumulativa: [ 1  3  6 10 15 21 28 36 45]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[76 88]
- [69 83]
- [97 53]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[96 79]
+ [70 56]
+ [97 97]]
 </pre></div>
 </div>
 </div>
@@ -1733,9 +1744,9 @@ Soma cumulativa: [ 1  3  6 10 15 21 28 36 45]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[72.48698341 72.37313985]
- [87.45999122 94.68215596]
- [51.72586277 52.971587  ]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[56.91725449 64.53126714]
+ [55.71912928 55.75020052]
+ [88.72478144 59.78356668]]
 </pre></div>
 </div>
 </div>
@@ -1754,8 +1765,8 @@ Soma cumulativa: [ 1  3  6 10 15 21 28 36 45]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 9.5749477  10.79720836  8.85041383]
- [ 8.54418934 13.06680445  8.61454567]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[12.20938182  7.07063205 10.05693265]
+ [10.26653224  8.81508174 12.77402326]]
 </pre></div>
 </div>
 </div>
@@ -1774,8 +1785,8 @@ Soma cumulativa: [ 1  3  6 10 15 21 28 36 45]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[4 1 3]
- [2 3 4]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1 2 4]
+ [4 4 2]]
 </pre></div>
 </div>
 </div>
@@ -1827,10 +1838,10 @@ Soma cumulativa: [ 1  3  6 10 15 21 28 36 45]
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="Primeiros_passos.html" title="próximo page">
+        <a class="right-next" href="Biopython_introd.html" title="próximo page">
             <div class="prevnext-info">
                 <p class="prevnext-label">próximo</p>
-                <p class="prevnext-title">Primeiros passos na programação em Python</p>
+                <p class="prevnext-title">Introdução ao Biopython</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

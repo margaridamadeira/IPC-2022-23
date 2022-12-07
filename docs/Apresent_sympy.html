@@ -44,6 +44,8 @@
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -54,6 +56,8 @@
     <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2022-23/docs/Apresent_sympy.html" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Primeiros passos na programação em Python" href="Primeiros_passos.html" />
+    <link rel="prev" title="Introdução ao Biopython" href="Biopython_introd.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -111,7 +115,7 @@
   Resumos dos temas
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Introdu%C3%A7%C3%A3o.html">
    Introdução
@@ -166,6 +170,16 @@
    <em>
     NumPy
    </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Biopython_introd.html">
+   Introdução ao Biopython
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Introdução ao SymPy
   </a>
  </li>
 </ul>
@@ -351,11 +365,6 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#outros-exemplos">
-     Outros exemplos
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#cuidados-a-ter">
      Cuidados a ter
     </a>
@@ -519,21 +528,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_6_1.png" src="../_images/Apresent_sympy_6_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 1\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -543,21 +539,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_7_1.png" src="../_images/Apresent_sympy_7_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \log{\left(x \right)}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -574,21 +557,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_9_1.png" src="../_images/Apresent_sympy_9_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \int \left(3 x^{2} + x\right)\, dx = x^{3} + \frac{x^{2}}{2}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -605,21 +575,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_11_1.png" src="../_images/Apresent_sympy_11_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \int e^{x} \cos{\left(x \right)}\, dx = \frac{e^{x} \sin{\left(x \right)}}{2} + \frac{e^{x} \cos{\left(x \right)}}{2}\]</div>
 </div>
 </div>
 <div class="section" id="recursos-online">
@@ -643,21 +600,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_15_1.png" src="../_images/Apresent_sympy_15_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 3.0\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -670,21 +614,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_16_1.png" src="../_images/Apresent_sympy_16_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 2.82842712474619\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -696,21 +627,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_17_1.png" src="../_images/Apresent_sympy_17_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 2 \sqrt{2}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -743,21 +661,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_20_1.png" src="../_images/Apresent_sympy_20_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left(x + 1\right)^{2}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -768,21 +673,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_21_1.png" src="../_images/Apresent_sympy_21_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x^{2} + 2 x + 1\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -793,21 +685,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_22_1.png" src="../_images/Apresent_sympy_22_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 25\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -830,33 +709,17 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x^{2} + 4 x + 1\]</div>
 </div>
-<img alt="../_images/Apresent_sympy_24_1.png" src="../_images/Apresent_sympy_24_1.png" />
-</div>
-</div>
-<div class="section" id="outros-exemplos">
-<h3>Outros exemplos<a class="headerlink" href="#outros-exemplos" title="Link permanente para este título">¶</a></h3>
-<p><strong><a class="reference external" href="http://certik.github.io/scipy-2013-tutorial/html/tutorial/intro.html#the-power-of-symbolic-computation">Computação simbólica avançada</a></strong></p>
 </div>
 <div class="section" id="cuidados-a-ter">
 <h3>Cuidados a ter<a class="headerlink" href="#cuidados-a-ter" title="Link permanente para este título">¶</a></h3>
 <p>Na criação de módulos há que ter em atenção a distinção entre as entidades e métodos padrão em Python e símbolos e funções de lógica simbólica.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># %reset</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -sf
+<span class="c1"># o reset limpa o espaço de trabalho do utilizador, deixando o histórico intacto, sem confirmação</span>
 </pre></div>
 </div>
 </div>
@@ -890,6 +753,11 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
     <span class="n">expr</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span> <span class="c1"># como x é uma variável, ainda não definida, terei um erro</span>
 <span class="k">except</span> <span class="ne">NameError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>   
     <span class="nb">print</span> <span class="p">(</span><span class="n">err</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>name &#39;x&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -931,21 +799,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_34_1.png" src="../_images/Apresent_sympy_34_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 3\]</div>
 </div>
 </div>
 <p>Há também que ter algum cuidado com os tipos de dados.</p>
@@ -985,21 +840,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_38_1.png" src="../_images/Apresent_sympy_38_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left( 0.5, \  0\right)\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1009,21 +851,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_39_1.png" src="../_images/Apresent_sympy_39_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{1}{2}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1033,21 +862,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_40_1.png" src="../_images/Apresent_sympy_40_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 1.5\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1057,21 +873,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_41_1.png" src="../_images/Apresent_sympy_41_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{3}{2}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1117,21 +920,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_46_1.png" src="../_images/Apresent_sympy_46_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 25\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1149,21 +939,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_48_1.png" src="../_images/Apresent_sympy_48_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left(y^{2} + 1\right)^{2}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1173,21 +950,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_49_1.png" src="../_images/Apresent_sympy_49_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle y^{4} + 2 y^{2} + 1\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1206,21 +970,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_51_1.png" src="../_images/Apresent_sympy_51_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \log{\left(x \right)}^{y}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1231,21 +982,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_52_1.png" src="../_images/Apresent_sympy_52_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x^{y}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1270,21 +1008,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_55_1.png" src="../_images/Apresent_sympy_55_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \sin^{2}{\left(x \right)}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1320,21 +1045,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_59_1.png" src="../_images/Apresent_sympy_59_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x^{2} + 3 x - \frac{1}{2}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1344,21 +1056,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_60_1.png" src="../_images/Apresent_sympy_60_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{7}{2}\]</div>
 </div>
 </div>
 </div>
@@ -1371,21 +1070,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_62_1.png" src="../_images/Apresent_sympy_62_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 3.5\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1395,21 +1081,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_63_1.png" src="../_images/Apresent_sympy_63_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 9.5\]</div>
 </div>
 </div>
 </div>
@@ -1419,7 +1092,7 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 <p>A função <em>simplify</em> tenta traduzir as expressões na sua forma mais simples.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># %reset</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -sf
 </pre></div>
 </div>
 </div>
@@ -1440,21 +1113,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_67_1.png" src="../_images/Apresent_sympy_67_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \sin^{2}{\left(x \right)} + \cos^{2}{\left(x \right)}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1464,21 +1124,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_68_1.png" src="../_images/Apresent_sympy_68_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 1\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1488,21 +1135,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_69_1.png" src="../_images/Apresent_sympy_69_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{x^{3} + x^{2} - x - 1}{x^{2} + 2 x + 1}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1512,21 +1146,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_70_1.png" src="../_images/Apresent_sympy_70_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x - 1\]</div>
 </div>
 </div>
 </div>
@@ -1541,21 +1162,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_72_1.png" src="../_images/Apresent_sympy_72_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x^{2} + 2 x + 1\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1565,21 +1173,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_73_1.png" src="../_images/Apresent_sympy_73_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x^{2} - x - 6\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1589,21 +1184,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_74_1.png" src="../_images/Apresent_sympy_74_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle -2\]</div>
 </div>
 </div>
 </div>
@@ -1616,21 +1198,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_76_1.png" src="../_images/Apresent_sympy_76_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left(x - 1\right) \left(x^{2} + 1\right)\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1640,21 +1209,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_77_1.png" src="../_images/Apresent_sympy_77_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle z \left(x + 2 y\right)^{2}\]</div>
 </div>
 </div>
 </div>
@@ -1667,21 +1223,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_79_1.png" src="../_images/Apresent_sympy_79_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x^{3} - x^{2} z + 2 x^{2} + x y + x - 3\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1691,21 +1234,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_80_1.png" src="../_images/Apresent_sympy_80_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x^{3} + x^{2} \left(2 - z\right) + x \left(y + 1\right) - 3\]</div>
 </div>
 </div>
 </div>
@@ -1718,21 +1248,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_82_1.png" src="../_images/Apresent_sympy_82_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{x^{2} + 2 x + 1}{x^{2} + x}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1742,21 +1259,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_83_1.png" src="../_images/Apresent_sympy_83_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{x + 1}{x}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1766,21 +1270,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_84_1.png" src="../_images/Apresent_sympy_84_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{\frac{3 x}{2} - 2}{x - 4} + \frac{1}{x}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1790,21 +1281,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_85_1.png" src="../_images/Apresent_sympy_85_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{3 x^{2} - 2 x - 8}{2 x^{2} - 8 x}\]</div>
 </div>
 </div>
 </div>
@@ -1817,21 +1295,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_87_1.png" src="../_images/Apresent_sympy_87_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{4 x^{3} + 21 x^{2} + 10 x + 12}{x^{4} + 5 x^{3} + 5 x^{2} + 4 x}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1841,21 +1306,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_88_1.png" src="../_images/Apresent_sympy_88_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{2 x - 1}{x^{2} + x + 1} - \frac{1}{x + 4} + \frac{3}{x}\]</div>
 </div>
 </div>
 </div>
@@ -1869,21 +1321,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_90_1.png" src="../_images/Apresent_sympy_90_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1893,21 +1332,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_91_1.png" src="../_images/Apresent_sympy_91_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{\pi}{2}\]</div>
 </div>
 </div>
 <div class="section" id="trigsimp">
@@ -1919,21 +1345,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_93_1.png" src="../_images/Apresent_sympy_93_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 1\]</div>
 </div>
 </div>
 </div>
@@ -1946,21 +1359,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_95_1.png" src="../_images/Apresent_sympy_95_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \sin{\left(x \right)} \cos{\left(y \right)} + \sin{\left(y \right)} \cos{\left(x \right)}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1970,21 +1370,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_96_1.png" src="../_images/Apresent_sympy_96_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{2 \tan{\left(x \right)}}{1 - \tan^{2}{\left(x \right)}}\]</div>
 </div>
 </div>
 </div>
@@ -2022,21 +1409,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_101_1.png" src="../_images/Apresent_sympy_101_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x^{a} x^{b}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2046,21 +1420,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_102_1.png" src="../_images/Apresent_sympy_102_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x^{a + b}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2070,21 +1431,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_103_1.png" src="../_images/Apresent_sympy_103_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x^{a} y^{a}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2094,21 +1442,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_104_1.png" src="../_images/Apresent_sympy_104_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left(x y\right)^{a}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2118,21 +1453,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_105_1.png" src="../_images/Apresent_sympy_105_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle t^{c} z^{c}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2142,21 +1464,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_106_1.png" src="../_images/Apresent_sympy_106_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle t^{c} z^{c}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2166,21 +1475,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_107_1.png" src="../_images/Apresent_sympy_107_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x^{a b}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2190,21 +1486,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_108_1.png" src="../_images/Apresent_sympy_108_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x^{a b}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2214,21 +1497,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_109_1.png" src="../_images/Apresent_sympy_109_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left(z^{a}\right)^{b}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2238,21 +1508,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_110_1.png" src="../_images/Apresent_sympy_110_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left(z^{a}\right)^{b}\]</div>
 </div>
 </div>
 </div>
@@ -2266,21 +1523,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_112_1.png" src="../_images/Apresent_sympy_112_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \log{\left(x \right)}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2298,21 +1542,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_114_1.png" src="../_images/Apresent_sympy_114_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \log{\left(x \right)} + \log{\left(y \right)}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2322,21 +1553,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_115_1.png" src="../_images/Apresent_sympy_115_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \log{\left(x \right)} - \log{\left(y \right)}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2346,21 +1564,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_116_1.png" src="../_images/Apresent_sympy_116_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 2 \log{\left(x \right)}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2370,21 +1575,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_117_1.png" src="../_images/Apresent_sympy_117_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle n \log{\left(x \right)}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2394,21 +1586,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_118_1.png" src="../_images/Apresent_sympy_118_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \log{\left(t z \right)}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2418,21 +1597,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_119_1.png" src="../_images/Apresent_sympy_119_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \log{\left(x y \right)}\]</div>
 </div>
 </div>
 </div>
@@ -2440,7 +1606,7 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 <h2>Funções especiais<a class="headerlink" href="#funcoes-especiais" title="Link permanente para este título">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># %reset</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -sf
 </pre></div>
 </div>
 </div>
@@ -2467,21 +1633,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_124_1.png" src="../_images/Apresent_sympy_124_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle n!\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2491,21 +1644,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_125_1.png" src="../_images/Apresent_sympy_125_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle n!!\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2515,21 +1655,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_126_1.png" src="../_images/Apresent_sympy_126_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle {\binom{n}{k}}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2539,21 +1666,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_127_1.png" src="../_images/Apresent_sympy_127_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{2 \sin^{2}{\left(x \right)}}{\sin{\left(2 x \right)}}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2563,21 +1677,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_128_1.png" src="../_images/Apresent_sympy_128_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{\cos{\left(x - \frac{\pi}{2} \right)}}{\cos{\left(x \right)}}\]</div>
 </div>
 </div>
 </div>
@@ -2585,7 +1686,7 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 <h2>Cálculo<a class="headerlink" href="#calculo" title="Link permanente para este título">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># %reset</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">reset</span> -sf
 </pre></div>
 </div>
 </div>
@@ -2612,21 +1713,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_133_1.png" src="../_images/Apresent_sympy_133_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle - \sin{\left(x \right)}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2636,21 +1724,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_134_1.png" src="../_images/Apresent_sympy_134_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 2 x e^{x^{2}}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2660,21 +1735,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_135_1.png" src="../_images/Apresent_sympy_135_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 24 x\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2684,21 +1746,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_136_1.png" src="../_images/Apresent_sympy_136_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle e^{x y z}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2708,21 +1757,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_137_1.png" src="../_images/Apresent_sympy_137_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{\partial}{\partial x} e^{x y z}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2732,21 +1768,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_138_1.png" src="../_images/Apresent_sympy_138_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle y z e^{x y z}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2756,21 +1779,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_139_1.png" src="../_images/Apresent_sympy_139_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \sin{\left(x \right)}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2780,21 +1790,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_140_1.png" src="../_images/Apresent_sympy_140_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 1\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2804,21 +1801,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_141_1.png" src="../_images/Apresent_sympy_141_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \int x^{2}\, dx\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2828,21 +1812,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_142_1.png" src="../_images/Apresent_sympy_142_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{x^{3}}{3}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2852,21 +1823,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_143_1.png" src="../_images/Apresent_sympy_143_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{\sin{\left(x \right)}}{x}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2876,21 +1834,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_144_1.png" src="../_images/Apresent_sympy_144_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 1\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2900,21 +1845,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_145_1.png" src="../_images/Apresent_sympy_145_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \lim_{x \to 0^+}\left(\frac{\sin{\left(x \right)}}{x}\right)\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2924,21 +1856,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_146_1.png" src="../_images/Apresent_sympy_146_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \lim_{x \to 0^-}\left(\frac{\sin{\left(x \right)}}{x}\right)\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -2955,21 +1874,8 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_png function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_rgba function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The to_mask function was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-/home/mmadeira/venvs/IPC-2021/lib/python3.9/site-packages/IPython/lib/latextools.py:126: MatplotlibDeprecationWarning: 
-The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be removed two minor releases later. Use mathtext.math_to_image instead.
-  mt.to_png(f, s, fontsize=12, dpi=dpi, color=color)
-</pre></div>
-</div>
-<img alt="../_images/Apresent_sympy_148_1.png" src="../_images/Apresent_sympy_148_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 1 + x + \frac{x^{2}}{2} + O\left(x^{4}\right)\]</div>
 </div>
 </div>
 </div>
@@ -3004,6 +1910,24 @@ The MathtextBackendBitmap class was deprecated in Matplotlib 3.4 and will be rem
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="Biopython_introd.html" title="anterior page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">anterior</p>
+                <p class="prevnext-title">Introdução ao Biopython</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="Primeiros_passos.html" title="próximo page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">próximo</p>
+                <p class="prevnext-title">Primeiros passos na programação em Python</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
 
 </div>
         
