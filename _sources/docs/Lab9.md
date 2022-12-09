@@ -198,9 +198,9 @@ Considere usar os esboços seguintes:
             A média aritmética dos valores da lista.
 
         >>> calcula_média([3])
-        3
+        3.0
         >>> calcula_média([3, 5])
-        4
+        4.0
         >>> calcula_média([3, 5.0, 12, -1])
         4.75
         """
