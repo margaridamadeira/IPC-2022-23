@@ -38,7 +38,7 @@ parts:
   - file: docs/F3-2122
   - file: docs/Lab9
   - file: docs/LabA
+  - file: docs/F3-2022
 #  - file: docs/Lab8_old
-#  - file: docs/F3-2122
 
 
