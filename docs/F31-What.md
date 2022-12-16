@@ -2,7 +2,7 @@
 
 **Introdução à programação científica - Bioengenharia**
 
-**16 de dezembro de 2022, das 10h às 11h30**
+**16 de dezembro de 2022, das 10h40 às 11h30**
 
 <hr>
 Note bem:
@@ -20,6 +20,7 @@ Note bem:
 
 
 ```{figure} ./figures/Roda.jpg
+---
 height: 300px
 name: Codon wheel
 ---
@@ -48,8 +49,10 @@ height: 300px
 name: Tabela RNA
 ---
 Tabela RNA
+```
 
-```{figure} ./Cod3para1.jpg
+
+```{figure} ./figures/Cod3para1.jpg
 ---
 height: 300px
 name: Códigos
