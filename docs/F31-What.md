@@ -7,7 +7,7 @@
 <hr>
 Note bem:
 
-+ Submeta cada uma das tarefas no problema correspondente do concurso IPC_F3 do *Mooshak* em http://deei-mooshak.ualg.pt/~mmadeira
++ Submeta a tarefa no concurso IPC_F31 do *Mooshak* em http://deei-mooshak.ualg.pt/~mmadeira
 
 + Prazo limite das validações das submissões aceites: 21 de dezembro de 2022
 + A cotação da submissão aceite no *Mooshak* e validadas: 40 pontos complementares.
@@ -17,7 +17,9 @@ Note bem:
 
 ## O que é isto?
 
-```{figure} ./Roda.jpg
+
+
+```{figure} ./figures/Roda.jpg
 height: 300px
 name: Codon wheel
 ---
@@ -40,7 +42,7 @@ Considere que uma moldura de leitura aberta (*open reading frame*) começa sempr
 É-lhe pedido que crie um programa que leia uma sequência de letras, identifique a moldura de leitura aberta e produza a correspondente de proteínas de uma letra, utilizando as tabelas abaixo.
 
 
-```{figure} ./TabelaRNA.jpg
+```{figure} ./figures/TabelaRNA.jpg
 ---
 height: 300px
 name: Tabela RNA
