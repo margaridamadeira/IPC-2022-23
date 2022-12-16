@@ -125,5 +125,3 @@ MPYRACL*MPVTRYVRS
 ```
 
 
-
-Submeta no concurso IPC_2021_P6.
