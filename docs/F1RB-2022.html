@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Terceira Festa de Programação &#8212; Introdução à programação científica</title>
+    <title>Primeira festa (RB) &#8212; Introdução à programação científica</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -44,6 +44,8 @@
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -51,11 +53,11 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2022-23/docs/F3-2022.html" />
+    <link rel="canonical" href="https://margaridamadeira.github.io/IPC-2022-23/docs/F1RB-2022.html" />
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
-    <link rel="next" title="Complemento da Festa" href="F31-What.html" />
-    <link rel="prev" title="LabA" href="LabA.html" />
+    <link rel="next" title="Terceira festa (RB)" href="F3RB-2022.html" />
+    <link rel="prev" title="Complemento da Festa" href="F31-What.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -262,8 +264,8 @@
    LabA
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="F3-2022.html">
    Terceira Festa de Programação
   </a>
  </li>
@@ -272,8 +274,8 @@
    Complemento da Festa
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="F1RB-2022.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Primeira festa (RB)
   </a>
  </li>
@@ -323,7 +325,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/docs/F3-2022.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/docs/F1RB-2022.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -354,8 +356,25 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#palavras">
-   Palavras
+  <a class="reference internal nav-link" href="#introducao-a-programacao-cientifica">
+   Introdução à programação científica
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bioengenharia">
+   Bioengenharia
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#avaliacao-22-de-dezembro-de-2022">
+     Avaliação - 22 de dezembro de 2022
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gerar-senhas">
+   Gerar senhas
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -363,11 +382,25 @@
      Tarefa A
     </a>
    </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#soma-dos-termos-de-uma-progressao-aritmetica">
+   Soma dos termos de uma progressão aritmética
+  </a>
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tarefa-b">
      Tarefa B
     </a>
    </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#area-de-um-triangulo">
+   Área de um triângulo
+  </a>
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tarefa-c">
      Tarefa C
@@ -386,150 +419,146 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="terceira-festa-de-programacao">
-<h1>Terceira Festa de Programação<a class="headerlink" href="#terceira-festa-de-programacao" title="Link permanente para este título">¶</a></h1>
-<p><strong>Introdução à programação científica - Bioengenharia</strong></p>
-<p><strong>15 de dezembro de 2022, das 9h30 às 11h00</strong></p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="primeira-festa-rb">
+<h1>Primeira festa (RB)<a class="headerlink" href="#primeira-festa-rb" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="introducao-a-programacao-cientifica">
+<h2>Introdução à programação científica<a class="headerlink" href="#introducao-a-programacao-cientifica" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="bioengenharia">
+<h2>Bioengenharia<a class="headerlink" href="#bioengenharia" title="Link permanente para este título">¶</a></h2>
+<div class="section" id="avaliacao-22-de-dezembro-de-2022">
+<h3>Avaliação - 22 de dezembro de 2022<a class="headerlink" href="#avaliacao-22-de-dezembro-de-2022" title="Link permanente para este título">¶</a></h3>
 <hr>
 Note bem:
 <ul class="simple">
-<li><p>Submeta cada uma das tarefas no problema correspondente do concurso IPC_F3 do <em>Mooshak</em> em http://deei-mooshak.ualg.pt/~mmadeira</p></li>
-<li><p>Prazo limite das validações das submissões aceites: 21 de dezembro de 2022</p></li>
-<li><p>A cotação das submissões aceites no <em>Mooshak</em> e validadas: tarefa A - 40 pontos, tarefa B - 30 pontos, tarefa C - 28 pontos.</p></li>
+<li><p>Submeta cada uma das tarefas no problema correspondente do concurso IPC_F1RB do <em>Mooshak</em> em http://deei-mooshak.ualg.pt/~mmadeira</p></li>
+<li><p>A cotação das tarefas com submissões aceites no <em>Mooshak</em>: 10, 10, 20 para as tarefas A, B e C, respetivamente.</p></li>
 </ul>
 <hr>
-<div class="section" id="palavras">
-<h2>Palavras<a class="headerlink" href="#palavras" title="Link permanente para este título">¶</a></h2>
-<p>Pretendo saber quais as palavras repetidas de um texto e quantas vezes ocorrem.</p>
+</div>
+</div>
+<div class="section" id="gerar-senhas">
+<h2>Gerar senhas<a class="headerlink" href="#gerar-senhas" title="Link permanente para este título">¶</a></h2>
+<div class="figure align-default" id="p4assw0rd">
+<a class="reference internal image-reference" href="../_images/codigos.png"><img alt="../_images/codigos.png" src="../_images/codigos.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 26 </span><span class="caption-text">Password secreta</span><a class="headerlink" href="#p4assw0rd" title="Permalink to this image">¶</a></p>
+</div>
+<p>Isto de inventar senhas, todas diferentes, tem muito que se lhe diga. Vou passar a criar uma senha a partir de uma frase, idealmente associada ao serviço onde me quero autenticar.</p>
+<p>Vou passar a adotar uma estratégia que passa por aplicar sequencialmente cada uma das seguintes três transformações: em cada palavra (ou sequência separada por espaços), se o primeiro carater for uma letra, converto-a para maiúscula e converto as demais letras para minúsculas; substituo todas as ocorrências de “a”, “e”, “i” e “o” por “4”, “3”, “1” e “0”, respetivamente; como muitas vezes são pedidos sinais de pontuação, então se a soma dos digitos numéricos for par, junto um ponto final (“.”) e se for ímpar, junto um ponto de exclamação (“!).</p>
+<p>Agora só preciso de um programa para converter as frases para quando precisar das senhas.</p>
 <div class="section" id="tarefa-a">
 <h3>Tarefa A<a class="headerlink" href="#tarefa-a" title="Link permanente para este título">¶</a></h3>
-<p>Prepare um programa em Python que leia linhas da consola até ao fim do input e apresente as palavras que ocorrem mais de uma vez no texto.</p>
-<p>O input é uma sequência de linhas. O output consiste em tantas linhas quantas as palavras diferentes do texto; em cada linha de output surge a palavra e o número de vezes que essa palavra aparece no texto separados por espaço.</p>
+<p>Prepare um programa em Python que leia da consola uma frase e apresente a frase original e a senha correspondente de acordo com a estratégia apresentada.</p>
+<p>O input é uma única linha contendo uma string.
+O output é uma única linha contendo a string lida e a string resultante da codificação, separadas pela sequência espaço, dois pontos, espaço (ou seja, » : » (sem as aspas)).</p>
 <p><strong>Casos de teste</strong></p>
 <p><strong>Input 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Python</span> <span class="n">é</span> <span class="n">uma</span> <span class="n">linguagem</span> <span class="n">de</span> <span class="n">programação</span><span class="o">.</span>
-<span class="n">A</span> <span class="n">programação</span> <span class="n">em</span> <span class="n">Python</span> <span class="n">é</span> <span class="n">uma</span> <span class="n">competência</span> <span class="n">importante</span> <span class="n">pois</span> <span class="n">é</span> <span class="n">linguagem</span> <span class="n">muito</span> <span class="n">usada</span><span class="o">.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">segredo</span> <span class="n">meu</span> <span class="n">e</span> <span class="n">MUITO</span> <span class="n">meu</span>
 </pre></div>
 </div>
 <p><strong>Output 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Python</span> <span class="mi">2</span>
-<span class="n">é</span> <span class="mi">3</span>
-<span class="n">uma</span> <span class="mi">2</span>
-<span class="n">linguagem</span> <span class="mi">2</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>segredo meu e MUITO meu : S3gr3d0 M3u E Mu1t0 M3u!
 </pre></div>
 </div>
 <p><strong>Input 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">Zen</span> <span class="n">of</span> <span class="n">Python</span><span class="p">,</span> <span class="n">by</span> <span class="n">Tim</span> <span class="n">Peters</span>
-
-<span class="n">Beautiful</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">ugly</span><span class="o">.</span>
-<span class="n">Explicit</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">implicit</span><span class="o">.</span>
-<span class="n">Simple</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="nb">complex</span><span class="o">.</span>
-<span class="n">Complex</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">complicated</span><span class="o">.</span>
-<span class="n">Flat</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">nested</span><span class="o">.</span>
-<span class="n">Sparse</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">dense</span><span class="o">.</span>
-<span class="n">Readability</span> <span class="n">counts</span><span class="o">.</span>
-<span class="n">Special</span> <span class="n">cases</span> <span class="n">aren</span><span class="s1">&#39;t special enough to break the rules.</span>
-<span class="n">Although</span> <span class="n">practicality</span> <span class="n">beats</span> <span class="n">purity</span><span class="o">.</span>
-<span class="n">Errors</span> <span class="n">should</span> <span class="n">never</span> <span class="k">pass</span> <span class="n">silently</span><span class="o">.</span>
-<span class="n">Unless</span> <span class="n">explicitly</span> <span class="n">silenced</span><span class="o">.</span>
-<span class="n">In</span> <span class="n">the</span> <span class="n">face</span> <span class="n">of</span> <span class="n">ambiguity</span><span class="p">,</span> <span class="n">refuse</span> <span class="n">the</span> <span class="n">temptation</span> <span class="n">to</span> <span class="n">guess</span><span class="o">.</span>
-<span class="n">There</span> <span class="n">should</span> <span class="n">be</span> <span class="n">one</span><span class="o">--</span> <span class="ow">and</span> <span class="n">preferably</span> <span class="n">only</span> <span class="n">one</span> <span class="o">--</span><span class="n">obvious</span> <span class="n">way</span> <span class="n">to</span> <span class="n">do</span> <span class="n">it</span><span class="o">.</span>
-<span class="n">Although</span> <span class="n">that</span> <span class="n">way</span> <span class="n">may</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">obvious</span> <span class="n">at</span> <span class="n">first</span> <span class="n">unless</span> <span class="n">you</span><span class="s1">&#39;re Dutch.</span>
-<span class="n">Now</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">never</span><span class="o">.</span>
-<span class="n">Although</span> <span class="n">never</span> <span class="ow">is</span> <span class="n">often</span> <span class="n">better</span> <span class="n">than</span> <span class="o">*</span><span class="n">right</span><span class="o">*</span> <span class="n">now</span><span class="o">.</span>
-<span class="n">If</span> <span class="n">the</span> <span class="n">implementation</span> <span class="ow">is</span> <span class="n">hard</span> <span class="n">to</span> <span class="n">explain</span><span class="p">,</span> <span class="n">it</span><span class="s1">&#39;s a bad idea.</span>
-<span class="n">If</span> <span class="n">the</span> <span class="n">implementation</span> <span class="ow">is</span> <span class="n">easy</span> <span class="n">to</span> <span class="n">explain</span><span class="p">,</span> <span class="n">it</span> <span class="n">may</span> <span class="n">be</span> <span class="n">a</span> <span class="n">good</span> <span class="n">idea</span><span class="o">.</span>
-<span class="n">Namespaces</span> <span class="n">are</span> <span class="n">one</span> <span class="n">honking</span> <span class="n">great</span> <span class="n">idea</span> <span class="o">--</span> <span class="n">let</span><span class="s1">&#39;s do more of those!</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">o</span> <span class="n">carteiro</span> <span class="n">toca</span> <span class="n">sempre</span> <span class="n">duas</span> <span class="n">vezes</span>
 </pre></div>
 </div>
 <p><strong>Output 2</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">of</span> <span class="mi">3</span>
-<span class="ow">is</span> <span class="mi">10</span>
-<span class="n">better</span> <span class="mi">8</span>
-<span class="n">than</span> <span class="mi">8</span>
-<span class="n">to</span> <span class="mi">5</span>
-<span class="n">the</span> <span class="mi">5</span>
-<span class="n">Although</span> <span class="mi">3</span>
-<span class="n">should</span> <span class="mi">2</span>
-<span class="n">never</span> <span class="mi">2</span>
-<span class="n">be</span> <span class="mi">3</span>
-<span class="n">one</span> <span class="mi">2</span>
-<span class="n">way</span> <span class="mi">2</span>
-<span class="n">do</span> <span class="mi">2</span>
-<span class="n">may</span> <span class="mi">2</span>
-<span class="n">If</span> <span class="mi">2</span>
-<span class="n">implementation</span> <span class="mi">2</span>
-<span class="n">explain</span><span class="p">,</span> <span class="mi">2</span>
-<span class="n">a</span> <span class="mi">2</span>
-<span class="n">idea</span><span class="o">.</span> <span class="mi">2</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">o</span> <span class="n">carteiro</span> <span class="n">toca</span> <span class="n">sempre</span> <span class="n">duas</span> <span class="n">vezes</span> <span class="p">:</span> <span class="n">O</span> <span class="n">C4rt31r0</span> <span class="n">T0c4</span> <span class="n">S3mpr3</span> <span class="n">Du4s</span> <span class="n">V3z3s</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><strong>Input 3</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conta</span> <span class="n">da</span> <span class="n">Univ</span> <span class="n">do</span> <span class="n">Algarve</span>
+</pre></div>
+</div>
+<p><strong>Output 3</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conta</span> <span class="n">da</span> <span class="n">Univ</span> <span class="n">do</span> <span class="n">Algarve</span> <span class="p">:</span> <span class="n">C0nt4</span> <span class="n">D4</span> <span class="n">Un1v</span> <span class="n">D0</span> <span class="n">Alg4rv3</span><span class="o">.</span>
 </pre></div>
 </div>
 <p>Submeta na tarefa A.</p>
 <div style="page-break-after: always"></div>
 </div>
+</div>
+<div class="section" id="soma-dos-termos-de-uma-progressao-aritmetica">
+<h2>Soma dos termos de uma progressão aritmética<a class="headerlink" href="#soma-dos-termos-de-uma-progressao-aritmetica" title="Link permanente para este título">¶</a></h2>
+<p><a class="reference external" href="https://mathworld.wolfram.com/ArithmeticSeries.html">Referência</a></p>
+<p>A soma dos <span class="math notranslate nohighlight">\(n\)</span> primeiros termos de uma progressão aritmética pode ser calculada pela fórmula</p>
+<p><span class="math notranslate nohighlight">\(S_{n}={\frac{n}{2}}\cdot \left(a_{1}+a_{n}\right)\)</span></p>
+<p>Por exemplo, para a soma dos quatro primeiros termos da progressão <span class="math notranslate nohighlight">\(P_A = ( 15, 12, 9, 6, 3)\)</span>, como <span class="math notranslate nohighlight">\(n = 4\)</span>, <span class="math notranslate nohighlight">\(a_i = 15\)</span> e <span class="math notranslate nohighlight">\(a_n = 6\)</span>, a soma dos quatro primeiros números, <span class="math notranslate nohighlight">\(S(4)\)</span>, é <span class="math notranslate nohighlight">\(42\)</span>.</p>
 <div class="section" id="tarefa-b">
 <h3>Tarefa B<a class="headerlink" href="#tarefa-b" title="Link permanente para este título">¶</a></h3>
-<p>Prepare um programa em Python que receba o nome de um ficheiro e apresente as palavras que ocorrem mais de uma vez no texto.</p>
-<p>O input é o nome de um ficheiro. O output consiste em tantas linhas quantas as palavras diferentes do texto; em cada linha de output surge a palavra e o número de vezes que essa palavra aparece no texto separados por espaço.</p>
+<p>Faça um programa em Python que calcule o valor da soma dos <span class="math notranslate nohighlight">\(n\)</span> primeiros números de uma progressão aritmética.</p>
+<p>O input consiste em três inteiros, um por linha, que correspondem respetivamente à quantidade de números a considerar, ao primeiro termo e ao n-ésimo termo.
+O output é um número real que corresponde à soma dos <span class="math notranslate nohighlight">\(n\)</span> primeiros termos.</p>
 <p><strong>Casos de teste</strong></p>
 <p><strong>Input 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">exemplo</span><span class="o">.</span><span class="n">txt</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span>
+<span class="mi">15</span>
+<span class="mi">6</span>
 </pre></div>
 </div>
-<p>sendo que o ficheiro <code class="docutils literal notranslate"><span class="pre">exemplo.txt</span></code> contém o conteúdo do <em>input 2</em> da tarefa A.</p>
 <p><strong>Output 1</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">of</span> <span class="mi">3</span>
-<span class="ow">is</span> <span class="mi">10</span>
-<span class="n">better</span> <span class="mi">8</span>
-<span class="n">than</span> <span class="mi">8</span>
-<span class="n">to</span> <span class="mi">5</span>
-<span class="n">the</span> <span class="mi">5</span>
-<span class="n">Although</span> <span class="mi">3</span>
-<span class="n">should</span> <span class="mi">2</span>
-<span class="n">never</span> <span class="mi">2</span>
-<span class="n">be</span> <span class="mi">3</span>
-<span class="n">one</span> <span class="mi">2</span>
-<span class="n">way</span> <span class="mi">2</span>
-<span class="n">do</span> <span class="mi">2</span>
-<span class="n">may</span> <span class="mi">2</span>
-<span class="n">If</span> <span class="mi">2</span>
-<span class="n">implementation</span> <span class="mi">2</span>
-<span class="n">explain</span><span class="p">,</span> <span class="mi">2</span>
-<span class="n">a</span> <span class="mi">2</span>
-<span class="n">idea</span><span class="o">.</span> <span class="mi">2</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">42.0</span>
+</pre></div>
+</div>
+<p><strong>Input 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span>
+<span class="mi">1</span>
+<span class="mi">7</span>
+</pre></div>
+</div>
+<p><strong>Output 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">28.0</span>
+</pre></div>
+</div>
+<p><strong>Input 3</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">100</span>
+<span class="mi">1</span>
+<span class="mi">100</span>
+</pre></div>
+</div>
+<p><strong>Output 3</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">5050.0</span>
 </pre></div>
 </div>
 <p>Submeta na tarefa B.</p>
 <div style="page-break-after: always"></div>
 </div>
+</div>
+<div class="section" id="area-de-um-triangulo">
+<h2>Área de um triângulo<a class="headerlink" href="#area-de-um-triangulo" title="Link permanente para este título">¶</a></h2>
+<p><a class="reference external" href="https://mathworld.wolfram.com/HeronsFormula.html">Referência</a></p>
+<p>A área de um triângulo pode ser calculada pela fórmula de Heron.</p>
+<p>Sendo conhecidas as dimensões <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span> e <span class="math notranslate nohighlight">\(c\)</span> das arestas de um triângulo, calculamos o semiperímetro <span class="math notranslate nohighlight">\(s\)</span> com a fórmula <span class="math notranslate nohighlight">\(s=1/2(a+b+c)\)</span> e a área <span class="math notranslate nohighlight">\(A\)</span> com a fórmula <span class="math notranslate nohighlight">\(A=sqrt(s(s-a)(s-b)(s-c))\)</span>.</p>
 <div class="section" id="tarefa-c">
 <h3>Tarefa C<a class="headerlink" href="#tarefa-c" title="Link permanente para este título">¶</a></h3>
-<p>Altere a sua submissão da tarefa C do Lab 6 para, em vez de apresentar o peso atómico da molécula, apresentar a molécula e o número total de átomos existem na molécula.</p>
-<p>Caso não tenha submetido a tarefa C do Lab 6 pode desenvolver agora uma solução. Nesse caso, o uso de dicionários não é obrigatório.</p>
-<p><strong>Input</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">9</span>
-<span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="n">H</span> <span class="n">Hydrogen</span> <span class="mf">1.008</span>
-<span class="mi">2</span> <span class="mi">1</span> <span class="mi">18</span> <span class="n">He</span> <span class="n">Helium</span> <span class="mf">4.003</span>
-<span class="mi">3</span> <span class="mi">2</span> <span class="mi">1</span> <span class="n">Li</span> <span class="n">Lithium</span> <span class="mf">6.941</span>
-<span class="mi">4</span> <span class="mi">2</span> <span class="mi">2</span> <span class="n">Be</span> <span class="n">Beryllium</span> <span class="mf">9.012</span>
-<span class="mi">5</span> <span class="mi">2</span> <span class="mi">13</span> <span class="n">B</span> <span class="n">Boron</span> <span class="mf">10.81</span>
-<span class="mi">6</span> <span class="mi">2</span> <span class="mi">14</span> <span class="n">C</span> <span class="n">Carbon</span> <span class="mf">12.011</span>
-<span class="mi">7</span> <span class="mi">2</span> <span class="mi">15</span> <span class="n">N</span> <span class="n">Nitrogen</span> <span class="mf">14.007</span>
-<span class="mi">8</span> <span class="mi">2</span> <span class="mi">16</span> <span class="n">O</span> <span class="n">Oxygen</span> <span class="mf">15.999</span>
-<span class="mi">9</span> <span class="mi">2</span> <span class="mi">17</span> <span class="n">F</span> <span class="n">Fluorine</span> <span class="mf">18.998</span>
-<span class="n">H2O</span>
-<span class="n">CO2</span>
-<span class="n">CO</span>
+<p>Prepare um programa em Python que leia da consola as dimensões dos três lados de um triângulo e apresente a área desse triângulo.</p>
+<p>O input consiste em três números reais, um por linha, que correspondem ao comprimento dos lados do triângulo.
+O output é um número real que corresponde à área do triângulo.</p>
+<p><strong>Requisito técnico</strong>: considere uma função apenas para o cálculo do semiperímetro e a <em>outra</em> função para o cálculo da área deverá chamar a função do semiperímetro.</p>
+<p><strong>Casos de teste</strong></p>
+<p><strong>Input 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">9.0</span>
+<span class="mf">7.0</span>
+<span class="mf">14.0</span>
 </pre></div>
 </div>
-<p><strong>Output</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">H2O</span> <span class="mi">3</span>
-<span class="n">CO2</span> <span class="mi">3</span>
-<span class="n">CO</span> <span class="mi">2</span>
+<p><strong>Output 1</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">26.832815729997478</span>
+</pre></div>
+</div>
+<p><strong>Input 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">3.0</span>
+<span class="mf">4.0</span>
+<span class="mf">5.0</span>
+</pre></div>
+</div>
+<p><strong>Output 2</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">6.0</span>
 </pre></div>
 </div>
 <p>Submeta na tarefa C.</p>
-<div style="page-break-after: always"></div>
 </div>
 </div>
 </div>
@@ -564,19 +593,19 @@ Note bem:
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="LabA.html" title="anterior page">
+        <a class="left-prev" href="F31-What.html" title="anterior page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">anterior</p>
-                <p class="prevnext-title">LabA</p>
+                <p class="prevnext-title">Complemento da Festa</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="F31-What.html" title="próximo page">
+        <a class="right-next" href="F3RB-2022.html" title="próximo page">
             <div class="prevnext-info">
                 <p class="prevnext-label">próximo</p>
-                <p class="prevnext-title">Complemento da Festa</p>
+                <p class="prevnext-title">Terceira festa (RB)</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
