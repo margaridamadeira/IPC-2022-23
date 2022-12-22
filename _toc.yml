@@ -41,5 +41,10 @@ parts:
   - file: docs/F3-2022
   - file: docs/F31-What
 #  - file: docs/Lab8_old
+#  - file: docs/F1R-2022
+#  - file: docs/F2R-2022
+#  - file: docs/F3R-2022
+  - file: docs/F1RB-2022
+  - file: docs/F3RB-2022
 
 
